@@ -1,9 +1,9 @@
 # Directories...
-$prefix=/Users/leico/pro/libcurl-xcode/DerivedData/Build/Products/Debug/curl
+$prefix=/Users/leico/pro/libcurl-xcode/DerivedData/Build/Products/Release/curl
 $exec_prefix=${prefix}
 $bindir=${exec_prefix}/bin
 $confdir=${prefix}/etc
-$docdir=/Users/leico/pro/libcurl-xcode/DerivedData/Build/Products/Debug/curl/doc
+$docdir=/Users/leico/pro/libcurl-xcode/DerivedData/Build/Products/Release/curl/doc
 $mandir=${datarootdir}/man
 $libdir=${exec_prefix}/lib
 $srcdir=../..

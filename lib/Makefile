@@ -402,7 +402,7 @@ CCDEPMODE = depmode=gcc3
 # This might hold -Werror
 CFLAGS = -Qunused-arguments -Os -mmacosx-version-min=10.8 -Werror=partial-availability 
 CFLAG_CURL_SYMBOL_HIDING = -fvisibility=hidden
-CONFIGURE_OPTIONS = " '--with-darwinssl' '--prefix=/Users/leico/pro/libcurl-xcode/DerivedData/Build/Products/Debug/curl/'"
+CONFIGURE_OPTIONS = " '--with-darwinssl' '--prefix=/Users/leico/pro/libcurl-xcode/DerivedData/Build/Products/Release/curl/'"
 CPP = gcc -E
 CPPFLAGS = 
 CPPFLAG_CURL_STATICLIB = 
@@ -567,7 +567,7 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /Users/leico/pro/libcurl-xcode/DerivedData/Build/Products/Debug/curl
+prefix = /Users/leico/pro/libcurl-xcode/DerivedData/Build/Products/Release/curl
 program_transform_name = s,x,x,
 psdir = ${docdir}
 runstatedir = ${localstatedir}/run
