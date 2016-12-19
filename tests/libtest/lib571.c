@@ -50,8 +50,7 @@ static const char *RTP_DATA = "$_1234\n\0asdf";
 
 static int rtp_packet_count = 0;
 
-static size_t rtp_write(void *ptr, size_t size, size_t nmemb, void *stream)
-{
+static size_t rtp_write(void *ptr, size_t size, size_t nmemb, void *stream) {
   char *data = (char *)ptr;
   int channel = RTP_PKT_CHANNEL(data);
   int message_size;
@@ -118,8 +117,7 @@ int test(char *URL)
     return TEST_ERR_MAJOR_BAD;
   }
 
-  curl = curl_easy_init();
-  if(!curl) {
+  if((curl = curl_easy_init()) == NULL) {
     fprintf(stderr, "curl_easy_init() failed\n");
     fclose(protofile);
     curl_global_cleanup();
@@ -127,8 +125,7 @@ int test(char *URL)
   }
   test_setopt(curl, CURLOPT_URL, URL);
 
-  stream_uri = suburl(URL, request++);
-  if(!stream_uri) {
+  if((stream_uri = suburl(URL, request++)) == NULL) {
     res = TEST_ERR_MAJOR_BAD;
     goto test_cleanup;
   }
@@ -149,8 +146,7 @@ int test(char *URL)
     goto test_cleanup;
 
   /* This PLAY starts the interleave */
-  stream_uri = suburl(URL, request++);
-  if(!stream_uri) {
+  if((stream_uri = suburl(URL, request++)) == NULL) {
     res = TEST_ERR_MAJOR_BAD;
     goto test_cleanup;
   }
@@ -164,8 +160,7 @@ int test(char *URL)
     goto test_cleanup;
 
   /* The DESCRIBE request will try to consume data after the Content */
-  stream_uri = suburl(URL, request++);
-  if(!stream_uri) {
+  if((stream_uri = suburl(URL, request++)) == NULL) {
     res = TEST_ERR_MAJOR_BAD;
     goto test_cleanup;
   }
@@ -178,8 +173,7 @@ int test(char *URL)
   if(res)
     goto test_cleanup;
 
-  stream_uri = suburl(URL, request++);
-  if(!stream_uri) {
+  if((stream_uri = suburl(URL, request++)) == NULL) {
     res = TEST_ERR_MAJOR_BAD;
     goto test_cleanup;
   }

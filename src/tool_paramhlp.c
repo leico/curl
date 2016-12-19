@@ -66,15 +66,12 @@ ParameterError file2string(char **bufp, FILE *file)
 
   if(file) {
     while(fgets(buffer, sizeof(buffer), file)) {
-      ptr = strchr(buffer, '\r');
-      if(ptr)
+      if((ptr = strchr(buffer, '\r')) != NULL)
         *ptr = '\0';
-      ptr = strchr(buffer, '\n');
-      if(ptr)
+      if((ptr = strchr(buffer, '\n')) != NULL)
         *ptr = '\0';
       buflen = strlen(buffer);
-      ptr = realloc(string, stringlen+buflen+1);
-      if(!ptr) {
+      if((ptr = realloc(string, stringlen+buflen+1)) == NULL) {
         Curl_safefree(string);
         return PARAM_NO_MEM;
       }
@@ -105,8 +102,7 @@ ParameterError file2memory(char **bufp, size_t *size, FILE *file)
         }
         alloc *= 2;
         /* allocate an extra char, reserved space, for null termination */
-        newbuf = realloc(buffer, alloc+1);
-        if(!newbuf) {
+        if((newbuf = realloc(buffer, alloc+1)) == NULL) {
           Curl_safefree(buffer);
           return PARAM_NO_MEM;
         }
@@ -119,8 +115,7 @@ ParameterError file2memory(char **bufp, size_t *size, FILE *file)
     buffer[nused] = '\0';
     /* free trailing slack space, if possible */
     if(alloc != nused) {
-      newbuf = realloc(buffer, nused+1);
-      if(!newbuf) {
+      if((newbuf = realloc(buffer, nused+1)) == NULL) {
         Curl_safefree(buffer);
         return PARAM_NO_MEM;
       }
@@ -318,7 +313,7 @@ long proto2num(struct OperationConfig *config, long *val, const char *str)
 
     for(pp=protos; pp->name; pp++) {
       if(curl_strequal(token, pp->name)) {
-        switch(action) {
+        switch (action) {
         case deny:
           *val &= ~(pp->bit);
           break;

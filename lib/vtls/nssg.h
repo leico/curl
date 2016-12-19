@@ -65,9 +65,6 @@ bool Curl_nss_cert_status_request(void);
 
 bool Curl_nss_false_start(void);
 
-/* Support HTTPS-proxy */
-#define HTTPS_PROXY_SUPPORT 1
-
 /* Set the API backend definition to NSS */
 #define CURL_SSL_BACKEND CURLSSLBACKEND_NSS
 

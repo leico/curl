@@ -1,4 +1,4 @@
-How curl Became Like This
+How cURL Became Like This
 =========================
 
 Towards the end of 1996, Daniel Stenberg was spending time writing an IRC bot

@@ -42,7 +42,6 @@
 #include "multihandle.h"
 #include "pipeline.h"
 #include "sigpipe.h"
-#include "vtls/vtls.h"
 #include "connect.h"
 /* The last 3 #include files should be in this order */
 #include "curl_printf.h"
@@ -813,11 +812,6 @@ static int waitconnect_getsock(struct connectdata *conn,
   if(!numsocks)
     return GETSOCK_BLANK;
 
-#ifdef USE_SSL
-  if(CONNECT_FIRSTSOCKET_PROXY_SSL())
-    return Curl_ssl_getsock(conn, sock, numsocks);
-#endif
-
   for(i=0; i<2; i++) {
     if(conn->tempsock[i] != CURL_SOCKET_BAD) {
       sock[s] = conn->tempsock[i];
@@ -1306,7 +1300,7 @@ static CURLMcode multi_runsingle(struct Curl_multi *multi,
   CURLMcode rc;
   CURLcode result = CURLE_OK;
   struct SingleRequest *k;
-  time_t timeout_ms;
+  long timeout_ms;
   int control;
 
   if(!GOOD_EASY_HANDLE(data))
@@ -1554,9 +1548,7 @@ static CURLMcode multi_runsingle(struct Curl_multi *multi,
         multistate(data, CURLM_STATE_CONNECT);
       }
       else if(!result) {
-        if((data->easy_conn->http_proxy.proxytype != CURLPROXY_HTTPS ||
-           data->easy_conn->bits.proxy_ssl_connected[FIRSTSOCKET]) &&
-           (data->easy_conn->tunnel_state[FIRSTSOCKET] != TUNNEL_CONNECT)) {
+        if(data->easy_conn->tunnel_state[FIRSTSOCKET] == TUNNEL_COMPLETE) {
           rc = CURLM_CALL_MULTI_PERFORM;
           /* initiate protocol connect phase */
           multistate(data, CURLM_STATE_SENDPROTOCONNECT);
@@ -1569,14 +1561,6 @@ static CURLMcode multi_runsingle(struct Curl_multi *multi,
       /* awaiting a completion of an asynch TCP connect */
       result = Curl_is_connected(data->easy_conn, FIRSTSOCKET, &connected);
       if(connected && !result) {
-#ifndef CURL_DISABLE_HTTP
-        if((data->easy_conn->http_proxy.proxytype == CURLPROXY_HTTPS &&
-            !data->easy_conn->bits.proxy_ssl_connected[FIRSTSOCKET]) ||
-            (data->easy_conn->tunnel_state[FIRSTSOCKET] == TUNNEL_CONNECT)) {
-          multistate(data, CURLM_STATE_WAITPROXYCONNECT);
-          break;
-        }
-#endif
         rc = CURLM_CALL_MULTI_PERFORM;
         multistate(data, data->easy_conn->bits.tunnel_proxy?
                    CURLM_STATE_WAITPROXYCONNECT:
@@ -2502,7 +2486,7 @@ static CURLMcode add_next_timeout(struct timeval now,
      timeout in *tv */
   for(e = list->head; e;) {
     struct curl_llist_element *n = e->next;
-    time_t diff = curlx_tvdiff(*(struct timeval *)e->ptr, now);
+    long diff = curlx_tvdiff(*(struct timeval *)e->ptr, now);
     if(diff <= 0)
       /* remove outdated entry */
       Curl_llist_remove(list, e, NULL);
@@ -2780,7 +2764,7 @@ static CURLMcode multi_timeout(struct Curl_multi *multi,
 
     if(Curl_splaycomparekeys(multi->timetree->key, now) > 0) {
       /* some time left before expiration */
-      *timeout_ms = (long)curlx_tvdiff(multi->timetree->key, now);
+      *timeout_ms = curlx_tvdiff(multi->timetree->key, now);
       if(!*timeout_ms)
         /*
          * Since we only provide millisecond resolution on the returned value
@@ -2887,7 +2871,7 @@ multi_addtimeout(struct curl_llist *timeoutlist,
     /* find the correct spot in the list */
     for(e = timeoutlist->head; e; e = e->next) {
       struct timeval *checktime = e->ptr;
-      time_t diff = curlx_tvdiff(*checktime, *timedup);
+      long diff = curlx_tvdiff(*checktime, *timedup);
       if(diff > 0)
         break;
       prev = e;
@@ -2914,7 +2898,7 @@ multi_addtimeout(struct curl_llist *timeoutlist,
  * The timeout will be added to a queue of timeouts if it defines a moment in
  * time that is later than the current head of queue.
  */
-void Curl_expire(struct Curl_easy *data, time_t milli)
+void Curl_expire(struct Curl_easy *data, long milli)
 {
   struct Curl_multi *multi = data->multi;
   struct timeval *nowp = &data->state.expiretime;
@@ -2927,7 +2911,7 @@ void Curl_expire(struct Curl_easy *data, time_t milli)
     return;
 
   set = Curl_tvnow();
-  set.tv_sec += (long)(milli/1000);
+  set.tv_sec += milli/1000;
   set.tv_usec += (milli%1000)*1000;
 
   if(set.tv_usec >= 1000000) {
@@ -2939,7 +2923,7 @@ void Curl_expire(struct Curl_easy *data, time_t milli)
     /* This means that the struct is added as a node in the splay tree.
        Compare if the new time is earlier, and only remove-old/add-new if it
        is. */
-    time_t diff = curlx_tvdiff(set, *nowp);
+    long diff = curlx_tvdiff(set, *nowp);
     if(diff > 0) {
       /* the new expire time was later so just add it to the queue
          and get out */
@@ -2977,14 +2961,14 @@ void Curl_expire(struct Curl_easy *data, time_t milli)
  * time-out period to expire.
  *
  */
-void Curl_expire_latest(struct Curl_easy *data, time_t milli)
+void Curl_expire_latest(struct Curl_easy *data, long milli)
 {
   struct timeval *expire = &data->state.expiretime;
 
   struct timeval set;
 
   set = Curl_tvnow();
-  set.tv_sec += (long)(milli / 1000);
+  set.tv_sec += milli / 1000;
   set.tv_usec += (milli % 1000) * 1000;
 
   if(set.tv_usec >= 1000000) {
@@ -2996,7 +2980,7 @@ void Curl_expire_latest(struct Curl_easy *data, time_t milli)
     /* This means that the struct is added as a node in the splay tree.
        Compare if the new time is earlier, and only remove-old/add-new if it
          is. */
-    time_t diff = curlx_tvdiff(set, *expire);
+    long diff = curlx_tvdiff(set, *expire);
     if(diff > 0)
       /* the new expire time was later than the top time, so just skip this */
       return;

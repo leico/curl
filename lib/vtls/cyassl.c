@@ -149,7 +149,7 @@ cyassl_connect_step1(struct connectdata *conn,
     return CURLE_OK;
 
   /* check to see if we've been told to use an explicit SSL/TLS version */
-  switch(SSL_CONN_CONFIG(version)) {
+  switch(data->set.ssl.version) {
   case CURL_SSLVERSION_DEFAULT:
   case CURL_SSLVERSION_TLSv1:
 #if LIBCYASSL_VERSION_HEX >= 0x03003000 /* >= 3.3.0 */
@@ -174,15 +174,12 @@ cyassl_connect_step1(struct connectdata *conn,
     req_method = TLSv1_2_client_method();
     use_sni(TRUE);
     break;
-  case CURL_SSLVERSION_TLSv1_3:
-    failf(data, "CyaSSL: TLS 1.3 is not yet supported");
-    return CURLE_SSL_CONNECT_ERROR;
   case CURL_SSLVERSION_SSLv3:
 #ifdef WOLFSSL_ALLOW_SSLV3
     req_method = SSLv3_client_method();
     use_sni(FALSE);
 #else
-    failf(data, "CyaSSL does not support SSLv3");
+    failf(data, "No support for SSLv3");
     return CURLE_NOT_BUILT_IN;
 #endif
     break;
@@ -208,7 +205,7 @@ cyassl_connect_step1(struct connectdata *conn,
     return CURLE_OUT_OF_MEMORY;
   }
 
-  switch(SSL_CONN_CONFIG(version)) {
+  switch(data->set.ssl.version) {
   case CURL_SSLVERSION_DEFAULT:
   case CURL_SSLVERSION_TLSv1:
 #if LIBCYASSL_VERSION_HEX > 0x03004006 /* > 3.4.6 */
@@ -231,18 +228,18 @@ cyassl_connect_step1(struct connectdata *conn,
 
 #ifndef NO_FILESYSTEM
   /* load trusted cacert */
-  if(SSL_CONN_CONFIG(CAfile)) {
+  if(data->set.str[STRING_SSL_CAFILE]) {
     if(1 != SSL_CTX_load_verify_locations(conssl->ctx,
-                                      SSL_CONN_CONFIG(CAfile),
-                                      SSL_CONN_CONFIG(CApath))) {
-      if(SSL_CONN_CONFIG(verifypeer)) {
+                                          data->set.str[STRING_SSL_CAFILE],
+                                          data->set.str[STRING_SSL_CAPATH])) {
+      if(data->set.ssl.verifypeer) {
         /* Fail if we insist on successfully verifying the server. */
         failf(data, "error setting certificate verify locations:\n"
               "  CAfile: %s\n  CApath: %s",
-              SSL_CONN_CONFIG(CAfile)?
-              SSL_CONN_CONFIG(CAfile): "none",
-              SSL_CONN_CONFIG(CApath)?
-              SSL_CONN_CONFIG(CApath) : "none");
+              data->set.str[STRING_SSL_CAFILE]?
+              data->set.str[STRING_SSL_CAFILE]: "none",
+              data->set.str[STRING_SSL_CAPATH]?
+              data->set.str[STRING_SSL_CAPATH] : "none");
         return CURLE_SSL_CACERT_BADFILE;
       }
       else {
@@ -259,25 +256,25 @@ cyassl_connect_step1(struct connectdata *conn,
     infof(data,
           "  CAfile: %s\n"
           "  CApath: %s\n",
-          SSL_CONN_CONFIG(CAfile) ? SSL_CONN_CONFIG(CAfile):
+          data->set.str[STRING_SSL_CAFILE] ? data->set.str[STRING_SSL_CAFILE]:
           "none",
-          SSL_CONN_CONFIG(CApath) ? SSL_CONN_CONFIG(CApath):
+          data->set.str[STRING_SSL_CAPATH] ? data->set.str[STRING_SSL_CAPATH]:
           "none");
   }
 
   /* Load the client certificate, and private key */
-  if(SSL_SET_OPTION(cert) && SSL_SET_OPTION(key)) {
-    int file_type = do_file_type(SSL_SET_OPTION(cert_type));
+  if(data->set.str[STRING_CERT] && data->set.str[STRING_KEY]) {
+    int file_type = do_file_type(data->set.str[STRING_CERT_TYPE]);
 
-    if(SSL_CTX_use_certificate_file(conssl->ctx, SSL_SET_OPTION(cert),
+    if(SSL_CTX_use_certificate_file(conssl->ctx, data->set.str[STRING_CERT],
                                      file_type) != 1) {
       failf(data, "unable to use client certificate (no key or wrong pass"
             " phrase?)");
       return CURLE_SSL_CONNECT_ERROR;
     }
 
-    file_type = do_file_type(SSL_SET_OPTION(key_type));
-    if(SSL_CTX_use_PrivateKey_file(conssl->ctx, SSL_SET_OPTION(key),
+    file_type = do_file_type(data->set.str[STRING_KEY_TYPE]);
+    if(SSL_CTX_use_PrivateKey_file(conssl->ctx, data->set.str[STRING_KEY],
                                     file_type) != 1) {
       failf(data, "unable to set private key");
       return CURLE_SSL_CONNECT_ERROR;
@@ -290,8 +287,7 @@ cyassl_connect_step1(struct connectdata *conn,
    * anyway. In the latter case the result of the verification is checked with
    * SSL_get_verify_result() below. */
   SSL_CTX_set_verify(conssl->ctx,
-                     SSL_CONN_CONFIG(verifypeer)?SSL_VERIFY_PEER:
-                                                 SSL_VERIFY_NONE,
+                     data->set.ssl.verifypeer?SSL_VERIFY_PEER:SSL_VERIFY_NONE,
                      NULL);
 
 #ifdef HAVE_SNI
@@ -300,15 +296,13 @@ cyassl_connect_step1(struct connectdata *conn,
 #ifdef ENABLE_IPV6
     struct in6_addr addr6;
 #endif
-    const char * const hostname = SSL_IS_PROXY() ? conn->http_proxy.host.name :
-      conn->host.name;
-    size_t hostname_len = strlen(hostname);
+    size_t hostname_len = strlen(conn->host.name);
     if((hostname_len < USHRT_MAX) &&
-       (0 == Curl_inet_pton(AF_INET, hostname, &addr4)) &&
+       (0 == Curl_inet_pton(AF_INET, conn->host.name, &addr4)) &&
 #ifdef ENABLE_IPV6
-       (0 == Curl_inet_pton(AF_INET6, hostname, &addr6)) &&
+       (0 == Curl_inet_pton(AF_INET6, conn->host.name, &addr6)) &&
 #endif
-       (CyaSSL_CTX_UseSNI(conssl->ctx, CYASSL_SNI_HOST_NAME, hostname,
+       (CyaSSL_CTX_UseSNI(conssl->ctx, CYASSL_SNI_HOST_NAME, conn->host.name,
                           (unsigned short)hostname_len) != 1)) {
       infof(data, "WARNING: failed to configure server name indication (SNI) "
             "TLS extension\n");
@@ -337,7 +331,7 @@ cyassl_connect_step1(struct connectdata *conn,
     }
   }
 #ifdef NO_FILESYSTEM
-  else if(SSL_CONN_CONFIG(verifypeer)) {
+  else if(data->set.ssl.verifypeer) {
     failf(data, "SSL: Certificates couldn't be loaded because CyaSSL was built"
           " with \"no filesystem\". Either disable peer verification"
           " (insecure) or if you are building an application with libcurl you"
@@ -383,11 +377,11 @@ cyassl_connect_step1(struct connectdata *conn,
 #endif /* HAVE_ALPN */
 
   /* Check if there's a cached ID we can/should use here! */
-  if(data->set.general_ssl.sessionid) {
+  if(conn->ssl_config.sessionid) {
     void *ssl_sessionid = NULL;
 
     Curl_ssl_sessionid_lock(conn);
-    if(!Curl_ssl_getsessionid(conn, &ssl_sessionid, NULL, sockindex)) {
+    if(!Curl_ssl_getsessionid(conn, &ssl_sessionid, NULL)) {
       /* we got a session id, use it! */
       if(!SSL_set_session(conssl->handle, ssl_sessionid)) {
         Curl_ssl_sessionid_unlock(conn);
@@ -397,7 +391,7 @@ cyassl_connect_step1(struct connectdata *conn,
         return CURLE_SSL_CONNECT_ERROR;
       }
       /* Informational message */
-      infof(data, "SSL re-using session ID\n");
+      infof (data, "SSL re-using session ID\n");
     }
     Curl_ssl_sessionid_unlock(conn);
   }
@@ -420,20 +414,13 @@ cyassl_connect_step2(struct connectdata *conn,
   int ret = -1;
   struct Curl_easy *data = conn->data;
   struct ssl_connect_data* conssl = &conn->ssl[sockindex];
-  const char * const hostname = SSL_IS_PROXY() ? conn->http_proxy.host.name :
-    conn->host.name;
-  const char * const dispname = SSL_IS_PROXY() ?
-    conn->http_proxy.host.dispname : conn->host.dispname;
-  const char * const pinnedpubkey = SSL_IS_PROXY() ?
-                        data->set.str[STRING_SSL_PINNEDPUBLICKEY_PROXY] :
-                        data->set.str[STRING_SSL_PINNEDPUBLICKEY_ORIG];
 
   conn->recv[sockindex] = cyassl_recv;
   conn->send[sockindex] = cyassl_send;
 
   /* Enable RFC2818 checks */
-  if(SSL_CONN_CONFIG(verifyhost)) {
-    ret = CyaSSL_check_domain_name(conssl->handle, hostname);
+  if(data->set.ssl.verifyhost) {
+    ret = CyaSSL_check_domain_name(conssl->handle, conn->host.name);
     if(ret == SSL_FAILURE)
       return CURLE_OUT_OF_MEMORY;
   }
@@ -457,31 +444,31 @@ cyassl_connect_step2(struct connectdata *conn,
     else if(DOMAIN_NAME_MISMATCH == detail) {
 #if 1
       failf(data, "\tsubject alt name(s) or common name do not match \"%s\"\n",
-            dispname);
+            conn->host.dispname);
       return CURLE_PEER_FAILED_VERIFICATION;
 #else
       /* When the CyaSSL_check_domain_name() is used and you desire to continue
-       * on a DOMAIN_NAME_MISMATCH, i.e. 'conn->ssl_config.verifyhost == 0',
+       * on a DOMAIN_NAME_MISMATCH, i.e. 'data->set.ssl.verifyhost == 0',
        * CyaSSL version 2.4.0 will fail with an INCOMPLETE_DATA error. The only
        * way to do this is currently to switch the CyaSSL_check_domain_name()
-       * in and out based on the 'conn->ssl_config.verifyhost' value. */
-      if(SSL_CONN_CONFIG(verifyhost)) {
+       * in and out based on the 'data->set.ssl.verifyhost' value. */
+      if(data->set.ssl.verifyhost) {
         failf(data,
               "\tsubject alt name(s) or common name do not match \"%s\"\n",
-              dispname);
+              conn->host.dispname);
         return CURLE_PEER_FAILED_VERIFICATION;
       }
       else {
         infof(data,
               "\tsubject alt name(s) and/or common name do not match \"%s\"\n",
-              dispname);
+              conn->host.dispname);
         return CURLE_OK;
       }
 #endif
     }
 #if LIBCYASSL_VERSION_HEX >= 0x02007000 /* 2.7.0 */
     else if(ASN_NO_SIGNER_E == detail) {
-      if(SSL_CONN_CONFIG(verifypeer)) {
+      if(data->set.ssl.verifypeer) {
         failf(data, "\tCA signer not available for verification\n");
         return CURLE_SSL_CACERT_BADFILE;
       }
@@ -500,7 +487,7 @@ cyassl_connect_step2(struct connectdata *conn,
     }
   }
 
-  if(pinnedpubkey) {
+  if(data->set.str[STRING_SSL_PINNEDPUBLICKEY]) {
 #ifdef KEEP_PEER_CERT
     X509 *x509;
     const char *x509_der;
@@ -522,8 +509,7 @@ cyassl_connect_step2(struct connectdata *conn,
     }
 
     memset(&x509_parsed, 0, sizeof x509_parsed);
-    if(Curl_parseX509(&x509_parsed, x509_der, x509_der + x509_der_len))
-      return CURLE_SSL_PINNEDPUBKEYNOTMATCH;
+    Curl_parseX509(&x509_parsed, x509_der, x509_der + x509_der_len);
 
     pubkey = &x509_parsed.subjectPublicKeyInfo;
     if(!pubkey->header || pubkey->end <= pubkey->header) {
@@ -532,7 +518,7 @@ cyassl_connect_step2(struct connectdata *conn,
     }
 
     result = Curl_pin_peer_pubkey(data,
-                                  pinnedpubkey,
+                                  data->set.str[STRING_SSL_PINNEDPUBLICKEY],
                                   (const unsigned char *)pubkey->header,
                                   (size_t)(pubkey->end - pubkey->header));
     if(result) {
@@ -597,7 +583,7 @@ cyassl_connect_step3(struct connectdata *conn,
 
   DEBUGASSERT(ssl_connect_3 == connssl->connecting_state);
 
-  if(data->set.general_ssl.sessionid) {
+  if(conn->ssl_config.sessionid) {
     bool incache;
     SSL_SESSION *our_ssl_sessionid;
     void *old_ssl_sessionid = NULL;
@@ -605,8 +591,7 @@ cyassl_connect_step3(struct connectdata *conn,
     our_ssl_sessionid = SSL_get_session(connssl->handle);
 
     Curl_ssl_sessionid_lock(conn);
-    incache = !(Curl_ssl_getsessionid(conn, &old_ssl_sessionid, NULL,
-                                      sockindex));
+    incache = !(Curl_ssl_getsessionid(conn, &old_ssl_sessionid, NULL));
     if(incache) {
       if(old_ssl_sessionid != our_ssl_sessionid) {
         infof(data, "old SSL session ID is stale, removing\n");
@@ -617,7 +602,7 @@ cyassl_connect_step3(struct connectdata *conn,
 
     if(!incache) {
       result = Curl_ssl_addsessionid(conn, our_ssl_sessionid,
-                                     0 /* unknown size */, sockindex);
+                                     0 /* unknown size */);
       if(result) {
         Curl_ssl_sessionid_unlock(conn);
         failf(data, "failed to store ssl session");
@@ -669,11 +654,11 @@ void Curl_cyassl_close(struct connectdata *conn, int sockindex)
 
   if(conssl->handle) {
     (void)SSL_shutdown(conssl->handle);
-    SSL_free(conssl->handle);
+    SSL_free (conssl->handle);
     conssl->handle = NULL;
   }
   if(conssl->ctx) {
-    SSL_CTX_free(conssl->ctx);
+    SSL_CTX_free (conssl->ctx);
     conssl->ctx = NULL;
   }
 }
@@ -755,7 +740,7 @@ int Curl_cyassl_shutdown(struct connectdata *conn, int sockindex)
   struct ssl_connect_data *connssl = &conn->ssl[sockindex];
 
   if(connssl->handle) {
-    SSL_free(connssl->handle);
+    SSL_free (connssl->handle);
     connssl->handle = NULL;
   }
   return retval;

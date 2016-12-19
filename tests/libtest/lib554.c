@@ -162,8 +162,7 @@ static int once(char *URL, bool oldstyle)
   if(formrc)
     printf("curl_formadd(4) = %d\n", (int)formrc);
 
-  curl = curl_easy_init();
-  if(!curl) {
+  if((curl = curl_easy_init()) == NULL) {
     fprintf(stderr, "curl_easy_init() failed\n");
     curl_formfree(formpost);
     curl_global_cleanup();

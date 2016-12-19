@@ -1,5 +1,5 @@
 //
-// curl network retrieval client
+// cURL network retrieval client
 //
 
 TARGET        curl.exe

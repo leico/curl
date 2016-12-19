@@ -51,7 +51,6 @@
 #include "curl_ntlm_wb.h"
 #include "url.h"
 #include "strerror.h"
-#include "strdup.h"
 /* The last 3 #include files should be in this order */
 #include "curl_printf.h"
 #include "curl_memory.h"
@@ -157,8 +156,7 @@ static CURLcode ntlm_wb_init(struct connectdata *conn, const char *userp)
   }
   slash = strpbrk(username, "\\/");
   if(slash) {
-    domain = strdup(username);
-    if(!domain)
+    if((domain = strdup(username)) == NULL)
       return CURLE_OUT_OF_MEMORY;
     slash = domain + (slash - username);
     *slash = '\0';
@@ -295,10 +293,11 @@ static CURLcode ntlm_wb_response(struct connectdata *conn,
       buf[len_out - 1] = '\0';
       break;
     }
-    newbuf = Curl_saferealloc(buf, len_out + NTLM_BUFSIZE);
-    if(!newbuf)
+    newbuf = realloc(buf, len_out + NTLM_BUFSIZE);
+    if(!newbuf) {
+      free(buf);
       return CURLE_OUT_OF_MEMORY;
-
+    }
     buf = newbuf;
   }
 
@@ -350,7 +349,7 @@ CURLcode Curl_output_ntlm_wb(struct connectdata *conn,
 
   if(proxy) {
     allocuserpwd = &conn->allocptr.proxyuserpwd;
-    userp = conn->http_proxy.user;
+    userp = conn->proxyuser;
     ntlm = &conn->proxyntlm;
     authp = &conn->data->state.authproxy;
   }

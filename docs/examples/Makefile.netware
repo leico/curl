@@ -60,7 +60,7 @@ endif
 TARGET  = examples
 VERSION	= $(LIBCURL_VERSION)
 COPYR	= Copyright (C) $(LIBCURL_COPYRIGHT_STR)
-DESCR	= curl ($(LIBARCH))
+DESCR	= cURL ($(LIBARCH))
 MTSAFE	= YES
 STACK	= 8192
 SCREEN	= Example Program

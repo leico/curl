@@ -50,7 +50,7 @@ static void my_lock(CURL *handle, curl_lock_data data,
   (void)handle;
   (void)laccess;
 
-  switch(data) {
+  switch (data) {
     case CURL_LOCK_DATA_SHARE:
       what = "share";
       locknum = 0;
@@ -86,7 +86,7 @@ static void my_unlock(CURL *handle, curl_lock_data data, void *useptr)
   struct userdata *user = (struct userdata *)useptr;
   int locknum;
   (void)handle;
-  switch(data) {
+  switch (data) {
     case CURL_LOCK_DATA_SHARE:
       what = "share";
       locknum = 0;
@@ -195,8 +195,7 @@ int test(char *URL)
 
   /* prepare share */
   printf("SHARE_INIT\n");
-  share = curl_share_init();
-  if(!share) {
+  if((share = curl_share_init()) == NULL) {
     fprintf(stderr, "curl_share_init() failed\n");
     curl_global_cleanup();
     return TEST_ERR_MAJOR_BAD;
@@ -231,8 +230,7 @@ int test(char *URL)
   }
 
   /* initial cookie manipulation */
-  curl = curl_easy_init();
-  if(!curl) {
+  if((curl = curl_easy_init()) == NULL) {
     fprintf(stderr, "curl_easy_init() failed\n");
     curl_share_cleanup(share);
     curl_global_cleanup();
@@ -277,8 +275,7 @@ int test(char *URL)
 
   /* fetch a another one and save cookies */
   printf("*** run %d\n", i);
-  curl = curl_easy_init();
-  if(!curl) {
+  if((curl = curl_easy_init()) == NULL) {
     fprintf(stderr, "curl_easy_init() failed\n");
     curl_share_cleanup(share);
     curl_global_cleanup();
@@ -305,8 +302,7 @@ int test(char *URL)
   curl_slist_free_all(headers);
 
   /* load cookies */
-  curl = curl_easy_init();
-  if(!curl) {
+  if((curl = curl_easy_init()) == NULL) {
     fprintf(stderr, "curl_easy_init() failed\n");
     curl_share_cleanup(share);
     curl_global_cleanup();

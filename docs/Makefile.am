@@ -29,7 +29,7 @@ PDFPAGES = curl.pdf curl-config.pdf mk-ca-bundle.pdf
 
 HTMLPAGES = $(GENHTMLPAGES) index.html
 
-SUBDIRS = examples libcurl cmdline-opts
+SUBDIRS = examples libcurl
 
 CLEANFILES = $(GENHTMLPAGES) $(PDFPAGES)
 

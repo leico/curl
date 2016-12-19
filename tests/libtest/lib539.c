@@ -35,15 +35,14 @@ int test(char *URL)
      return TEST_ERR_MAJOR_BAD;
    }
 
-   curl = curl_easy_init();
-   if(!curl) {
+   if((curl = curl_easy_init()) == NULL) {
      fprintf(stderr, "curl_easy_init() failed\n");
      curl_global_cleanup();
      return TEST_ERR_MAJOR_BAD;
    }
 
    /*
-    * Begin with curl set to use a single CWD to the URL's directory.
+    * Begin with cURL set to use a single CWD to the URL's directory.
     */
    test_setopt(curl, CURLOPT_URL, URL);
    test_setopt(curl, CURLOPT_VERBOSE, 1L);
@@ -54,7 +53,7 @@ int test(char *URL)
    /*
     * Change the FTP_FILEMETHOD option to use full paths rather than a CWD
     * command.  Alter the URL's path a bit, appending a "./".  Use an innocuous
-    * QUOTE command, after which curl will CWD to ftp_conn->entrypath and then
+    * QUOTE command, after which cURL will CWD to ftp_conn->entrypath and then
     * (on the next call to ftp_statemach_act) find a non-zero ftpconn->dirdepth
     * even though no directories are stored in the ftpconn->dirs array (after a
     * call to freedirs).
@@ -66,7 +65,7 @@ int test(char *URL)
      return TEST_ERR_MAJOR_BAD;
    }
 
-   slist = curl_slist_append(NULL, "SYST");
+   slist = curl_slist_append (NULL, "SYST");
    if(slist == NULL) {
      free(newURL);
      curl_easy_cleanup(curl);

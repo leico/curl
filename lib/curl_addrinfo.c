@@ -146,8 +146,7 @@ Curl_getaddrinfo_ex(const char *nodename,
     if((size_t)ai->ai_addrlen < ss_size)
       continue;
 
-    ca = malloc(sizeof(Curl_addrinfo));
-    if(!ca) {
+    if((ca = malloc(sizeof(Curl_addrinfo))) == NULL) {
       error = EAI_MEMORY;
       break;
     }
@@ -164,8 +163,7 @@ Curl_getaddrinfo_ex(const char *nodename,
     ca->ai_canonname = NULL;
     ca->ai_next      = NULL;
 
-    ca->ai_addr = malloc(ss_size);
-    if(!ca->ai_addr) {
+    if((ca->ai_addr = malloc(ss_size)) == NULL) {
       error = EAI_MEMORY;
       free(ca);
       break;
@@ -173,8 +171,7 @@ Curl_getaddrinfo_ex(const char *nodename,
     memcpy(ca->ai_addr, ai->ai_addr, ss_size);
 
     if(ai->ai_canonname != NULL) {
-      ca->ai_canonname = strdup(ai->ai_canonname);
-      if(!ca->ai_canonname) {
+      if((ca->ai_canonname = strdup(ai->ai_canonname)) == NULL) {
         error = EAI_MEMORY;
         free(ca->ai_addr);
         free(ca);
@@ -289,24 +286,21 @@ Curl_he2ai(const struct hostent *he, int port)
     size_t ss_size;
 #ifdef ENABLE_IPV6
     if(he->h_addrtype == AF_INET6)
-      ss_size = sizeof(struct sockaddr_in6);
+      ss_size = sizeof (struct sockaddr_in6);
     else
 #endif
-      ss_size = sizeof(struct sockaddr_in);
+      ss_size = sizeof (struct sockaddr_in);
 
-    ai = calloc(1, sizeof(Curl_addrinfo));
-    if(!ai) {
+    if((ai = calloc(1, sizeof(Curl_addrinfo))) == NULL) {
       result = CURLE_OUT_OF_MEMORY;
       break;
     }
-    ai->ai_canonname = strdup(he->h_name);
-    if(!ai->ai_canonname) {
+    if((ai->ai_canonname = strdup(he->h_name)) == NULL) {
       result = CURLE_OUT_OF_MEMORY;
       free(ai);
       break;
     }
-    ai->ai_addr = calloc(1, ss_size);
-    if(!ai->ai_addr) {
+    if((ai->ai_addr = calloc(1, ss_size)) == NULL) {
       result = CURLE_OUT_OF_MEMORY;
       free(ai->ai_canonname);
       free(ai);
@@ -331,7 +325,7 @@ Curl_he2ai(const struct hostent *he, int port)
 
     /* leave the rest of the struct filled with zero */
 
-    switch(ai->ai_family) {
+    switch (ai->ai_family) {
     case AF_INET:
       addr = (void *)ai->ai_addr; /* storage area for this info */
 
@@ -481,9 +475,8 @@ Curl_addrinfo *Curl_str2addr(char *address, int port)
 /**
  * Given a path to a Unix domain socket, return a newly allocated Curl_addrinfo
  * struct initialized with this path.
- * Set '*longpath' to TRUE if the error is a too long path.
  */
-Curl_addrinfo *Curl_unix2addr(const char *path, int *longpath)
+Curl_addrinfo *Curl_unix2addr(const char *path)
 {
   Curl_addrinfo *ai;
   struct sockaddr_un *sa_un;
@@ -492,10 +485,8 @@ Curl_addrinfo *Curl_unix2addr(const char *path, int *longpath)
   ai = calloc(1, sizeof(Curl_addrinfo));
   if(!ai)
     return NULL;
-  ai->ai_addr = calloc(1, sizeof(struct sockaddr_un));
-  if(!ai->ai_addr) {
+  if((ai->ai_addr = calloc(1, sizeof(struct sockaddr_un))) == NULL) {
     free(ai);
-    *longpath = FALSE;
     return NULL;
   }
   /* sun_path must be able to store the NUL-terminated path */
@@ -503,7 +494,6 @@ Curl_addrinfo *Curl_unix2addr(const char *path, int *longpath)
   if(path_len >= sizeof(sa_un->sun_path)) {
     free(ai->ai_addr);
     free(ai);
-    *longpath = TRUE;
     return NULL;
   }
 
@@ -586,7 +576,7 @@ void Curl_addrinfo_set_port(Curl_addrinfo *addrinfo, int port)
   struct sockaddr_in6 *addr6;
 #endif
   for(ca = addrinfo; ca != NULL; ca = ca->ai_next) {
-    switch(ca->ai_family) {
+    switch (ca->ai_family) {
     case AF_INET:
       addr = (void *)ca->ai_addr; /* storage area for this info */
       addr->sin_port = htons((unsigned short)port);

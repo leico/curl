@@ -37,7 +37,6 @@
 CURLcode Curl_input_negotiate(struct connectdata *conn, bool proxy,
                               const char *header)
 {
-  CURLcode result;
   struct Curl_easy *data = conn->data;
   size_t len;
 
@@ -51,11 +50,11 @@ CURLcode Curl_input_negotiate(struct connectdata *conn, bool proxy,
   struct negotiatedata *neg_ctx;
 
   if(proxy) {
-    userp = conn->http_proxy.user;
-    passwdp = conn->http_proxy.passwd;
+    userp = conn->proxyuser;
+    passwdp = conn->proxypasswd;
     service = data->set.str[STRING_PROXY_SERVICE_NAME] ?
               data->set.str[STRING_PROXY_SERVICE_NAME] : "HTTP";
-    host = conn->http_proxy.host.name;
+    host = conn->proxy.name;
     neg_ctx = &data->state.proxyneg;
   }
   else {
@@ -90,13 +89,8 @@ CURLcode Curl_input_negotiate(struct connectdata *conn, bool proxy,
   }
 
   /* Initilise the security context and decode our challenge */
-  result = Curl_auth_decode_spnego_message(data, userp, passwdp, service,
-                                           host, header, neg_ctx);
-
-  if(result)
-    Curl_auth_spnego_cleanup(neg_ctx);
-
-  return result;
+  return Curl_auth_decode_spnego_message(data, userp, passwdp, service, host,
+                                         header, neg_ctx);
 }
 
 CURLcode Curl_output_negotiate(struct connectdata *conn, bool proxy)

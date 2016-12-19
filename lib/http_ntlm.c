@@ -136,8 +136,8 @@ CURLcode Curl_output_ntlm(struct connectdata *conn, bool proxy)
 
   if(proxy) {
     allocuserpwd = &conn->allocptr.proxyuserpwd;
-    userp = conn->http_proxy.user;
-    passwdp = conn->http_proxy.passwd;
+    userp = conn->proxyuser;
+    passwdp = conn->proxypasswd;
     ntlm = &conn->proxyntlm;
     authp = &conn->data->state.authproxy;
   }
