@@ -20,9 +20,6 @@
 /builds/
 CHANGES.dist
 Debug
-INSTALL
-Makefile
-Makefile.in
 Release
 TAGS
 aclocal.m4
@@ -40,10 +37,6 @@ curl-*.tar.lzma
 curl-*.zip
 curl-config
 depcomp
-install-sh
-libcurl.pc
-libtool
-ltmain.sh
 missing
 mkinstalldirs
 tags
