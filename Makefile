@@ -303,21 +303,21 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing aclocal-1.15
+ACLOCAL = aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
 AS = as
-AUTOCONF = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing autoconf
-AUTOHEADER = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing autoheader
-AUTOMAKE = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing automake-1.15
+AUTOCONF = autoconf
+AUTOHEADER = autoheader
+AUTOMAKE = automake-1.15
 AWK = awk
 BLANK_AT_MAKETIME = 
 CC = gcc
-CCDEPMODE = depmode=gcc3
+CCDEPMODE = depmode=none
 CFLAGS = -Qunused-arguments -Os -mmacosx-version-min=10.8 -Werror=partial-availability
 CFLAG_CURL_SYMBOL_HIDING = -fvisibility=hidden
-CONFIGURE_OPTIONS = " '--with-darwinssl' '--prefix=/Users/leico/pro/libcurl-xcode/DerivedData/Build/Products/Release/curl/'"
+CONFIGURE_OPTIONS = " '--with-darwinssl' '--prefix=/Users/leico/pro/twitter-oauth-commandline/libCurl/DerivedData/Build/Products/Release/curl/'"
 CPP = gcc -E
 CPPFLAGS = 
 CPPFLAG_CURL_STATICLIB = 
@@ -382,7 +382,7 @@ LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
 MAINT = #
-MAKEINFO = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing makeinfo
+MAKEINFO = makeinfo
 MANIFEST_TOOL = :
 MANOPT = -man
 MKDIR_P = ./install-sh -c -d
@@ -438,10 +438,10 @@ VERSION = -
 VERSIONNUM = 073300
 ZLIB_LIBS = -lz
 ZSH_FUNCTIONS_DIR = ${prefix}/share/zsh/site-functions
-abs_builddir = /Users/leico/pro/libcurl-xcode/curl
-abs_srcdir = /Users/leico/pro/libcurl-xcode/curl
-abs_top_builddir = /Users/leico/pro/libcurl-xcode/curl
-abs_top_srcdir = /Users/leico/pro/libcurl-xcode/curl
+abs_builddir = /Users/leico/pro/twitter-oauth-commandline/libCurl/curl
+abs_srcdir = /Users/leico/pro/twitter-oauth-commandline/libCurl/curl
+abs_top_builddir = /Users/leico/pro/twitter-oauth-commandline/libCurl/curl
+abs_top_srcdir = /Users/leico/pro/twitter-oauth-commandline/libCurl/curl
 ac_ct_AR = 
 ac_ct_CC = gcc
 ac_ct_DUMPBIN = 
@@ -470,7 +470,7 @@ host_vendor = apple
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/install-sh
+install_sh = ${SHELL} /Users/leico/pro/twitter-oauth-commandline/libCurl/curl/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 libext = a
@@ -480,7 +480,7 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /Users/leico/pro/libcurl-xcode/DerivedData/Build/Products/Release/curl
+prefix = /Users/leico/pro/twitter-oauth-commandline/libCurl/DerivedData/Build/Products/Release/curl
 program_transform_name = s,x,x,
 psdir = ${docdir}
 runstatedir = ${localstatedir}/run

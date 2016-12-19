@@ -307,21 +307,21 @@ CTAGS = ctags
 am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.inc \
 	$(top_srcdir)/depcomp
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing aclocal-1.15
+ACLOCAL = aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
 AS = as
-AUTOCONF = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing autoconf
-AUTOHEADER = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing autoheader
-AUTOMAKE = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing automake-1.15
+AUTOCONF = autoconf
+AUTOHEADER = autoheader
+AUTOMAKE = automake-1.15
 AWK = awk
 BLANK_AT_MAKETIME = 
 CC = gcc
-CCDEPMODE = depmode=gcc3
+CCDEPMODE = depmode=none
 CFLAGS = -Qunused-arguments -Os -mmacosx-version-min=10.8 -Werror=partial-availability
 CFLAG_CURL_SYMBOL_HIDING = -fvisibility=hidden
-CONFIGURE_OPTIONS = " '--with-darwinssl' '--prefix=/Users/leico/pro/libcurl-xcode/DerivedData/Build/Products/Release/curl/'"
+CONFIGURE_OPTIONS = " '--with-darwinssl' '--prefix=/Users/leico/pro/twitter-oauth-commandline/libCurl/DerivedData/Build/Products/Release/curl/'"
 CPP = gcc -E
 CPPFLAGS = 
 CPPFLAG_CURL_STATICLIB = 
@@ -388,7 +388,7 @@ LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
 MAINT = #
-MAKEINFO = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing makeinfo
+MAKEINFO = makeinfo
 MANIFEST_TOOL = :
 MANOPT = -man
 MKDIR_P = ../.././install-sh -c -d
@@ -444,10 +444,10 @@ VERSION = -
 VERSIONNUM = 073300
 ZLIB_LIBS = -lz
 ZSH_FUNCTIONS_DIR = ${prefix}/share/zsh/site-functions
-abs_builddir = /Users/leico/pro/libcurl-xcode/curl/tests/server
-abs_srcdir = /Users/leico/pro/libcurl-xcode/curl/tests/server
-abs_top_builddir = /Users/leico/pro/libcurl-xcode/curl
-abs_top_srcdir = /Users/leico/pro/libcurl-xcode/curl
+abs_builddir = /Users/leico/pro/twitter-oauth-commandline/libCurl/curl/tests/server
+abs_srcdir = /Users/leico/pro/twitter-oauth-commandline/libCurl/curl/tests/server
+abs_top_builddir = /Users/leico/pro/twitter-oauth-commandline/libCurl/curl
+abs_top_srcdir = /Users/leico/pro/twitter-oauth-commandline/libCurl/curl
 ac_ct_AR = 
 ac_ct_CC = gcc
 ac_ct_DUMPBIN = 
@@ -476,7 +476,7 @@ host_vendor = apple
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/install-sh
+install_sh = ${SHELL} /Users/leico/pro/twitter-oauth-commandline/libCurl/curl/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 libext = a
@@ -486,7 +486,7 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /Users/leico/pro/libcurl-xcode/DerivedData/Build/Products/Release/curl
+prefix = /Users/leico/pro/twitter-oauth-commandline/libCurl/DerivedData/Build/Products/Release/curl
 program_transform_name = s,x,x,
 psdir = ${docdir}
 runstatedir = ${localstatedir}/run
@@ -879,1022 +879,1022 @@ include ./$(DEPDIR)/tftpd-tftpd.Po
 include ./$(DEPDIR)/tftpd-util.Po
 
 .c.o:
-	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
-	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
+#	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
+#	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Po
+	$(AM_V_CC)source='$<' object='$@' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
 
 .c.obj:
-	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.obj$$||'`;\
-	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ `$(CYGPATH_W) '$<'` &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.obj$$||'`;\
+#	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ `$(CYGPATH_W) '$<'` &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Po
+	$(AM_V_CC)source='$<' object='$@' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .c.lo:
-	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.lo$$||'`;\
-	$(LTCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Plo
-#	$(AM_V_CC)source='$<' object='$@' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LTCOMPILE) -c -o $@ $<
+#	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.lo$$||'`;\
+#	$(LTCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Plo
+	$(AM_V_CC)source='$<' object='$@' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LTCOMPILE) -c -o $@ $<
 
 ../../lib/fake_ntlm-mprintf.o: ../../lib/mprintf.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-mprintf.o -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-mprintf.Tpo -c -o ../../lib/fake_ntlm-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-mprintf.Tpo ../../lib/$(DEPDIR)/fake_ntlm-mprintf.Po
-#	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/fake_ntlm-mprintf.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-mprintf.o -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-mprintf.Tpo -c -o ../../lib/fake_ntlm-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-mprintf.Tpo ../../lib/$(DEPDIR)/fake_ntlm-mprintf.Po
+	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/fake_ntlm-mprintf.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
 
 ../../lib/fake_ntlm-mprintf.obj: ../../lib/mprintf.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-mprintf.obj -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-mprintf.Tpo -c -o ../../lib/fake_ntlm-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-mprintf.Tpo ../../lib/$(DEPDIR)/fake_ntlm-mprintf.Po
-#	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/fake_ntlm-mprintf.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-mprintf.obj -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-mprintf.Tpo -c -o ../../lib/fake_ntlm-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-mprintf.Tpo ../../lib/$(DEPDIR)/fake_ntlm-mprintf.Po
+	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/fake_ntlm-mprintf.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
 
 ../../lib/fake_ntlm-nonblock.o: ../../lib/nonblock.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-nonblock.o -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-nonblock.Tpo -c -o ../../lib/fake_ntlm-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-nonblock.Tpo ../../lib/$(DEPDIR)/fake_ntlm-nonblock.Po
-#	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/fake_ntlm-nonblock.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-nonblock.o -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-nonblock.Tpo -c -o ../../lib/fake_ntlm-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-nonblock.Tpo ../../lib/$(DEPDIR)/fake_ntlm-nonblock.Po
+	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/fake_ntlm-nonblock.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
 
 ../../lib/fake_ntlm-nonblock.obj: ../../lib/nonblock.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-nonblock.obj -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-nonblock.Tpo -c -o ../../lib/fake_ntlm-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-nonblock.Tpo ../../lib/$(DEPDIR)/fake_ntlm-nonblock.Po
-#	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/fake_ntlm-nonblock.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-nonblock.obj -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-nonblock.Tpo -c -o ../../lib/fake_ntlm-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-nonblock.Tpo ../../lib/$(DEPDIR)/fake_ntlm-nonblock.Po
+	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/fake_ntlm-nonblock.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
 
 ../../lib/fake_ntlm-strtoofft.o: ../../lib/strtoofft.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-strtoofft.o -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-strtoofft.Tpo -c -o ../../lib/fake_ntlm-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-strtoofft.Tpo ../../lib/$(DEPDIR)/fake_ntlm-strtoofft.Po
-#	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/fake_ntlm-strtoofft.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-strtoofft.o -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-strtoofft.Tpo -c -o ../../lib/fake_ntlm-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-strtoofft.Tpo ../../lib/$(DEPDIR)/fake_ntlm-strtoofft.Po
+	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/fake_ntlm-strtoofft.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
 
 ../../lib/fake_ntlm-strtoofft.obj: ../../lib/strtoofft.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-strtoofft.obj -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-strtoofft.Tpo -c -o ../../lib/fake_ntlm-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-strtoofft.Tpo ../../lib/$(DEPDIR)/fake_ntlm-strtoofft.Po
-#	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/fake_ntlm-strtoofft.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-strtoofft.obj -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-strtoofft.Tpo -c -o ../../lib/fake_ntlm-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-strtoofft.Tpo ../../lib/$(DEPDIR)/fake_ntlm-strtoofft.Po
+	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/fake_ntlm-strtoofft.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
 
 ../../lib/fake_ntlm-timeval.o: ../../lib/timeval.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-timeval.o -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-timeval.Tpo -c -o ../../lib/fake_ntlm-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-timeval.Tpo ../../lib/$(DEPDIR)/fake_ntlm-timeval.Po
-#	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/fake_ntlm-timeval.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-timeval.o -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-timeval.Tpo -c -o ../../lib/fake_ntlm-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-timeval.Tpo ../../lib/$(DEPDIR)/fake_ntlm-timeval.Po
+	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/fake_ntlm-timeval.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
 
 ../../lib/fake_ntlm-timeval.obj: ../../lib/timeval.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-timeval.obj -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-timeval.Tpo -c -o ../../lib/fake_ntlm-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-timeval.Tpo ../../lib/$(DEPDIR)/fake_ntlm-timeval.Po
-#	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/fake_ntlm-timeval.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-timeval.obj -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-timeval.Tpo -c -o ../../lib/fake_ntlm-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-timeval.Tpo ../../lib/$(DEPDIR)/fake_ntlm-timeval.Po
+	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/fake_ntlm-timeval.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
 
 ../../lib/fake_ntlm-warnless.o: ../../lib/warnless.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-warnless.o -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-warnless.Tpo -c -o ../../lib/fake_ntlm-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-warnless.Tpo ../../lib/$(DEPDIR)/fake_ntlm-warnless.Po
-#	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/fake_ntlm-warnless.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-warnless.o -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-warnless.Tpo -c -o ../../lib/fake_ntlm-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-warnless.Tpo ../../lib/$(DEPDIR)/fake_ntlm-warnless.Po
+	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/fake_ntlm-warnless.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
 
 ../../lib/fake_ntlm-warnless.obj: ../../lib/warnless.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-warnless.obj -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-warnless.Tpo -c -o ../../lib/fake_ntlm-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-warnless.Tpo ../../lib/$(DEPDIR)/fake_ntlm-warnless.Po
-#	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/fake_ntlm-warnless.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-warnless.obj -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-warnless.Tpo -c -o ../../lib/fake_ntlm-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-warnless.Tpo ../../lib/$(DEPDIR)/fake_ntlm-warnless.Po
+	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/fake_ntlm-warnless.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
 
 fake_ntlm-getpart.o: getpart.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT fake_ntlm-getpart.o -MD -MP -MF $(DEPDIR)/fake_ntlm-getpart.Tpo -c -o fake_ntlm-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/fake_ntlm-getpart.Tpo $(DEPDIR)/fake_ntlm-getpart.Po
-#	$(AM_V_CC)source='getpart.c' object='fake_ntlm-getpart.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o fake_ntlm-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT fake_ntlm-getpart.o -MD -MP -MF $(DEPDIR)/fake_ntlm-getpart.Tpo -c -o fake_ntlm-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/fake_ntlm-getpart.Tpo $(DEPDIR)/fake_ntlm-getpart.Po
+	$(AM_V_CC)source='getpart.c' object='fake_ntlm-getpart.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o fake_ntlm-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
 
 fake_ntlm-getpart.obj: getpart.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT fake_ntlm-getpart.obj -MD -MP -MF $(DEPDIR)/fake_ntlm-getpart.Tpo -c -o fake_ntlm-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/fake_ntlm-getpart.Tpo $(DEPDIR)/fake_ntlm-getpart.Po
-#	$(AM_V_CC)source='getpart.c' object='fake_ntlm-getpart.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o fake_ntlm-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT fake_ntlm-getpart.obj -MD -MP -MF $(DEPDIR)/fake_ntlm-getpart.Tpo -c -o fake_ntlm-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/fake_ntlm-getpart.Tpo $(DEPDIR)/fake_ntlm-getpart.Po
+	$(AM_V_CC)source='getpart.c' object='fake_ntlm-getpart.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o fake_ntlm-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
 
 ../../lib/fake_ntlm-base64.o: ../../lib/base64.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-base64.o -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-base64.Tpo -c -o ../../lib/fake_ntlm-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-base64.Tpo ../../lib/$(DEPDIR)/fake_ntlm-base64.Po
-#	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/fake_ntlm-base64.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-base64.o -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-base64.Tpo -c -o ../../lib/fake_ntlm-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-base64.Tpo ../../lib/$(DEPDIR)/fake_ntlm-base64.Po
+	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/fake_ntlm-base64.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
 
 ../../lib/fake_ntlm-base64.obj: ../../lib/base64.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-base64.obj -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-base64.Tpo -c -o ../../lib/fake_ntlm-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-base64.Tpo ../../lib/$(DEPDIR)/fake_ntlm-base64.Po
-#	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/fake_ntlm-base64.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-base64.obj -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-base64.Tpo -c -o ../../lib/fake_ntlm-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-base64.Tpo ../../lib/$(DEPDIR)/fake_ntlm-base64.Po
+	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/fake_ntlm-base64.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
 
 ../../lib/fake_ntlm-memdebug.o: ../../lib/memdebug.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-memdebug.o -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-memdebug.Tpo -c -o ../../lib/fake_ntlm-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-memdebug.Tpo ../../lib/$(DEPDIR)/fake_ntlm-memdebug.Po
-#	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/fake_ntlm-memdebug.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-memdebug.o -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-memdebug.Tpo -c -o ../../lib/fake_ntlm-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-memdebug.Tpo ../../lib/$(DEPDIR)/fake_ntlm-memdebug.Po
+	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/fake_ntlm-memdebug.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
 
 ../../lib/fake_ntlm-memdebug.obj: ../../lib/memdebug.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-memdebug.obj -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-memdebug.Tpo -c -o ../../lib/fake_ntlm-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-memdebug.Tpo ../../lib/$(DEPDIR)/fake_ntlm-memdebug.Po
-#	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/fake_ntlm-memdebug.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT ../../lib/fake_ntlm-memdebug.obj -MD -MP -MF ../../lib/$(DEPDIR)/fake_ntlm-memdebug.Tpo -c -o ../../lib/fake_ntlm-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/fake_ntlm-memdebug.Tpo ../../lib/$(DEPDIR)/fake_ntlm-memdebug.Po
+	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/fake_ntlm-memdebug.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o ../../lib/fake_ntlm-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
 
 fake_ntlm-util.o: util.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT fake_ntlm-util.o -MD -MP -MF $(DEPDIR)/fake_ntlm-util.Tpo -c -o fake_ntlm-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/fake_ntlm-util.Tpo $(DEPDIR)/fake_ntlm-util.Po
-#	$(AM_V_CC)source='util.c' object='fake_ntlm-util.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o fake_ntlm-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT fake_ntlm-util.o -MD -MP -MF $(DEPDIR)/fake_ntlm-util.Tpo -c -o fake_ntlm-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/fake_ntlm-util.Tpo $(DEPDIR)/fake_ntlm-util.Po
+	$(AM_V_CC)source='util.c' object='fake_ntlm-util.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o fake_ntlm-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
 
 fake_ntlm-util.obj: util.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT fake_ntlm-util.obj -MD -MP -MF $(DEPDIR)/fake_ntlm-util.Tpo -c -o fake_ntlm-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/fake_ntlm-util.Tpo $(DEPDIR)/fake_ntlm-util.Po
-#	$(AM_V_CC)source='util.c' object='fake_ntlm-util.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o fake_ntlm-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT fake_ntlm-util.obj -MD -MP -MF $(DEPDIR)/fake_ntlm-util.Tpo -c -o fake_ntlm-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/fake_ntlm-util.Tpo $(DEPDIR)/fake_ntlm-util.Po
+	$(AM_V_CC)source='util.c' object='fake_ntlm-util.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o fake_ntlm-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
 
 fake_ntlm-fake_ntlm.o: fake_ntlm.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT fake_ntlm-fake_ntlm.o -MD -MP -MF $(DEPDIR)/fake_ntlm-fake_ntlm.Tpo -c -o fake_ntlm-fake_ntlm.o `test -f 'fake_ntlm.c' || echo '$(srcdir)/'`fake_ntlm.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/fake_ntlm-fake_ntlm.Tpo $(DEPDIR)/fake_ntlm-fake_ntlm.Po
-#	$(AM_V_CC)source='fake_ntlm.c' object='fake_ntlm-fake_ntlm.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o fake_ntlm-fake_ntlm.o `test -f 'fake_ntlm.c' || echo '$(srcdir)/'`fake_ntlm.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT fake_ntlm-fake_ntlm.o -MD -MP -MF $(DEPDIR)/fake_ntlm-fake_ntlm.Tpo -c -o fake_ntlm-fake_ntlm.o `test -f 'fake_ntlm.c' || echo '$(srcdir)/'`fake_ntlm.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/fake_ntlm-fake_ntlm.Tpo $(DEPDIR)/fake_ntlm-fake_ntlm.Po
+	$(AM_V_CC)source='fake_ntlm.c' object='fake_ntlm-fake_ntlm.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o fake_ntlm-fake_ntlm.o `test -f 'fake_ntlm.c' || echo '$(srcdir)/'`fake_ntlm.c
 
 fake_ntlm-fake_ntlm.obj: fake_ntlm.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT fake_ntlm-fake_ntlm.obj -MD -MP -MF $(DEPDIR)/fake_ntlm-fake_ntlm.Tpo -c -o fake_ntlm-fake_ntlm.obj `if test -f 'fake_ntlm.c'; then $(CYGPATH_W) 'fake_ntlm.c'; else $(CYGPATH_W) '$(srcdir)/fake_ntlm.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/fake_ntlm-fake_ntlm.Tpo $(DEPDIR)/fake_ntlm-fake_ntlm.Po
-#	$(AM_V_CC)source='fake_ntlm.c' object='fake_ntlm-fake_ntlm.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o fake_ntlm-fake_ntlm.obj `if test -f 'fake_ntlm.c'; then $(CYGPATH_W) 'fake_ntlm.c'; else $(CYGPATH_W) '$(srcdir)/fake_ntlm.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -MT fake_ntlm-fake_ntlm.obj -MD -MP -MF $(DEPDIR)/fake_ntlm-fake_ntlm.Tpo -c -o fake_ntlm-fake_ntlm.obj `if test -f 'fake_ntlm.c'; then $(CYGPATH_W) 'fake_ntlm.c'; else $(CYGPATH_W) '$(srcdir)/fake_ntlm.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/fake_ntlm-fake_ntlm.Tpo $(DEPDIR)/fake_ntlm-fake_ntlm.Po
+	$(AM_V_CC)source='fake_ntlm.c' object='fake_ntlm-fake_ntlm.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fake_ntlm_CFLAGS) $(CFLAGS) -c -o fake_ntlm-fake_ntlm.obj `if test -f 'fake_ntlm.c'; then $(CYGPATH_W) 'fake_ntlm.c'; else $(CYGPATH_W) '$(srcdir)/fake_ntlm.c'; fi`
 
 ../../lib/getpart-mprintf.o: ../../lib/mprintf.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-mprintf.o -MD -MP -MF ../../lib/$(DEPDIR)/getpart-mprintf.Tpo -c -o ../../lib/getpart-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-mprintf.Tpo ../../lib/$(DEPDIR)/getpart-mprintf.Po
-#	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/getpart-mprintf.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-mprintf.o -MD -MP -MF ../../lib/$(DEPDIR)/getpart-mprintf.Tpo -c -o ../../lib/getpart-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-mprintf.Tpo ../../lib/$(DEPDIR)/getpart-mprintf.Po
+	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/getpart-mprintf.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
 
 ../../lib/getpart-mprintf.obj: ../../lib/mprintf.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-mprintf.obj -MD -MP -MF ../../lib/$(DEPDIR)/getpart-mprintf.Tpo -c -o ../../lib/getpart-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-mprintf.Tpo ../../lib/$(DEPDIR)/getpart-mprintf.Po
-#	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/getpart-mprintf.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-mprintf.obj -MD -MP -MF ../../lib/$(DEPDIR)/getpart-mprintf.Tpo -c -o ../../lib/getpart-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-mprintf.Tpo ../../lib/$(DEPDIR)/getpart-mprintf.Po
+	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/getpart-mprintf.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
 
 ../../lib/getpart-nonblock.o: ../../lib/nonblock.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-nonblock.o -MD -MP -MF ../../lib/$(DEPDIR)/getpart-nonblock.Tpo -c -o ../../lib/getpart-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-nonblock.Tpo ../../lib/$(DEPDIR)/getpart-nonblock.Po
-#	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/getpart-nonblock.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-nonblock.o -MD -MP -MF ../../lib/$(DEPDIR)/getpart-nonblock.Tpo -c -o ../../lib/getpart-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-nonblock.Tpo ../../lib/$(DEPDIR)/getpart-nonblock.Po
+	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/getpart-nonblock.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
 
 ../../lib/getpart-nonblock.obj: ../../lib/nonblock.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-nonblock.obj -MD -MP -MF ../../lib/$(DEPDIR)/getpart-nonblock.Tpo -c -o ../../lib/getpart-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-nonblock.Tpo ../../lib/$(DEPDIR)/getpart-nonblock.Po
-#	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/getpart-nonblock.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-nonblock.obj -MD -MP -MF ../../lib/$(DEPDIR)/getpart-nonblock.Tpo -c -o ../../lib/getpart-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-nonblock.Tpo ../../lib/$(DEPDIR)/getpart-nonblock.Po
+	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/getpart-nonblock.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
 
 ../../lib/getpart-strtoofft.o: ../../lib/strtoofft.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-strtoofft.o -MD -MP -MF ../../lib/$(DEPDIR)/getpart-strtoofft.Tpo -c -o ../../lib/getpart-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-strtoofft.Tpo ../../lib/$(DEPDIR)/getpart-strtoofft.Po
-#	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/getpart-strtoofft.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-strtoofft.o -MD -MP -MF ../../lib/$(DEPDIR)/getpart-strtoofft.Tpo -c -o ../../lib/getpart-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-strtoofft.Tpo ../../lib/$(DEPDIR)/getpart-strtoofft.Po
+	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/getpart-strtoofft.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
 
 ../../lib/getpart-strtoofft.obj: ../../lib/strtoofft.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-strtoofft.obj -MD -MP -MF ../../lib/$(DEPDIR)/getpart-strtoofft.Tpo -c -o ../../lib/getpart-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-strtoofft.Tpo ../../lib/$(DEPDIR)/getpart-strtoofft.Po
-#	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/getpart-strtoofft.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-strtoofft.obj -MD -MP -MF ../../lib/$(DEPDIR)/getpart-strtoofft.Tpo -c -o ../../lib/getpart-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-strtoofft.Tpo ../../lib/$(DEPDIR)/getpart-strtoofft.Po
+	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/getpart-strtoofft.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
 
 ../../lib/getpart-timeval.o: ../../lib/timeval.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-timeval.o -MD -MP -MF ../../lib/$(DEPDIR)/getpart-timeval.Tpo -c -o ../../lib/getpart-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-timeval.Tpo ../../lib/$(DEPDIR)/getpart-timeval.Po
-#	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/getpart-timeval.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-timeval.o -MD -MP -MF ../../lib/$(DEPDIR)/getpart-timeval.Tpo -c -o ../../lib/getpart-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-timeval.Tpo ../../lib/$(DEPDIR)/getpart-timeval.Po
+	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/getpart-timeval.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
 
 ../../lib/getpart-timeval.obj: ../../lib/timeval.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-timeval.obj -MD -MP -MF ../../lib/$(DEPDIR)/getpart-timeval.Tpo -c -o ../../lib/getpart-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-timeval.Tpo ../../lib/$(DEPDIR)/getpart-timeval.Po
-#	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/getpart-timeval.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-timeval.obj -MD -MP -MF ../../lib/$(DEPDIR)/getpart-timeval.Tpo -c -o ../../lib/getpart-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-timeval.Tpo ../../lib/$(DEPDIR)/getpart-timeval.Po
+	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/getpart-timeval.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
 
 ../../lib/getpart-warnless.o: ../../lib/warnless.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-warnless.o -MD -MP -MF ../../lib/$(DEPDIR)/getpart-warnless.Tpo -c -o ../../lib/getpart-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-warnless.Tpo ../../lib/$(DEPDIR)/getpart-warnless.Po
-#	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/getpart-warnless.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-warnless.o -MD -MP -MF ../../lib/$(DEPDIR)/getpart-warnless.Tpo -c -o ../../lib/getpart-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-warnless.Tpo ../../lib/$(DEPDIR)/getpart-warnless.Po
+	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/getpart-warnless.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
 
 ../../lib/getpart-warnless.obj: ../../lib/warnless.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-warnless.obj -MD -MP -MF ../../lib/$(DEPDIR)/getpart-warnless.Tpo -c -o ../../lib/getpart-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-warnless.Tpo ../../lib/$(DEPDIR)/getpart-warnless.Po
-#	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/getpart-warnless.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-warnless.obj -MD -MP -MF ../../lib/$(DEPDIR)/getpart-warnless.Tpo -c -o ../../lib/getpart-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-warnless.Tpo ../../lib/$(DEPDIR)/getpart-warnless.Po
+	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/getpart-warnless.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
 
 getpart-getpart.o: getpart.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT getpart-getpart.o -MD -MP -MF $(DEPDIR)/getpart-getpart.Tpo -c -o getpart-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/getpart-getpart.Tpo $(DEPDIR)/getpart-getpart.Po
-#	$(AM_V_CC)source='getpart.c' object='getpart-getpart.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o getpart-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT getpart-getpart.o -MD -MP -MF $(DEPDIR)/getpart-getpart.Tpo -c -o getpart-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/getpart-getpart.Tpo $(DEPDIR)/getpart-getpart.Po
+	$(AM_V_CC)source='getpart.c' object='getpart-getpart.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o getpart-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
 
 getpart-getpart.obj: getpart.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT getpart-getpart.obj -MD -MP -MF $(DEPDIR)/getpart-getpart.Tpo -c -o getpart-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/getpart-getpart.Tpo $(DEPDIR)/getpart-getpart.Po
-#	$(AM_V_CC)source='getpart.c' object='getpart-getpart.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o getpart-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT getpart-getpart.obj -MD -MP -MF $(DEPDIR)/getpart-getpart.Tpo -c -o getpart-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/getpart-getpart.Tpo $(DEPDIR)/getpart-getpart.Po
+	$(AM_V_CC)source='getpart.c' object='getpart-getpart.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o getpart-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
 
 ../../lib/getpart-base64.o: ../../lib/base64.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-base64.o -MD -MP -MF ../../lib/$(DEPDIR)/getpart-base64.Tpo -c -o ../../lib/getpart-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-base64.Tpo ../../lib/$(DEPDIR)/getpart-base64.Po
-#	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/getpart-base64.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-base64.o -MD -MP -MF ../../lib/$(DEPDIR)/getpart-base64.Tpo -c -o ../../lib/getpart-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-base64.Tpo ../../lib/$(DEPDIR)/getpart-base64.Po
+	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/getpart-base64.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
 
 ../../lib/getpart-base64.obj: ../../lib/base64.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-base64.obj -MD -MP -MF ../../lib/$(DEPDIR)/getpart-base64.Tpo -c -o ../../lib/getpart-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-base64.Tpo ../../lib/$(DEPDIR)/getpart-base64.Po
-#	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/getpart-base64.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-base64.obj -MD -MP -MF ../../lib/$(DEPDIR)/getpart-base64.Tpo -c -o ../../lib/getpart-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-base64.Tpo ../../lib/$(DEPDIR)/getpart-base64.Po
+	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/getpart-base64.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
 
 ../../lib/getpart-memdebug.o: ../../lib/memdebug.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-memdebug.o -MD -MP -MF ../../lib/$(DEPDIR)/getpart-memdebug.Tpo -c -o ../../lib/getpart-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-memdebug.Tpo ../../lib/$(DEPDIR)/getpart-memdebug.Po
-#	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/getpart-memdebug.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-memdebug.o -MD -MP -MF ../../lib/$(DEPDIR)/getpart-memdebug.Tpo -c -o ../../lib/getpart-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-memdebug.Tpo ../../lib/$(DEPDIR)/getpart-memdebug.Po
+	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/getpart-memdebug.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
 
 ../../lib/getpart-memdebug.obj: ../../lib/memdebug.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-memdebug.obj -MD -MP -MF ../../lib/$(DEPDIR)/getpart-memdebug.Tpo -c -o ../../lib/getpart-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-memdebug.Tpo ../../lib/$(DEPDIR)/getpart-memdebug.Po
-#	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/getpart-memdebug.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT ../../lib/getpart-memdebug.obj -MD -MP -MF ../../lib/$(DEPDIR)/getpart-memdebug.Tpo -c -o ../../lib/getpart-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/getpart-memdebug.Tpo ../../lib/$(DEPDIR)/getpart-memdebug.Po
+	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/getpart-memdebug.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o ../../lib/getpart-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
 
 getpart-testpart.o: testpart.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT getpart-testpart.o -MD -MP -MF $(DEPDIR)/getpart-testpart.Tpo -c -o getpart-testpart.o `test -f 'testpart.c' || echo '$(srcdir)/'`testpart.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/getpart-testpart.Tpo $(DEPDIR)/getpart-testpart.Po
-#	$(AM_V_CC)source='testpart.c' object='getpart-testpart.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o getpart-testpart.o `test -f 'testpart.c' || echo '$(srcdir)/'`testpart.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT getpart-testpart.o -MD -MP -MF $(DEPDIR)/getpart-testpart.Tpo -c -o getpart-testpart.o `test -f 'testpart.c' || echo '$(srcdir)/'`testpart.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/getpart-testpart.Tpo $(DEPDIR)/getpart-testpart.Po
+	$(AM_V_CC)source='testpart.c' object='getpart-testpart.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o getpart-testpart.o `test -f 'testpart.c' || echo '$(srcdir)/'`testpart.c
 
 getpart-testpart.obj: testpart.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT getpart-testpart.obj -MD -MP -MF $(DEPDIR)/getpart-testpart.Tpo -c -o getpart-testpart.obj `if test -f 'testpart.c'; then $(CYGPATH_W) 'testpart.c'; else $(CYGPATH_W) '$(srcdir)/testpart.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/getpart-testpart.Tpo $(DEPDIR)/getpart-testpart.Po
-#	$(AM_V_CC)source='testpart.c' object='getpart-testpart.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o getpart-testpart.obj `if test -f 'testpart.c'; then $(CYGPATH_W) 'testpart.c'; else $(CYGPATH_W) '$(srcdir)/testpart.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -MT getpart-testpart.obj -MD -MP -MF $(DEPDIR)/getpart-testpart.Tpo -c -o getpart-testpart.obj `if test -f 'testpart.c'; then $(CYGPATH_W) 'testpart.c'; else $(CYGPATH_W) '$(srcdir)/testpart.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/getpart-testpart.Tpo $(DEPDIR)/getpart-testpart.Po
+	$(AM_V_CC)source='testpart.c' object='getpart-testpart.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(getpart_CFLAGS) $(CFLAGS) -c -o getpart-testpart.obj `if test -f 'testpart.c'; then $(CYGPATH_W) 'testpart.c'; else $(CYGPATH_W) '$(srcdir)/testpart.c'; fi`
 
 ../../lib/resolve-mprintf.o: ../../lib/mprintf.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-mprintf.o -MD -MP -MF ../../lib/$(DEPDIR)/resolve-mprintf.Tpo -c -o ../../lib/resolve-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-mprintf.Tpo ../../lib/$(DEPDIR)/resolve-mprintf.Po
-#	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/resolve-mprintf.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-mprintf.o -MD -MP -MF ../../lib/$(DEPDIR)/resolve-mprintf.Tpo -c -o ../../lib/resolve-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-mprintf.Tpo ../../lib/$(DEPDIR)/resolve-mprintf.Po
+	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/resolve-mprintf.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
 
 ../../lib/resolve-mprintf.obj: ../../lib/mprintf.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-mprintf.obj -MD -MP -MF ../../lib/$(DEPDIR)/resolve-mprintf.Tpo -c -o ../../lib/resolve-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-mprintf.Tpo ../../lib/$(DEPDIR)/resolve-mprintf.Po
-#	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/resolve-mprintf.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-mprintf.obj -MD -MP -MF ../../lib/$(DEPDIR)/resolve-mprintf.Tpo -c -o ../../lib/resolve-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-mprintf.Tpo ../../lib/$(DEPDIR)/resolve-mprintf.Po
+	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/resolve-mprintf.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
 
 ../../lib/resolve-nonblock.o: ../../lib/nonblock.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-nonblock.o -MD -MP -MF ../../lib/$(DEPDIR)/resolve-nonblock.Tpo -c -o ../../lib/resolve-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-nonblock.Tpo ../../lib/$(DEPDIR)/resolve-nonblock.Po
-#	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/resolve-nonblock.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-nonblock.o -MD -MP -MF ../../lib/$(DEPDIR)/resolve-nonblock.Tpo -c -o ../../lib/resolve-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-nonblock.Tpo ../../lib/$(DEPDIR)/resolve-nonblock.Po
+	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/resolve-nonblock.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
 
 ../../lib/resolve-nonblock.obj: ../../lib/nonblock.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-nonblock.obj -MD -MP -MF ../../lib/$(DEPDIR)/resolve-nonblock.Tpo -c -o ../../lib/resolve-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-nonblock.Tpo ../../lib/$(DEPDIR)/resolve-nonblock.Po
-#	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/resolve-nonblock.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-nonblock.obj -MD -MP -MF ../../lib/$(DEPDIR)/resolve-nonblock.Tpo -c -o ../../lib/resolve-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-nonblock.Tpo ../../lib/$(DEPDIR)/resolve-nonblock.Po
+	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/resolve-nonblock.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
 
 ../../lib/resolve-strtoofft.o: ../../lib/strtoofft.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-strtoofft.o -MD -MP -MF ../../lib/$(DEPDIR)/resolve-strtoofft.Tpo -c -o ../../lib/resolve-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-strtoofft.Tpo ../../lib/$(DEPDIR)/resolve-strtoofft.Po
-#	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/resolve-strtoofft.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-strtoofft.o -MD -MP -MF ../../lib/$(DEPDIR)/resolve-strtoofft.Tpo -c -o ../../lib/resolve-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-strtoofft.Tpo ../../lib/$(DEPDIR)/resolve-strtoofft.Po
+	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/resolve-strtoofft.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
 
 ../../lib/resolve-strtoofft.obj: ../../lib/strtoofft.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-strtoofft.obj -MD -MP -MF ../../lib/$(DEPDIR)/resolve-strtoofft.Tpo -c -o ../../lib/resolve-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-strtoofft.Tpo ../../lib/$(DEPDIR)/resolve-strtoofft.Po
-#	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/resolve-strtoofft.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-strtoofft.obj -MD -MP -MF ../../lib/$(DEPDIR)/resolve-strtoofft.Tpo -c -o ../../lib/resolve-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-strtoofft.Tpo ../../lib/$(DEPDIR)/resolve-strtoofft.Po
+	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/resolve-strtoofft.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
 
 ../../lib/resolve-timeval.o: ../../lib/timeval.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-timeval.o -MD -MP -MF ../../lib/$(DEPDIR)/resolve-timeval.Tpo -c -o ../../lib/resolve-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-timeval.Tpo ../../lib/$(DEPDIR)/resolve-timeval.Po
-#	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/resolve-timeval.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-timeval.o -MD -MP -MF ../../lib/$(DEPDIR)/resolve-timeval.Tpo -c -o ../../lib/resolve-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-timeval.Tpo ../../lib/$(DEPDIR)/resolve-timeval.Po
+	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/resolve-timeval.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
 
 ../../lib/resolve-timeval.obj: ../../lib/timeval.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-timeval.obj -MD -MP -MF ../../lib/$(DEPDIR)/resolve-timeval.Tpo -c -o ../../lib/resolve-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-timeval.Tpo ../../lib/$(DEPDIR)/resolve-timeval.Po
-#	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/resolve-timeval.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-timeval.obj -MD -MP -MF ../../lib/$(DEPDIR)/resolve-timeval.Tpo -c -o ../../lib/resolve-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-timeval.Tpo ../../lib/$(DEPDIR)/resolve-timeval.Po
+	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/resolve-timeval.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
 
 ../../lib/resolve-warnless.o: ../../lib/warnless.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-warnless.o -MD -MP -MF ../../lib/$(DEPDIR)/resolve-warnless.Tpo -c -o ../../lib/resolve-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-warnless.Tpo ../../lib/$(DEPDIR)/resolve-warnless.Po
-#	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/resolve-warnless.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-warnless.o -MD -MP -MF ../../lib/$(DEPDIR)/resolve-warnless.Tpo -c -o ../../lib/resolve-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-warnless.Tpo ../../lib/$(DEPDIR)/resolve-warnless.Po
+	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/resolve-warnless.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
 
 ../../lib/resolve-warnless.obj: ../../lib/warnless.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-warnless.obj -MD -MP -MF ../../lib/$(DEPDIR)/resolve-warnless.Tpo -c -o ../../lib/resolve-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-warnless.Tpo ../../lib/$(DEPDIR)/resolve-warnless.Po
-#	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/resolve-warnless.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-warnless.obj -MD -MP -MF ../../lib/$(DEPDIR)/resolve-warnless.Tpo -c -o ../../lib/resolve-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-warnless.Tpo ../../lib/$(DEPDIR)/resolve-warnless.Po
+	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/resolve-warnless.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
 
 resolve-getpart.o: getpart.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT resolve-getpart.o -MD -MP -MF $(DEPDIR)/resolve-getpart.Tpo -c -o resolve-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/resolve-getpart.Tpo $(DEPDIR)/resolve-getpart.Po
-#	$(AM_V_CC)source='getpart.c' object='resolve-getpart.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o resolve-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT resolve-getpart.o -MD -MP -MF $(DEPDIR)/resolve-getpart.Tpo -c -o resolve-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/resolve-getpart.Tpo $(DEPDIR)/resolve-getpart.Po
+	$(AM_V_CC)source='getpart.c' object='resolve-getpart.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o resolve-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
 
 resolve-getpart.obj: getpart.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT resolve-getpart.obj -MD -MP -MF $(DEPDIR)/resolve-getpart.Tpo -c -o resolve-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/resolve-getpart.Tpo $(DEPDIR)/resolve-getpart.Po
-#	$(AM_V_CC)source='getpart.c' object='resolve-getpart.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o resolve-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT resolve-getpart.obj -MD -MP -MF $(DEPDIR)/resolve-getpart.Tpo -c -o resolve-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/resolve-getpart.Tpo $(DEPDIR)/resolve-getpart.Po
+	$(AM_V_CC)source='getpart.c' object='resolve-getpart.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o resolve-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
 
 ../../lib/resolve-base64.o: ../../lib/base64.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-base64.o -MD -MP -MF ../../lib/$(DEPDIR)/resolve-base64.Tpo -c -o ../../lib/resolve-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-base64.Tpo ../../lib/$(DEPDIR)/resolve-base64.Po
-#	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/resolve-base64.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-base64.o -MD -MP -MF ../../lib/$(DEPDIR)/resolve-base64.Tpo -c -o ../../lib/resolve-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-base64.Tpo ../../lib/$(DEPDIR)/resolve-base64.Po
+	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/resolve-base64.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
 
 ../../lib/resolve-base64.obj: ../../lib/base64.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-base64.obj -MD -MP -MF ../../lib/$(DEPDIR)/resolve-base64.Tpo -c -o ../../lib/resolve-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-base64.Tpo ../../lib/$(DEPDIR)/resolve-base64.Po
-#	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/resolve-base64.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-base64.obj -MD -MP -MF ../../lib/$(DEPDIR)/resolve-base64.Tpo -c -o ../../lib/resolve-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-base64.Tpo ../../lib/$(DEPDIR)/resolve-base64.Po
+	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/resolve-base64.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
 
 ../../lib/resolve-memdebug.o: ../../lib/memdebug.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-memdebug.o -MD -MP -MF ../../lib/$(DEPDIR)/resolve-memdebug.Tpo -c -o ../../lib/resolve-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-memdebug.Tpo ../../lib/$(DEPDIR)/resolve-memdebug.Po
-#	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/resolve-memdebug.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-memdebug.o -MD -MP -MF ../../lib/$(DEPDIR)/resolve-memdebug.Tpo -c -o ../../lib/resolve-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-memdebug.Tpo ../../lib/$(DEPDIR)/resolve-memdebug.Po
+	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/resolve-memdebug.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
 
 ../../lib/resolve-memdebug.obj: ../../lib/memdebug.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-memdebug.obj -MD -MP -MF ../../lib/$(DEPDIR)/resolve-memdebug.Tpo -c -o ../../lib/resolve-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-memdebug.Tpo ../../lib/$(DEPDIR)/resolve-memdebug.Po
-#	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/resolve-memdebug.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT ../../lib/resolve-memdebug.obj -MD -MP -MF ../../lib/$(DEPDIR)/resolve-memdebug.Tpo -c -o ../../lib/resolve-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/resolve-memdebug.Tpo ../../lib/$(DEPDIR)/resolve-memdebug.Po
+	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/resolve-memdebug.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o ../../lib/resolve-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
 
 resolve-util.o: util.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT resolve-util.o -MD -MP -MF $(DEPDIR)/resolve-util.Tpo -c -o resolve-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/resolve-util.Tpo $(DEPDIR)/resolve-util.Po
-#	$(AM_V_CC)source='util.c' object='resolve-util.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o resolve-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT resolve-util.o -MD -MP -MF $(DEPDIR)/resolve-util.Tpo -c -o resolve-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/resolve-util.Tpo $(DEPDIR)/resolve-util.Po
+	$(AM_V_CC)source='util.c' object='resolve-util.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o resolve-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
 
 resolve-util.obj: util.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT resolve-util.obj -MD -MP -MF $(DEPDIR)/resolve-util.Tpo -c -o resolve-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/resolve-util.Tpo $(DEPDIR)/resolve-util.Po
-#	$(AM_V_CC)source='util.c' object='resolve-util.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o resolve-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT resolve-util.obj -MD -MP -MF $(DEPDIR)/resolve-util.Tpo -c -o resolve-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/resolve-util.Tpo $(DEPDIR)/resolve-util.Po
+	$(AM_V_CC)source='util.c' object='resolve-util.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o resolve-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
 
 resolve-resolve.o: resolve.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT resolve-resolve.o -MD -MP -MF $(DEPDIR)/resolve-resolve.Tpo -c -o resolve-resolve.o `test -f 'resolve.c' || echo '$(srcdir)/'`resolve.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/resolve-resolve.Tpo $(DEPDIR)/resolve-resolve.Po
-#	$(AM_V_CC)source='resolve.c' object='resolve-resolve.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o resolve-resolve.o `test -f 'resolve.c' || echo '$(srcdir)/'`resolve.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT resolve-resolve.o -MD -MP -MF $(DEPDIR)/resolve-resolve.Tpo -c -o resolve-resolve.o `test -f 'resolve.c' || echo '$(srcdir)/'`resolve.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/resolve-resolve.Tpo $(DEPDIR)/resolve-resolve.Po
+	$(AM_V_CC)source='resolve.c' object='resolve-resolve.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o resolve-resolve.o `test -f 'resolve.c' || echo '$(srcdir)/'`resolve.c
 
 resolve-resolve.obj: resolve.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT resolve-resolve.obj -MD -MP -MF $(DEPDIR)/resolve-resolve.Tpo -c -o resolve-resolve.obj `if test -f 'resolve.c'; then $(CYGPATH_W) 'resolve.c'; else $(CYGPATH_W) '$(srcdir)/resolve.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/resolve-resolve.Tpo $(DEPDIR)/resolve-resolve.Po
-#	$(AM_V_CC)source='resolve.c' object='resolve-resolve.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o resolve-resolve.obj `if test -f 'resolve.c'; then $(CYGPATH_W) 'resolve.c'; else $(CYGPATH_W) '$(srcdir)/resolve.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -MT resolve-resolve.obj -MD -MP -MF $(DEPDIR)/resolve-resolve.Tpo -c -o resolve-resolve.obj `if test -f 'resolve.c'; then $(CYGPATH_W) 'resolve.c'; else $(CYGPATH_W) '$(srcdir)/resolve.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/resolve-resolve.Tpo $(DEPDIR)/resolve-resolve.Po
+	$(AM_V_CC)source='resolve.c' object='resolve-resolve.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(resolve_CFLAGS) $(CFLAGS) -c -o resolve-resolve.obj `if test -f 'resolve.c'; then $(CYGPATH_W) 'resolve.c'; else $(CYGPATH_W) '$(srcdir)/resolve.c'; fi`
 
 ../../lib/rtspd-mprintf.o: ../../lib/mprintf.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-mprintf.o -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-mprintf.Tpo -c -o ../../lib/rtspd-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-mprintf.Tpo ../../lib/$(DEPDIR)/rtspd-mprintf.Po
-#	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/rtspd-mprintf.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-mprintf.o -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-mprintf.Tpo -c -o ../../lib/rtspd-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-mprintf.Tpo ../../lib/$(DEPDIR)/rtspd-mprintf.Po
+	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/rtspd-mprintf.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
 
 ../../lib/rtspd-mprintf.obj: ../../lib/mprintf.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-mprintf.obj -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-mprintf.Tpo -c -o ../../lib/rtspd-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-mprintf.Tpo ../../lib/$(DEPDIR)/rtspd-mprintf.Po
-#	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/rtspd-mprintf.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-mprintf.obj -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-mprintf.Tpo -c -o ../../lib/rtspd-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-mprintf.Tpo ../../lib/$(DEPDIR)/rtspd-mprintf.Po
+	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/rtspd-mprintf.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
 
 ../../lib/rtspd-nonblock.o: ../../lib/nonblock.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-nonblock.o -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-nonblock.Tpo -c -o ../../lib/rtspd-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-nonblock.Tpo ../../lib/$(DEPDIR)/rtspd-nonblock.Po
-#	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/rtspd-nonblock.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-nonblock.o -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-nonblock.Tpo -c -o ../../lib/rtspd-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-nonblock.Tpo ../../lib/$(DEPDIR)/rtspd-nonblock.Po
+	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/rtspd-nonblock.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
 
 ../../lib/rtspd-nonblock.obj: ../../lib/nonblock.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-nonblock.obj -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-nonblock.Tpo -c -o ../../lib/rtspd-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-nonblock.Tpo ../../lib/$(DEPDIR)/rtspd-nonblock.Po
-#	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/rtspd-nonblock.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-nonblock.obj -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-nonblock.Tpo -c -o ../../lib/rtspd-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-nonblock.Tpo ../../lib/$(DEPDIR)/rtspd-nonblock.Po
+	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/rtspd-nonblock.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
 
 ../../lib/rtspd-strtoofft.o: ../../lib/strtoofft.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-strtoofft.o -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-strtoofft.Tpo -c -o ../../lib/rtspd-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-strtoofft.Tpo ../../lib/$(DEPDIR)/rtspd-strtoofft.Po
-#	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/rtspd-strtoofft.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-strtoofft.o -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-strtoofft.Tpo -c -o ../../lib/rtspd-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-strtoofft.Tpo ../../lib/$(DEPDIR)/rtspd-strtoofft.Po
+	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/rtspd-strtoofft.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
 
 ../../lib/rtspd-strtoofft.obj: ../../lib/strtoofft.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-strtoofft.obj -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-strtoofft.Tpo -c -o ../../lib/rtspd-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-strtoofft.Tpo ../../lib/$(DEPDIR)/rtspd-strtoofft.Po
-#	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/rtspd-strtoofft.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-strtoofft.obj -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-strtoofft.Tpo -c -o ../../lib/rtspd-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-strtoofft.Tpo ../../lib/$(DEPDIR)/rtspd-strtoofft.Po
+	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/rtspd-strtoofft.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
 
 ../../lib/rtspd-timeval.o: ../../lib/timeval.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-timeval.o -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-timeval.Tpo -c -o ../../lib/rtspd-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-timeval.Tpo ../../lib/$(DEPDIR)/rtspd-timeval.Po
-#	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/rtspd-timeval.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-timeval.o -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-timeval.Tpo -c -o ../../lib/rtspd-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-timeval.Tpo ../../lib/$(DEPDIR)/rtspd-timeval.Po
+	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/rtspd-timeval.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
 
 ../../lib/rtspd-timeval.obj: ../../lib/timeval.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-timeval.obj -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-timeval.Tpo -c -o ../../lib/rtspd-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-timeval.Tpo ../../lib/$(DEPDIR)/rtspd-timeval.Po
-#	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/rtspd-timeval.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-timeval.obj -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-timeval.Tpo -c -o ../../lib/rtspd-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-timeval.Tpo ../../lib/$(DEPDIR)/rtspd-timeval.Po
+	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/rtspd-timeval.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
 
 ../../lib/rtspd-warnless.o: ../../lib/warnless.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-warnless.o -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-warnless.Tpo -c -o ../../lib/rtspd-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-warnless.Tpo ../../lib/$(DEPDIR)/rtspd-warnless.Po
-#	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/rtspd-warnless.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-warnless.o -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-warnless.Tpo -c -o ../../lib/rtspd-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-warnless.Tpo ../../lib/$(DEPDIR)/rtspd-warnless.Po
+	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/rtspd-warnless.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
 
 ../../lib/rtspd-warnless.obj: ../../lib/warnless.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-warnless.obj -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-warnless.Tpo -c -o ../../lib/rtspd-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-warnless.Tpo ../../lib/$(DEPDIR)/rtspd-warnless.Po
-#	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/rtspd-warnless.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-warnless.obj -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-warnless.Tpo -c -o ../../lib/rtspd-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-warnless.Tpo ../../lib/$(DEPDIR)/rtspd-warnless.Po
+	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/rtspd-warnless.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
 
 rtspd-getpart.o: getpart.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT rtspd-getpart.o -MD -MP -MF $(DEPDIR)/rtspd-getpart.Tpo -c -o rtspd-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/rtspd-getpart.Tpo $(DEPDIR)/rtspd-getpart.Po
-#	$(AM_V_CC)source='getpart.c' object='rtspd-getpart.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o rtspd-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT rtspd-getpart.o -MD -MP -MF $(DEPDIR)/rtspd-getpart.Tpo -c -o rtspd-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/rtspd-getpart.Tpo $(DEPDIR)/rtspd-getpart.Po
+	$(AM_V_CC)source='getpart.c' object='rtspd-getpart.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o rtspd-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
 
 rtspd-getpart.obj: getpart.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT rtspd-getpart.obj -MD -MP -MF $(DEPDIR)/rtspd-getpart.Tpo -c -o rtspd-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/rtspd-getpart.Tpo $(DEPDIR)/rtspd-getpart.Po
-#	$(AM_V_CC)source='getpart.c' object='rtspd-getpart.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o rtspd-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT rtspd-getpart.obj -MD -MP -MF $(DEPDIR)/rtspd-getpart.Tpo -c -o rtspd-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/rtspd-getpart.Tpo $(DEPDIR)/rtspd-getpart.Po
+	$(AM_V_CC)source='getpart.c' object='rtspd-getpart.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o rtspd-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
 
 ../../lib/rtspd-base64.o: ../../lib/base64.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-base64.o -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-base64.Tpo -c -o ../../lib/rtspd-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-base64.Tpo ../../lib/$(DEPDIR)/rtspd-base64.Po
-#	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/rtspd-base64.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-base64.o -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-base64.Tpo -c -o ../../lib/rtspd-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-base64.Tpo ../../lib/$(DEPDIR)/rtspd-base64.Po
+	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/rtspd-base64.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
 
 ../../lib/rtspd-base64.obj: ../../lib/base64.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-base64.obj -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-base64.Tpo -c -o ../../lib/rtspd-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-base64.Tpo ../../lib/$(DEPDIR)/rtspd-base64.Po
-#	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/rtspd-base64.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-base64.obj -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-base64.Tpo -c -o ../../lib/rtspd-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-base64.Tpo ../../lib/$(DEPDIR)/rtspd-base64.Po
+	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/rtspd-base64.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
 
 ../../lib/rtspd-memdebug.o: ../../lib/memdebug.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-memdebug.o -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-memdebug.Tpo -c -o ../../lib/rtspd-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-memdebug.Tpo ../../lib/$(DEPDIR)/rtspd-memdebug.Po
-#	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/rtspd-memdebug.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-memdebug.o -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-memdebug.Tpo -c -o ../../lib/rtspd-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-memdebug.Tpo ../../lib/$(DEPDIR)/rtspd-memdebug.Po
+	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/rtspd-memdebug.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
 
 ../../lib/rtspd-memdebug.obj: ../../lib/memdebug.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-memdebug.obj -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-memdebug.Tpo -c -o ../../lib/rtspd-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-memdebug.Tpo ../../lib/$(DEPDIR)/rtspd-memdebug.Po
-#	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/rtspd-memdebug.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT ../../lib/rtspd-memdebug.obj -MD -MP -MF ../../lib/$(DEPDIR)/rtspd-memdebug.Tpo -c -o ../../lib/rtspd-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/rtspd-memdebug.Tpo ../../lib/$(DEPDIR)/rtspd-memdebug.Po
+	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/rtspd-memdebug.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o ../../lib/rtspd-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
 
 rtspd-util.o: util.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT rtspd-util.o -MD -MP -MF $(DEPDIR)/rtspd-util.Tpo -c -o rtspd-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/rtspd-util.Tpo $(DEPDIR)/rtspd-util.Po
-#	$(AM_V_CC)source='util.c' object='rtspd-util.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o rtspd-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT rtspd-util.o -MD -MP -MF $(DEPDIR)/rtspd-util.Tpo -c -o rtspd-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/rtspd-util.Tpo $(DEPDIR)/rtspd-util.Po
+	$(AM_V_CC)source='util.c' object='rtspd-util.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o rtspd-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
 
 rtspd-util.obj: util.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT rtspd-util.obj -MD -MP -MF $(DEPDIR)/rtspd-util.Tpo -c -o rtspd-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/rtspd-util.Tpo $(DEPDIR)/rtspd-util.Po
-#	$(AM_V_CC)source='util.c' object='rtspd-util.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o rtspd-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT rtspd-util.obj -MD -MP -MF $(DEPDIR)/rtspd-util.Tpo -c -o rtspd-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/rtspd-util.Tpo $(DEPDIR)/rtspd-util.Po
+	$(AM_V_CC)source='util.c' object='rtspd-util.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o rtspd-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
 
 rtspd-rtspd.o: rtspd.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT rtspd-rtspd.o -MD -MP -MF $(DEPDIR)/rtspd-rtspd.Tpo -c -o rtspd-rtspd.o `test -f 'rtspd.c' || echo '$(srcdir)/'`rtspd.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/rtspd-rtspd.Tpo $(DEPDIR)/rtspd-rtspd.Po
-#	$(AM_V_CC)source='rtspd.c' object='rtspd-rtspd.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o rtspd-rtspd.o `test -f 'rtspd.c' || echo '$(srcdir)/'`rtspd.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT rtspd-rtspd.o -MD -MP -MF $(DEPDIR)/rtspd-rtspd.Tpo -c -o rtspd-rtspd.o `test -f 'rtspd.c' || echo '$(srcdir)/'`rtspd.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/rtspd-rtspd.Tpo $(DEPDIR)/rtspd-rtspd.Po
+	$(AM_V_CC)source='rtspd.c' object='rtspd-rtspd.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o rtspd-rtspd.o `test -f 'rtspd.c' || echo '$(srcdir)/'`rtspd.c
 
 rtspd-rtspd.obj: rtspd.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT rtspd-rtspd.obj -MD -MP -MF $(DEPDIR)/rtspd-rtspd.Tpo -c -o rtspd-rtspd.obj `if test -f 'rtspd.c'; then $(CYGPATH_W) 'rtspd.c'; else $(CYGPATH_W) '$(srcdir)/rtspd.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/rtspd-rtspd.Tpo $(DEPDIR)/rtspd-rtspd.Po
-#	$(AM_V_CC)source='rtspd.c' object='rtspd-rtspd.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o rtspd-rtspd.obj `if test -f 'rtspd.c'; then $(CYGPATH_W) 'rtspd.c'; else $(CYGPATH_W) '$(srcdir)/rtspd.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -MT rtspd-rtspd.obj -MD -MP -MF $(DEPDIR)/rtspd-rtspd.Tpo -c -o rtspd-rtspd.obj `if test -f 'rtspd.c'; then $(CYGPATH_W) 'rtspd.c'; else $(CYGPATH_W) '$(srcdir)/rtspd.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/rtspd-rtspd.Tpo $(DEPDIR)/rtspd-rtspd.Po
+	$(AM_V_CC)source='rtspd.c' object='rtspd-rtspd.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(rtspd_CFLAGS) $(CFLAGS) -c -o rtspd-rtspd.obj `if test -f 'rtspd.c'; then $(CYGPATH_W) 'rtspd.c'; else $(CYGPATH_W) '$(srcdir)/rtspd.c'; fi`
 
 ../../lib/sockfilt-mprintf.o: ../../lib/mprintf.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-mprintf.o -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-mprintf.Tpo -c -o ../../lib/sockfilt-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-mprintf.Tpo ../../lib/$(DEPDIR)/sockfilt-mprintf.Po
-#	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/sockfilt-mprintf.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-mprintf.o -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-mprintf.Tpo -c -o ../../lib/sockfilt-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-mprintf.Tpo ../../lib/$(DEPDIR)/sockfilt-mprintf.Po
+	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/sockfilt-mprintf.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
 
 ../../lib/sockfilt-mprintf.obj: ../../lib/mprintf.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-mprintf.obj -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-mprintf.Tpo -c -o ../../lib/sockfilt-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-mprintf.Tpo ../../lib/$(DEPDIR)/sockfilt-mprintf.Po
-#	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/sockfilt-mprintf.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-mprintf.obj -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-mprintf.Tpo -c -o ../../lib/sockfilt-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-mprintf.Tpo ../../lib/$(DEPDIR)/sockfilt-mprintf.Po
+	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/sockfilt-mprintf.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
 
 ../../lib/sockfilt-nonblock.o: ../../lib/nonblock.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-nonblock.o -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-nonblock.Tpo -c -o ../../lib/sockfilt-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-nonblock.Tpo ../../lib/$(DEPDIR)/sockfilt-nonblock.Po
-#	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/sockfilt-nonblock.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-nonblock.o -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-nonblock.Tpo -c -o ../../lib/sockfilt-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-nonblock.Tpo ../../lib/$(DEPDIR)/sockfilt-nonblock.Po
+	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/sockfilt-nonblock.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
 
 ../../lib/sockfilt-nonblock.obj: ../../lib/nonblock.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-nonblock.obj -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-nonblock.Tpo -c -o ../../lib/sockfilt-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-nonblock.Tpo ../../lib/$(DEPDIR)/sockfilt-nonblock.Po
-#	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/sockfilt-nonblock.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-nonblock.obj -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-nonblock.Tpo -c -o ../../lib/sockfilt-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-nonblock.Tpo ../../lib/$(DEPDIR)/sockfilt-nonblock.Po
+	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/sockfilt-nonblock.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
 
 ../../lib/sockfilt-strtoofft.o: ../../lib/strtoofft.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-strtoofft.o -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-strtoofft.Tpo -c -o ../../lib/sockfilt-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-strtoofft.Tpo ../../lib/$(DEPDIR)/sockfilt-strtoofft.Po
-#	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/sockfilt-strtoofft.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-strtoofft.o -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-strtoofft.Tpo -c -o ../../lib/sockfilt-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-strtoofft.Tpo ../../lib/$(DEPDIR)/sockfilt-strtoofft.Po
+	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/sockfilt-strtoofft.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
 
 ../../lib/sockfilt-strtoofft.obj: ../../lib/strtoofft.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-strtoofft.obj -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-strtoofft.Tpo -c -o ../../lib/sockfilt-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-strtoofft.Tpo ../../lib/$(DEPDIR)/sockfilt-strtoofft.Po
-#	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/sockfilt-strtoofft.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-strtoofft.obj -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-strtoofft.Tpo -c -o ../../lib/sockfilt-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-strtoofft.Tpo ../../lib/$(DEPDIR)/sockfilt-strtoofft.Po
+	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/sockfilt-strtoofft.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
 
 ../../lib/sockfilt-timeval.o: ../../lib/timeval.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-timeval.o -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-timeval.Tpo -c -o ../../lib/sockfilt-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-timeval.Tpo ../../lib/$(DEPDIR)/sockfilt-timeval.Po
-#	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/sockfilt-timeval.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-timeval.o -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-timeval.Tpo -c -o ../../lib/sockfilt-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-timeval.Tpo ../../lib/$(DEPDIR)/sockfilt-timeval.Po
+	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/sockfilt-timeval.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
 
 ../../lib/sockfilt-timeval.obj: ../../lib/timeval.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-timeval.obj -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-timeval.Tpo -c -o ../../lib/sockfilt-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-timeval.Tpo ../../lib/$(DEPDIR)/sockfilt-timeval.Po
-#	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/sockfilt-timeval.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-timeval.obj -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-timeval.Tpo -c -o ../../lib/sockfilt-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-timeval.Tpo ../../lib/$(DEPDIR)/sockfilt-timeval.Po
+	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/sockfilt-timeval.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
 
 ../../lib/sockfilt-warnless.o: ../../lib/warnless.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-warnless.o -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-warnless.Tpo -c -o ../../lib/sockfilt-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-warnless.Tpo ../../lib/$(DEPDIR)/sockfilt-warnless.Po
-#	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/sockfilt-warnless.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-warnless.o -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-warnless.Tpo -c -o ../../lib/sockfilt-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-warnless.Tpo ../../lib/$(DEPDIR)/sockfilt-warnless.Po
+	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/sockfilt-warnless.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
 
 ../../lib/sockfilt-warnless.obj: ../../lib/warnless.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-warnless.obj -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-warnless.Tpo -c -o ../../lib/sockfilt-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-warnless.Tpo ../../lib/$(DEPDIR)/sockfilt-warnless.Po
-#	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/sockfilt-warnless.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-warnless.obj -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-warnless.Tpo -c -o ../../lib/sockfilt-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-warnless.Tpo ../../lib/$(DEPDIR)/sockfilt-warnless.Po
+	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/sockfilt-warnless.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
 
 sockfilt-getpart.o: getpart.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT sockfilt-getpart.o -MD -MP -MF $(DEPDIR)/sockfilt-getpart.Tpo -c -o sockfilt-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/sockfilt-getpart.Tpo $(DEPDIR)/sockfilt-getpart.Po
-#	$(AM_V_CC)source='getpart.c' object='sockfilt-getpart.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o sockfilt-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT sockfilt-getpart.o -MD -MP -MF $(DEPDIR)/sockfilt-getpart.Tpo -c -o sockfilt-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/sockfilt-getpart.Tpo $(DEPDIR)/sockfilt-getpart.Po
+	$(AM_V_CC)source='getpart.c' object='sockfilt-getpart.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o sockfilt-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
 
 sockfilt-getpart.obj: getpart.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT sockfilt-getpart.obj -MD -MP -MF $(DEPDIR)/sockfilt-getpart.Tpo -c -o sockfilt-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/sockfilt-getpart.Tpo $(DEPDIR)/sockfilt-getpart.Po
-#	$(AM_V_CC)source='getpart.c' object='sockfilt-getpart.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o sockfilt-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT sockfilt-getpart.obj -MD -MP -MF $(DEPDIR)/sockfilt-getpart.Tpo -c -o sockfilt-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/sockfilt-getpart.Tpo $(DEPDIR)/sockfilt-getpart.Po
+	$(AM_V_CC)source='getpart.c' object='sockfilt-getpart.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o sockfilt-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
 
 ../../lib/sockfilt-base64.o: ../../lib/base64.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-base64.o -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-base64.Tpo -c -o ../../lib/sockfilt-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-base64.Tpo ../../lib/$(DEPDIR)/sockfilt-base64.Po
-#	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/sockfilt-base64.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-base64.o -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-base64.Tpo -c -o ../../lib/sockfilt-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-base64.Tpo ../../lib/$(DEPDIR)/sockfilt-base64.Po
+	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/sockfilt-base64.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
 
 ../../lib/sockfilt-base64.obj: ../../lib/base64.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-base64.obj -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-base64.Tpo -c -o ../../lib/sockfilt-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-base64.Tpo ../../lib/$(DEPDIR)/sockfilt-base64.Po
-#	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/sockfilt-base64.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-base64.obj -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-base64.Tpo -c -o ../../lib/sockfilt-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-base64.Tpo ../../lib/$(DEPDIR)/sockfilt-base64.Po
+	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/sockfilt-base64.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
 
 ../../lib/sockfilt-memdebug.o: ../../lib/memdebug.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-memdebug.o -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-memdebug.Tpo -c -o ../../lib/sockfilt-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-memdebug.Tpo ../../lib/$(DEPDIR)/sockfilt-memdebug.Po
-#	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/sockfilt-memdebug.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-memdebug.o -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-memdebug.Tpo -c -o ../../lib/sockfilt-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-memdebug.Tpo ../../lib/$(DEPDIR)/sockfilt-memdebug.Po
+	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/sockfilt-memdebug.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
 
 ../../lib/sockfilt-memdebug.obj: ../../lib/memdebug.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-memdebug.obj -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-memdebug.Tpo -c -o ../../lib/sockfilt-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-memdebug.Tpo ../../lib/$(DEPDIR)/sockfilt-memdebug.Po
-#	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/sockfilt-memdebug.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-memdebug.obj -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-memdebug.Tpo -c -o ../../lib/sockfilt-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-memdebug.Tpo ../../lib/$(DEPDIR)/sockfilt-memdebug.Po
+	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/sockfilt-memdebug.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
 
 sockfilt-util.o: util.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT sockfilt-util.o -MD -MP -MF $(DEPDIR)/sockfilt-util.Tpo -c -o sockfilt-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/sockfilt-util.Tpo $(DEPDIR)/sockfilt-util.Po
-#	$(AM_V_CC)source='util.c' object='sockfilt-util.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o sockfilt-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT sockfilt-util.o -MD -MP -MF $(DEPDIR)/sockfilt-util.Tpo -c -o sockfilt-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/sockfilt-util.Tpo $(DEPDIR)/sockfilt-util.Po
+	$(AM_V_CC)source='util.c' object='sockfilt-util.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o sockfilt-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
 
 sockfilt-util.obj: util.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT sockfilt-util.obj -MD -MP -MF $(DEPDIR)/sockfilt-util.Tpo -c -o sockfilt-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/sockfilt-util.Tpo $(DEPDIR)/sockfilt-util.Po
-#	$(AM_V_CC)source='util.c' object='sockfilt-util.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o sockfilt-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT sockfilt-util.obj -MD -MP -MF $(DEPDIR)/sockfilt-util.Tpo -c -o sockfilt-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/sockfilt-util.Tpo $(DEPDIR)/sockfilt-util.Po
+	$(AM_V_CC)source='util.c' object='sockfilt-util.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o sockfilt-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
 
 sockfilt-sockfilt.o: sockfilt.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT sockfilt-sockfilt.o -MD -MP -MF $(DEPDIR)/sockfilt-sockfilt.Tpo -c -o sockfilt-sockfilt.o `test -f 'sockfilt.c' || echo '$(srcdir)/'`sockfilt.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/sockfilt-sockfilt.Tpo $(DEPDIR)/sockfilt-sockfilt.Po
-#	$(AM_V_CC)source='sockfilt.c' object='sockfilt-sockfilt.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o sockfilt-sockfilt.o `test -f 'sockfilt.c' || echo '$(srcdir)/'`sockfilt.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT sockfilt-sockfilt.o -MD -MP -MF $(DEPDIR)/sockfilt-sockfilt.Tpo -c -o sockfilt-sockfilt.o `test -f 'sockfilt.c' || echo '$(srcdir)/'`sockfilt.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/sockfilt-sockfilt.Tpo $(DEPDIR)/sockfilt-sockfilt.Po
+	$(AM_V_CC)source='sockfilt.c' object='sockfilt-sockfilt.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o sockfilt-sockfilt.o `test -f 'sockfilt.c' || echo '$(srcdir)/'`sockfilt.c
 
 sockfilt-sockfilt.obj: sockfilt.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT sockfilt-sockfilt.obj -MD -MP -MF $(DEPDIR)/sockfilt-sockfilt.Tpo -c -o sockfilt-sockfilt.obj `if test -f 'sockfilt.c'; then $(CYGPATH_W) 'sockfilt.c'; else $(CYGPATH_W) '$(srcdir)/sockfilt.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/sockfilt-sockfilt.Tpo $(DEPDIR)/sockfilt-sockfilt.Po
-#	$(AM_V_CC)source='sockfilt.c' object='sockfilt-sockfilt.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o sockfilt-sockfilt.obj `if test -f 'sockfilt.c'; then $(CYGPATH_W) 'sockfilt.c'; else $(CYGPATH_W) '$(srcdir)/sockfilt.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT sockfilt-sockfilt.obj -MD -MP -MF $(DEPDIR)/sockfilt-sockfilt.Tpo -c -o sockfilt-sockfilt.obj `if test -f 'sockfilt.c'; then $(CYGPATH_W) 'sockfilt.c'; else $(CYGPATH_W) '$(srcdir)/sockfilt.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/sockfilt-sockfilt.Tpo $(DEPDIR)/sockfilt-sockfilt.Po
+	$(AM_V_CC)source='sockfilt.c' object='sockfilt-sockfilt.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o sockfilt-sockfilt.obj `if test -f 'sockfilt.c'; then $(CYGPATH_W) 'sockfilt.c'; else $(CYGPATH_W) '$(srcdir)/sockfilt.c'; fi`
 
 ../../lib/sockfilt-inet_pton.o: ../../lib/inet_pton.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-inet_pton.o -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-inet_pton.Tpo -c -o ../../lib/sockfilt-inet_pton.o `test -f '../../lib/inet_pton.c' || echo '$(srcdir)/'`../../lib/inet_pton.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-inet_pton.Tpo ../../lib/$(DEPDIR)/sockfilt-inet_pton.Po
-#	$(AM_V_CC)source='../../lib/inet_pton.c' object='../../lib/sockfilt-inet_pton.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-inet_pton.o `test -f '../../lib/inet_pton.c' || echo '$(srcdir)/'`../../lib/inet_pton.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-inet_pton.o -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-inet_pton.Tpo -c -o ../../lib/sockfilt-inet_pton.o `test -f '../../lib/inet_pton.c' || echo '$(srcdir)/'`../../lib/inet_pton.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-inet_pton.Tpo ../../lib/$(DEPDIR)/sockfilt-inet_pton.Po
+	$(AM_V_CC)source='../../lib/inet_pton.c' object='../../lib/sockfilt-inet_pton.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-inet_pton.o `test -f '../../lib/inet_pton.c' || echo '$(srcdir)/'`../../lib/inet_pton.c
 
 ../../lib/sockfilt-inet_pton.obj: ../../lib/inet_pton.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-inet_pton.obj -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-inet_pton.Tpo -c -o ../../lib/sockfilt-inet_pton.obj `if test -f '../../lib/inet_pton.c'; then $(CYGPATH_W) '../../lib/inet_pton.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/inet_pton.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-inet_pton.Tpo ../../lib/$(DEPDIR)/sockfilt-inet_pton.Po
-#	$(AM_V_CC)source='../../lib/inet_pton.c' object='../../lib/sockfilt-inet_pton.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-inet_pton.obj `if test -f '../../lib/inet_pton.c'; then $(CYGPATH_W) '../../lib/inet_pton.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/inet_pton.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -MT ../../lib/sockfilt-inet_pton.obj -MD -MP -MF ../../lib/$(DEPDIR)/sockfilt-inet_pton.Tpo -c -o ../../lib/sockfilt-inet_pton.obj `if test -f '../../lib/inet_pton.c'; then $(CYGPATH_W) '../../lib/inet_pton.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/inet_pton.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sockfilt-inet_pton.Tpo ../../lib/$(DEPDIR)/sockfilt-inet_pton.Po
+	$(AM_V_CC)source='../../lib/inet_pton.c' object='../../lib/sockfilt-inet_pton.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sockfilt_CFLAGS) $(CFLAGS) -c -o ../../lib/sockfilt-inet_pton.obj `if test -f '../../lib/inet_pton.c'; then $(CYGPATH_W) '../../lib/inet_pton.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/inet_pton.c'; fi`
 
 ../../lib/sws-mprintf.o: ../../lib/mprintf.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-mprintf.o -MD -MP -MF ../../lib/$(DEPDIR)/sws-mprintf.Tpo -c -o ../../lib/sws-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-mprintf.Tpo ../../lib/$(DEPDIR)/sws-mprintf.Po
-#	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/sws-mprintf.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-mprintf.o -MD -MP -MF ../../lib/$(DEPDIR)/sws-mprintf.Tpo -c -o ../../lib/sws-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-mprintf.Tpo ../../lib/$(DEPDIR)/sws-mprintf.Po
+	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/sws-mprintf.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
 
 ../../lib/sws-mprintf.obj: ../../lib/mprintf.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-mprintf.obj -MD -MP -MF ../../lib/$(DEPDIR)/sws-mprintf.Tpo -c -o ../../lib/sws-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-mprintf.Tpo ../../lib/$(DEPDIR)/sws-mprintf.Po
-#	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/sws-mprintf.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-mprintf.obj -MD -MP -MF ../../lib/$(DEPDIR)/sws-mprintf.Tpo -c -o ../../lib/sws-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-mprintf.Tpo ../../lib/$(DEPDIR)/sws-mprintf.Po
+	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/sws-mprintf.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
 
 ../../lib/sws-nonblock.o: ../../lib/nonblock.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-nonblock.o -MD -MP -MF ../../lib/$(DEPDIR)/sws-nonblock.Tpo -c -o ../../lib/sws-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-nonblock.Tpo ../../lib/$(DEPDIR)/sws-nonblock.Po
-#	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/sws-nonblock.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-nonblock.o -MD -MP -MF ../../lib/$(DEPDIR)/sws-nonblock.Tpo -c -o ../../lib/sws-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-nonblock.Tpo ../../lib/$(DEPDIR)/sws-nonblock.Po
+	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/sws-nonblock.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
 
 ../../lib/sws-nonblock.obj: ../../lib/nonblock.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-nonblock.obj -MD -MP -MF ../../lib/$(DEPDIR)/sws-nonblock.Tpo -c -o ../../lib/sws-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-nonblock.Tpo ../../lib/$(DEPDIR)/sws-nonblock.Po
-#	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/sws-nonblock.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-nonblock.obj -MD -MP -MF ../../lib/$(DEPDIR)/sws-nonblock.Tpo -c -o ../../lib/sws-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-nonblock.Tpo ../../lib/$(DEPDIR)/sws-nonblock.Po
+	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/sws-nonblock.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
 
 ../../lib/sws-strtoofft.o: ../../lib/strtoofft.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-strtoofft.o -MD -MP -MF ../../lib/$(DEPDIR)/sws-strtoofft.Tpo -c -o ../../lib/sws-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-strtoofft.Tpo ../../lib/$(DEPDIR)/sws-strtoofft.Po
-#	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/sws-strtoofft.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-strtoofft.o -MD -MP -MF ../../lib/$(DEPDIR)/sws-strtoofft.Tpo -c -o ../../lib/sws-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-strtoofft.Tpo ../../lib/$(DEPDIR)/sws-strtoofft.Po
+	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/sws-strtoofft.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
 
 ../../lib/sws-strtoofft.obj: ../../lib/strtoofft.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-strtoofft.obj -MD -MP -MF ../../lib/$(DEPDIR)/sws-strtoofft.Tpo -c -o ../../lib/sws-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-strtoofft.Tpo ../../lib/$(DEPDIR)/sws-strtoofft.Po
-#	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/sws-strtoofft.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-strtoofft.obj -MD -MP -MF ../../lib/$(DEPDIR)/sws-strtoofft.Tpo -c -o ../../lib/sws-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-strtoofft.Tpo ../../lib/$(DEPDIR)/sws-strtoofft.Po
+	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/sws-strtoofft.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
 
 ../../lib/sws-timeval.o: ../../lib/timeval.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-timeval.o -MD -MP -MF ../../lib/$(DEPDIR)/sws-timeval.Tpo -c -o ../../lib/sws-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-timeval.Tpo ../../lib/$(DEPDIR)/sws-timeval.Po
-#	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/sws-timeval.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-timeval.o -MD -MP -MF ../../lib/$(DEPDIR)/sws-timeval.Tpo -c -o ../../lib/sws-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-timeval.Tpo ../../lib/$(DEPDIR)/sws-timeval.Po
+	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/sws-timeval.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
 
 ../../lib/sws-timeval.obj: ../../lib/timeval.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-timeval.obj -MD -MP -MF ../../lib/$(DEPDIR)/sws-timeval.Tpo -c -o ../../lib/sws-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-timeval.Tpo ../../lib/$(DEPDIR)/sws-timeval.Po
-#	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/sws-timeval.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-timeval.obj -MD -MP -MF ../../lib/$(DEPDIR)/sws-timeval.Tpo -c -o ../../lib/sws-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-timeval.Tpo ../../lib/$(DEPDIR)/sws-timeval.Po
+	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/sws-timeval.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
 
 ../../lib/sws-warnless.o: ../../lib/warnless.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-warnless.o -MD -MP -MF ../../lib/$(DEPDIR)/sws-warnless.Tpo -c -o ../../lib/sws-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-warnless.Tpo ../../lib/$(DEPDIR)/sws-warnless.Po
-#	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/sws-warnless.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-warnless.o -MD -MP -MF ../../lib/$(DEPDIR)/sws-warnless.Tpo -c -o ../../lib/sws-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-warnless.Tpo ../../lib/$(DEPDIR)/sws-warnless.Po
+	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/sws-warnless.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
 
 ../../lib/sws-warnless.obj: ../../lib/warnless.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-warnless.obj -MD -MP -MF ../../lib/$(DEPDIR)/sws-warnless.Tpo -c -o ../../lib/sws-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-warnless.Tpo ../../lib/$(DEPDIR)/sws-warnless.Po
-#	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/sws-warnless.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-warnless.obj -MD -MP -MF ../../lib/$(DEPDIR)/sws-warnless.Tpo -c -o ../../lib/sws-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-warnless.Tpo ../../lib/$(DEPDIR)/sws-warnless.Po
+	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/sws-warnless.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
 
 sws-getpart.o: getpart.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT sws-getpart.o -MD -MP -MF $(DEPDIR)/sws-getpart.Tpo -c -o sws-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/sws-getpart.Tpo $(DEPDIR)/sws-getpart.Po
-#	$(AM_V_CC)source='getpart.c' object='sws-getpart.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o sws-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT sws-getpart.o -MD -MP -MF $(DEPDIR)/sws-getpart.Tpo -c -o sws-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/sws-getpart.Tpo $(DEPDIR)/sws-getpart.Po
+	$(AM_V_CC)source='getpart.c' object='sws-getpart.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o sws-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
 
 sws-getpart.obj: getpart.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT sws-getpart.obj -MD -MP -MF $(DEPDIR)/sws-getpart.Tpo -c -o sws-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/sws-getpart.Tpo $(DEPDIR)/sws-getpart.Po
-#	$(AM_V_CC)source='getpart.c' object='sws-getpart.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o sws-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT sws-getpart.obj -MD -MP -MF $(DEPDIR)/sws-getpart.Tpo -c -o sws-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/sws-getpart.Tpo $(DEPDIR)/sws-getpart.Po
+	$(AM_V_CC)source='getpart.c' object='sws-getpart.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o sws-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
 
 ../../lib/sws-base64.o: ../../lib/base64.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-base64.o -MD -MP -MF ../../lib/$(DEPDIR)/sws-base64.Tpo -c -o ../../lib/sws-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-base64.Tpo ../../lib/$(DEPDIR)/sws-base64.Po
-#	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/sws-base64.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-base64.o -MD -MP -MF ../../lib/$(DEPDIR)/sws-base64.Tpo -c -o ../../lib/sws-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-base64.Tpo ../../lib/$(DEPDIR)/sws-base64.Po
+	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/sws-base64.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
 
 ../../lib/sws-base64.obj: ../../lib/base64.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-base64.obj -MD -MP -MF ../../lib/$(DEPDIR)/sws-base64.Tpo -c -o ../../lib/sws-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-base64.Tpo ../../lib/$(DEPDIR)/sws-base64.Po
-#	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/sws-base64.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-base64.obj -MD -MP -MF ../../lib/$(DEPDIR)/sws-base64.Tpo -c -o ../../lib/sws-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-base64.Tpo ../../lib/$(DEPDIR)/sws-base64.Po
+	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/sws-base64.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
 
 ../../lib/sws-memdebug.o: ../../lib/memdebug.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-memdebug.o -MD -MP -MF ../../lib/$(DEPDIR)/sws-memdebug.Tpo -c -o ../../lib/sws-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-memdebug.Tpo ../../lib/$(DEPDIR)/sws-memdebug.Po
-#	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/sws-memdebug.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-memdebug.o -MD -MP -MF ../../lib/$(DEPDIR)/sws-memdebug.Tpo -c -o ../../lib/sws-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-memdebug.Tpo ../../lib/$(DEPDIR)/sws-memdebug.Po
+	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/sws-memdebug.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
 
 ../../lib/sws-memdebug.obj: ../../lib/memdebug.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-memdebug.obj -MD -MP -MF ../../lib/$(DEPDIR)/sws-memdebug.Tpo -c -o ../../lib/sws-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-memdebug.Tpo ../../lib/$(DEPDIR)/sws-memdebug.Po
-#	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/sws-memdebug.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-memdebug.obj -MD -MP -MF ../../lib/$(DEPDIR)/sws-memdebug.Tpo -c -o ../../lib/sws-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-memdebug.Tpo ../../lib/$(DEPDIR)/sws-memdebug.Po
+	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/sws-memdebug.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
 
 sws-util.o: util.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT sws-util.o -MD -MP -MF $(DEPDIR)/sws-util.Tpo -c -o sws-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/sws-util.Tpo $(DEPDIR)/sws-util.Po
-#	$(AM_V_CC)source='util.c' object='sws-util.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o sws-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT sws-util.o -MD -MP -MF $(DEPDIR)/sws-util.Tpo -c -o sws-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/sws-util.Tpo $(DEPDIR)/sws-util.Po
+	$(AM_V_CC)source='util.c' object='sws-util.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o sws-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
 
 sws-util.obj: util.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT sws-util.obj -MD -MP -MF $(DEPDIR)/sws-util.Tpo -c -o sws-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/sws-util.Tpo $(DEPDIR)/sws-util.Po
-#	$(AM_V_CC)source='util.c' object='sws-util.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o sws-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT sws-util.obj -MD -MP -MF $(DEPDIR)/sws-util.Tpo -c -o sws-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/sws-util.Tpo $(DEPDIR)/sws-util.Po
+	$(AM_V_CC)source='util.c' object='sws-util.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o sws-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
 
 sws-sws.o: sws.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT sws-sws.o -MD -MP -MF $(DEPDIR)/sws-sws.Tpo -c -o sws-sws.o `test -f 'sws.c' || echo '$(srcdir)/'`sws.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/sws-sws.Tpo $(DEPDIR)/sws-sws.Po
-#	$(AM_V_CC)source='sws.c' object='sws-sws.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o sws-sws.o `test -f 'sws.c' || echo '$(srcdir)/'`sws.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT sws-sws.o -MD -MP -MF $(DEPDIR)/sws-sws.Tpo -c -o sws-sws.o `test -f 'sws.c' || echo '$(srcdir)/'`sws.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/sws-sws.Tpo $(DEPDIR)/sws-sws.Po
+	$(AM_V_CC)source='sws.c' object='sws-sws.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o sws-sws.o `test -f 'sws.c' || echo '$(srcdir)/'`sws.c
 
 sws-sws.obj: sws.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT sws-sws.obj -MD -MP -MF $(DEPDIR)/sws-sws.Tpo -c -o sws-sws.obj `if test -f 'sws.c'; then $(CYGPATH_W) 'sws.c'; else $(CYGPATH_W) '$(srcdir)/sws.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/sws-sws.Tpo $(DEPDIR)/sws-sws.Po
-#	$(AM_V_CC)source='sws.c' object='sws-sws.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o sws-sws.obj `if test -f 'sws.c'; then $(CYGPATH_W) 'sws.c'; else $(CYGPATH_W) '$(srcdir)/sws.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT sws-sws.obj -MD -MP -MF $(DEPDIR)/sws-sws.Tpo -c -o sws-sws.obj `if test -f 'sws.c'; then $(CYGPATH_W) 'sws.c'; else $(CYGPATH_W) '$(srcdir)/sws.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/sws-sws.Tpo $(DEPDIR)/sws-sws.Po
+	$(AM_V_CC)source='sws.c' object='sws-sws.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o sws-sws.obj `if test -f 'sws.c'; then $(CYGPATH_W) 'sws.c'; else $(CYGPATH_W) '$(srcdir)/sws.c'; fi`
 
 ../../lib/sws-inet_pton.o: ../../lib/inet_pton.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-inet_pton.o -MD -MP -MF ../../lib/$(DEPDIR)/sws-inet_pton.Tpo -c -o ../../lib/sws-inet_pton.o `test -f '../../lib/inet_pton.c' || echo '$(srcdir)/'`../../lib/inet_pton.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-inet_pton.Tpo ../../lib/$(DEPDIR)/sws-inet_pton.Po
-#	$(AM_V_CC)source='../../lib/inet_pton.c' object='../../lib/sws-inet_pton.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-inet_pton.o `test -f '../../lib/inet_pton.c' || echo '$(srcdir)/'`../../lib/inet_pton.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-inet_pton.o -MD -MP -MF ../../lib/$(DEPDIR)/sws-inet_pton.Tpo -c -o ../../lib/sws-inet_pton.o `test -f '../../lib/inet_pton.c' || echo '$(srcdir)/'`../../lib/inet_pton.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-inet_pton.Tpo ../../lib/$(DEPDIR)/sws-inet_pton.Po
+	$(AM_V_CC)source='../../lib/inet_pton.c' object='../../lib/sws-inet_pton.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-inet_pton.o `test -f '../../lib/inet_pton.c' || echo '$(srcdir)/'`../../lib/inet_pton.c
 
 ../../lib/sws-inet_pton.obj: ../../lib/inet_pton.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-inet_pton.obj -MD -MP -MF ../../lib/$(DEPDIR)/sws-inet_pton.Tpo -c -o ../../lib/sws-inet_pton.obj `if test -f '../../lib/inet_pton.c'; then $(CYGPATH_W) '../../lib/inet_pton.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/inet_pton.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-inet_pton.Tpo ../../lib/$(DEPDIR)/sws-inet_pton.Po
-#	$(AM_V_CC)source='../../lib/inet_pton.c' object='../../lib/sws-inet_pton.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-inet_pton.obj `if test -f '../../lib/inet_pton.c'; then $(CYGPATH_W) '../../lib/inet_pton.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/inet_pton.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -MT ../../lib/sws-inet_pton.obj -MD -MP -MF ../../lib/$(DEPDIR)/sws-inet_pton.Tpo -c -o ../../lib/sws-inet_pton.obj `if test -f '../../lib/inet_pton.c'; then $(CYGPATH_W) '../../lib/inet_pton.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/inet_pton.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/sws-inet_pton.Tpo ../../lib/$(DEPDIR)/sws-inet_pton.Po
+	$(AM_V_CC)source='../../lib/inet_pton.c' object='../../lib/sws-inet_pton.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sws_CFLAGS) $(CFLAGS) -c -o ../../lib/sws-inet_pton.obj `if test -f '../../lib/inet_pton.c'; then $(CYGPATH_W) '../../lib/inet_pton.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/inet_pton.c'; fi`
 
 ../../lib/tftpd-mprintf.o: ../../lib/mprintf.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-mprintf.o -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-mprintf.Tpo -c -o ../../lib/tftpd-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-mprintf.Tpo ../../lib/$(DEPDIR)/tftpd-mprintf.Po
-#	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/tftpd-mprintf.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-mprintf.o -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-mprintf.Tpo -c -o ../../lib/tftpd-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-mprintf.Tpo ../../lib/$(DEPDIR)/tftpd-mprintf.Po
+	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/tftpd-mprintf.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-mprintf.o `test -f '../../lib/mprintf.c' || echo '$(srcdir)/'`../../lib/mprintf.c
 
 ../../lib/tftpd-mprintf.obj: ../../lib/mprintf.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-mprintf.obj -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-mprintf.Tpo -c -o ../../lib/tftpd-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-mprintf.Tpo ../../lib/$(DEPDIR)/tftpd-mprintf.Po
-#	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/tftpd-mprintf.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-mprintf.obj -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-mprintf.Tpo -c -o ../../lib/tftpd-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-mprintf.Tpo ../../lib/$(DEPDIR)/tftpd-mprintf.Po
+	$(AM_V_CC)source='../../lib/mprintf.c' object='../../lib/tftpd-mprintf.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-mprintf.obj `if test -f '../../lib/mprintf.c'; then $(CYGPATH_W) '../../lib/mprintf.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/mprintf.c'; fi`
 
 ../../lib/tftpd-nonblock.o: ../../lib/nonblock.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-nonblock.o -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-nonblock.Tpo -c -o ../../lib/tftpd-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-nonblock.Tpo ../../lib/$(DEPDIR)/tftpd-nonblock.Po
-#	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/tftpd-nonblock.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-nonblock.o -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-nonblock.Tpo -c -o ../../lib/tftpd-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-nonblock.Tpo ../../lib/$(DEPDIR)/tftpd-nonblock.Po
+	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/tftpd-nonblock.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-nonblock.o `test -f '../../lib/nonblock.c' || echo '$(srcdir)/'`../../lib/nonblock.c
 
 ../../lib/tftpd-nonblock.obj: ../../lib/nonblock.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-nonblock.obj -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-nonblock.Tpo -c -o ../../lib/tftpd-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-nonblock.Tpo ../../lib/$(DEPDIR)/tftpd-nonblock.Po
-#	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/tftpd-nonblock.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-nonblock.obj -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-nonblock.Tpo -c -o ../../lib/tftpd-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-nonblock.Tpo ../../lib/$(DEPDIR)/tftpd-nonblock.Po
+	$(AM_V_CC)source='../../lib/nonblock.c' object='../../lib/tftpd-nonblock.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-nonblock.obj `if test -f '../../lib/nonblock.c'; then $(CYGPATH_W) '../../lib/nonblock.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/nonblock.c'; fi`
 
 ../../lib/tftpd-strtoofft.o: ../../lib/strtoofft.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-strtoofft.o -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-strtoofft.Tpo -c -o ../../lib/tftpd-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-strtoofft.Tpo ../../lib/$(DEPDIR)/tftpd-strtoofft.Po
-#	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/tftpd-strtoofft.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-strtoofft.o -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-strtoofft.Tpo -c -o ../../lib/tftpd-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-strtoofft.Tpo ../../lib/$(DEPDIR)/tftpd-strtoofft.Po
+	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/tftpd-strtoofft.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-strtoofft.o `test -f '../../lib/strtoofft.c' || echo '$(srcdir)/'`../../lib/strtoofft.c
 
 ../../lib/tftpd-strtoofft.obj: ../../lib/strtoofft.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-strtoofft.obj -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-strtoofft.Tpo -c -o ../../lib/tftpd-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-strtoofft.Tpo ../../lib/$(DEPDIR)/tftpd-strtoofft.Po
-#	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/tftpd-strtoofft.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-strtoofft.obj -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-strtoofft.Tpo -c -o ../../lib/tftpd-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-strtoofft.Tpo ../../lib/$(DEPDIR)/tftpd-strtoofft.Po
+	$(AM_V_CC)source='../../lib/strtoofft.c' object='../../lib/tftpd-strtoofft.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-strtoofft.obj `if test -f '../../lib/strtoofft.c'; then $(CYGPATH_W) '../../lib/strtoofft.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/strtoofft.c'; fi`
 
 ../../lib/tftpd-timeval.o: ../../lib/timeval.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-timeval.o -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-timeval.Tpo -c -o ../../lib/tftpd-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-timeval.Tpo ../../lib/$(DEPDIR)/tftpd-timeval.Po
-#	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/tftpd-timeval.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-timeval.o -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-timeval.Tpo -c -o ../../lib/tftpd-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-timeval.Tpo ../../lib/$(DEPDIR)/tftpd-timeval.Po
+	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/tftpd-timeval.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-timeval.o `test -f '../../lib/timeval.c' || echo '$(srcdir)/'`../../lib/timeval.c
 
 ../../lib/tftpd-timeval.obj: ../../lib/timeval.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-timeval.obj -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-timeval.Tpo -c -o ../../lib/tftpd-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-timeval.Tpo ../../lib/$(DEPDIR)/tftpd-timeval.Po
-#	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/tftpd-timeval.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-timeval.obj -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-timeval.Tpo -c -o ../../lib/tftpd-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-timeval.Tpo ../../lib/$(DEPDIR)/tftpd-timeval.Po
+	$(AM_V_CC)source='../../lib/timeval.c' object='../../lib/tftpd-timeval.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-timeval.obj `if test -f '../../lib/timeval.c'; then $(CYGPATH_W) '../../lib/timeval.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/timeval.c'; fi`
 
 ../../lib/tftpd-warnless.o: ../../lib/warnless.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-warnless.o -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-warnless.Tpo -c -o ../../lib/tftpd-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-warnless.Tpo ../../lib/$(DEPDIR)/tftpd-warnless.Po
-#	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/tftpd-warnless.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-warnless.o -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-warnless.Tpo -c -o ../../lib/tftpd-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-warnless.Tpo ../../lib/$(DEPDIR)/tftpd-warnless.Po
+	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/tftpd-warnless.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-warnless.o `test -f '../../lib/warnless.c' || echo '$(srcdir)/'`../../lib/warnless.c
 
 ../../lib/tftpd-warnless.obj: ../../lib/warnless.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-warnless.obj -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-warnless.Tpo -c -o ../../lib/tftpd-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-warnless.Tpo ../../lib/$(DEPDIR)/tftpd-warnless.Po
-#	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/tftpd-warnless.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-warnless.obj -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-warnless.Tpo -c -o ../../lib/tftpd-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-warnless.Tpo ../../lib/$(DEPDIR)/tftpd-warnless.Po
+	$(AM_V_CC)source='../../lib/warnless.c' object='../../lib/tftpd-warnless.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-warnless.obj `if test -f '../../lib/warnless.c'; then $(CYGPATH_W) '../../lib/warnless.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/warnless.c'; fi`
 
 tftpd-getpart.o: getpart.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT tftpd-getpart.o -MD -MP -MF $(DEPDIR)/tftpd-getpart.Tpo -c -o tftpd-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/tftpd-getpart.Tpo $(DEPDIR)/tftpd-getpart.Po
-#	$(AM_V_CC)source='getpart.c' object='tftpd-getpart.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o tftpd-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT tftpd-getpart.o -MD -MP -MF $(DEPDIR)/tftpd-getpart.Tpo -c -o tftpd-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/tftpd-getpart.Tpo $(DEPDIR)/tftpd-getpart.Po
+	$(AM_V_CC)source='getpart.c' object='tftpd-getpart.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o tftpd-getpart.o `test -f 'getpart.c' || echo '$(srcdir)/'`getpart.c
 
 tftpd-getpart.obj: getpart.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT tftpd-getpart.obj -MD -MP -MF $(DEPDIR)/tftpd-getpart.Tpo -c -o tftpd-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/tftpd-getpart.Tpo $(DEPDIR)/tftpd-getpart.Po
-#	$(AM_V_CC)source='getpart.c' object='tftpd-getpart.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o tftpd-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT tftpd-getpart.obj -MD -MP -MF $(DEPDIR)/tftpd-getpart.Tpo -c -o tftpd-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/tftpd-getpart.Tpo $(DEPDIR)/tftpd-getpart.Po
+	$(AM_V_CC)source='getpart.c' object='tftpd-getpart.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o tftpd-getpart.obj `if test -f 'getpart.c'; then $(CYGPATH_W) 'getpart.c'; else $(CYGPATH_W) '$(srcdir)/getpart.c'; fi`
 
 ../../lib/tftpd-base64.o: ../../lib/base64.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-base64.o -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-base64.Tpo -c -o ../../lib/tftpd-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-base64.Tpo ../../lib/$(DEPDIR)/tftpd-base64.Po
-#	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/tftpd-base64.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-base64.o -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-base64.Tpo -c -o ../../lib/tftpd-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-base64.Tpo ../../lib/$(DEPDIR)/tftpd-base64.Po
+	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/tftpd-base64.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-base64.o `test -f '../../lib/base64.c' || echo '$(srcdir)/'`../../lib/base64.c
 
 ../../lib/tftpd-base64.obj: ../../lib/base64.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-base64.obj -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-base64.Tpo -c -o ../../lib/tftpd-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-base64.Tpo ../../lib/$(DEPDIR)/tftpd-base64.Po
-#	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/tftpd-base64.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-base64.obj -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-base64.Tpo -c -o ../../lib/tftpd-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-base64.Tpo ../../lib/$(DEPDIR)/tftpd-base64.Po
+	$(AM_V_CC)source='../../lib/base64.c' object='../../lib/tftpd-base64.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-base64.obj `if test -f '../../lib/base64.c'; then $(CYGPATH_W) '../../lib/base64.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/base64.c'; fi`
 
 ../../lib/tftpd-memdebug.o: ../../lib/memdebug.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-memdebug.o -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-memdebug.Tpo -c -o ../../lib/tftpd-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-memdebug.Tpo ../../lib/$(DEPDIR)/tftpd-memdebug.Po
-#	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/tftpd-memdebug.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-memdebug.o -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-memdebug.Tpo -c -o ../../lib/tftpd-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-memdebug.Tpo ../../lib/$(DEPDIR)/tftpd-memdebug.Po
+	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/tftpd-memdebug.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-memdebug.o `test -f '../../lib/memdebug.c' || echo '$(srcdir)/'`../../lib/memdebug.c
 
 ../../lib/tftpd-memdebug.obj: ../../lib/memdebug.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-memdebug.obj -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-memdebug.Tpo -c -o ../../lib/tftpd-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
-	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-memdebug.Tpo ../../lib/$(DEPDIR)/tftpd-memdebug.Po
-#	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/tftpd-memdebug.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT ../../lib/tftpd-memdebug.obj -MD -MP -MF ../../lib/$(DEPDIR)/tftpd-memdebug.Tpo -c -o ../../lib/tftpd-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
+#	$(AM_V_at)$(am__mv) ../../lib/$(DEPDIR)/tftpd-memdebug.Tpo ../../lib/$(DEPDIR)/tftpd-memdebug.Po
+	$(AM_V_CC)source='../../lib/memdebug.c' object='../../lib/tftpd-memdebug.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o ../../lib/tftpd-memdebug.obj `if test -f '../../lib/memdebug.c'; then $(CYGPATH_W) '../../lib/memdebug.c'; else $(CYGPATH_W) '$(srcdir)/../../lib/memdebug.c'; fi`
 
 tftpd-util.o: util.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT tftpd-util.o -MD -MP -MF $(DEPDIR)/tftpd-util.Tpo -c -o tftpd-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/tftpd-util.Tpo $(DEPDIR)/tftpd-util.Po
-#	$(AM_V_CC)source='util.c' object='tftpd-util.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o tftpd-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT tftpd-util.o -MD -MP -MF $(DEPDIR)/tftpd-util.Tpo -c -o tftpd-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/tftpd-util.Tpo $(DEPDIR)/tftpd-util.Po
+	$(AM_V_CC)source='util.c' object='tftpd-util.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o tftpd-util.o `test -f 'util.c' || echo '$(srcdir)/'`util.c
 
 tftpd-util.obj: util.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT tftpd-util.obj -MD -MP -MF $(DEPDIR)/tftpd-util.Tpo -c -o tftpd-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/tftpd-util.Tpo $(DEPDIR)/tftpd-util.Po
-#	$(AM_V_CC)source='util.c' object='tftpd-util.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o tftpd-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT tftpd-util.obj -MD -MP -MF $(DEPDIR)/tftpd-util.Tpo -c -o tftpd-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/tftpd-util.Tpo $(DEPDIR)/tftpd-util.Po
+	$(AM_V_CC)source='util.c' object='tftpd-util.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o tftpd-util.obj `if test -f 'util.c'; then $(CYGPATH_W) 'util.c'; else $(CYGPATH_W) '$(srcdir)/util.c'; fi`
 
 tftpd-tftpd.o: tftpd.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT tftpd-tftpd.o -MD -MP -MF $(DEPDIR)/tftpd-tftpd.Tpo -c -o tftpd-tftpd.o `test -f 'tftpd.c' || echo '$(srcdir)/'`tftpd.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/tftpd-tftpd.Tpo $(DEPDIR)/tftpd-tftpd.Po
-#	$(AM_V_CC)source='tftpd.c' object='tftpd-tftpd.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o tftpd-tftpd.o `test -f 'tftpd.c' || echo '$(srcdir)/'`tftpd.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT tftpd-tftpd.o -MD -MP -MF $(DEPDIR)/tftpd-tftpd.Tpo -c -o tftpd-tftpd.o `test -f 'tftpd.c' || echo '$(srcdir)/'`tftpd.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/tftpd-tftpd.Tpo $(DEPDIR)/tftpd-tftpd.Po
+	$(AM_V_CC)source='tftpd.c' object='tftpd-tftpd.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o tftpd-tftpd.o `test -f 'tftpd.c' || echo '$(srcdir)/'`tftpd.c
 
 tftpd-tftpd.obj: tftpd.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT tftpd-tftpd.obj -MD -MP -MF $(DEPDIR)/tftpd-tftpd.Tpo -c -o tftpd-tftpd.obj `if test -f 'tftpd.c'; then $(CYGPATH_W) 'tftpd.c'; else $(CYGPATH_W) '$(srcdir)/tftpd.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/tftpd-tftpd.Tpo $(DEPDIR)/tftpd-tftpd.Po
-#	$(AM_V_CC)source='tftpd.c' object='tftpd-tftpd.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o tftpd-tftpd.obj `if test -f 'tftpd.c'; then $(CYGPATH_W) 'tftpd.c'; else $(CYGPATH_W) '$(srcdir)/tftpd.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -MT tftpd-tftpd.obj -MD -MP -MF $(DEPDIR)/tftpd-tftpd.Tpo -c -o tftpd-tftpd.obj `if test -f 'tftpd.c'; then $(CYGPATH_W) 'tftpd.c'; else $(CYGPATH_W) '$(srcdir)/tftpd.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/tftpd-tftpd.Tpo $(DEPDIR)/tftpd-tftpd.Po
+	$(AM_V_CC)source='tftpd.c' object='tftpd-tftpd.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(tftpd_CFLAGS) $(CFLAGS) -c -o tftpd-tftpd.obj `if test -f 'tftpd.c'; then $(CYGPATH_W) 'tftpd.c'; else $(CYGPATH_W) '$(srcdir)/tftpd.c'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo

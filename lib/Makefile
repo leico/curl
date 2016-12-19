@@ -386,23 +386,23 @@ am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.inc \
 	$(srcdir)/curl_config.h.in $(srcdir)/libcurl.vers.in \
 	$(top_srcdir)/depcomp
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing aclocal-1.15
+ACLOCAL = aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
 AS = as
-AUTOCONF = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing autoconf
-AUTOHEADER = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing autoheader
-AUTOMAKE = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing automake-1.15
+AUTOCONF = autoconf
+AUTOHEADER = autoheader
+AUTOMAKE = automake-1.15
 AWK = awk
 BLANK_AT_MAKETIME = 
 CC = gcc
-CCDEPMODE = depmode=gcc3
+CCDEPMODE = depmode=none
 
 # This might hold -Werror
 CFLAGS = -Qunused-arguments -Os -mmacosx-version-min=10.8 -Werror=partial-availability 
 CFLAG_CURL_SYMBOL_HIDING = -fvisibility=hidden
-CONFIGURE_OPTIONS = " '--with-darwinssl' '--prefix=/Users/leico/pro/libcurl-xcode/DerivedData/Build/Products/Release/curl/'"
+CONFIGURE_OPTIONS = " '--with-darwinssl' '--prefix=/Users/leico/pro/twitter-oauth-commandline/libCurl/DerivedData/Build/Products/Release/curl/'"
 CPP = gcc -E
 CPPFLAGS = 
 CPPFLAG_CURL_STATICLIB = 
@@ -469,7 +469,7 @@ LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
 MAINT = #
-MAKEINFO = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing makeinfo
+MAKEINFO = makeinfo
 MANIFEST_TOOL = :
 MANOPT = -man
 MKDIR_P = .././install-sh -c -d
@@ -525,10 +525,10 @@ VERSION = -
 VERSIONNUM = 073300
 ZLIB_LIBS = -lz
 ZSH_FUNCTIONS_DIR = ${prefix}/share/zsh/site-functions
-abs_builddir = /Users/leico/pro/libcurl-xcode/curl/lib
-abs_srcdir = /Users/leico/pro/libcurl-xcode/curl/lib
-abs_top_builddir = /Users/leico/pro/libcurl-xcode/curl
-abs_top_srcdir = /Users/leico/pro/libcurl-xcode/curl
+abs_builddir = /Users/leico/pro/twitter-oauth-commandline/libCurl/curl/lib
+abs_srcdir = /Users/leico/pro/twitter-oauth-commandline/libCurl/curl/lib
+abs_top_builddir = /Users/leico/pro/twitter-oauth-commandline/libCurl/curl
+abs_top_srcdir = /Users/leico/pro/twitter-oauth-commandline/libCurl/curl
 ac_ct_AR = 
 ac_ct_CC = gcc
 ac_ct_DUMPBIN = 
@@ -557,7 +557,7 @@ host_vendor = apple
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/install-sh
+install_sh = ${SHELL} /Users/leico/pro/twitter-oauth-commandline/libCurl/curl/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 libext = a
@@ -567,7 +567,7 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /Users/leico/pro/libcurl-xcode/DerivedData/Build/Products/Release/curl
+prefix = /Users/leico/pro/twitter-oauth-commandline/libCurl/DerivedData/Build/Products/Release/curl
 program_transform_name = s,x,x,
 psdir = ${docdir}
 runstatedir = ${localstatedir}/run
@@ -1202,1764 +1202,1764 @@ include vtls/$(DEPDIR)/libcurlu_la-schannel.Plo
 include vtls/$(DEPDIR)/libcurlu_la-vtls.Plo
 
 .c.o:
-	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
-	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
+#	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
+#	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Po
+	$(AM_V_CC)source='$<' object='$@' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
 
 .c.obj:
-	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.obj$$||'`;\
-	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ `$(CYGPATH_W) '$<'` &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.obj$$||'`;\
+#	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ `$(CYGPATH_W) '$<'` &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Po
+	$(AM_V_CC)source='$<' object='$@' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .c.lo:
-	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.lo$$||'`;\
-	$(LTCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Plo
-#	$(AM_V_CC)source='$<' object='$@' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LTCOMPILE) -c -o $@ $<
+#	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.lo$$||'`;\
+#	$(LTCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Plo
+	$(AM_V_CC)source='$<' object='$@' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LTCOMPILE) -c -o $@ $<
 
 libcurl_la-file.lo: file.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-file.lo -MD -MP -MF $(DEPDIR)/libcurl_la-file.Tpo -c -o libcurl_la-file.lo `test -f 'file.c' || echo '$(srcdir)/'`file.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-file.Tpo $(DEPDIR)/libcurl_la-file.Plo
-#	$(AM_V_CC)source='file.c' object='libcurl_la-file.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-file.lo `test -f 'file.c' || echo '$(srcdir)/'`file.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-file.lo -MD -MP -MF $(DEPDIR)/libcurl_la-file.Tpo -c -o libcurl_la-file.lo `test -f 'file.c' || echo '$(srcdir)/'`file.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-file.Tpo $(DEPDIR)/libcurl_la-file.Plo
+	$(AM_V_CC)source='file.c' object='libcurl_la-file.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-file.lo `test -f 'file.c' || echo '$(srcdir)/'`file.c
 
 libcurl_la-timeval.lo: timeval.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-timeval.lo -MD -MP -MF $(DEPDIR)/libcurl_la-timeval.Tpo -c -o libcurl_la-timeval.lo `test -f 'timeval.c' || echo '$(srcdir)/'`timeval.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-timeval.Tpo $(DEPDIR)/libcurl_la-timeval.Plo
-#	$(AM_V_CC)source='timeval.c' object='libcurl_la-timeval.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-timeval.lo `test -f 'timeval.c' || echo '$(srcdir)/'`timeval.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-timeval.lo -MD -MP -MF $(DEPDIR)/libcurl_la-timeval.Tpo -c -o libcurl_la-timeval.lo `test -f 'timeval.c' || echo '$(srcdir)/'`timeval.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-timeval.Tpo $(DEPDIR)/libcurl_la-timeval.Plo
+	$(AM_V_CC)source='timeval.c' object='libcurl_la-timeval.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-timeval.lo `test -f 'timeval.c' || echo '$(srcdir)/'`timeval.c
 
 libcurl_la-base64.lo: base64.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-base64.lo -MD -MP -MF $(DEPDIR)/libcurl_la-base64.Tpo -c -o libcurl_la-base64.lo `test -f 'base64.c' || echo '$(srcdir)/'`base64.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-base64.Tpo $(DEPDIR)/libcurl_la-base64.Plo
-#	$(AM_V_CC)source='base64.c' object='libcurl_la-base64.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-base64.lo `test -f 'base64.c' || echo '$(srcdir)/'`base64.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-base64.lo -MD -MP -MF $(DEPDIR)/libcurl_la-base64.Tpo -c -o libcurl_la-base64.lo `test -f 'base64.c' || echo '$(srcdir)/'`base64.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-base64.Tpo $(DEPDIR)/libcurl_la-base64.Plo
+	$(AM_V_CC)source='base64.c' object='libcurl_la-base64.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-base64.lo `test -f 'base64.c' || echo '$(srcdir)/'`base64.c
 
 libcurl_la-hostip.lo: hostip.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-hostip.lo -MD -MP -MF $(DEPDIR)/libcurl_la-hostip.Tpo -c -o libcurl_la-hostip.lo `test -f 'hostip.c' || echo '$(srcdir)/'`hostip.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-hostip.Tpo $(DEPDIR)/libcurl_la-hostip.Plo
-#	$(AM_V_CC)source='hostip.c' object='libcurl_la-hostip.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-hostip.lo `test -f 'hostip.c' || echo '$(srcdir)/'`hostip.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-hostip.lo -MD -MP -MF $(DEPDIR)/libcurl_la-hostip.Tpo -c -o libcurl_la-hostip.lo `test -f 'hostip.c' || echo '$(srcdir)/'`hostip.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-hostip.Tpo $(DEPDIR)/libcurl_la-hostip.Plo
+	$(AM_V_CC)source='hostip.c' object='libcurl_la-hostip.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-hostip.lo `test -f 'hostip.c' || echo '$(srcdir)/'`hostip.c
 
 libcurl_la-progress.lo: progress.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-progress.lo -MD -MP -MF $(DEPDIR)/libcurl_la-progress.Tpo -c -o libcurl_la-progress.lo `test -f 'progress.c' || echo '$(srcdir)/'`progress.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-progress.Tpo $(DEPDIR)/libcurl_la-progress.Plo
-#	$(AM_V_CC)source='progress.c' object='libcurl_la-progress.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-progress.lo `test -f 'progress.c' || echo '$(srcdir)/'`progress.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-progress.lo -MD -MP -MF $(DEPDIR)/libcurl_la-progress.Tpo -c -o libcurl_la-progress.lo `test -f 'progress.c' || echo '$(srcdir)/'`progress.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-progress.Tpo $(DEPDIR)/libcurl_la-progress.Plo
+	$(AM_V_CC)source='progress.c' object='libcurl_la-progress.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-progress.lo `test -f 'progress.c' || echo '$(srcdir)/'`progress.c
 
 libcurl_la-formdata.lo: formdata.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-formdata.lo -MD -MP -MF $(DEPDIR)/libcurl_la-formdata.Tpo -c -o libcurl_la-formdata.lo `test -f 'formdata.c' || echo '$(srcdir)/'`formdata.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-formdata.Tpo $(DEPDIR)/libcurl_la-formdata.Plo
-#	$(AM_V_CC)source='formdata.c' object='libcurl_la-formdata.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-formdata.lo `test -f 'formdata.c' || echo '$(srcdir)/'`formdata.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-formdata.lo -MD -MP -MF $(DEPDIR)/libcurl_la-formdata.Tpo -c -o libcurl_la-formdata.lo `test -f 'formdata.c' || echo '$(srcdir)/'`formdata.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-formdata.Tpo $(DEPDIR)/libcurl_la-formdata.Plo
+	$(AM_V_CC)source='formdata.c' object='libcurl_la-formdata.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-formdata.lo `test -f 'formdata.c' || echo '$(srcdir)/'`formdata.c
 
 libcurl_la-cookie.lo: cookie.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-cookie.lo -MD -MP -MF $(DEPDIR)/libcurl_la-cookie.Tpo -c -o libcurl_la-cookie.lo `test -f 'cookie.c' || echo '$(srcdir)/'`cookie.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-cookie.Tpo $(DEPDIR)/libcurl_la-cookie.Plo
-#	$(AM_V_CC)source='cookie.c' object='libcurl_la-cookie.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-cookie.lo `test -f 'cookie.c' || echo '$(srcdir)/'`cookie.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-cookie.lo -MD -MP -MF $(DEPDIR)/libcurl_la-cookie.Tpo -c -o libcurl_la-cookie.lo `test -f 'cookie.c' || echo '$(srcdir)/'`cookie.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-cookie.Tpo $(DEPDIR)/libcurl_la-cookie.Plo
+	$(AM_V_CC)source='cookie.c' object='libcurl_la-cookie.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-cookie.lo `test -f 'cookie.c' || echo '$(srcdir)/'`cookie.c
 
 libcurl_la-http.lo: http.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-http.lo -MD -MP -MF $(DEPDIR)/libcurl_la-http.Tpo -c -o libcurl_la-http.lo `test -f 'http.c' || echo '$(srcdir)/'`http.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-http.Tpo $(DEPDIR)/libcurl_la-http.Plo
-#	$(AM_V_CC)source='http.c' object='libcurl_la-http.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-http.lo `test -f 'http.c' || echo '$(srcdir)/'`http.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-http.lo -MD -MP -MF $(DEPDIR)/libcurl_la-http.Tpo -c -o libcurl_la-http.lo `test -f 'http.c' || echo '$(srcdir)/'`http.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-http.Tpo $(DEPDIR)/libcurl_la-http.Plo
+	$(AM_V_CC)source='http.c' object='libcurl_la-http.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-http.lo `test -f 'http.c' || echo '$(srcdir)/'`http.c
 
 libcurl_la-sendf.lo: sendf.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-sendf.lo -MD -MP -MF $(DEPDIR)/libcurl_la-sendf.Tpo -c -o libcurl_la-sendf.lo `test -f 'sendf.c' || echo '$(srcdir)/'`sendf.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-sendf.Tpo $(DEPDIR)/libcurl_la-sendf.Plo
-#	$(AM_V_CC)source='sendf.c' object='libcurl_la-sendf.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-sendf.lo `test -f 'sendf.c' || echo '$(srcdir)/'`sendf.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-sendf.lo -MD -MP -MF $(DEPDIR)/libcurl_la-sendf.Tpo -c -o libcurl_la-sendf.lo `test -f 'sendf.c' || echo '$(srcdir)/'`sendf.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-sendf.Tpo $(DEPDIR)/libcurl_la-sendf.Plo
+	$(AM_V_CC)source='sendf.c' object='libcurl_la-sendf.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-sendf.lo `test -f 'sendf.c' || echo '$(srcdir)/'`sendf.c
 
 libcurl_la-ftp.lo: ftp.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-ftp.lo -MD -MP -MF $(DEPDIR)/libcurl_la-ftp.Tpo -c -o libcurl_la-ftp.lo `test -f 'ftp.c' || echo '$(srcdir)/'`ftp.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-ftp.Tpo $(DEPDIR)/libcurl_la-ftp.Plo
-#	$(AM_V_CC)source='ftp.c' object='libcurl_la-ftp.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-ftp.lo `test -f 'ftp.c' || echo '$(srcdir)/'`ftp.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-ftp.lo -MD -MP -MF $(DEPDIR)/libcurl_la-ftp.Tpo -c -o libcurl_la-ftp.lo `test -f 'ftp.c' || echo '$(srcdir)/'`ftp.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-ftp.Tpo $(DEPDIR)/libcurl_la-ftp.Plo
+	$(AM_V_CC)source='ftp.c' object='libcurl_la-ftp.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-ftp.lo `test -f 'ftp.c' || echo '$(srcdir)/'`ftp.c
 
 libcurl_la-url.lo: url.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-url.lo -MD -MP -MF $(DEPDIR)/libcurl_la-url.Tpo -c -o libcurl_la-url.lo `test -f 'url.c' || echo '$(srcdir)/'`url.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-url.Tpo $(DEPDIR)/libcurl_la-url.Plo
-#	$(AM_V_CC)source='url.c' object='libcurl_la-url.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-url.lo `test -f 'url.c' || echo '$(srcdir)/'`url.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-url.lo -MD -MP -MF $(DEPDIR)/libcurl_la-url.Tpo -c -o libcurl_la-url.lo `test -f 'url.c' || echo '$(srcdir)/'`url.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-url.Tpo $(DEPDIR)/libcurl_la-url.Plo
+	$(AM_V_CC)source='url.c' object='libcurl_la-url.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-url.lo `test -f 'url.c' || echo '$(srcdir)/'`url.c
 
 libcurl_la-dict.lo: dict.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-dict.lo -MD -MP -MF $(DEPDIR)/libcurl_la-dict.Tpo -c -o libcurl_la-dict.lo `test -f 'dict.c' || echo '$(srcdir)/'`dict.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-dict.Tpo $(DEPDIR)/libcurl_la-dict.Plo
-#	$(AM_V_CC)source='dict.c' object='libcurl_la-dict.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-dict.lo `test -f 'dict.c' || echo '$(srcdir)/'`dict.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-dict.lo -MD -MP -MF $(DEPDIR)/libcurl_la-dict.Tpo -c -o libcurl_la-dict.lo `test -f 'dict.c' || echo '$(srcdir)/'`dict.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-dict.Tpo $(DEPDIR)/libcurl_la-dict.Plo
+	$(AM_V_CC)source='dict.c' object='libcurl_la-dict.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-dict.lo `test -f 'dict.c' || echo '$(srcdir)/'`dict.c
 
 libcurl_la-if2ip.lo: if2ip.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-if2ip.lo -MD -MP -MF $(DEPDIR)/libcurl_la-if2ip.Tpo -c -o libcurl_la-if2ip.lo `test -f 'if2ip.c' || echo '$(srcdir)/'`if2ip.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-if2ip.Tpo $(DEPDIR)/libcurl_la-if2ip.Plo
-#	$(AM_V_CC)source='if2ip.c' object='libcurl_la-if2ip.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-if2ip.lo `test -f 'if2ip.c' || echo '$(srcdir)/'`if2ip.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-if2ip.lo -MD -MP -MF $(DEPDIR)/libcurl_la-if2ip.Tpo -c -o libcurl_la-if2ip.lo `test -f 'if2ip.c' || echo '$(srcdir)/'`if2ip.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-if2ip.Tpo $(DEPDIR)/libcurl_la-if2ip.Plo
+	$(AM_V_CC)source='if2ip.c' object='libcurl_la-if2ip.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-if2ip.lo `test -f 'if2ip.c' || echo '$(srcdir)/'`if2ip.c
 
 libcurl_la-speedcheck.lo: speedcheck.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-speedcheck.lo -MD -MP -MF $(DEPDIR)/libcurl_la-speedcheck.Tpo -c -o libcurl_la-speedcheck.lo `test -f 'speedcheck.c' || echo '$(srcdir)/'`speedcheck.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-speedcheck.Tpo $(DEPDIR)/libcurl_la-speedcheck.Plo
-#	$(AM_V_CC)source='speedcheck.c' object='libcurl_la-speedcheck.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-speedcheck.lo `test -f 'speedcheck.c' || echo '$(srcdir)/'`speedcheck.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-speedcheck.lo -MD -MP -MF $(DEPDIR)/libcurl_la-speedcheck.Tpo -c -o libcurl_la-speedcheck.lo `test -f 'speedcheck.c' || echo '$(srcdir)/'`speedcheck.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-speedcheck.Tpo $(DEPDIR)/libcurl_la-speedcheck.Plo
+	$(AM_V_CC)source='speedcheck.c' object='libcurl_la-speedcheck.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-speedcheck.lo `test -f 'speedcheck.c' || echo '$(srcdir)/'`speedcheck.c
 
 libcurl_la-ldap.lo: ldap.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-ldap.lo -MD -MP -MF $(DEPDIR)/libcurl_la-ldap.Tpo -c -o libcurl_la-ldap.lo `test -f 'ldap.c' || echo '$(srcdir)/'`ldap.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-ldap.Tpo $(DEPDIR)/libcurl_la-ldap.Plo
-#	$(AM_V_CC)source='ldap.c' object='libcurl_la-ldap.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-ldap.lo `test -f 'ldap.c' || echo '$(srcdir)/'`ldap.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-ldap.lo -MD -MP -MF $(DEPDIR)/libcurl_la-ldap.Tpo -c -o libcurl_la-ldap.lo `test -f 'ldap.c' || echo '$(srcdir)/'`ldap.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-ldap.Tpo $(DEPDIR)/libcurl_la-ldap.Plo
+	$(AM_V_CC)source='ldap.c' object='libcurl_la-ldap.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-ldap.lo `test -f 'ldap.c' || echo '$(srcdir)/'`ldap.c
 
 libcurl_la-version.lo: version.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-version.lo -MD -MP -MF $(DEPDIR)/libcurl_la-version.Tpo -c -o libcurl_la-version.lo `test -f 'version.c' || echo '$(srcdir)/'`version.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-version.Tpo $(DEPDIR)/libcurl_la-version.Plo
-#	$(AM_V_CC)source='version.c' object='libcurl_la-version.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-version.lo `test -f 'version.c' || echo '$(srcdir)/'`version.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-version.lo -MD -MP -MF $(DEPDIR)/libcurl_la-version.Tpo -c -o libcurl_la-version.lo `test -f 'version.c' || echo '$(srcdir)/'`version.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-version.Tpo $(DEPDIR)/libcurl_la-version.Plo
+	$(AM_V_CC)source='version.c' object='libcurl_la-version.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-version.lo `test -f 'version.c' || echo '$(srcdir)/'`version.c
 
 libcurl_la-getenv.lo: getenv.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-getenv.lo -MD -MP -MF $(DEPDIR)/libcurl_la-getenv.Tpo -c -o libcurl_la-getenv.lo `test -f 'getenv.c' || echo '$(srcdir)/'`getenv.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-getenv.Tpo $(DEPDIR)/libcurl_la-getenv.Plo
-#	$(AM_V_CC)source='getenv.c' object='libcurl_la-getenv.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-getenv.lo `test -f 'getenv.c' || echo '$(srcdir)/'`getenv.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-getenv.lo -MD -MP -MF $(DEPDIR)/libcurl_la-getenv.Tpo -c -o libcurl_la-getenv.lo `test -f 'getenv.c' || echo '$(srcdir)/'`getenv.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-getenv.Tpo $(DEPDIR)/libcurl_la-getenv.Plo
+	$(AM_V_CC)source='getenv.c' object='libcurl_la-getenv.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-getenv.lo `test -f 'getenv.c' || echo '$(srcdir)/'`getenv.c
 
 libcurl_la-escape.lo: escape.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-escape.lo -MD -MP -MF $(DEPDIR)/libcurl_la-escape.Tpo -c -o libcurl_la-escape.lo `test -f 'escape.c' || echo '$(srcdir)/'`escape.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-escape.Tpo $(DEPDIR)/libcurl_la-escape.Plo
-#	$(AM_V_CC)source='escape.c' object='libcurl_la-escape.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-escape.lo `test -f 'escape.c' || echo '$(srcdir)/'`escape.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-escape.lo -MD -MP -MF $(DEPDIR)/libcurl_la-escape.Tpo -c -o libcurl_la-escape.lo `test -f 'escape.c' || echo '$(srcdir)/'`escape.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-escape.Tpo $(DEPDIR)/libcurl_la-escape.Plo
+	$(AM_V_CC)source='escape.c' object='libcurl_la-escape.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-escape.lo `test -f 'escape.c' || echo '$(srcdir)/'`escape.c
 
 libcurl_la-mprintf.lo: mprintf.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-mprintf.lo -MD -MP -MF $(DEPDIR)/libcurl_la-mprintf.Tpo -c -o libcurl_la-mprintf.lo `test -f 'mprintf.c' || echo '$(srcdir)/'`mprintf.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-mprintf.Tpo $(DEPDIR)/libcurl_la-mprintf.Plo
-#	$(AM_V_CC)source='mprintf.c' object='libcurl_la-mprintf.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-mprintf.lo `test -f 'mprintf.c' || echo '$(srcdir)/'`mprintf.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-mprintf.lo -MD -MP -MF $(DEPDIR)/libcurl_la-mprintf.Tpo -c -o libcurl_la-mprintf.lo `test -f 'mprintf.c' || echo '$(srcdir)/'`mprintf.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-mprintf.Tpo $(DEPDIR)/libcurl_la-mprintf.Plo
+	$(AM_V_CC)source='mprintf.c' object='libcurl_la-mprintf.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-mprintf.lo `test -f 'mprintf.c' || echo '$(srcdir)/'`mprintf.c
 
 libcurl_la-telnet.lo: telnet.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-telnet.lo -MD -MP -MF $(DEPDIR)/libcurl_la-telnet.Tpo -c -o libcurl_la-telnet.lo `test -f 'telnet.c' || echo '$(srcdir)/'`telnet.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-telnet.Tpo $(DEPDIR)/libcurl_la-telnet.Plo
-#	$(AM_V_CC)source='telnet.c' object='libcurl_la-telnet.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-telnet.lo `test -f 'telnet.c' || echo '$(srcdir)/'`telnet.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-telnet.lo -MD -MP -MF $(DEPDIR)/libcurl_la-telnet.Tpo -c -o libcurl_la-telnet.lo `test -f 'telnet.c' || echo '$(srcdir)/'`telnet.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-telnet.Tpo $(DEPDIR)/libcurl_la-telnet.Plo
+	$(AM_V_CC)source='telnet.c' object='libcurl_la-telnet.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-telnet.lo `test -f 'telnet.c' || echo '$(srcdir)/'`telnet.c
 
 libcurl_la-netrc.lo: netrc.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-netrc.lo -MD -MP -MF $(DEPDIR)/libcurl_la-netrc.Tpo -c -o libcurl_la-netrc.lo `test -f 'netrc.c' || echo '$(srcdir)/'`netrc.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-netrc.Tpo $(DEPDIR)/libcurl_la-netrc.Plo
-#	$(AM_V_CC)source='netrc.c' object='libcurl_la-netrc.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-netrc.lo `test -f 'netrc.c' || echo '$(srcdir)/'`netrc.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-netrc.lo -MD -MP -MF $(DEPDIR)/libcurl_la-netrc.Tpo -c -o libcurl_la-netrc.lo `test -f 'netrc.c' || echo '$(srcdir)/'`netrc.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-netrc.Tpo $(DEPDIR)/libcurl_la-netrc.Plo
+	$(AM_V_CC)source='netrc.c' object='libcurl_la-netrc.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-netrc.lo `test -f 'netrc.c' || echo '$(srcdir)/'`netrc.c
 
 libcurl_la-getinfo.lo: getinfo.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-getinfo.lo -MD -MP -MF $(DEPDIR)/libcurl_la-getinfo.Tpo -c -o libcurl_la-getinfo.lo `test -f 'getinfo.c' || echo '$(srcdir)/'`getinfo.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-getinfo.Tpo $(DEPDIR)/libcurl_la-getinfo.Plo
-#	$(AM_V_CC)source='getinfo.c' object='libcurl_la-getinfo.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-getinfo.lo `test -f 'getinfo.c' || echo '$(srcdir)/'`getinfo.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-getinfo.lo -MD -MP -MF $(DEPDIR)/libcurl_la-getinfo.Tpo -c -o libcurl_la-getinfo.lo `test -f 'getinfo.c' || echo '$(srcdir)/'`getinfo.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-getinfo.Tpo $(DEPDIR)/libcurl_la-getinfo.Plo
+	$(AM_V_CC)source='getinfo.c' object='libcurl_la-getinfo.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-getinfo.lo `test -f 'getinfo.c' || echo '$(srcdir)/'`getinfo.c
 
 libcurl_la-transfer.lo: transfer.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-transfer.lo -MD -MP -MF $(DEPDIR)/libcurl_la-transfer.Tpo -c -o libcurl_la-transfer.lo `test -f 'transfer.c' || echo '$(srcdir)/'`transfer.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-transfer.Tpo $(DEPDIR)/libcurl_la-transfer.Plo
-#	$(AM_V_CC)source='transfer.c' object='libcurl_la-transfer.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-transfer.lo `test -f 'transfer.c' || echo '$(srcdir)/'`transfer.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-transfer.lo -MD -MP -MF $(DEPDIR)/libcurl_la-transfer.Tpo -c -o libcurl_la-transfer.lo `test -f 'transfer.c' || echo '$(srcdir)/'`transfer.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-transfer.Tpo $(DEPDIR)/libcurl_la-transfer.Plo
+	$(AM_V_CC)source='transfer.c' object='libcurl_la-transfer.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-transfer.lo `test -f 'transfer.c' || echo '$(srcdir)/'`transfer.c
 
 libcurl_la-strcase.lo: strcase.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-strcase.lo -MD -MP -MF $(DEPDIR)/libcurl_la-strcase.Tpo -c -o libcurl_la-strcase.lo `test -f 'strcase.c' || echo '$(srcdir)/'`strcase.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-strcase.Tpo $(DEPDIR)/libcurl_la-strcase.Plo
-#	$(AM_V_CC)source='strcase.c' object='libcurl_la-strcase.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-strcase.lo `test -f 'strcase.c' || echo '$(srcdir)/'`strcase.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-strcase.lo -MD -MP -MF $(DEPDIR)/libcurl_la-strcase.Tpo -c -o libcurl_la-strcase.lo `test -f 'strcase.c' || echo '$(srcdir)/'`strcase.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-strcase.Tpo $(DEPDIR)/libcurl_la-strcase.Plo
+	$(AM_V_CC)source='strcase.c' object='libcurl_la-strcase.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-strcase.lo `test -f 'strcase.c' || echo '$(srcdir)/'`strcase.c
 
 libcurl_la-easy.lo: easy.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-easy.lo -MD -MP -MF $(DEPDIR)/libcurl_la-easy.Tpo -c -o libcurl_la-easy.lo `test -f 'easy.c' || echo '$(srcdir)/'`easy.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-easy.Tpo $(DEPDIR)/libcurl_la-easy.Plo
-#	$(AM_V_CC)source='easy.c' object='libcurl_la-easy.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-easy.lo `test -f 'easy.c' || echo '$(srcdir)/'`easy.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-easy.lo -MD -MP -MF $(DEPDIR)/libcurl_la-easy.Tpo -c -o libcurl_la-easy.lo `test -f 'easy.c' || echo '$(srcdir)/'`easy.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-easy.Tpo $(DEPDIR)/libcurl_la-easy.Plo
+	$(AM_V_CC)source='easy.c' object='libcurl_la-easy.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-easy.lo `test -f 'easy.c' || echo '$(srcdir)/'`easy.c
 
 libcurl_la-security.lo: security.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-security.lo -MD -MP -MF $(DEPDIR)/libcurl_la-security.Tpo -c -o libcurl_la-security.lo `test -f 'security.c' || echo '$(srcdir)/'`security.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-security.Tpo $(DEPDIR)/libcurl_la-security.Plo
-#	$(AM_V_CC)source='security.c' object='libcurl_la-security.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-security.lo `test -f 'security.c' || echo '$(srcdir)/'`security.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-security.lo -MD -MP -MF $(DEPDIR)/libcurl_la-security.Tpo -c -o libcurl_la-security.lo `test -f 'security.c' || echo '$(srcdir)/'`security.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-security.Tpo $(DEPDIR)/libcurl_la-security.Plo
+	$(AM_V_CC)source='security.c' object='libcurl_la-security.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-security.lo `test -f 'security.c' || echo '$(srcdir)/'`security.c
 
 libcurl_la-curl_fnmatch.lo: curl_fnmatch.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_fnmatch.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_fnmatch.Tpo -c -o libcurl_la-curl_fnmatch.lo `test -f 'curl_fnmatch.c' || echo '$(srcdir)/'`curl_fnmatch.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_fnmatch.Tpo $(DEPDIR)/libcurl_la-curl_fnmatch.Plo
-#	$(AM_V_CC)source='curl_fnmatch.c' object='libcurl_la-curl_fnmatch.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_fnmatch.lo `test -f 'curl_fnmatch.c' || echo '$(srcdir)/'`curl_fnmatch.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_fnmatch.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_fnmatch.Tpo -c -o libcurl_la-curl_fnmatch.lo `test -f 'curl_fnmatch.c' || echo '$(srcdir)/'`curl_fnmatch.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_fnmatch.Tpo $(DEPDIR)/libcurl_la-curl_fnmatch.Plo
+	$(AM_V_CC)source='curl_fnmatch.c' object='libcurl_la-curl_fnmatch.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_fnmatch.lo `test -f 'curl_fnmatch.c' || echo '$(srcdir)/'`curl_fnmatch.c
 
 libcurl_la-fileinfo.lo: fileinfo.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-fileinfo.lo -MD -MP -MF $(DEPDIR)/libcurl_la-fileinfo.Tpo -c -o libcurl_la-fileinfo.lo `test -f 'fileinfo.c' || echo '$(srcdir)/'`fileinfo.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-fileinfo.Tpo $(DEPDIR)/libcurl_la-fileinfo.Plo
-#	$(AM_V_CC)source='fileinfo.c' object='libcurl_la-fileinfo.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-fileinfo.lo `test -f 'fileinfo.c' || echo '$(srcdir)/'`fileinfo.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-fileinfo.lo -MD -MP -MF $(DEPDIR)/libcurl_la-fileinfo.Tpo -c -o libcurl_la-fileinfo.lo `test -f 'fileinfo.c' || echo '$(srcdir)/'`fileinfo.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-fileinfo.Tpo $(DEPDIR)/libcurl_la-fileinfo.Plo
+	$(AM_V_CC)source='fileinfo.c' object='libcurl_la-fileinfo.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-fileinfo.lo `test -f 'fileinfo.c' || echo '$(srcdir)/'`fileinfo.c
 
 libcurl_la-ftplistparser.lo: ftplistparser.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-ftplistparser.lo -MD -MP -MF $(DEPDIR)/libcurl_la-ftplistparser.Tpo -c -o libcurl_la-ftplistparser.lo `test -f 'ftplistparser.c' || echo '$(srcdir)/'`ftplistparser.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-ftplistparser.Tpo $(DEPDIR)/libcurl_la-ftplistparser.Plo
-#	$(AM_V_CC)source='ftplistparser.c' object='libcurl_la-ftplistparser.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-ftplistparser.lo `test -f 'ftplistparser.c' || echo '$(srcdir)/'`ftplistparser.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-ftplistparser.lo -MD -MP -MF $(DEPDIR)/libcurl_la-ftplistparser.Tpo -c -o libcurl_la-ftplistparser.lo `test -f 'ftplistparser.c' || echo '$(srcdir)/'`ftplistparser.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-ftplistparser.Tpo $(DEPDIR)/libcurl_la-ftplistparser.Plo
+	$(AM_V_CC)source='ftplistparser.c' object='libcurl_la-ftplistparser.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-ftplistparser.lo `test -f 'ftplistparser.c' || echo '$(srcdir)/'`ftplistparser.c
 
 libcurl_la-wildcard.lo: wildcard.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-wildcard.lo -MD -MP -MF $(DEPDIR)/libcurl_la-wildcard.Tpo -c -o libcurl_la-wildcard.lo `test -f 'wildcard.c' || echo '$(srcdir)/'`wildcard.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-wildcard.Tpo $(DEPDIR)/libcurl_la-wildcard.Plo
-#	$(AM_V_CC)source='wildcard.c' object='libcurl_la-wildcard.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-wildcard.lo `test -f 'wildcard.c' || echo '$(srcdir)/'`wildcard.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-wildcard.lo -MD -MP -MF $(DEPDIR)/libcurl_la-wildcard.Tpo -c -o libcurl_la-wildcard.lo `test -f 'wildcard.c' || echo '$(srcdir)/'`wildcard.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-wildcard.Tpo $(DEPDIR)/libcurl_la-wildcard.Plo
+	$(AM_V_CC)source='wildcard.c' object='libcurl_la-wildcard.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-wildcard.lo `test -f 'wildcard.c' || echo '$(srcdir)/'`wildcard.c
 
 libcurl_la-krb5.lo: krb5.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-krb5.lo -MD -MP -MF $(DEPDIR)/libcurl_la-krb5.Tpo -c -o libcurl_la-krb5.lo `test -f 'krb5.c' || echo '$(srcdir)/'`krb5.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-krb5.Tpo $(DEPDIR)/libcurl_la-krb5.Plo
-#	$(AM_V_CC)source='krb5.c' object='libcurl_la-krb5.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-krb5.lo `test -f 'krb5.c' || echo '$(srcdir)/'`krb5.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-krb5.lo -MD -MP -MF $(DEPDIR)/libcurl_la-krb5.Tpo -c -o libcurl_la-krb5.lo `test -f 'krb5.c' || echo '$(srcdir)/'`krb5.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-krb5.Tpo $(DEPDIR)/libcurl_la-krb5.Plo
+	$(AM_V_CC)source='krb5.c' object='libcurl_la-krb5.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-krb5.lo `test -f 'krb5.c' || echo '$(srcdir)/'`krb5.c
 
 libcurl_la-memdebug.lo: memdebug.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-memdebug.lo -MD -MP -MF $(DEPDIR)/libcurl_la-memdebug.Tpo -c -o libcurl_la-memdebug.lo `test -f 'memdebug.c' || echo '$(srcdir)/'`memdebug.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-memdebug.Tpo $(DEPDIR)/libcurl_la-memdebug.Plo
-#	$(AM_V_CC)source='memdebug.c' object='libcurl_la-memdebug.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-memdebug.lo `test -f 'memdebug.c' || echo '$(srcdir)/'`memdebug.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-memdebug.lo -MD -MP -MF $(DEPDIR)/libcurl_la-memdebug.Tpo -c -o libcurl_la-memdebug.lo `test -f 'memdebug.c' || echo '$(srcdir)/'`memdebug.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-memdebug.Tpo $(DEPDIR)/libcurl_la-memdebug.Plo
+	$(AM_V_CC)source='memdebug.c' object='libcurl_la-memdebug.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-memdebug.lo `test -f 'memdebug.c' || echo '$(srcdir)/'`memdebug.c
 
 libcurl_la-http_chunks.lo: http_chunks.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-http_chunks.lo -MD -MP -MF $(DEPDIR)/libcurl_la-http_chunks.Tpo -c -o libcurl_la-http_chunks.lo `test -f 'http_chunks.c' || echo '$(srcdir)/'`http_chunks.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-http_chunks.Tpo $(DEPDIR)/libcurl_la-http_chunks.Plo
-#	$(AM_V_CC)source='http_chunks.c' object='libcurl_la-http_chunks.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-http_chunks.lo `test -f 'http_chunks.c' || echo '$(srcdir)/'`http_chunks.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-http_chunks.lo -MD -MP -MF $(DEPDIR)/libcurl_la-http_chunks.Tpo -c -o libcurl_la-http_chunks.lo `test -f 'http_chunks.c' || echo '$(srcdir)/'`http_chunks.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-http_chunks.Tpo $(DEPDIR)/libcurl_la-http_chunks.Plo
+	$(AM_V_CC)source='http_chunks.c' object='libcurl_la-http_chunks.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-http_chunks.lo `test -f 'http_chunks.c' || echo '$(srcdir)/'`http_chunks.c
 
 libcurl_la-strtok.lo: strtok.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-strtok.lo -MD -MP -MF $(DEPDIR)/libcurl_la-strtok.Tpo -c -o libcurl_la-strtok.lo `test -f 'strtok.c' || echo '$(srcdir)/'`strtok.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-strtok.Tpo $(DEPDIR)/libcurl_la-strtok.Plo
-#	$(AM_V_CC)source='strtok.c' object='libcurl_la-strtok.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-strtok.lo `test -f 'strtok.c' || echo '$(srcdir)/'`strtok.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-strtok.lo -MD -MP -MF $(DEPDIR)/libcurl_la-strtok.Tpo -c -o libcurl_la-strtok.lo `test -f 'strtok.c' || echo '$(srcdir)/'`strtok.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-strtok.Tpo $(DEPDIR)/libcurl_la-strtok.Plo
+	$(AM_V_CC)source='strtok.c' object='libcurl_la-strtok.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-strtok.lo `test -f 'strtok.c' || echo '$(srcdir)/'`strtok.c
 
 libcurl_la-connect.lo: connect.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-connect.lo -MD -MP -MF $(DEPDIR)/libcurl_la-connect.Tpo -c -o libcurl_la-connect.lo `test -f 'connect.c' || echo '$(srcdir)/'`connect.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-connect.Tpo $(DEPDIR)/libcurl_la-connect.Plo
-#	$(AM_V_CC)source='connect.c' object='libcurl_la-connect.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-connect.lo `test -f 'connect.c' || echo '$(srcdir)/'`connect.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-connect.lo -MD -MP -MF $(DEPDIR)/libcurl_la-connect.Tpo -c -o libcurl_la-connect.lo `test -f 'connect.c' || echo '$(srcdir)/'`connect.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-connect.Tpo $(DEPDIR)/libcurl_la-connect.Plo
+	$(AM_V_CC)source='connect.c' object='libcurl_la-connect.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-connect.lo `test -f 'connect.c' || echo '$(srcdir)/'`connect.c
 
 libcurl_la-llist.lo: llist.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-llist.lo -MD -MP -MF $(DEPDIR)/libcurl_la-llist.Tpo -c -o libcurl_la-llist.lo `test -f 'llist.c' || echo '$(srcdir)/'`llist.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-llist.Tpo $(DEPDIR)/libcurl_la-llist.Plo
-#	$(AM_V_CC)source='llist.c' object='libcurl_la-llist.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-llist.lo `test -f 'llist.c' || echo '$(srcdir)/'`llist.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-llist.lo -MD -MP -MF $(DEPDIR)/libcurl_la-llist.Tpo -c -o libcurl_la-llist.lo `test -f 'llist.c' || echo '$(srcdir)/'`llist.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-llist.Tpo $(DEPDIR)/libcurl_la-llist.Plo
+	$(AM_V_CC)source='llist.c' object='libcurl_la-llist.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-llist.lo `test -f 'llist.c' || echo '$(srcdir)/'`llist.c
 
 libcurl_la-hash.lo: hash.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-hash.lo -MD -MP -MF $(DEPDIR)/libcurl_la-hash.Tpo -c -o libcurl_la-hash.lo `test -f 'hash.c' || echo '$(srcdir)/'`hash.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-hash.Tpo $(DEPDIR)/libcurl_la-hash.Plo
-#	$(AM_V_CC)source='hash.c' object='libcurl_la-hash.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-hash.lo `test -f 'hash.c' || echo '$(srcdir)/'`hash.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-hash.lo -MD -MP -MF $(DEPDIR)/libcurl_la-hash.Tpo -c -o libcurl_la-hash.lo `test -f 'hash.c' || echo '$(srcdir)/'`hash.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-hash.Tpo $(DEPDIR)/libcurl_la-hash.Plo
+	$(AM_V_CC)source='hash.c' object='libcurl_la-hash.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-hash.lo `test -f 'hash.c' || echo '$(srcdir)/'`hash.c
 
 libcurl_la-multi.lo: multi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-multi.lo -MD -MP -MF $(DEPDIR)/libcurl_la-multi.Tpo -c -o libcurl_la-multi.lo `test -f 'multi.c' || echo '$(srcdir)/'`multi.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-multi.Tpo $(DEPDIR)/libcurl_la-multi.Plo
-#	$(AM_V_CC)source='multi.c' object='libcurl_la-multi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-multi.lo `test -f 'multi.c' || echo '$(srcdir)/'`multi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-multi.lo -MD -MP -MF $(DEPDIR)/libcurl_la-multi.Tpo -c -o libcurl_la-multi.lo `test -f 'multi.c' || echo '$(srcdir)/'`multi.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-multi.Tpo $(DEPDIR)/libcurl_la-multi.Plo
+	$(AM_V_CC)source='multi.c' object='libcurl_la-multi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-multi.lo `test -f 'multi.c' || echo '$(srcdir)/'`multi.c
 
 libcurl_la-content_encoding.lo: content_encoding.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-content_encoding.lo -MD -MP -MF $(DEPDIR)/libcurl_la-content_encoding.Tpo -c -o libcurl_la-content_encoding.lo `test -f 'content_encoding.c' || echo '$(srcdir)/'`content_encoding.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-content_encoding.Tpo $(DEPDIR)/libcurl_la-content_encoding.Plo
-#	$(AM_V_CC)source='content_encoding.c' object='libcurl_la-content_encoding.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-content_encoding.lo `test -f 'content_encoding.c' || echo '$(srcdir)/'`content_encoding.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-content_encoding.lo -MD -MP -MF $(DEPDIR)/libcurl_la-content_encoding.Tpo -c -o libcurl_la-content_encoding.lo `test -f 'content_encoding.c' || echo '$(srcdir)/'`content_encoding.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-content_encoding.Tpo $(DEPDIR)/libcurl_la-content_encoding.Plo
+	$(AM_V_CC)source='content_encoding.c' object='libcurl_la-content_encoding.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-content_encoding.lo `test -f 'content_encoding.c' || echo '$(srcdir)/'`content_encoding.c
 
 libcurl_la-share.lo: share.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-share.lo -MD -MP -MF $(DEPDIR)/libcurl_la-share.Tpo -c -o libcurl_la-share.lo `test -f 'share.c' || echo '$(srcdir)/'`share.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-share.Tpo $(DEPDIR)/libcurl_la-share.Plo
-#	$(AM_V_CC)source='share.c' object='libcurl_la-share.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-share.lo `test -f 'share.c' || echo '$(srcdir)/'`share.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-share.lo -MD -MP -MF $(DEPDIR)/libcurl_la-share.Tpo -c -o libcurl_la-share.lo `test -f 'share.c' || echo '$(srcdir)/'`share.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-share.Tpo $(DEPDIR)/libcurl_la-share.Plo
+	$(AM_V_CC)source='share.c' object='libcurl_la-share.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-share.lo `test -f 'share.c' || echo '$(srcdir)/'`share.c
 
 libcurl_la-http_digest.lo: http_digest.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-http_digest.lo -MD -MP -MF $(DEPDIR)/libcurl_la-http_digest.Tpo -c -o libcurl_la-http_digest.lo `test -f 'http_digest.c' || echo '$(srcdir)/'`http_digest.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-http_digest.Tpo $(DEPDIR)/libcurl_la-http_digest.Plo
-#	$(AM_V_CC)source='http_digest.c' object='libcurl_la-http_digest.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-http_digest.lo `test -f 'http_digest.c' || echo '$(srcdir)/'`http_digest.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-http_digest.lo -MD -MP -MF $(DEPDIR)/libcurl_la-http_digest.Tpo -c -o libcurl_la-http_digest.lo `test -f 'http_digest.c' || echo '$(srcdir)/'`http_digest.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-http_digest.Tpo $(DEPDIR)/libcurl_la-http_digest.Plo
+	$(AM_V_CC)source='http_digest.c' object='libcurl_la-http_digest.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-http_digest.lo `test -f 'http_digest.c' || echo '$(srcdir)/'`http_digest.c
 
 libcurl_la-md4.lo: md4.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-md4.lo -MD -MP -MF $(DEPDIR)/libcurl_la-md4.Tpo -c -o libcurl_la-md4.lo `test -f 'md4.c' || echo '$(srcdir)/'`md4.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-md4.Tpo $(DEPDIR)/libcurl_la-md4.Plo
-#	$(AM_V_CC)source='md4.c' object='libcurl_la-md4.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-md4.lo `test -f 'md4.c' || echo '$(srcdir)/'`md4.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-md4.lo -MD -MP -MF $(DEPDIR)/libcurl_la-md4.Tpo -c -o libcurl_la-md4.lo `test -f 'md4.c' || echo '$(srcdir)/'`md4.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-md4.Tpo $(DEPDIR)/libcurl_la-md4.Plo
+	$(AM_V_CC)source='md4.c' object='libcurl_la-md4.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-md4.lo `test -f 'md4.c' || echo '$(srcdir)/'`md4.c
 
 libcurl_la-md5.lo: md5.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-md5.lo -MD -MP -MF $(DEPDIR)/libcurl_la-md5.Tpo -c -o libcurl_la-md5.lo `test -f 'md5.c' || echo '$(srcdir)/'`md5.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-md5.Tpo $(DEPDIR)/libcurl_la-md5.Plo
-#	$(AM_V_CC)source='md5.c' object='libcurl_la-md5.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-md5.lo `test -f 'md5.c' || echo '$(srcdir)/'`md5.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-md5.lo -MD -MP -MF $(DEPDIR)/libcurl_la-md5.Tpo -c -o libcurl_la-md5.lo `test -f 'md5.c' || echo '$(srcdir)/'`md5.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-md5.Tpo $(DEPDIR)/libcurl_la-md5.Plo
+	$(AM_V_CC)source='md5.c' object='libcurl_la-md5.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-md5.lo `test -f 'md5.c' || echo '$(srcdir)/'`md5.c
 
 libcurl_la-http_negotiate.lo: http_negotiate.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-http_negotiate.lo -MD -MP -MF $(DEPDIR)/libcurl_la-http_negotiate.Tpo -c -o libcurl_la-http_negotiate.lo `test -f 'http_negotiate.c' || echo '$(srcdir)/'`http_negotiate.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-http_negotiate.Tpo $(DEPDIR)/libcurl_la-http_negotiate.Plo
-#	$(AM_V_CC)source='http_negotiate.c' object='libcurl_la-http_negotiate.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-http_negotiate.lo `test -f 'http_negotiate.c' || echo '$(srcdir)/'`http_negotiate.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-http_negotiate.lo -MD -MP -MF $(DEPDIR)/libcurl_la-http_negotiate.Tpo -c -o libcurl_la-http_negotiate.lo `test -f 'http_negotiate.c' || echo '$(srcdir)/'`http_negotiate.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-http_negotiate.Tpo $(DEPDIR)/libcurl_la-http_negotiate.Plo
+	$(AM_V_CC)source='http_negotiate.c' object='libcurl_la-http_negotiate.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-http_negotiate.lo `test -f 'http_negotiate.c' || echo '$(srcdir)/'`http_negotiate.c
 
 libcurl_la-inet_pton.lo: inet_pton.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-inet_pton.lo -MD -MP -MF $(DEPDIR)/libcurl_la-inet_pton.Tpo -c -o libcurl_la-inet_pton.lo `test -f 'inet_pton.c' || echo '$(srcdir)/'`inet_pton.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-inet_pton.Tpo $(DEPDIR)/libcurl_la-inet_pton.Plo
-#	$(AM_V_CC)source='inet_pton.c' object='libcurl_la-inet_pton.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-inet_pton.lo `test -f 'inet_pton.c' || echo '$(srcdir)/'`inet_pton.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-inet_pton.lo -MD -MP -MF $(DEPDIR)/libcurl_la-inet_pton.Tpo -c -o libcurl_la-inet_pton.lo `test -f 'inet_pton.c' || echo '$(srcdir)/'`inet_pton.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-inet_pton.Tpo $(DEPDIR)/libcurl_la-inet_pton.Plo
+	$(AM_V_CC)source='inet_pton.c' object='libcurl_la-inet_pton.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-inet_pton.lo `test -f 'inet_pton.c' || echo '$(srcdir)/'`inet_pton.c
 
 libcurl_la-strtoofft.lo: strtoofft.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-strtoofft.lo -MD -MP -MF $(DEPDIR)/libcurl_la-strtoofft.Tpo -c -o libcurl_la-strtoofft.lo `test -f 'strtoofft.c' || echo '$(srcdir)/'`strtoofft.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-strtoofft.Tpo $(DEPDIR)/libcurl_la-strtoofft.Plo
-#	$(AM_V_CC)source='strtoofft.c' object='libcurl_la-strtoofft.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-strtoofft.lo `test -f 'strtoofft.c' || echo '$(srcdir)/'`strtoofft.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-strtoofft.lo -MD -MP -MF $(DEPDIR)/libcurl_la-strtoofft.Tpo -c -o libcurl_la-strtoofft.lo `test -f 'strtoofft.c' || echo '$(srcdir)/'`strtoofft.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-strtoofft.Tpo $(DEPDIR)/libcurl_la-strtoofft.Plo
+	$(AM_V_CC)source='strtoofft.c' object='libcurl_la-strtoofft.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-strtoofft.lo `test -f 'strtoofft.c' || echo '$(srcdir)/'`strtoofft.c
 
 libcurl_la-strerror.lo: strerror.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-strerror.lo -MD -MP -MF $(DEPDIR)/libcurl_la-strerror.Tpo -c -o libcurl_la-strerror.lo `test -f 'strerror.c' || echo '$(srcdir)/'`strerror.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-strerror.Tpo $(DEPDIR)/libcurl_la-strerror.Plo
-#	$(AM_V_CC)source='strerror.c' object='libcurl_la-strerror.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-strerror.lo `test -f 'strerror.c' || echo '$(srcdir)/'`strerror.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-strerror.lo -MD -MP -MF $(DEPDIR)/libcurl_la-strerror.Tpo -c -o libcurl_la-strerror.lo `test -f 'strerror.c' || echo '$(srcdir)/'`strerror.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-strerror.Tpo $(DEPDIR)/libcurl_la-strerror.Plo
+	$(AM_V_CC)source='strerror.c' object='libcurl_la-strerror.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-strerror.lo `test -f 'strerror.c' || echo '$(srcdir)/'`strerror.c
 
 libcurl_la-amigaos.lo: amigaos.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-amigaos.lo -MD -MP -MF $(DEPDIR)/libcurl_la-amigaos.Tpo -c -o libcurl_la-amigaos.lo `test -f 'amigaos.c' || echo '$(srcdir)/'`amigaos.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-amigaos.Tpo $(DEPDIR)/libcurl_la-amigaos.Plo
-#	$(AM_V_CC)source='amigaos.c' object='libcurl_la-amigaos.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-amigaos.lo `test -f 'amigaos.c' || echo '$(srcdir)/'`amigaos.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-amigaos.lo -MD -MP -MF $(DEPDIR)/libcurl_la-amigaos.Tpo -c -o libcurl_la-amigaos.lo `test -f 'amigaos.c' || echo '$(srcdir)/'`amigaos.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-amigaos.Tpo $(DEPDIR)/libcurl_la-amigaos.Plo
+	$(AM_V_CC)source='amigaos.c' object='libcurl_la-amigaos.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-amigaos.lo `test -f 'amigaos.c' || echo '$(srcdir)/'`amigaos.c
 
 libcurl_la-hostasyn.lo: hostasyn.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-hostasyn.lo -MD -MP -MF $(DEPDIR)/libcurl_la-hostasyn.Tpo -c -o libcurl_la-hostasyn.lo `test -f 'hostasyn.c' || echo '$(srcdir)/'`hostasyn.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-hostasyn.Tpo $(DEPDIR)/libcurl_la-hostasyn.Plo
-#	$(AM_V_CC)source='hostasyn.c' object='libcurl_la-hostasyn.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-hostasyn.lo `test -f 'hostasyn.c' || echo '$(srcdir)/'`hostasyn.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-hostasyn.lo -MD -MP -MF $(DEPDIR)/libcurl_la-hostasyn.Tpo -c -o libcurl_la-hostasyn.lo `test -f 'hostasyn.c' || echo '$(srcdir)/'`hostasyn.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-hostasyn.Tpo $(DEPDIR)/libcurl_la-hostasyn.Plo
+	$(AM_V_CC)source='hostasyn.c' object='libcurl_la-hostasyn.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-hostasyn.lo `test -f 'hostasyn.c' || echo '$(srcdir)/'`hostasyn.c
 
 libcurl_la-hostip4.lo: hostip4.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-hostip4.lo -MD -MP -MF $(DEPDIR)/libcurl_la-hostip4.Tpo -c -o libcurl_la-hostip4.lo `test -f 'hostip4.c' || echo '$(srcdir)/'`hostip4.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-hostip4.Tpo $(DEPDIR)/libcurl_la-hostip4.Plo
-#	$(AM_V_CC)source='hostip4.c' object='libcurl_la-hostip4.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-hostip4.lo `test -f 'hostip4.c' || echo '$(srcdir)/'`hostip4.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-hostip4.lo -MD -MP -MF $(DEPDIR)/libcurl_la-hostip4.Tpo -c -o libcurl_la-hostip4.lo `test -f 'hostip4.c' || echo '$(srcdir)/'`hostip4.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-hostip4.Tpo $(DEPDIR)/libcurl_la-hostip4.Plo
+	$(AM_V_CC)source='hostip4.c' object='libcurl_la-hostip4.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-hostip4.lo `test -f 'hostip4.c' || echo '$(srcdir)/'`hostip4.c
 
 libcurl_la-hostip6.lo: hostip6.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-hostip6.lo -MD -MP -MF $(DEPDIR)/libcurl_la-hostip6.Tpo -c -o libcurl_la-hostip6.lo `test -f 'hostip6.c' || echo '$(srcdir)/'`hostip6.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-hostip6.Tpo $(DEPDIR)/libcurl_la-hostip6.Plo
-#	$(AM_V_CC)source='hostip6.c' object='libcurl_la-hostip6.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-hostip6.lo `test -f 'hostip6.c' || echo '$(srcdir)/'`hostip6.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-hostip6.lo -MD -MP -MF $(DEPDIR)/libcurl_la-hostip6.Tpo -c -o libcurl_la-hostip6.lo `test -f 'hostip6.c' || echo '$(srcdir)/'`hostip6.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-hostip6.Tpo $(DEPDIR)/libcurl_la-hostip6.Plo
+	$(AM_V_CC)source='hostip6.c' object='libcurl_la-hostip6.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-hostip6.lo `test -f 'hostip6.c' || echo '$(srcdir)/'`hostip6.c
 
 libcurl_la-hostsyn.lo: hostsyn.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-hostsyn.lo -MD -MP -MF $(DEPDIR)/libcurl_la-hostsyn.Tpo -c -o libcurl_la-hostsyn.lo `test -f 'hostsyn.c' || echo '$(srcdir)/'`hostsyn.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-hostsyn.Tpo $(DEPDIR)/libcurl_la-hostsyn.Plo
-#	$(AM_V_CC)source='hostsyn.c' object='libcurl_la-hostsyn.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-hostsyn.lo `test -f 'hostsyn.c' || echo '$(srcdir)/'`hostsyn.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-hostsyn.lo -MD -MP -MF $(DEPDIR)/libcurl_la-hostsyn.Tpo -c -o libcurl_la-hostsyn.lo `test -f 'hostsyn.c' || echo '$(srcdir)/'`hostsyn.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-hostsyn.Tpo $(DEPDIR)/libcurl_la-hostsyn.Plo
+	$(AM_V_CC)source='hostsyn.c' object='libcurl_la-hostsyn.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-hostsyn.lo `test -f 'hostsyn.c' || echo '$(srcdir)/'`hostsyn.c
 
 libcurl_la-inet_ntop.lo: inet_ntop.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-inet_ntop.lo -MD -MP -MF $(DEPDIR)/libcurl_la-inet_ntop.Tpo -c -o libcurl_la-inet_ntop.lo `test -f 'inet_ntop.c' || echo '$(srcdir)/'`inet_ntop.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-inet_ntop.Tpo $(DEPDIR)/libcurl_la-inet_ntop.Plo
-#	$(AM_V_CC)source='inet_ntop.c' object='libcurl_la-inet_ntop.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-inet_ntop.lo `test -f 'inet_ntop.c' || echo '$(srcdir)/'`inet_ntop.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-inet_ntop.lo -MD -MP -MF $(DEPDIR)/libcurl_la-inet_ntop.Tpo -c -o libcurl_la-inet_ntop.lo `test -f 'inet_ntop.c' || echo '$(srcdir)/'`inet_ntop.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-inet_ntop.Tpo $(DEPDIR)/libcurl_la-inet_ntop.Plo
+	$(AM_V_CC)source='inet_ntop.c' object='libcurl_la-inet_ntop.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-inet_ntop.lo `test -f 'inet_ntop.c' || echo '$(srcdir)/'`inet_ntop.c
 
 libcurl_la-parsedate.lo: parsedate.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-parsedate.lo -MD -MP -MF $(DEPDIR)/libcurl_la-parsedate.Tpo -c -o libcurl_la-parsedate.lo `test -f 'parsedate.c' || echo '$(srcdir)/'`parsedate.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-parsedate.Tpo $(DEPDIR)/libcurl_la-parsedate.Plo
-#	$(AM_V_CC)source='parsedate.c' object='libcurl_la-parsedate.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-parsedate.lo `test -f 'parsedate.c' || echo '$(srcdir)/'`parsedate.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-parsedate.lo -MD -MP -MF $(DEPDIR)/libcurl_la-parsedate.Tpo -c -o libcurl_la-parsedate.lo `test -f 'parsedate.c' || echo '$(srcdir)/'`parsedate.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-parsedate.Tpo $(DEPDIR)/libcurl_la-parsedate.Plo
+	$(AM_V_CC)source='parsedate.c' object='libcurl_la-parsedate.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-parsedate.lo `test -f 'parsedate.c' || echo '$(srcdir)/'`parsedate.c
 
 libcurl_la-select.lo: select.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-select.lo -MD -MP -MF $(DEPDIR)/libcurl_la-select.Tpo -c -o libcurl_la-select.lo `test -f 'select.c' || echo '$(srcdir)/'`select.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-select.Tpo $(DEPDIR)/libcurl_la-select.Plo
-#	$(AM_V_CC)source='select.c' object='libcurl_la-select.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-select.lo `test -f 'select.c' || echo '$(srcdir)/'`select.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-select.lo -MD -MP -MF $(DEPDIR)/libcurl_la-select.Tpo -c -o libcurl_la-select.lo `test -f 'select.c' || echo '$(srcdir)/'`select.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-select.Tpo $(DEPDIR)/libcurl_la-select.Plo
+	$(AM_V_CC)source='select.c' object='libcurl_la-select.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-select.lo `test -f 'select.c' || echo '$(srcdir)/'`select.c
 
 libcurl_la-tftp.lo: tftp.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-tftp.lo -MD -MP -MF $(DEPDIR)/libcurl_la-tftp.Tpo -c -o libcurl_la-tftp.lo `test -f 'tftp.c' || echo '$(srcdir)/'`tftp.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-tftp.Tpo $(DEPDIR)/libcurl_la-tftp.Plo
-#	$(AM_V_CC)source='tftp.c' object='libcurl_la-tftp.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-tftp.lo `test -f 'tftp.c' || echo '$(srcdir)/'`tftp.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-tftp.lo -MD -MP -MF $(DEPDIR)/libcurl_la-tftp.Tpo -c -o libcurl_la-tftp.lo `test -f 'tftp.c' || echo '$(srcdir)/'`tftp.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-tftp.Tpo $(DEPDIR)/libcurl_la-tftp.Plo
+	$(AM_V_CC)source='tftp.c' object='libcurl_la-tftp.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-tftp.lo `test -f 'tftp.c' || echo '$(srcdir)/'`tftp.c
 
 libcurl_la-splay.lo: splay.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-splay.lo -MD -MP -MF $(DEPDIR)/libcurl_la-splay.Tpo -c -o libcurl_la-splay.lo `test -f 'splay.c' || echo '$(srcdir)/'`splay.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-splay.Tpo $(DEPDIR)/libcurl_la-splay.Plo
-#	$(AM_V_CC)source='splay.c' object='libcurl_la-splay.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-splay.lo `test -f 'splay.c' || echo '$(srcdir)/'`splay.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-splay.lo -MD -MP -MF $(DEPDIR)/libcurl_la-splay.Tpo -c -o libcurl_la-splay.lo `test -f 'splay.c' || echo '$(srcdir)/'`splay.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-splay.Tpo $(DEPDIR)/libcurl_la-splay.Plo
+	$(AM_V_CC)source='splay.c' object='libcurl_la-splay.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-splay.lo `test -f 'splay.c' || echo '$(srcdir)/'`splay.c
 
 libcurl_la-strdup.lo: strdup.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-strdup.lo -MD -MP -MF $(DEPDIR)/libcurl_la-strdup.Tpo -c -o libcurl_la-strdup.lo `test -f 'strdup.c' || echo '$(srcdir)/'`strdup.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-strdup.Tpo $(DEPDIR)/libcurl_la-strdup.Plo
-#	$(AM_V_CC)source='strdup.c' object='libcurl_la-strdup.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-strdup.lo `test -f 'strdup.c' || echo '$(srcdir)/'`strdup.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-strdup.lo -MD -MP -MF $(DEPDIR)/libcurl_la-strdup.Tpo -c -o libcurl_la-strdup.lo `test -f 'strdup.c' || echo '$(srcdir)/'`strdup.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-strdup.Tpo $(DEPDIR)/libcurl_la-strdup.Plo
+	$(AM_V_CC)source='strdup.c' object='libcurl_la-strdup.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-strdup.lo `test -f 'strdup.c' || echo '$(srcdir)/'`strdup.c
 
 libcurl_la-socks.lo: socks.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-socks.lo -MD -MP -MF $(DEPDIR)/libcurl_la-socks.Tpo -c -o libcurl_la-socks.lo `test -f 'socks.c' || echo '$(srcdir)/'`socks.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-socks.Tpo $(DEPDIR)/libcurl_la-socks.Plo
-#	$(AM_V_CC)source='socks.c' object='libcurl_la-socks.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-socks.lo `test -f 'socks.c' || echo '$(srcdir)/'`socks.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-socks.lo -MD -MP -MF $(DEPDIR)/libcurl_la-socks.Tpo -c -o libcurl_la-socks.lo `test -f 'socks.c' || echo '$(srcdir)/'`socks.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-socks.Tpo $(DEPDIR)/libcurl_la-socks.Plo
+	$(AM_V_CC)source='socks.c' object='libcurl_la-socks.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-socks.lo `test -f 'socks.c' || echo '$(srcdir)/'`socks.c
 
 libcurl_la-ssh.lo: ssh.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-ssh.lo -MD -MP -MF $(DEPDIR)/libcurl_la-ssh.Tpo -c -o libcurl_la-ssh.lo `test -f 'ssh.c' || echo '$(srcdir)/'`ssh.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-ssh.Tpo $(DEPDIR)/libcurl_la-ssh.Plo
-#	$(AM_V_CC)source='ssh.c' object='libcurl_la-ssh.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-ssh.lo `test -f 'ssh.c' || echo '$(srcdir)/'`ssh.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-ssh.lo -MD -MP -MF $(DEPDIR)/libcurl_la-ssh.Tpo -c -o libcurl_la-ssh.lo `test -f 'ssh.c' || echo '$(srcdir)/'`ssh.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-ssh.Tpo $(DEPDIR)/libcurl_la-ssh.Plo
+	$(AM_V_CC)source='ssh.c' object='libcurl_la-ssh.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-ssh.lo `test -f 'ssh.c' || echo '$(srcdir)/'`ssh.c
 
 libcurl_la-curl_addrinfo.lo: curl_addrinfo.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_addrinfo.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_addrinfo.Tpo -c -o libcurl_la-curl_addrinfo.lo `test -f 'curl_addrinfo.c' || echo '$(srcdir)/'`curl_addrinfo.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_addrinfo.Tpo $(DEPDIR)/libcurl_la-curl_addrinfo.Plo
-#	$(AM_V_CC)source='curl_addrinfo.c' object='libcurl_la-curl_addrinfo.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_addrinfo.lo `test -f 'curl_addrinfo.c' || echo '$(srcdir)/'`curl_addrinfo.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_addrinfo.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_addrinfo.Tpo -c -o libcurl_la-curl_addrinfo.lo `test -f 'curl_addrinfo.c' || echo '$(srcdir)/'`curl_addrinfo.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_addrinfo.Tpo $(DEPDIR)/libcurl_la-curl_addrinfo.Plo
+	$(AM_V_CC)source='curl_addrinfo.c' object='libcurl_la-curl_addrinfo.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_addrinfo.lo `test -f 'curl_addrinfo.c' || echo '$(srcdir)/'`curl_addrinfo.c
 
 libcurl_la-socks_gssapi.lo: socks_gssapi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-socks_gssapi.lo -MD -MP -MF $(DEPDIR)/libcurl_la-socks_gssapi.Tpo -c -o libcurl_la-socks_gssapi.lo `test -f 'socks_gssapi.c' || echo '$(srcdir)/'`socks_gssapi.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-socks_gssapi.Tpo $(DEPDIR)/libcurl_la-socks_gssapi.Plo
-#	$(AM_V_CC)source='socks_gssapi.c' object='libcurl_la-socks_gssapi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-socks_gssapi.lo `test -f 'socks_gssapi.c' || echo '$(srcdir)/'`socks_gssapi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-socks_gssapi.lo -MD -MP -MF $(DEPDIR)/libcurl_la-socks_gssapi.Tpo -c -o libcurl_la-socks_gssapi.lo `test -f 'socks_gssapi.c' || echo '$(srcdir)/'`socks_gssapi.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-socks_gssapi.Tpo $(DEPDIR)/libcurl_la-socks_gssapi.Plo
+	$(AM_V_CC)source='socks_gssapi.c' object='libcurl_la-socks_gssapi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-socks_gssapi.lo `test -f 'socks_gssapi.c' || echo '$(srcdir)/'`socks_gssapi.c
 
 libcurl_la-socks_sspi.lo: socks_sspi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-socks_sspi.lo -MD -MP -MF $(DEPDIR)/libcurl_la-socks_sspi.Tpo -c -o libcurl_la-socks_sspi.lo `test -f 'socks_sspi.c' || echo '$(srcdir)/'`socks_sspi.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-socks_sspi.Tpo $(DEPDIR)/libcurl_la-socks_sspi.Plo
-#	$(AM_V_CC)source='socks_sspi.c' object='libcurl_la-socks_sspi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-socks_sspi.lo `test -f 'socks_sspi.c' || echo '$(srcdir)/'`socks_sspi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-socks_sspi.lo -MD -MP -MF $(DEPDIR)/libcurl_la-socks_sspi.Tpo -c -o libcurl_la-socks_sspi.lo `test -f 'socks_sspi.c' || echo '$(srcdir)/'`socks_sspi.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-socks_sspi.Tpo $(DEPDIR)/libcurl_la-socks_sspi.Plo
+	$(AM_V_CC)source='socks_sspi.c' object='libcurl_la-socks_sspi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-socks_sspi.lo `test -f 'socks_sspi.c' || echo '$(srcdir)/'`socks_sspi.c
 
 libcurl_la-curl_sspi.lo: curl_sspi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_sspi.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_sspi.Tpo -c -o libcurl_la-curl_sspi.lo `test -f 'curl_sspi.c' || echo '$(srcdir)/'`curl_sspi.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_sspi.Tpo $(DEPDIR)/libcurl_la-curl_sspi.Plo
-#	$(AM_V_CC)source='curl_sspi.c' object='libcurl_la-curl_sspi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_sspi.lo `test -f 'curl_sspi.c' || echo '$(srcdir)/'`curl_sspi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_sspi.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_sspi.Tpo -c -o libcurl_la-curl_sspi.lo `test -f 'curl_sspi.c' || echo '$(srcdir)/'`curl_sspi.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_sspi.Tpo $(DEPDIR)/libcurl_la-curl_sspi.Plo
+	$(AM_V_CC)source='curl_sspi.c' object='libcurl_la-curl_sspi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_sspi.lo `test -f 'curl_sspi.c' || echo '$(srcdir)/'`curl_sspi.c
 
 libcurl_la-slist.lo: slist.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-slist.lo -MD -MP -MF $(DEPDIR)/libcurl_la-slist.Tpo -c -o libcurl_la-slist.lo `test -f 'slist.c' || echo '$(srcdir)/'`slist.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-slist.Tpo $(DEPDIR)/libcurl_la-slist.Plo
-#	$(AM_V_CC)source='slist.c' object='libcurl_la-slist.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-slist.lo `test -f 'slist.c' || echo '$(srcdir)/'`slist.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-slist.lo -MD -MP -MF $(DEPDIR)/libcurl_la-slist.Tpo -c -o libcurl_la-slist.lo `test -f 'slist.c' || echo '$(srcdir)/'`slist.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-slist.Tpo $(DEPDIR)/libcurl_la-slist.Plo
+	$(AM_V_CC)source='slist.c' object='libcurl_la-slist.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-slist.lo `test -f 'slist.c' || echo '$(srcdir)/'`slist.c
 
 libcurl_la-nonblock.lo: nonblock.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-nonblock.lo -MD -MP -MF $(DEPDIR)/libcurl_la-nonblock.Tpo -c -o libcurl_la-nonblock.lo `test -f 'nonblock.c' || echo '$(srcdir)/'`nonblock.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-nonblock.Tpo $(DEPDIR)/libcurl_la-nonblock.Plo
-#	$(AM_V_CC)source='nonblock.c' object='libcurl_la-nonblock.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-nonblock.lo `test -f 'nonblock.c' || echo '$(srcdir)/'`nonblock.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-nonblock.lo -MD -MP -MF $(DEPDIR)/libcurl_la-nonblock.Tpo -c -o libcurl_la-nonblock.lo `test -f 'nonblock.c' || echo '$(srcdir)/'`nonblock.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-nonblock.Tpo $(DEPDIR)/libcurl_la-nonblock.Plo
+	$(AM_V_CC)source='nonblock.c' object='libcurl_la-nonblock.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-nonblock.lo `test -f 'nonblock.c' || echo '$(srcdir)/'`nonblock.c
 
 libcurl_la-curl_memrchr.lo: curl_memrchr.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_memrchr.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_memrchr.Tpo -c -o libcurl_la-curl_memrchr.lo `test -f 'curl_memrchr.c' || echo '$(srcdir)/'`curl_memrchr.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_memrchr.Tpo $(DEPDIR)/libcurl_la-curl_memrchr.Plo
-#	$(AM_V_CC)source='curl_memrchr.c' object='libcurl_la-curl_memrchr.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_memrchr.lo `test -f 'curl_memrchr.c' || echo '$(srcdir)/'`curl_memrchr.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_memrchr.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_memrchr.Tpo -c -o libcurl_la-curl_memrchr.lo `test -f 'curl_memrchr.c' || echo '$(srcdir)/'`curl_memrchr.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_memrchr.Tpo $(DEPDIR)/libcurl_la-curl_memrchr.Plo
+	$(AM_V_CC)source='curl_memrchr.c' object='libcurl_la-curl_memrchr.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_memrchr.lo `test -f 'curl_memrchr.c' || echo '$(srcdir)/'`curl_memrchr.c
 
 libcurl_la-imap.lo: imap.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-imap.lo -MD -MP -MF $(DEPDIR)/libcurl_la-imap.Tpo -c -o libcurl_la-imap.lo `test -f 'imap.c' || echo '$(srcdir)/'`imap.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-imap.Tpo $(DEPDIR)/libcurl_la-imap.Plo
-#	$(AM_V_CC)source='imap.c' object='libcurl_la-imap.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-imap.lo `test -f 'imap.c' || echo '$(srcdir)/'`imap.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-imap.lo -MD -MP -MF $(DEPDIR)/libcurl_la-imap.Tpo -c -o libcurl_la-imap.lo `test -f 'imap.c' || echo '$(srcdir)/'`imap.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-imap.Tpo $(DEPDIR)/libcurl_la-imap.Plo
+	$(AM_V_CC)source='imap.c' object='libcurl_la-imap.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-imap.lo `test -f 'imap.c' || echo '$(srcdir)/'`imap.c
 
 libcurl_la-pop3.lo: pop3.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-pop3.lo -MD -MP -MF $(DEPDIR)/libcurl_la-pop3.Tpo -c -o libcurl_la-pop3.lo `test -f 'pop3.c' || echo '$(srcdir)/'`pop3.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-pop3.Tpo $(DEPDIR)/libcurl_la-pop3.Plo
-#	$(AM_V_CC)source='pop3.c' object='libcurl_la-pop3.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-pop3.lo `test -f 'pop3.c' || echo '$(srcdir)/'`pop3.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-pop3.lo -MD -MP -MF $(DEPDIR)/libcurl_la-pop3.Tpo -c -o libcurl_la-pop3.lo `test -f 'pop3.c' || echo '$(srcdir)/'`pop3.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-pop3.Tpo $(DEPDIR)/libcurl_la-pop3.Plo
+	$(AM_V_CC)source='pop3.c' object='libcurl_la-pop3.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-pop3.lo `test -f 'pop3.c' || echo '$(srcdir)/'`pop3.c
 
 libcurl_la-smtp.lo: smtp.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-smtp.lo -MD -MP -MF $(DEPDIR)/libcurl_la-smtp.Tpo -c -o libcurl_la-smtp.lo `test -f 'smtp.c' || echo '$(srcdir)/'`smtp.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-smtp.Tpo $(DEPDIR)/libcurl_la-smtp.Plo
-#	$(AM_V_CC)source='smtp.c' object='libcurl_la-smtp.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-smtp.lo `test -f 'smtp.c' || echo '$(srcdir)/'`smtp.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-smtp.lo -MD -MP -MF $(DEPDIR)/libcurl_la-smtp.Tpo -c -o libcurl_la-smtp.lo `test -f 'smtp.c' || echo '$(srcdir)/'`smtp.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-smtp.Tpo $(DEPDIR)/libcurl_la-smtp.Plo
+	$(AM_V_CC)source='smtp.c' object='libcurl_la-smtp.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-smtp.lo `test -f 'smtp.c' || echo '$(srcdir)/'`smtp.c
 
 libcurl_la-pingpong.lo: pingpong.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-pingpong.lo -MD -MP -MF $(DEPDIR)/libcurl_la-pingpong.Tpo -c -o libcurl_la-pingpong.lo `test -f 'pingpong.c' || echo '$(srcdir)/'`pingpong.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-pingpong.Tpo $(DEPDIR)/libcurl_la-pingpong.Plo
-#	$(AM_V_CC)source='pingpong.c' object='libcurl_la-pingpong.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-pingpong.lo `test -f 'pingpong.c' || echo '$(srcdir)/'`pingpong.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-pingpong.lo -MD -MP -MF $(DEPDIR)/libcurl_la-pingpong.Tpo -c -o libcurl_la-pingpong.lo `test -f 'pingpong.c' || echo '$(srcdir)/'`pingpong.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-pingpong.Tpo $(DEPDIR)/libcurl_la-pingpong.Plo
+	$(AM_V_CC)source='pingpong.c' object='libcurl_la-pingpong.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-pingpong.lo `test -f 'pingpong.c' || echo '$(srcdir)/'`pingpong.c
 
 libcurl_la-rtsp.lo: rtsp.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-rtsp.lo -MD -MP -MF $(DEPDIR)/libcurl_la-rtsp.Tpo -c -o libcurl_la-rtsp.lo `test -f 'rtsp.c' || echo '$(srcdir)/'`rtsp.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-rtsp.Tpo $(DEPDIR)/libcurl_la-rtsp.Plo
-#	$(AM_V_CC)source='rtsp.c' object='libcurl_la-rtsp.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-rtsp.lo `test -f 'rtsp.c' || echo '$(srcdir)/'`rtsp.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-rtsp.lo -MD -MP -MF $(DEPDIR)/libcurl_la-rtsp.Tpo -c -o libcurl_la-rtsp.lo `test -f 'rtsp.c' || echo '$(srcdir)/'`rtsp.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-rtsp.Tpo $(DEPDIR)/libcurl_la-rtsp.Plo
+	$(AM_V_CC)source='rtsp.c' object='libcurl_la-rtsp.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-rtsp.lo `test -f 'rtsp.c' || echo '$(srcdir)/'`rtsp.c
 
 libcurl_la-curl_threads.lo: curl_threads.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_threads.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_threads.Tpo -c -o libcurl_la-curl_threads.lo `test -f 'curl_threads.c' || echo '$(srcdir)/'`curl_threads.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_threads.Tpo $(DEPDIR)/libcurl_la-curl_threads.Plo
-#	$(AM_V_CC)source='curl_threads.c' object='libcurl_la-curl_threads.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_threads.lo `test -f 'curl_threads.c' || echo '$(srcdir)/'`curl_threads.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_threads.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_threads.Tpo -c -o libcurl_la-curl_threads.lo `test -f 'curl_threads.c' || echo '$(srcdir)/'`curl_threads.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_threads.Tpo $(DEPDIR)/libcurl_la-curl_threads.Plo
+	$(AM_V_CC)source='curl_threads.c' object='libcurl_la-curl_threads.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_threads.lo `test -f 'curl_threads.c' || echo '$(srcdir)/'`curl_threads.c
 
 libcurl_la-warnless.lo: warnless.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-warnless.lo -MD -MP -MF $(DEPDIR)/libcurl_la-warnless.Tpo -c -o libcurl_la-warnless.lo `test -f 'warnless.c' || echo '$(srcdir)/'`warnless.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-warnless.Tpo $(DEPDIR)/libcurl_la-warnless.Plo
-#	$(AM_V_CC)source='warnless.c' object='libcurl_la-warnless.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-warnless.lo `test -f 'warnless.c' || echo '$(srcdir)/'`warnless.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-warnless.lo -MD -MP -MF $(DEPDIR)/libcurl_la-warnless.Tpo -c -o libcurl_la-warnless.lo `test -f 'warnless.c' || echo '$(srcdir)/'`warnless.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-warnless.Tpo $(DEPDIR)/libcurl_la-warnless.Plo
+	$(AM_V_CC)source='warnless.c' object='libcurl_la-warnless.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-warnless.lo `test -f 'warnless.c' || echo '$(srcdir)/'`warnless.c
 
 libcurl_la-hmac.lo: hmac.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-hmac.lo -MD -MP -MF $(DEPDIR)/libcurl_la-hmac.Tpo -c -o libcurl_la-hmac.lo `test -f 'hmac.c' || echo '$(srcdir)/'`hmac.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-hmac.Tpo $(DEPDIR)/libcurl_la-hmac.Plo
-#	$(AM_V_CC)source='hmac.c' object='libcurl_la-hmac.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-hmac.lo `test -f 'hmac.c' || echo '$(srcdir)/'`hmac.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-hmac.lo -MD -MP -MF $(DEPDIR)/libcurl_la-hmac.Tpo -c -o libcurl_la-hmac.lo `test -f 'hmac.c' || echo '$(srcdir)/'`hmac.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-hmac.Tpo $(DEPDIR)/libcurl_la-hmac.Plo
+	$(AM_V_CC)source='hmac.c' object='libcurl_la-hmac.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-hmac.lo `test -f 'hmac.c' || echo '$(srcdir)/'`hmac.c
 
 libcurl_la-curl_rtmp.lo: curl_rtmp.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_rtmp.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_rtmp.Tpo -c -o libcurl_la-curl_rtmp.lo `test -f 'curl_rtmp.c' || echo '$(srcdir)/'`curl_rtmp.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_rtmp.Tpo $(DEPDIR)/libcurl_la-curl_rtmp.Plo
-#	$(AM_V_CC)source='curl_rtmp.c' object='libcurl_la-curl_rtmp.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_rtmp.lo `test -f 'curl_rtmp.c' || echo '$(srcdir)/'`curl_rtmp.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_rtmp.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_rtmp.Tpo -c -o libcurl_la-curl_rtmp.lo `test -f 'curl_rtmp.c' || echo '$(srcdir)/'`curl_rtmp.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_rtmp.Tpo $(DEPDIR)/libcurl_la-curl_rtmp.Plo
+	$(AM_V_CC)source='curl_rtmp.c' object='libcurl_la-curl_rtmp.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_rtmp.lo `test -f 'curl_rtmp.c' || echo '$(srcdir)/'`curl_rtmp.c
 
 libcurl_la-openldap.lo: openldap.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-openldap.lo -MD -MP -MF $(DEPDIR)/libcurl_la-openldap.Tpo -c -o libcurl_la-openldap.lo `test -f 'openldap.c' || echo '$(srcdir)/'`openldap.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-openldap.Tpo $(DEPDIR)/libcurl_la-openldap.Plo
-#	$(AM_V_CC)source='openldap.c' object='libcurl_la-openldap.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-openldap.lo `test -f 'openldap.c' || echo '$(srcdir)/'`openldap.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-openldap.lo -MD -MP -MF $(DEPDIR)/libcurl_la-openldap.Tpo -c -o libcurl_la-openldap.lo `test -f 'openldap.c' || echo '$(srcdir)/'`openldap.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-openldap.Tpo $(DEPDIR)/libcurl_la-openldap.Plo
+	$(AM_V_CC)source='openldap.c' object='libcurl_la-openldap.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-openldap.lo `test -f 'openldap.c' || echo '$(srcdir)/'`openldap.c
 
 libcurl_la-curl_gethostname.lo: curl_gethostname.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_gethostname.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_gethostname.Tpo -c -o libcurl_la-curl_gethostname.lo `test -f 'curl_gethostname.c' || echo '$(srcdir)/'`curl_gethostname.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_gethostname.Tpo $(DEPDIR)/libcurl_la-curl_gethostname.Plo
-#	$(AM_V_CC)source='curl_gethostname.c' object='libcurl_la-curl_gethostname.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_gethostname.lo `test -f 'curl_gethostname.c' || echo '$(srcdir)/'`curl_gethostname.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_gethostname.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_gethostname.Tpo -c -o libcurl_la-curl_gethostname.lo `test -f 'curl_gethostname.c' || echo '$(srcdir)/'`curl_gethostname.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_gethostname.Tpo $(DEPDIR)/libcurl_la-curl_gethostname.Plo
+	$(AM_V_CC)source='curl_gethostname.c' object='libcurl_la-curl_gethostname.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_gethostname.lo `test -f 'curl_gethostname.c' || echo '$(srcdir)/'`curl_gethostname.c
 
 libcurl_la-gopher.lo: gopher.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-gopher.lo -MD -MP -MF $(DEPDIR)/libcurl_la-gopher.Tpo -c -o libcurl_la-gopher.lo `test -f 'gopher.c' || echo '$(srcdir)/'`gopher.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-gopher.Tpo $(DEPDIR)/libcurl_la-gopher.Plo
-#	$(AM_V_CC)source='gopher.c' object='libcurl_la-gopher.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-gopher.lo `test -f 'gopher.c' || echo '$(srcdir)/'`gopher.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-gopher.lo -MD -MP -MF $(DEPDIR)/libcurl_la-gopher.Tpo -c -o libcurl_la-gopher.lo `test -f 'gopher.c' || echo '$(srcdir)/'`gopher.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-gopher.Tpo $(DEPDIR)/libcurl_la-gopher.Plo
+	$(AM_V_CC)source='gopher.c' object='libcurl_la-gopher.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-gopher.lo `test -f 'gopher.c' || echo '$(srcdir)/'`gopher.c
 
 libcurl_la-idn_win32.lo: idn_win32.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-idn_win32.lo -MD -MP -MF $(DEPDIR)/libcurl_la-idn_win32.Tpo -c -o libcurl_la-idn_win32.lo `test -f 'idn_win32.c' || echo '$(srcdir)/'`idn_win32.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-idn_win32.Tpo $(DEPDIR)/libcurl_la-idn_win32.Plo
-#	$(AM_V_CC)source='idn_win32.c' object='libcurl_la-idn_win32.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-idn_win32.lo `test -f 'idn_win32.c' || echo '$(srcdir)/'`idn_win32.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-idn_win32.lo -MD -MP -MF $(DEPDIR)/libcurl_la-idn_win32.Tpo -c -o libcurl_la-idn_win32.lo `test -f 'idn_win32.c' || echo '$(srcdir)/'`idn_win32.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-idn_win32.Tpo $(DEPDIR)/libcurl_la-idn_win32.Plo
+	$(AM_V_CC)source='idn_win32.c' object='libcurl_la-idn_win32.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-idn_win32.lo `test -f 'idn_win32.c' || echo '$(srcdir)/'`idn_win32.c
 
 libcurl_la-http_proxy.lo: http_proxy.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-http_proxy.lo -MD -MP -MF $(DEPDIR)/libcurl_la-http_proxy.Tpo -c -o libcurl_la-http_proxy.lo `test -f 'http_proxy.c' || echo '$(srcdir)/'`http_proxy.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-http_proxy.Tpo $(DEPDIR)/libcurl_la-http_proxy.Plo
-#	$(AM_V_CC)source='http_proxy.c' object='libcurl_la-http_proxy.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-http_proxy.lo `test -f 'http_proxy.c' || echo '$(srcdir)/'`http_proxy.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-http_proxy.lo -MD -MP -MF $(DEPDIR)/libcurl_la-http_proxy.Tpo -c -o libcurl_la-http_proxy.lo `test -f 'http_proxy.c' || echo '$(srcdir)/'`http_proxy.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-http_proxy.Tpo $(DEPDIR)/libcurl_la-http_proxy.Plo
+	$(AM_V_CC)source='http_proxy.c' object='libcurl_la-http_proxy.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-http_proxy.lo `test -f 'http_proxy.c' || echo '$(srcdir)/'`http_proxy.c
 
 libcurl_la-non-ascii.lo: non-ascii.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-non-ascii.lo -MD -MP -MF $(DEPDIR)/libcurl_la-non-ascii.Tpo -c -o libcurl_la-non-ascii.lo `test -f 'non-ascii.c' || echo '$(srcdir)/'`non-ascii.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-non-ascii.Tpo $(DEPDIR)/libcurl_la-non-ascii.Plo
-#	$(AM_V_CC)source='non-ascii.c' object='libcurl_la-non-ascii.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-non-ascii.lo `test -f 'non-ascii.c' || echo '$(srcdir)/'`non-ascii.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-non-ascii.lo -MD -MP -MF $(DEPDIR)/libcurl_la-non-ascii.Tpo -c -o libcurl_la-non-ascii.lo `test -f 'non-ascii.c' || echo '$(srcdir)/'`non-ascii.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-non-ascii.Tpo $(DEPDIR)/libcurl_la-non-ascii.Plo
+	$(AM_V_CC)source='non-ascii.c' object='libcurl_la-non-ascii.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-non-ascii.lo `test -f 'non-ascii.c' || echo '$(srcdir)/'`non-ascii.c
 
 libcurl_la-asyn-ares.lo: asyn-ares.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-asyn-ares.lo -MD -MP -MF $(DEPDIR)/libcurl_la-asyn-ares.Tpo -c -o libcurl_la-asyn-ares.lo `test -f 'asyn-ares.c' || echo '$(srcdir)/'`asyn-ares.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-asyn-ares.Tpo $(DEPDIR)/libcurl_la-asyn-ares.Plo
-#	$(AM_V_CC)source='asyn-ares.c' object='libcurl_la-asyn-ares.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-asyn-ares.lo `test -f 'asyn-ares.c' || echo '$(srcdir)/'`asyn-ares.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-asyn-ares.lo -MD -MP -MF $(DEPDIR)/libcurl_la-asyn-ares.Tpo -c -o libcurl_la-asyn-ares.lo `test -f 'asyn-ares.c' || echo '$(srcdir)/'`asyn-ares.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-asyn-ares.Tpo $(DEPDIR)/libcurl_la-asyn-ares.Plo
+	$(AM_V_CC)source='asyn-ares.c' object='libcurl_la-asyn-ares.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-asyn-ares.lo `test -f 'asyn-ares.c' || echo '$(srcdir)/'`asyn-ares.c
 
 libcurl_la-asyn-thread.lo: asyn-thread.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-asyn-thread.lo -MD -MP -MF $(DEPDIR)/libcurl_la-asyn-thread.Tpo -c -o libcurl_la-asyn-thread.lo `test -f 'asyn-thread.c' || echo '$(srcdir)/'`asyn-thread.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-asyn-thread.Tpo $(DEPDIR)/libcurl_la-asyn-thread.Plo
-#	$(AM_V_CC)source='asyn-thread.c' object='libcurl_la-asyn-thread.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-asyn-thread.lo `test -f 'asyn-thread.c' || echo '$(srcdir)/'`asyn-thread.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-asyn-thread.lo -MD -MP -MF $(DEPDIR)/libcurl_la-asyn-thread.Tpo -c -o libcurl_la-asyn-thread.lo `test -f 'asyn-thread.c' || echo '$(srcdir)/'`asyn-thread.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-asyn-thread.Tpo $(DEPDIR)/libcurl_la-asyn-thread.Plo
+	$(AM_V_CC)source='asyn-thread.c' object='libcurl_la-asyn-thread.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-asyn-thread.lo `test -f 'asyn-thread.c' || echo '$(srcdir)/'`asyn-thread.c
 
 libcurl_la-curl_gssapi.lo: curl_gssapi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_gssapi.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_gssapi.Tpo -c -o libcurl_la-curl_gssapi.lo `test -f 'curl_gssapi.c' || echo '$(srcdir)/'`curl_gssapi.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_gssapi.Tpo $(DEPDIR)/libcurl_la-curl_gssapi.Plo
-#	$(AM_V_CC)source='curl_gssapi.c' object='libcurl_la-curl_gssapi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_gssapi.lo `test -f 'curl_gssapi.c' || echo '$(srcdir)/'`curl_gssapi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_gssapi.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_gssapi.Tpo -c -o libcurl_la-curl_gssapi.lo `test -f 'curl_gssapi.c' || echo '$(srcdir)/'`curl_gssapi.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_gssapi.Tpo $(DEPDIR)/libcurl_la-curl_gssapi.Plo
+	$(AM_V_CC)source='curl_gssapi.c' object='libcurl_la-curl_gssapi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_gssapi.lo `test -f 'curl_gssapi.c' || echo '$(srcdir)/'`curl_gssapi.c
 
 libcurl_la-http_ntlm.lo: http_ntlm.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-http_ntlm.lo -MD -MP -MF $(DEPDIR)/libcurl_la-http_ntlm.Tpo -c -o libcurl_la-http_ntlm.lo `test -f 'http_ntlm.c' || echo '$(srcdir)/'`http_ntlm.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-http_ntlm.Tpo $(DEPDIR)/libcurl_la-http_ntlm.Plo
-#	$(AM_V_CC)source='http_ntlm.c' object='libcurl_la-http_ntlm.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-http_ntlm.lo `test -f 'http_ntlm.c' || echo '$(srcdir)/'`http_ntlm.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-http_ntlm.lo -MD -MP -MF $(DEPDIR)/libcurl_la-http_ntlm.Tpo -c -o libcurl_la-http_ntlm.lo `test -f 'http_ntlm.c' || echo '$(srcdir)/'`http_ntlm.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-http_ntlm.Tpo $(DEPDIR)/libcurl_la-http_ntlm.Plo
+	$(AM_V_CC)source='http_ntlm.c' object='libcurl_la-http_ntlm.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-http_ntlm.lo `test -f 'http_ntlm.c' || echo '$(srcdir)/'`http_ntlm.c
 
 libcurl_la-curl_ntlm_wb.lo: curl_ntlm_wb.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_ntlm_wb.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_ntlm_wb.Tpo -c -o libcurl_la-curl_ntlm_wb.lo `test -f 'curl_ntlm_wb.c' || echo '$(srcdir)/'`curl_ntlm_wb.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_ntlm_wb.Tpo $(DEPDIR)/libcurl_la-curl_ntlm_wb.Plo
-#	$(AM_V_CC)source='curl_ntlm_wb.c' object='libcurl_la-curl_ntlm_wb.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_ntlm_wb.lo `test -f 'curl_ntlm_wb.c' || echo '$(srcdir)/'`curl_ntlm_wb.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_ntlm_wb.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_ntlm_wb.Tpo -c -o libcurl_la-curl_ntlm_wb.lo `test -f 'curl_ntlm_wb.c' || echo '$(srcdir)/'`curl_ntlm_wb.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_ntlm_wb.Tpo $(DEPDIR)/libcurl_la-curl_ntlm_wb.Plo
+	$(AM_V_CC)source='curl_ntlm_wb.c' object='libcurl_la-curl_ntlm_wb.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_ntlm_wb.lo `test -f 'curl_ntlm_wb.c' || echo '$(srcdir)/'`curl_ntlm_wb.c
 
 libcurl_la-curl_ntlm_core.lo: curl_ntlm_core.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_ntlm_core.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_ntlm_core.Tpo -c -o libcurl_la-curl_ntlm_core.lo `test -f 'curl_ntlm_core.c' || echo '$(srcdir)/'`curl_ntlm_core.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_ntlm_core.Tpo $(DEPDIR)/libcurl_la-curl_ntlm_core.Plo
-#	$(AM_V_CC)source='curl_ntlm_core.c' object='libcurl_la-curl_ntlm_core.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_ntlm_core.lo `test -f 'curl_ntlm_core.c' || echo '$(srcdir)/'`curl_ntlm_core.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_ntlm_core.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_ntlm_core.Tpo -c -o libcurl_la-curl_ntlm_core.lo `test -f 'curl_ntlm_core.c' || echo '$(srcdir)/'`curl_ntlm_core.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_ntlm_core.Tpo $(DEPDIR)/libcurl_la-curl_ntlm_core.Plo
+	$(AM_V_CC)source='curl_ntlm_core.c' object='libcurl_la-curl_ntlm_core.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_ntlm_core.lo `test -f 'curl_ntlm_core.c' || echo '$(srcdir)/'`curl_ntlm_core.c
 
 libcurl_la-curl_sasl.lo: curl_sasl.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_sasl.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_sasl.Tpo -c -o libcurl_la-curl_sasl.lo `test -f 'curl_sasl.c' || echo '$(srcdir)/'`curl_sasl.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_sasl.Tpo $(DEPDIR)/libcurl_la-curl_sasl.Plo
-#	$(AM_V_CC)source='curl_sasl.c' object='libcurl_la-curl_sasl.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_sasl.lo `test -f 'curl_sasl.c' || echo '$(srcdir)/'`curl_sasl.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_sasl.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_sasl.Tpo -c -o libcurl_la-curl_sasl.lo `test -f 'curl_sasl.c' || echo '$(srcdir)/'`curl_sasl.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_sasl.Tpo $(DEPDIR)/libcurl_la-curl_sasl.Plo
+	$(AM_V_CC)source='curl_sasl.c' object='libcurl_la-curl_sasl.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_sasl.lo `test -f 'curl_sasl.c' || echo '$(srcdir)/'`curl_sasl.c
 
 libcurl_la-curl_multibyte.lo: curl_multibyte.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_multibyte.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_multibyte.Tpo -c -o libcurl_la-curl_multibyte.lo `test -f 'curl_multibyte.c' || echo '$(srcdir)/'`curl_multibyte.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_multibyte.Tpo $(DEPDIR)/libcurl_la-curl_multibyte.Plo
-#	$(AM_V_CC)source='curl_multibyte.c' object='libcurl_la-curl_multibyte.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_multibyte.lo `test -f 'curl_multibyte.c' || echo '$(srcdir)/'`curl_multibyte.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_multibyte.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_multibyte.Tpo -c -o libcurl_la-curl_multibyte.lo `test -f 'curl_multibyte.c' || echo '$(srcdir)/'`curl_multibyte.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_multibyte.Tpo $(DEPDIR)/libcurl_la-curl_multibyte.Plo
+	$(AM_V_CC)source='curl_multibyte.c' object='libcurl_la-curl_multibyte.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_multibyte.lo `test -f 'curl_multibyte.c' || echo '$(srcdir)/'`curl_multibyte.c
 
 libcurl_la-hostcheck.lo: hostcheck.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-hostcheck.lo -MD -MP -MF $(DEPDIR)/libcurl_la-hostcheck.Tpo -c -o libcurl_la-hostcheck.lo `test -f 'hostcheck.c' || echo '$(srcdir)/'`hostcheck.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-hostcheck.Tpo $(DEPDIR)/libcurl_la-hostcheck.Plo
-#	$(AM_V_CC)source='hostcheck.c' object='libcurl_la-hostcheck.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-hostcheck.lo `test -f 'hostcheck.c' || echo '$(srcdir)/'`hostcheck.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-hostcheck.lo -MD -MP -MF $(DEPDIR)/libcurl_la-hostcheck.Tpo -c -o libcurl_la-hostcheck.lo `test -f 'hostcheck.c' || echo '$(srcdir)/'`hostcheck.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-hostcheck.Tpo $(DEPDIR)/libcurl_la-hostcheck.Plo
+	$(AM_V_CC)source='hostcheck.c' object='libcurl_la-hostcheck.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-hostcheck.lo `test -f 'hostcheck.c' || echo '$(srcdir)/'`hostcheck.c
 
 libcurl_la-conncache.lo: conncache.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-conncache.lo -MD -MP -MF $(DEPDIR)/libcurl_la-conncache.Tpo -c -o libcurl_la-conncache.lo `test -f 'conncache.c' || echo '$(srcdir)/'`conncache.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-conncache.Tpo $(DEPDIR)/libcurl_la-conncache.Plo
-#	$(AM_V_CC)source='conncache.c' object='libcurl_la-conncache.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-conncache.lo `test -f 'conncache.c' || echo '$(srcdir)/'`conncache.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-conncache.lo -MD -MP -MF $(DEPDIR)/libcurl_la-conncache.Tpo -c -o libcurl_la-conncache.lo `test -f 'conncache.c' || echo '$(srcdir)/'`conncache.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-conncache.Tpo $(DEPDIR)/libcurl_la-conncache.Plo
+	$(AM_V_CC)source='conncache.c' object='libcurl_la-conncache.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-conncache.lo `test -f 'conncache.c' || echo '$(srcdir)/'`conncache.c
 
 libcurl_la-pipeline.lo: pipeline.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-pipeline.lo -MD -MP -MF $(DEPDIR)/libcurl_la-pipeline.Tpo -c -o libcurl_la-pipeline.lo `test -f 'pipeline.c' || echo '$(srcdir)/'`pipeline.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-pipeline.Tpo $(DEPDIR)/libcurl_la-pipeline.Plo
-#	$(AM_V_CC)source='pipeline.c' object='libcurl_la-pipeline.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-pipeline.lo `test -f 'pipeline.c' || echo '$(srcdir)/'`pipeline.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-pipeline.lo -MD -MP -MF $(DEPDIR)/libcurl_la-pipeline.Tpo -c -o libcurl_la-pipeline.lo `test -f 'pipeline.c' || echo '$(srcdir)/'`pipeline.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-pipeline.Tpo $(DEPDIR)/libcurl_la-pipeline.Plo
+	$(AM_V_CC)source='pipeline.c' object='libcurl_la-pipeline.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-pipeline.lo `test -f 'pipeline.c' || echo '$(srcdir)/'`pipeline.c
 
 libcurl_la-dotdot.lo: dotdot.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-dotdot.lo -MD -MP -MF $(DEPDIR)/libcurl_la-dotdot.Tpo -c -o libcurl_la-dotdot.lo `test -f 'dotdot.c' || echo '$(srcdir)/'`dotdot.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-dotdot.Tpo $(DEPDIR)/libcurl_la-dotdot.Plo
-#	$(AM_V_CC)source='dotdot.c' object='libcurl_la-dotdot.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-dotdot.lo `test -f 'dotdot.c' || echo '$(srcdir)/'`dotdot.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-dotdot.lo -MD -MP -MF $(DEPDIR)/libcurl_la-dotdot.Tpo -c -o libcurl_la-dotdot.lo `test -f 'dotdot.c' || echo '$(srcdir)/'`dotdot.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-dotdot.Tpo $(DEPDIR)/libcurl_la-dotdot.Plo
+	$(AM_V_CC)source='dotdot.c' object='libcurl_la-dotdot.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-dotdot.lo `test -f 'dotdot.c' || echo '$(srcdir)/'`dotdot.c
 
 libcurl_la-x509asn1.lo: x509asn1.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-x509asn1.lo -MD -MP -MF $(DEPDIR)/libcurl_la-x509asn1.Tpo -c -o libcurl_la-x509asn1.lo `test -f 'x509asn1.c' || echo '$(srcdir)/'`x509asn1.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-x509asn1.Tpo $(DEPDIR)/libcurl_la-x509asn1.Plo
-#	$(AM_V_CC)source='x509asn1.c' object='libcurl_la-x509asn1.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-x509asn1.lo `test -f 'x509asn1.c' || echo '$(srcdir)/'`x509asn1.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-x509asn1.lo -MD -MP -MF $(DEPDIR)/libcurl_la-x509asn1.Tpo -c -o libcurl_la-x509asn1.lo `test -f 'x509asn1.c' || echo '$(srcdir)/'`x509asn1.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-x509asn1.Tpo $(DEPDIR)/libcurl_la-x509asn1.Plo
+	$(AM_V_CC)source='x509asn1.c' object='libcurl_la-x509asn1.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-x509asn1.lo `test -f 'x509asn1.c' || echo '$(srcdir)/'`x509asn1.c
 
 libcurl_la-http2.lo: http2.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-http2.lo -MD -MP -MF $(DEPDIR)/libcurl_la-http2.Tpo -c -o libcurl_la-http2.lo `test -f 'http2.c' || echo '$(srcdir)/'`http2.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-http2.Tpo $(DEPDIR)/libcurl_la-http2.Plo
-#	$(AM_V_CC)source='http2.c' object='libcurl_la-http2.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-http2.lo `test -f 'http2.c' || echo '$(srcdir)/'`http2.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-http2.lo -MD -MP -MF $(DEPDIR)/libcurl_la-http2.Tpo -c -o libcurl_la-http2.lo `test -f 'http2.c' || echo '$(srcdir)/'`http2.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-http2.Tpo $(DEPDIR)/libcurl_la-http2.Plo
+	$(AM_V_CC)source='http2.c' object='libcurl_la-http2.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-http2.lo `test -f 'http2.c' || echo '$(srcdir)/'`http2.c
 
 libcurl_la-smb.lo: smb.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-smb.lo -MD -MP -MF $(DEPDIR)/libcurl_la-smb.Tpo -c -o libcurl_la-smb.lo `test -f 'smb.c' || echo '$(srcdir)/'`smb.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-smb.Tpo $(DEPDIR)/libcurl_la-smb.Plo
-#	$(AM_V_CC)source='smb.c' object='libcurl_la-smb.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-smb.lo `test -f 'smb.c' || echo '$(srcdir)/'`smb.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-smb.lo -MD -MP -MF $(DEPDIR)/libcurl_la-smb.Tpo -c -o libcurl_la-smb.lo `test -f 'smb.c' || echo '$(srcdir)/'`smb.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-smb.Tpo $(DEPDIR)/libcurl_la-smb.Plo
+	$(AM_V_CC)source='smb.c' object='libcurl_la-smb.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-smb.lo `test -f 'smb.c' || echo '$(srcdir)/'`smb.c
 
 libcurl_la-curl_endian.lo: curl_endian.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_endian.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_endian.Tpo -c -o libcurl_la-curl_endian.lo `test -f 'curl_endian.c' || echo '$(srcdir)/'`curl_endian.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_endian.Tpo $(DEPDIR)/libcurl_la-curl_endian.Plo
-#	$(AM_V_CC)source='curl_endian.c' object='libcurl_la-curl_endian.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_endian.lo `test -f 'curl_endian.c' || echo '$(srcdir)/'`curl_endian.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_endian.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_endian.Tpo -c -o libcurl_la-curl_endian.lo `test -f 'curl_endian.c' || echo '$(srcdir)/'`curl_endian.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_endian.Tpo $(DEPDIR)/libcurl_la-curl_endian.Plo
+	$(AM_V_CC)source='curl_endian.c' object='libcurl_la-curl_endian.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_endian.lo `test -f 'curl_endian.c' || echo '$(srcdir)/'`curl_endian.c
 
 libcurl_la-curl_des.lo: curl_des.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_des.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_des.Tpo -c -o libcurl_la-curl_des.lo `test -f 'curl_des.c' || echo '$(srcdir)/'`curl_des.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_des.Tpo $(DEPDIR)/libcurl_la-curl_des.Plo
-#	$(AM_V_CC)source='curl_des.c' object='libcurl_la-curl_des.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_des.lo `test -f 'curl_des.c' || echo '$(srcdir)/'`curl_des.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-curl_des.lo -MD -MP -MF $(DEPDIR)/libcurl_la-curl_des.Tpo -c -o libcurl_la-curl_des.lo `test -f 'curl_des.c' || echo '$(srcdir)/'`curl_des.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-curl_des.Tpo $(DEPDIR)/libcurl_la-curl_des.Plo
+	$(AM_V_CC)source='curl_des.c' object='libcurl_la-curl_des.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-curl_des.lo `test -f 'curl_des.c' || echo '$(srcdir)/'`curl_des.c
 
 libcurl_la-system_win32.lo: system_win32.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-system_win32.lo -MD -MP -MF $(DEPDIR)/libcurl_la-system_win32.Tpo -c -o libcurl_la-system_win32.lo `test -f 'system_win32.c' || echo '$(srcdir)/'`system_win32.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-system_win32.Tpo $(DEPDIR)/libcurl_la-system_win32.Plo
-#	$(AM_V_CC)source='system_win32.c' object='libcurl_la-system_win32.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-system_win32.lo `test -f 'system_win32.c' || echo '$(srcdir)/'`system_win32.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT libcurl_la-system_win32.lo -MD -MP -MF $(DEPDIR)/libcurl_la-system_win32.Tpo -c -o libcurl_la-system_win32.lo `test -f 'system_win32.c' || echo '$(srcdir)/'`system_win32.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurl_la-system_win32.Tpo $(DEPDIR)/libcurl_la-system_win32.Plo
+	$(AM_V_CC)source='system_win32.c' object='libcurl_la-system_win32.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o libcurl_la-system_win32.lo `test -f 'system_win32.c' || echo '$(srcdir)/'`system_win32.c
 
 vauth/libcurl_la-vauth.lo: vauth/vauth.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-vauth.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-vauth.Tpo -c -o vauth/libcurl_la-vauth.lo `test -f 'vauth/vauth.c' || echo '$(srcdir)/'`vauth/vauth.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-vauth.Tpo vauth/$(DEPDIR)/libcurl_la-vauth.Plo
-#	$(AM_V_CC)source='vauth/vauth.c' object='vauth/libcurl_la-vauth.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-vauth.lo `test -f 'vauth/vauth.c' || echo '$(srcdir)/'`vauth/vauth.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-vauth.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-vauth.Tpo -c -o vauth/libcurl_la-vauth.lo `test -f 'vauth/vauth.c' || echo '$(srcdir)/'`vauth/vauth.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-vauth.Tpo vauth/$(DEPDIR)/libcurl_la-vauth.Plo
+	$(AM_V_CC)source='vauth/vauth.c' object='vauth/libcurl_la-vauth.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-vauth.lo `test -f 'vauth/vauth.c' || echo '$(srcdir)/'`vauth/vauth.c
 
 vauth/libcurl_la-cleartext.lo: vauth/cleartext.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-cleartext.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-cleartext.Tpo -c -o vauth/libcurl_la-cleartext.lo `test -f 'vauth/cleartext.c' || echo '$(srcdir)/'`vauth/cleartext.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-cleartext.Tpo vauth/$(DEPDIR)/libcurl_la-cleartext.Plo
-#	$(AM_V_CC)source='vauth/cleartext.c' object='vauth/libcurl_la-cleartext.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-cleartext.lo `test -f 'vauth/cleartext.c' || echo '$(srcdir)/'`vauth/cleartext.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-cleartext.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-cleartext.Tpo -c -o vauth/libcurl_la-cleartext.lo `test -f 'vauth/cleartext.c' || echo '$(srcdir)/'`vauth/cleartext.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-cleartext.Tpo vauth/$(DEPDIR)/libcurl_la-cleartext.Plo
+	$(AM_V_CC)source='vauth/cleartext.c' object='vauth/libcurl_la-cleartext.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-cleartext.lo `test -f 'vauth/cleartext.c' || echo '$(srcdir)/'`vauth/cleartext.c
 
 vauth/libcurl_la-cram.lo: vauth/cram.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-cram.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-cram.Tpo -c -o vauth/libcurl_la-cram.lo `test -f 'vauth/cram.c' || echo '$(srcdir)/'`vauth/cram.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-cram.Tpo vauth/$(DEPDIR)/libcurl_la-cram.Plo
-#	$(AM_V_CC)source='vauth/cram.c' object='vauth/libcurl_la-cram.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-cram.lo `test -f 'vauth/cram.c' || echo '$(srcdir)/'`vauth/cram.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-cram.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-cram.Tpo -c -o vauth/libcurl_la-cram.lo `test -f 'vauth/cram.c' || echo '$(srcdir)/'`vauth/cram.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-cram.Tpo vauth/$(DEPDIR)/libcurl_la-cram.Plo
+	$(AM_V_CC)source='vauth/cram.c' object='vauth/libcurl_la-cram.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-cram.lo `test -f 'vauth/cram.c' || echo '$(srcdir)/'`vauth/cram.c
 
 vauth/libcurl_la-digest.lo: vauth/digest.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-digest.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-digest.Tpo -c -o vauth/libcurl_la-digest.lo `test -f 'vauth/digest.c' || echo '$(srcdir)/'`vauth/digest.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-digest.Tpo vauth/$(DEPDIR)/libcurl_la-digest.Plo
-#	$(AM_V_CC)source='vauth/digest.c' object='vauth/libcurl_la-digest.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-digest.lo `test -f 'vauth/digest.c' || echo '$(srcdir)/'`vauth/digest.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-digest.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-digest.Tpo -c -o vauth/libcurl_la-digest.lo `test -f 'vauth/digest.c' || echo '$(srcdir)/'`vauth/digest.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-digest.Tpo vauth/$(DEPDIR)/libcurl_la-digest.Plo
+	$(AM_V_CC)source='vauth/digest.c' object='vauth/libcurl_la-digest.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-digest.lo `test -f 'vauth/digest.c' || echo '$(srcdir)/'`vauth/digest.c
 
 vauth/libcurl_la-digest_sspi.lo: vauth/digest_sspi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-digest_sspi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-digest_sspi.Tpo -c -o vauth/libcurl_la-digest_sspi.lo `test -f 'vauth/digest_sspi.c' || echo '$(srcdir)/'`vauth/digest_sspi.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-digest_sspi.Tpo vauth/$(DEPDIR)/libcurl_la-digest_sspi.Plo
-#	$(AM_V_CC)source='vauth/digest_sspi.c' object='vauth/libcurl_la-digest_sspi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-digest_sspi.lo `test -f 'vauth/digest_sspi.c' || echo '$(srcdir)/'`vauth/digest_sspi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-digest_sspi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-digest_sspi.Tpo -c -o vauth/libcurl_la-digest_sspi.lo `test -f 'vauth/digest_sspi.c' || echo '$(srcdir)/'`vauth/digest_sspi.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-digest_sspi.Tpo vauth/$(DEPDIR)/libcurl_la-digest_sspi.Plo
+	$(AM_V_CC)source='vauth/digest_sspi.c' object='vauth/libcurl_la-digest_sspi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-digest_sspi.lo `test -f 'vauth/digest_sspi.c' || echo '$(srcdir)/'`vauth/digest_sspi.c
 
 vauth/libcurl_la-krb5_gssapi.lo: vauth/krb5_gssapi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-krb5_gssapi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-krb5_gssapi.Tpo -c -o vauth/libcurl_la-krb5_gssapi.lo `test -f 'vauth/krb5_gssapi.c' || echo '$(srcdir)/'`vauth/krb5_gssapi.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-krb5_gssapi.Tpo vauth/$(DEPDIR)/libcurl_la-krb5_gssapi.Plo
-#	$(AM_V_CC)source='vauth/krb5_gssapi.c' object='vauth/libcurl_la-krb5_gssapi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-krb5_gssapi.lo `test -f 'vauth/krb5_gssapi.c' || echo '$(srcdir)/'`vauth/krb5_gssapi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-krb5_gssapi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-krb5_gssapi.Tpo -c -o vauth/libcurl_la-krb5_gssapi.lo `test -f 'vauth/krb5_gssapi.c' || echo '$(srcdir)/'`vauth/krb5_gssapi.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-krb5_gssapi.Tpo vauth/$(DEPDIR)/libcurl_la-krb5_gssapi.Plo
+	$(AM_V_CC)source='vauth/krb5_gssapi.c' object='vauth/libcurl_la-krb5_gssapi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-krb5_gssapi.lo `test -f 'vauth/krb5_gssapi.c' || echo '$(srcdir)/'`vauth/krb5_gssapi.c
 
 vauth/libcurl_la-krb5_sspi.lo: vauth/krb5_sspi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-krb5_sspi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-krb5_sspi.Tpo -c -o vauth/libcurl_la-krb5_sspi.lo `test -f 'vauth/krb5_sspi.c' || echo '$(srcdir)/'`vauth/krb5_sspi.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-krb5_sspi.Tpo vauth/$(DEPDIR)/libcurl_la-krb5_sspi.Plo
-#	$(AM_V_CC)source='vauth/krb5_sspi.c' object='vauth/libcurl_la-krb5_sspi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-krb5_sspi.lo `test -f 'vauth/krb5_sspi.c' || echo '$(srcdir)/'`vauth/krb5_sspi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-krb5_sspi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-krb5_sspi.Tpo -c -o vauth/libcurl_la-krb5_sspi.lo `test -f 'vauth/krb5_sspi.c' || echo '$(srcdir)/'`vauth/krb5_sspi.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-krb5_sspi.Tpo vauth/$(DEPDIR)/libcurl_la-krb5_sspi.Plo
+	$(AM_V_CC)source='vauth/krb5_sspi.c' object='vauth/libcurl_la-krb5_sspi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-krb5_sspi.lo `test -f 'vauth/krb5_sspi.c' || echo '$(srcdir)/'`vauth/krb5_sspi.c
 
 vauth/libcurl_la-ntlm.lo: vauth/ntlm.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-ntlm.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-ntlm.Tpo -c -o vauth/libcurl_la-ntlm.lo `test -f 'vauth/ntlm.c' || echo '$(srcdir)/'`vauth/ntlm.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-ntlm.Tpo vauth/$(DEPDIR)/libcurl_la-ntlm.Plo
-#	$(AM_V_CC)source='vauth/ntlm.c' object='vauth/libcurl_la-ntlm.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-ntlm.lo `test -f 'vauth/ntlm.c' || echo '$(srcdir)/'`vauth/ntlm.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-ntlm.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-ntlm.Tpo -c -o vauth/libcurl_la-ntlm.lo `test -f 'vauth/ntlm.c' || echo '$(srcdir)/'`vauth/ntlm.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-ntlm.Tpo vauth/$(DEPDIR)/libcurl_la-ntlm.Plo
+	$(AM_V_CC)source='vauth/ntlm.c' object='vauth/libcurl_la-ntlm.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-ntlm.lo `test -f 'vauth/ntlm.c' || echo '$(srcdir)/'`vauth/ntlm.c
 
 vauth/libcurl_la-ntlm_sspi.lo: vauth/ntlm_sspi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-ntlm_sspi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-ntlm_sspi.Tpo -c -o vauth/libcurl_la-ntlm_sspi.lo `test -f 'vauth/ntlm_sspi.c' || echo '$(srcdir)/'`vauth/ntlm_sspi.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-ntlm_sspi.Tpo vauth/$(DEPDIR)/libcurl_la-ntlm_sspi.Plo
-#	$(AM_V_CC)source='vauth/ntlm_sspi.c' object='vauth/libcurl_la-ntlm_sspi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-ntlm_sspi.lo `test -f 'vauth/ntlm_sspi.c' || echo '$(srcdir)/'`vauth/ntlm_sspi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-ntlm_sspi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-ntlm_sspi.Tpo -c -o vauth/libcurl_la-ntlm_sspi.lo `test -f 'vauth/ntlm_sspi.c' || echo '$(srcdir)/'`vauth/ntlm_sspi.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-ntlm_sspi.Tpo vauth/$(DEPDIR)/libcurl_la-ntlm_sspi.Plo
+	$(AM_V_CC)source='vauth/ntlm_sspi.c' object='vauth/libcurl_la-ntlm_sspi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-ntlm_sspi.lo `test -f 'vauth/ntlm_sspi.c' || echo '$(srcdir)/'`vauth/ntlm_sspi.c
 
 vauth/libcurl_la-oauth2.lo: vauth/oauth2.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-oauth2.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-oauth2.Tpo -c -o vauth/libcurl_la-oauth2.lo `test -f 'vauth/oauth2.c' || echo '$(srcdir)/'`vauth/oauth2.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-oauth2.Tpo vauth/$(DEPDIR)/libcurl_la-oauth2.Plo
-#	$(AM_V_CC)source='vauth/oauth2.c' object='vauth/libcurl_la-oauth2.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-oauth2.lo `test -f 'vauth/oauth2.c' || echo '$(srcdir)/'`vauth/oauth2.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-oauth2.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-oauth2.Tpo -c -o vauth/libcurl_la-oauth2.lo `test -f 'vauth/oauth2.c' || echo '$(srcdir)/'`vauth/oauth2.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-oauth2.Tpo vauth/$(DEPDIR)/libcurl_la-oauth2.Plo
+	$(AM_V_CC)source='vauth/oauth2.c' object='vauth/libcurl_la-oauth2.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-oauth2.lo `test -f 'vauth/oauth2.c' || echo '$(srcdir)/'`vauth/oauth2.c
 
 vauth/libcurl_la-spnego_gssapi.lo: vauth/spnego_gssapi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-spnego_gssapi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-spnego_gssapi.Tpo -c -o vauth/libcurl_la-spnego_gssapi.lo `test -f 'vauth/spnego_gssapi.c' || echo '$(srcdir)/'`vauth/spnego_gssapi.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-spnego_gssapi.Tpo vauth/$(DEPDIR)/libcurl_la-spnego_gssapi.Plo
-#	$(AM_V_CC)source='vauth/spnego_gssapi.c' object='vauth/libcurl_la-spnego_gssapi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-spnego_gssapi.lo `test -f 'vauth/spnego_gssapi.c' || echo '$(srcdir)/'`vauth/spnego_gssapi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-spnego_gssapi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-spnego_gssapi.Tpo -c -o vauth/libcurl_la-spnego_gssapi.lo `test -f 'vauth/spnego_gssapi.c' || echo '$(srcdir)/'`vauth/spnego_gssapi.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-spnego_gssapi.Tpo vauth/$(DEPDIR)/libcurl_la-spnego_gssapi.Plo
+	$(AM_V_CC)source='vauth/spnego_gssapi.c' object='vauth/libcurl_la-spnego_gssapi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-spnego_gssapi.lo `test -f 'vauth/spnego_gssapi.c' || echo '$(srcdir)/'`vauth/spnego_gssapi.c
 
 vauth/libcurl_la-spnego_sspi.lo: vauth/spnego_sspi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-spnego_sspi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-spnego_sspi.Tpo -c -o vauth/libcurl_la-spnego_sspi.lo `test -f 'vauth/spnego_sspi.c' || echo '$(srcdir)/'`vauth/spnego_sspi.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-spnego_sspi.Tpo vauth/$(DEPDIR)/libcurl_la-spnego_sspi.Plo
-#	$(AM_V_CC)source='vauth/spnego_sspi.c' object='vauth/libcurl_la-spnego_sspi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-spnego_sspi.lo `test -f 'vauth/spnego_sspi.c' || echo '$(srcdir)/'`vauth/spnego_sspi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vauth/libcurl_la-spnego_sspi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurl_la-spnego_sspi.Tpo -c -o vauth/libcurl_la-spnego_sspi.lo `test -f 'vauth/spnego_sspi.c' || echo '$(srcdir)/'`vauth/spnego_sspi.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurl_la-spnego_sspi.Tpo vauth/$(DEPDIR)/libcurl_la-spnego_sspi.Plo
+	$(AM_V_CC)source='vauth/spnego_sspi.c' object='vauth/libcurl_la-spnego_sspi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurl_la-spnego_sspi.lo `test -f 'vauth/spnego_sspi.c' || echo '$(srcdir)/'`vauth/spnego_sspi.c
 
 vtls/libcurl_la-openssl.lo: vtls/openssl.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-openssl.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-openssl.Tpo -c -o vtls/libcurl_la-openssl.lo `test -f 'vtls/openssl.c' || echo '$(srcdir)/'`vtls/openssl.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-openssl.Tpo vtls/$(DEPDIR)/libcurl_la-openssl.Plo
-#	$(AM_V_CC)source='vtls/openssl.c' object='vtls/libcurl_la-openssl.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-openssl.lo `test -f 'vtls/openssl.c' || echo '$(srcdir)/'`vtls/openssl.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-openssl.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-openssl.Tpo -c -o vtls/libcurl_la-openssl.lo `test -f 'vtls/openssl.c' || echo '$(srcdir)/'`vtls/openssl.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-openssl.Tpo vtls/$(DEPDIR)/libcurl_la-openssl.Plo
+	$(AM_V_CC)source='vtls/openssl.c' object='vtls/libcurl_la-openssl.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-openssl.lo `test -f 'vtls/openssl.c' || echo '$(srcdir)/'`vtls/openssl.c
 
 vtls/libcurl_la-gtls.lo: vtls/gtls.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-gtls.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-gtls.Tpo -c -o vtls/libcurl_la-gtls.lo `test -f 'vtls/gtls.c' || echo '$(srcdir)/'`vtls/gtls.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-gtls.Tpo vtls/$(DEPDIR)/libcurl_la-gtls.Plo
-#	$(AM_V_CC)source='vtls/gtls.c' object='vtls/libcurl_la-gtls.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-gtls.lo `test -f 'vtls/gtls.c' || echo '$(srcdir)/'`vtls/gtls.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-gtls.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-gtls.Tpo -c -o vtls/libcurl_la-gtls.lo `test -f 'vtls/gtls.c' || echo '$(srcdir)/'`vtls/gtls.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-gtls.Tpo vtls/$(DEPDIR)/libcurl_la-gtls.Plo
+	$(AM_V_CC)source='vtls/gtls.c' object='vtls/libcurl_la-gtls.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-gtls.lo `test -f 'vtls/gtls.c' || echo '$(srcdir)/'`vtls/gtls.c
 
 vtls/libcurl_la-vtls.lo: vtls/vtls.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-vtls.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-vtls.Tpo -c -o vtls/libcurl_la-vtls.lo `test -f 'vtls/vtls.c' || echo '$(srcdir)/'`vtls/vtls.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-vtls.Tpo vtls/$(DEPDIR)/libcurl_la-vtls.Plo
-#	$(AM_V_CC)source='vtls/vtls.c' object='vtls/libcurl_la-vtls.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-vtls.lo `test -f 'vtls/vtls.c' || echo '$(srcdir)/'`vtls/vtls.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-vtls.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-vtls.Tpo -c -o vtls/libcurl_la-vtls.lo `test -f 'vtls/vtls.c' || echo '$(srcdir)/'`vtls/vtls.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-vtls.Tpo vtls/$(DEPDIR)/libcurl_la-vtls.Plo
+	$(AM_V_CC)source='vtls/vtls.c' object='vtls/libcurl_la-vtls.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-vtls.lo `test -f 'vtls/vtls.c' || echo '$(srcdir)/'`vtls/vtls.c
 
 vtls/libcurl_la-nss.lo: vtls/nss.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-nss.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-nss.Tpo -c -o vtls/libcurl_la-nss.lo `test -f 'vtls/nss.c' || echo '$(srcdir)/'`vtls/nss.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-nss.Tpo vtls/$(DEPDIR)/libcurl_la-nss.Plo
-#	$(AM_V_CC)source='vtls/nss.c' object='vtls/libcurl_la-nss.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-nss.lo `test -f 'vtls/nss.c' || echo '$(srcdir)/'`vtls/nss.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-nss.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-nss.Tpo -c -o vtls/libcurl_la-nss.lo `test -f 'vtls/nss.c' || echo '$(srcdir)/'`vtls/nss.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-nss.Tpo vtls/$(DEPDIR)/libcurl_la-nss.Plo
+	$(AM_V_CC)source='vtls/nss.c' object='vtls/libcurl_la-nss.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-nss.lo `test -f 'vtls/nss.c' || echo '$(srcdir)/'`vtls/nss.c
 
 vtls/libcurl_la-polarssl.lo: vtls/polarssl.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-polarssl.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-polarssl.Tpo -c -o vtls/libcurl_la-polarssl.lo `test -f 'vtls/polarssl.c' || echo '$(srcdir)/'`vtls/polarssl.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-polarssl.Tpo vtls/$(DEPDIR)/libcurl_la-polarssl.Plo
-#	$(AM_V_CC)source='vtls/polarssl.c' object='vtls/libcurl_la-polarssl.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-polarssl.lo `test -f 'vtls/polarssl.c' || echo '$(srcdir)/'`vtls/polarssl.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-polarssl.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-polarssl.Tpo -c -o vtls/libcurl_la-polarssl.lo `test -f 'vtls/polarssl.c' || echo '$(srcdir)/'`vtls/polarssl.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-polarssl.Tpo vtls/$(DEPDIR)/libcurl_la-polarssl.Plo
+	$(AM_V_CC)source='vtls/polarssl.c' object='vtls/libcurl_la-polarssl.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-polarssl.lo `test -f 'vtls/polarssl.c' || echo '$(srcdir)/'`vtls/polarssl.c
 
 vtls/libcurl_la-polarssl_threadlock.lo: vtls/polarssl_threadlock.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-polarssl_threadlock.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-polarssl_threadlock.Tpo -c -o vtls/libcurl_la-polarssl_threadlock.lo `test -f 'vtls/polarssl_threadlock.c' || echo '$(srcdir)/'`vtls/polarssl_threadlock.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-polarssl_threadlock.Tpo vtls/$(DEPDIR)/libcurl_la-polarssl_threadlock.Plo
-#	$(AM_V_CC)source='vtls/polarssl_threadlock.c' object='vtls/libcurl_la-polarssl_threadlock.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-polarssl_threadlock.lo `test -f 'vtls/polarssl_threadlock.c' || echo '$(srcdir)/'`vtls/polarssl_threadlock.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-polarssl_threadlock.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-polarssl_threadlock.Tpo -c -o vtls/libcurl_la-polarssl_threadlock.lo `test -f 'vtls/polarssl_threadlock.c' || echo '$(srcdir)/'`vtls/polarssl_threadlock.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-polarssl_threadlock.Tpo vtls/$(DEPDIR)/libcurl_la-polarssl_threadlock.Plo
+	$(AM_V_CC)source='vtls/polarssl_threadlock.c' object='vtls/libcurl_la-polarssl_threadlock.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-polarssl_threadlock.lo `test -f 'vtls/polarssl_threadlock.c' || echo '$(srcdir)/'`vtls/polarssl_threadlock.c
 
 vtls/libcurl_la-axtls.lo: vtls/axtls.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-axtls.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-axtls.Tpo -c -o vtls/libcurl_la-axtls.lo `test -f 'vtls/axtls.c' || echo '$(srcdir)/'`vtls/axtls.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-axtls.Tpo vtls/$(DEPDIR)/libcurl_la-axtls.Plo
-#	$(AM_V_CC)source='vtls/axtls.c' object='vtls/libcurl_la-axtls.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-axtls.lo `test -f 'vtls/axtls.c' || echo '$(srcdir)/'`vtls/axtls.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-axtls.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-axtls.Tpo -c -o vtls/libcurl_la-axtls.lo `test -f 'vtls/axtls.c' || echo '$(srcdir)/'`vtls/axtls.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-axtls.Tpo vtls/$(DEPDIR)/libcurl_la-axtls.Plo
+	$(AM_V_CC)source='vtls/axtls.c' object='vtls/libcurl_la-axtls.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-axtls.lo `test -f 'vtls/axtls.c' || echo '$(srcdir)/'`vtls/axtls.c
 
 vtls/libcurl_la-cyassl.lo: vtls/cyassl.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-cyassl.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-cyassl.Tpo -c -o vtls/libcurl_la-cyassl.lo `test -f 'vtls/cyassl.c' || echo '$(srcdir)/'`vtls/cyassl.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-cyassl.Tpo vtls/$(DEPDIR)/libcurl_la-cyassl.Plo
-#	$(AM_V_CC)source='vtls/cyassl.c' object='vtls/libcurl_la-cyassl.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-cyassl.lo `test -f 'vtls/cyassl.c' || echo '$(srcdir)/'`vtls/cyassl.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-cyassl.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-cyassl.Tpo -c -o vtls/libcurl_la-cyassl.lo `test -f 'vtls/cyassl.c' || echo '$(srcdir)/'`vtls/cyassl.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-cyassl.Tpo vtls/$(DEPDIR)/libcurl_la-cyassl.Plo
+	$(AM_V_CC)source='vtls/cyassl.c' object='vtls/libcurl_la-cyassl.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-cyassl.lo `test -f 'vtls/cyassl.c' || echo '$(srcdir)/'`vtls/cyassl.c
 
 vtls/libcurl_la-schannel.lo: vtls/schannel.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-schannel.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-schannel.Tpo -c -o vtls/libcurl_la-schannel.lo `test -f 'vtls/schannel.c' || echo '$(srcdir)/'`vtls/schannel.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-schannel.Tpo vtls/$(DEPDIR)/libcurl_la-schannel.Plo
-#	$(AM_V_CC)source='vtls/schannel.c' object='vtls/libcurl_la-schannel.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-schannel.lo `test -f 'vtls/schannel.c' || echo '$(srcdir)/'`vtls/schannel.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-schannel.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-schannel.Tpo -c -o vtls/libcurl_la-schannel.lo `test -f 'vtls/schannel.c' || echo '$(srcdir)/'`vtls/schannel.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-schannel.Tpo vtls/$(DEPDIR)/libcurl_la-schannel.Plo
+	$(AM_V_CC)source='vtls/schannel.c' object='vtls/libcurl_la-schannel.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-schannel.lo `test -f 'vtls/schannel.c' || echo '$(srcdir)/'`vtls/schannel.c
 
 vtls/libcurl_la-darwinssl.lo: vtls/darwinssl.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-darwinssl.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-darwinssl.Tpo -c -o vtls/libcurl_la-darwinssl.lo `test -f 'vtls/darwinssl.c' || echo '$(srcdir)/'`vtls/darwinssl.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-darwinssl.Tpo vtls/$(DEPDIR)/libcurl_la-darwinssl.Plo
-#	$(AM_V_CC)source='vtls/darwinssl.c' object='vtls/libcurl_la-darwinssl.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-darwinssl.lo `test -f 'vtls/darwinssl.c' || echo '$(srcdir)/'`vtls/darwinssl.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-darwinssl.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-darwinssl.Tpo -c -o vtls/libcurl_la-darwinssl.lo `test -f 'vtls/darwinssl.c' || echo '$(srcdir)/'`vtls/darwinssl.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-darwinssl.Tpo vtls/$(DEPDIR)/libcurl_la-darwinssl.Plo
+	$(AM_V_CC)source='vtls/darwinssl.c' object='vtls/libcurl_la-darwinssl.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-darwinssl.lo `test -f 'vtls/darwinssl.c' || echo '$(srcdir)/'`vtls/darwinssl.c
 
 vtls/libcurl_la-gskit.lo: vtls/gskit.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-gskit.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-gskit.Tpo -c -o vtls/libcurl_la-gskit.lo `test -f 'vtls/gskit.c' || echo '$(srcdir)/'`vtls/gskit.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-gskit.Tpo vtls/$(DEPDIR)/libcurl_la-gskit.Plo
-#	$(AM_V_CC)source='vtls/gskit.c' object='vtls/libcurl_la-gskit.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-gskit.lo `test -f 'vtls/gskit.c' || echo '$(srcdir)/'`vtls/gskit.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-gskit.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-gskit.Tpo -c -o vtls/libcurl_la-gskit.lo `test -f 'vtls/gskit.c' || echo '$(srcdir)/'`vtls/gskit.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-gskit.Tpo vtls/$(DEPDIR)/libcurl_la-gskit.Plo
+	$(AM_V_CC)source='vtls/gskit.c' object='vtls/libcurl_la-gskit.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-gskit.lo `test -f 'vtls/gskit.c' || echo '$(srcdir)/'`vtls/gskit.c
 
 vtls/libcurl_la-mbedtls.lo: vtls/mbedtls.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-mbedtls.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-mbedtls.Tpo -c -o vtls/libcurl_la-mbedtls.lo `test -f 'vtls/mbedtls.c' || echo '$(srcdir)/'`vtls/mbedtls.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-mbedtls.Tpo vtls/$(DEPDIR)/libcurl_la-mbedtls.Plo
-#	$(AM_V_CC)source='vtls/mbedtls.c' object='vtls/libcurl_la-mbedtls.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-mbedtls.lo `test -f 'vtls/mbedtls.c' || echo '$(srcdir)/'`vtls/mbedtls.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -MT vtls/libcurl_la-mbedtls.lo -MD -MP -MF vtls/$(DEPDIR)/libcurl_la-mbedtls.Tpo -c -o vtls/libcurl_la-mbedtls.lo `test -f 'vtls/mbedtls.c' || echo '$(srcdir)/'`vtls/mbedtls.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurl_la-mbedtls.Tpo vtls/$(DEPDIR)/libcurl_la-mbedtls.Plo
+	$(AM_V_CC)source='vtls/mbedtls.c' object='vtls/libcurl_la-mbedtls.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurl_la_CPPFLAGS) $(CPPFLAGS) $(libcurl_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurl_la-mbedtls.lo `test -f 'vtls/mbedtls.c' || echo '$(srcdir)/'`vtls/mbedtls.c
 
 libcurlu_la-file.lo: file.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-file.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-file.Tpo -c -o libcurlu_la-file.lo `test -f 'file.c' || echo '$(srcdir)/'`file.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-file.Tpo $(DEPDIR)/libcurlu_la-file.Plo
-#	$(AM_V_CC)source='file.c' object='libcurlu_la-file.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-file.lo `test -f 'file.c' || echo '$(srcdir)/'`file.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-file.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-file.Tpo -c -o libcurlu_la-file.lo `test -f 'file.c' || echo '$(srcdir)/'`file.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-file.Tpo $(DEPDIR)/libcurlu_la-file.Plo
+	$(AM_V_CC)source='file.c' object='libcurlu_la-file.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-file.lo `test -f 'file.c' || echo '$(srcdir)/'`file.c
 
 libcurlu_la-timeval.lo: timeval.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-timeval.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-timeval.Tpo -c -o libcurlu_la-timeval.lo `test -f 'timeval.c' || echo '$(srcdir)/'`timeval.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-timeval.Tpo $(DEPDIR)/libcurlu_la-timeval.Plo
-#	$(AM_V_CC)source='timeval.c' object='libcurlu_la-timeval.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-timeval.lo `test -f 'timeval.c' || echo '$(srcdir)/'`timeval.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-timeval.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-timeval.Tpo -c -o libcurlu_la-timeval.lo `test -f 'timeval.c' || echo '$(srcdir)/'`timeval.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-timeval.Tpo $(DEPDIR)/libcurlu_la-timeval.Plo
+	$(AM_V_CC)source='timeval.c' object='libcurlu_la-timeval.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-timeval.lo `test -f 'timeval.c' || echo '$(srcdir)/'`timeval.c
 
 libcurlu_la-base64.lo: base64.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-base64.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-base64.Tpo -c -o libcurlu_la-base64.lo `test -f 'base64.c' || echo '$(srcdir)/'`base64.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-base64.Tpo $(DEPDIR)/libcurlu_la-base64.Plo
-#	$(AM_V_CC)source='base64.c' object='libcurlu_la-base64.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-base64.lo `test -f 'base64.c' || echo '$(srcdir)/'`base64.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-base64.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-base64.Tpo -c -o libcurlu_la-base64.lo `test -f 'base64.c' || echo '$(srcdir)/'`base64.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-base64.Tpo $(DEPDIR)/libcurlu_la-base64.Plo
+	$(AM_V_CC)source='base64.c' object='libcurlu_la-base64.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-base64.lo `test -f 'base64.c' || echo '$(srcdir)/'`base64.c
 
 libcurlu_la-hostip.lo: hostip.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-hostip.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-hostip.Tpo -c -o libcurlu_la-hostip.lo `test -f 'hostip.c' || echo '$(srcdir)/'`hostip.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-hostip.Tpo $(DEPDIR)/libcurlu_la-hostip.Plo
-#	$(AM_V_CC)source='hostip.c' object='libcurlu_la-hostip.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-hostip.lo `test -f 'hostip.c' || echo '$(srcdir)/'`hostip.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-hostip.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-hostip.Tpo -c -o libcurlu_la-hostip.lo `test -f 'hostip.c' || echo '$(srcdir)/'`hostip.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-hostip.Tpo $(DEPDIR)/libcurlu_la-hostip.Plo
+	$(AM_V_CC)source='hostip.c' object='libcurlu_la-hostip.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-hostip.lo `test -f 'hostip.c' || echo '$(srcdir)/'`hostip.c
 
 libcurlu_la-progress.lo: progress.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-progress.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-progress.Tpo -c -o libcurlu_la-progress.lo `test -f 'progress.c' || echo '$(srcdir)/'`progress.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-progress.Tpo $(DEPDIR)/libcurlu_la-progress.Plo
-#	$(AM_V_CC)source='progress.c' object='libcurlu_la-progress.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-progress.lo `test -f 'progress.c' || echo '$(srcdir)/'`progress.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-progress.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-progress.Tpo -c -o libcurlu_la-progress.lo `test -f 'progress.c' || echo '$(srcdir)/'`progress.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-progress.Tpo $(DEPDIR)/libcurlu_la-progress.Plo
+	$(AM_V_CC)source='progress.c' object='libcurlu_la-progress.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-progress.lo `test -f 'progress.c' || echo '$(srcdir)/'`progress.c
 
 libcurlu_la-formdata.lo: formdata.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-formdata.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-formdata.Tpo -c -o libcurlu_la-formdata.lo `test -f 'formdata.c' || echo '$(srcdir)/'`formdata.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-formdata.Tpo $(DEPDIR)/libcurlu_la-formdata.Plo
-#	$(AM_V_CC)source='formdata.c' object='libcurlu_la-formdata.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-formdata.lo `test -f 'formdata.c' || echo '$(srcdir)/'`formdata.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-formdata.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-formdata.Tpo -c -o libcurlu_la-formdata.lo `test -f 'formdata.c' || echo '$(srcdir)/'`formdata.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-formdata.Tpo $(DEPDIR)/libcurlu_la-formdata.Plo
+	$(AM_V_CC)source='formdata.c' object='libcurlu_la-formdata.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-formdata.lo `test -f 'formdata.c' || echo '$(srcdir)/'`formdata.c
 
 libcurlu_la-cookie.lo: cookie.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-cookie.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-cookie.Tpo -c -o libcurlu_la-cookie.lo `test -f 'cookie.c' || echo '$(srcdir)/'`cookie.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-cookie.Tpo $(DEPDIR)/libcurlu_la-cookie.Plo
-#	$(AM_V_CC)source='cookie.c' object='libcurlu_la-cookie.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-cookie.lo `test -f 'cookie.c' || echo '$(srcdir)/'`cookie.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-cookie.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-cookie.Tpo -c -o libcurlu_la-cookie.lo `test -f 'cookie.c' || echo '$(srcdir)/'`cookie.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-cookie.Tpo $(DEPDIR)/libcurlu_la-cookie.Plo
+	$(AM_V_CC)source='cookie.c' object='libcurlu_la-cookie.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-cookie.lo `test -f 'cookie.c' || echo '$(srcdir)/'`cookie.c
 
 libcurlu_la-http.lo: http.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-http.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-http.Tpo -c -o libcurlu_la-http.lo `test -f 'http.c' || echo '$(srcdir)/'`http.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-http.Tpo $(DEPDIR)/libcurlu_la-http.Plo
-#	$(AM_V_CC)source='http.c' object='libcurlu_la-http.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-http.lo `test -f 'http.c' || echo '$(srcdir)/'`http.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-http.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-http.Tpo -c -o libcurlu_la-http.lo `test -f 'http.c' || echo '$(srcdir)/'`http.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-http.Tpo $(DEPDIR)/libcurlu_la-http.Plo
+	$(AM_V_CC)source='http.c' object='libcurlu_la-http.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-http.lo `test -f 'http.c' || echo '$(srcdir)/'`http.c
 
 libcurlu_la-sendf.lo: sendf.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-sendf.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-sendf.Tpo -c -o libcurlu_la-sendf.lo `test -f 'sendf.c' || echo '$(srcdir)/'`sendf.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-sendf.Tpo $(DEPDIR)/libcurlu_la-sendf.Plo
-#	$(AM_V_CC)source='sendf.c' object='libcurlu_la-sendf.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-sendf.lo `test -f 'sendf.c' || echo '$(srcdir)/'`sendf.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-sendf.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-sendf.Tpo -c -o libcurlu_la-sendf.lo `test -f 'sendf.c' || echo '$(srcdir)/'`sendf.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-sendf.Tpo $(DEPDIR)/libcurlu_la-sendf.Plo
+	$(AM_V_CC)source='sendf.c' object='libcurlu_la-sendf.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-sendf.lo `test -f 'sendf.c' || echo '$(srcdir)/'`sendf.c
 
 libcurlu_la-ftp.lo: ftp.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-ftp.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-ftp.Tpo -c -o libcurlu_la-ftp.lo `test -f 'ftp.c' || echo '$(srcdir)/'`ftp.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-ftp.Tpo $(DEPDIR)/libcurlu_la-ftp.Plo
-#	$(AM_V_CC)source='ftp.c' object='libcurlu_la-ftp.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-ftp.lo `test -f 'ftp.c' || echo '$(srcdir)/'`ftp.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-ftp.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-ftp.Tpo -c -o libcurlu_la-ftp.lo `test -f 'ftp.c' || echo '$(srcdir)/'`ftp.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-ftp.Tpo $(DEPDIR)/libcurlu_la-ftp.Plo
+	$(AM_V_CC)source='ftp.c' object='libcurlu_la-ftp.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-ftp.lo `test -f 'ftp.c' || echo '$(srcdir)/'`ftp.c
 
 libcurlu_la-url.lo: url.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-url.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-url.Tpo -c -o libcurlu_la-url.lo `test -f 'url.c' || echo '$(srcdir)/'`url.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-url.Tpo $(DEPDIR)/libcurlu_la-url.Plo
-#	$(AM_V_CC)source='url.c' object='libcurlu_la-url.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-url.lo `test -f 'url.c' || echo '$(srcdir)/'`url.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-url.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-url.Tpo -c -o libcurlu_la-url.lo `test -f 'url.c' || echo '$(srcdir)/'`url.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-url.Tpo $(DEPDIR)/libcurlu_la-url.Plo
+	$(AM_V_CC)source='url.c' object='libcurlu_la-url.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-url.lo `test -f 'url.c' || echo '$(srcdir)/'`url.c
 
 libcurlu_la-dict.lo: dict.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-dict.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-dict.Tpo -c -o libcurlu_la-dict.lo `test -f 'dict.c' || echo '$(srcdir)/'`dict.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-dict.Tpo $(DEPDIR)/libcurlu_la-dict.Plo
-#	$(AM_V_CC)source='dict.c' object='libcurlu_la-dict.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-dict.lo `test -f 'dict.c' || echo '$(srcdir)/'`dict.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-dict.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-dict.Tpo -c -o libcurlu_la-dict.lo `test -f 'dict.c' || echo '$(srcdir)/'`dict.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-dict.Tpo $(DEPDIR)/libcurlu_la-dict.Plo
+	$(AM_V_CC)source='dict.c' object='libcurlu_la-dict.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-dict.lo `test -f 'dict.c' || echo '$(srcdir)/'`dict.c
 
 libcurlu_la-if2ip.lo: if2ip.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-if2ip.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-if2ip.Tpo -c -o libcurlu_la-if2ip.lo `test -f 'if2ip.c' || echo '$(srcdir)/'`if2ip.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-if2ip.Tpo $(DEPDIR)/libcurlu_la-if2ip.Plo
-#	$(AM_V_CC)source='if2ip.c' object='libcurlu_la-if2ip.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-if2ip.lo `test -f 'if2ip.c' || echo '$(srcdir)/'`if2ip.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-if2ip.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-if2ip.Tpo -c -o libcurlu_la-if2ip.lo `test -f 'if2ip.c' || echo '$(srcdir)/'`if2ip.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-if2ip.Tpo $(DEPDIR)/libcurlu_la-if2ip.Plo
+	$(AM_V_CC)source='if2ip.c' object='libcurlu_la-if2ip.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-if2ip.lo `test -f 'if2ip.c' || echo '$(srcdir)/'`if2ip.c
 
 libcurlu_la-speedcheck.lo: speedcheck.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-speedcheck.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-speedcheck.Tpo -c -o libcurlu_la-speedcheck.lo `test -f 'speedcheck.c' || echo '$(srcdir)/'`speedcheck.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-speedcheck.Tpo $(DEPDIR)/libcurlu_la-speedcheck.Plo
-#	$(AM_V_CC)source='speedcheck.c' object='libcurlu_la-speedcheck.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-speedcheck.lo `test -f 'speedcheck.c' || echo '$(srcdir)/'`speedcheck.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-speedcheck.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-speedcheck.Tpo -c -o libcurlu_la-speedcheck.lo `test -f 'speedcheck.c' || echo '$(srcdir)/'`speedcheck.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-speedcheck.Tpo $(DEPDIR)/libcurlu_la-speedcheck.Plo
+	$(AM_V_CC)source='speedcheck.c' object='libcurlu_la-speedcheck.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-speedcheck.lo `test -f 'speedcheck.c' || echo '$(srcdir)/'`speedcheck.c
 
 libcurlu_la-ldap.lo: ldap.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-ldap.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-ldap.Tpo -c -o libcurlu_la-ldap.lo `test -f 'ldap.c' || echo '$(srcdir)/'`ldap.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-ldap.Tpo $(DEPDIR)/libcurlu_la-ldap.Plo
-#	$(AM_V_CC)source='ldap.c' object='libcurlu_la-ldap.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-ldap.lo `test -f 'ldap.c' || echo '$(srcdir)/'`ldap.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-ldap.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-ldap.Tpo -c -o libcurlu_la-ldap.lo `test -f 'ldap.c' || echo '$(srcdir)/'`ldap.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-ldap.Tpo $(DEPDIR)/libcurlu_la-ldap.Plo
+	$(AM_V_CC)source='ldap.c' object='libcurlu_la-ldap.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-ldap.lo `test -f 'ldap.c' || echo '$(srcdir)/'`ldap.c
 
 libcurlu_la-version.lo: version.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-version.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-version.Tpo -c -o libcurlu_la-version.lo `test -f 'version.c' || echo '$(srcdir)/'`version.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-version.Tpo $(DEPDIR)/libcurlu_la-version.Plo
-#	$(AM_V_CC)source='version.c' object='libcurlu_la-version.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-version.lo `test -f 'version.c' || echo '$(srcdir)/'`version.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-version.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-version.Tpo -c -o libcurlu_la-version.lo `test -f 'version.c' || echo '$(srcdir)/'`version.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-version.Tpo $(DEPDIR)/libcurlu_la-version.Plo
+	$(AM_V_CC)source='version.c' object='libcurlu_la-version.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-version.lo `test -f 'version.c' || echo '$(srcdir)/'`version.c
 
 libcurlu_la-getenv.lo: getenv.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-getenv.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-getenv.Tpo -c -o libcurlu_la-getenv.lo `test -f 'getenv.c' || echo '$(srcdir)/'`getenv.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-getenv.Tpo $(DEPDIR)/libcurlu_la-getenv.Plo
-#	$(AM_V_CC)source='getenv.c' object='libcurlu_la-getenv.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-getenv.lo `test -f 'getenv.c' || echo '$(srcdir)/'`getenv.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-getenv.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-getenv.Tpo -c -o libcurlu_la-getenv.lo `test -f 'getenv.c' || echo '$(srcdir)/'`getenv.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-getenv.Tpo $(DEPDIR)/libcurlu_la-getenv.Plo
+	$(AM_V_CC)source='getenv.c' object='libcurlu_la-getenv.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-getenv.lo `test -f 'getenv.c' || echo '$(srcdir)/'`getenv.c
 
 libcurlu_la-escape.lo: escape.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-escape.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-escape.Tpo -c -o libcurlu_la-escape.lo `test -f 'escape.c' || echo '$(srcdir)/'`escape.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-escape.Tpo $(DEPDIR)/libcurlu_la-escape.Plo
-#	$(AM_V_CC)source='escape.c' object='libcurlu_la-escape.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-escape.lo `test -f 'escape.c' || echo '$(srcdir)/'`escape.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-escape.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-escape.Tpo -c -o libcurlu_la-escape.lo `test -f 'escape.c' || echo '$(srcdir)/'`escape.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-escape.Tpo $(DEPDIR)/libcurlu_la-escape.Plo
+	$(AM_V_CC)source='escape.c' object='libcurlu_la-escape.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-escape.lo `test -f 'escape.c' || echo '$(srcdir)/'`escape.c
 
 libcurlu_la-mprintf.lo: mprintf.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-mprintf.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-mprintf.Tpo -c -o libcurlu_la-mprintf.lo `test -f 'mprintf.c' || echo '$(srcdir)/'`mprintf.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-mprintf.Tpo $(DEPDIR)/libcurlu_la-mprintf.Plo
-#	$(AM_V_CC)source='mprintf.c' object='libcurlu_la-mprintf.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-mprintf.lo `test -f 'mprintf.c' || echo '$(srcdir)/'`mprintf.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-mprintf.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-mprintf.Tpo -c -o libcurlu_la-mprintf.lo `test -f 'mprintf.c' || echo '$(srcdir)/'`mprintf.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-mprintf.Tpo $(DEPDIR)/libcurlu_la-mprintf.Plo
+	$(AM_V_CC)source='mprintf.c' object='libcurlu_la-mprintf.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-mprintf.lo `test -f 'mprintf.c' || echo '$(srcdir)/'`mprintf.c
 
 libcurlu_la-telnet.lo: telnet.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-telnet.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-telnet.Tpo -c -o libcurlu_la-telnet.lo `test -f 'telnet.c' || echo '$(srcdir)/'`telnet.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-telnet.Tpo $(DEPDIR)/libcurlu_la-telnet.Plo
-#	$(AM_V_CC)source='telnet.c' object='libcurlu_la-telnet.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-telnet.lo `test -f 'telnet.c' || echo '$(srcdir)/'`telnet.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-telnet.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-telnet.Tpo -c -o libcurlu_la-telnet.lo `test -f 'telnet.c' || echo '$(srcdir)/'`telnet.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-telnet.Tpo $(DEPDIR)/libcurlu_la-telnet.Plo
+	$(AM_V_CC)source='telnet.c' object='libcurlu_la-telnet.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-telnet.lo `test -f 'telnet.c' || echo '$(srcdir)/'`telnet.c
 
 libcurlu_la-netrc.lo: netrc.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-netrc.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-netrc.Tpo -c -o libcurlu_la-netrc.lo `test -f 'netrc.c' || echo '$(srcdir)/'`netrc.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-netrc.Tpo $(DEPDIR)/libcurlu_la-netrc.Plo
-#	$(AM_V_CC)source='netrc.c' object='libcurlu_la-netrc.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-netrc.lo `test -f 'netrc.c' || echo '$(srcdir)/'`netrc.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-netrc.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-netrc.Tpo -c -o libcurlu_la-netrc.lo `test -f 'netrc.c' || echo '$(srcdir)/'`netrc.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-netrc.Tpo $(DEPDIR)/libcurlu_la-netrc.Plo
+	$(AM_V_CC)source='netrc.c' object='libcurlu_la-netrc.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-netrc.lo `test -f 'netrc.c' || echo '$(srcdir)/'`netrc.c
 
 libcurlu_la-getinfo.lo: getinfo.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-getinfo.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-getinfo.Tpo -c -o libcurlu_la-getinfo.lo `test -f 'getinfo.c' || echo '$(srcdir)/'`getinfo.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-getinfo.Tpo $(DEPDIR)/libcurlu_la-getinfo.Plo
-#	$(AM_V_CC)source='getinfo.c' object='libcurlu_la-getinfo.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-getinfo.lo `test -f 'getinfo.c' || echo '$(srcdir)/'`getinfo.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-getinfo.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-getinfo.Tpo -c -o libcurlu_la-getinfo.lo `test -f 'getinfo.c' || echo '$(srcdir)/'`getinfo.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-getinfo.Tpo $(DEPDIR)/libcurlu_la-getinfo.Plo
+	$(AM_V_CC)source='getinfo.c' object='libcurlu_la-getinfo.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-getinfo.lo `test -f 'getinfo.c' || echo '$(srcdir)/'`getinfo.c
 
 libcurlu_la-transfer.lo: transfer.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-transfer.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-transfer.Tpo -c -o libcurlu_la-transfer.lo `test -f 'transfer.c' || echo '$(srcdir)/'`transfer.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-transfer.Tpo $(DEPDIR)/libcurlu_la-transfer.Plo
-#	$(AM_V_CC)source='transfer.c' object='libcurlu_la-transfer.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-transfer.lo `test -f 'transfer.c' || echo '$(srcdir)/'`transfer.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-transfer.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-transfer.Tpo -c -o libcurlu_la-transfer.lo `test -f 'transfer.c' || echo '$(srcdir)/'`transfer.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-transfer.Tpo $(DEPDIR)/libcurlu_la-transfer.Plo
+	$(AM_V_CC)source='transfer.c' object='libcurlu_la-transfer.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-transfer.lo `test -f 'transfer.c' || echo '$(srcdir)/'`transfer.c
 
 libcurlu_la-strcase.lo: strcase.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-strcase.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-strcase.Tpo -c -o libcurlu_la-strcase.lo `test -f 'strcase.c' || echo '$(srcdir)/'`strcase.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-strcase.Tpo $(DEPDIR)/libcurlu_la-strcase.Plo
-#	$(AM_V_CC)source='strcase.c' object='libcurlu_la-strcase.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-strcase.lo `test -f 'strcase.c' || echo '$(srcdir)/'`strcase.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-strcase.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-strcase.Tpo -c -o libcurlu_la-strcase.lo `test -f 'strcase.c' || echo '$(srcdir)/'`strcase.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-strcase.Tpo $(DEPDIR)/libcurlu_la-strcase.Plo
+	$(AM_V_CC)source='strcase.c' object='libcurlu_la-strcase.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-strcase.lo `test -f 'strcase.c' || echo '$(srcdir)/'`strcase.c
 
 libcurlu_la-easy.lo: easy.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-easy.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-easy.Tpo -c -o libcurlu_la-easy.lo `test -f 'easy.c' || echo '$(srcdir)/'`easy.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-easy.Tpo $(DEPDIR)/libcurlu_la-easy.Plo
-#	$(AM_V_CC)source='easy.c' object='libcurlu_la-easy.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-easy.lo `test -f 'easy.c' || echo '$(srcdir)/'`easy.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-easy.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-easy.Tpo -c -o libcurlu_la-easy.lo `test -f 'easy.c' || echo '$(srcdir)/'`easy.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-easy.Tpo $(DEPDIR)/libcurlu_la-easy.Plo
+	$(AM_V_CC)source='easy.c' object='libcurlu_la-easy.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-easy.lo `test -f 'easy.c' || echo '$(srcdir)/'`easy.c
 
 libcurlu_la-security.lo: security.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-security.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-security.Tpo -c -o libcurlu_la-security.lo `test -f 'security.c' || echo '$(srcdir)/'`security.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-security.Tpo $(DEPDIR)/libcurlu_la-security.Plo
-#	$(AM_V_CC)source='security.c' object='libcurlu_la-security.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-security.lo `test -f 'security.c' || echo '$(srcdir)/'`security.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-security.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-security.Tpo -c -o libcurlu_la-security.lo `test -f 'security.c' || echo '$(srcdir)/'`security.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-security.Tpo $(DEPDIR)/libcurlu_la-security.Plo
+	$(AM_V_CC)source='security.c' object='libcurlu_la-security.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-security.lo `test -f 'security.c' || echo '$(srcdir)/'`security.c
 
 libcurlu_la-curl_fnmatch.lo: curl_fnmatch.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_fnmatch.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_fnmatch.Tpo -c -o libcurlu_la-curl_fnmatch.lo `test -f 'curl_fnmatch.c' || echo '$(srcdir)/'`curl_fnmatch.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_fnmatch.Tpo $(DEPDIR)/libcurlu_la-curl_fnmatch.Plo
-#	$(AM_V_CC)source='curl_fnmatch.c' object='libcurlu_la-curl_fnmatch.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_fnmatch.lo `test -f 'curl_fnmatch.c' || echo '$(srcdir)/'`curl_fnmatch.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_fnmatch.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_fnmatch.Tpo -c -o libcurlu_la-curl_fnmatch.lo `test -f 'curl_fnmatch.c' || echo '$(srcdir)/'`curl_fnmatch.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_fnmatch.Tpo $(DEPDIR)/libcurlu_la-curl_fnmatch.Plo
+	$(AM_V_CC)source='curl_fnmatch.c' object='libcurlu_la-curl_fnmatch.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_fnmatch.lo `test -f 'curl_fnmatch.c' || echo '$(srcdir)/'`curl_fnmatch.c
 
 libcurlu_la-fileinfo.lo: fileinfo.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-fileinfo.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-fileinfo.Tpo -c -o libcurlu_la-fileinfo.lo `test -f 'fileinfo.c' || echo '$(srcdir)/'`fileinfo.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-fileinfo.Tpo $(DEPDIR)/libcurlu_la-fileinfo.Plo
-#	$(AM_V_CC)source='fileinfo.c' object='libcurlu_la-fileinfo.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-fileinfo.lo `test -f 'fileinfo.c' || echo '$(srcdir)/'`fileinfo.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-fileinfo.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-fileinfo.Tpo -c -o libcurlu_la-fileinfo.lo `test -f 'fileinfo.c' || echo '$(srcdir)/'`fileinfo.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-fileinfo.Tpo $(DEPDIR)/libcurlu_la-fileinfo.Plo
+	$(AM_V_CC)source='fileinfo.c' object='libcurlu_la-fileinfo.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-fileinfo.lo `test -f 'fileinfo.c' || echo '$(srcdir)/'`fileinfo.c
 
 libcurlu_la-ftplistparser.lo: ftplistparser.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-ftplistparser.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-ftplistparser.Tpo -c -o libcurlu_la-ftplistparser.lo `test -f 'ftplistparser.c' || echo '$(srcdir)/'`ftplistparser.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-ftplistparser.Tpo $(DEPDIR)/libcurlu_la-ftplistparser.Plo
-#	$(AM_V_CC)source='ftplistparser.c' object='libcurlu_la-ftplistparser.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-ftplistparser.lo `test -f 'ftplistparser.c' || echo '$(srcdir)/'`ftplistparser.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-ftplistparser.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-ftplistparser.Tpo -c -o libcurlu_la-ftplistparser.lo `test -f 'ftplistparser.c' || echo '$(srcdir)/'`ftplistparser.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-ftplistparser.Tpo $(DEPDIR)/libcurlu_la-ftplistparser.Plo
+	$(AM_V_CC)source='ftplistparser.c' object='libcurlu_la-ftplistparser.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-ftplistparser.lo `test -f 'ftplistparser.c' || echo '$(srcdir)/'`ftplistparser.c
 
 libcurlu_la-wildcard.lo: wildcard.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-wildcard.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-wildcard.Tpo -c -o libcurlu_la-wildcard.lo `test -f 'wildcard.c' || echo '$(srcdir)/'`wildcard.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-wildcard.Tpo $(DEPDIR)/libcurlu_la-wildcard.Plo
-#	$(AM_V_CC)source='wildcard.c' object='libcurlu_la-wildcard.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-wildcard.lo `test -f 'wildcard.c' || echo '$(srcdir)/'`wildcard.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-wildcard.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-wildcard.Tpo -c -o libcurlu_la-wildcard.lo `test -f 'wildcard.c' || echo '$(srcdir)/'`wildcard.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-wildcard.Tpo $(DEPDIR)/libcurlu_la-wildcard.Plo
+	$(AM_V_CC)source='wildcard.c' object='libcurlu_la-wildcard.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-wildcard.lo `test -f 'wildcard.c' || echo '$(srcdir)/'`wildcard.c
 
 libcurlu_la-krb5.lo: krb5.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-krb5.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-krb5.Tpo -c -o libcurlu_la-krb5.lo `test -f 'krb5.c' || echo '$(srcdir)/'`krb5.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-krb5.Tpo $(DEPDIR)/libcurlu_la-krb5.Plo
-#	$(AM_V_CC)source='krb5.c' object='libcurlu_la-krb5.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-krb5.lo `test -f 'krb5.c' || echo '$(srcdir)/'`krb5.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-krb5.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-krb5.Tpo -c -o libcurlu_la-krb5.lo `test -f 'krb5.c' || echo '$(srcdir)/'`krb5.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-krb5.Tpo $(DEPDIR)/libcurlu_la-krb5.Plo
+	$(AM_V_CC)source='krb5.c' object='libcurlu_la-krb5.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-krb5.lo `test -f 'krb5.c' || echo '$(srcdir)/'`krb5.c
 
 libcurlu_la-memdebug.lo: memdebug.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-memdebug.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-memdebug.Tpo -c -o libcurlu_la-memdebug.lo `test -f 'memdebug.c' || echo '$(srcdir)/'`memdebug.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-memdebug.Tpo $(DEPDIR)/libcurlu_la-memdebug.Plo
-#	$(AM_V_CC)source='memdebug.c' object='libcurlu_la-memdebug.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-memdebug.lo `test -f 'memdebug.c' || echo '$(srcdir)/'`memdebug.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-memdebug.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-memdebug.Tpo -c -o libcurlu_la-memdebug.lo `test -f 'memdebug.c' || echo '$(srcdir)/'`memdebug.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-memdebug.Tpo $(DEPDIR)/libcurlu_la-memdebug.Plo
+	$(AM_V_CC)source='memdebug.c' object='libcurlu_la-memdebug.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-memdebug.lo `test -f 'memdebug.c' || echo '$(srcdir)/'`memdebug.c
 
 libcurlu_la-http_chunks.lo: http_chunks.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-http_chunks.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-http_chunks.Tpo -c -o libcurlu_la-http_chunks.lo `test -f 'http_chunks.c' || echo '$(srcdir)/'`http_chunks.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-http_chunks.Tpo $(DEPDIR)/libcurlu_la-http_chunks.Plo
-#	$(AM_V_CC)source='http_chunks.c' object='libcurlu_la-http_chunks.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-http_chunks.lo `test -f 'http_chunks.c' || echo '$(srcdir)/'`http_chunks.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-http_chunks.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-http_chunks.Tpo -c -o libcurlu_la-http_chunks.lo `test -f 'http_chunks.c' || echo '$(srcdir)/'`http_chunks.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-http_chunks.Tpo $(DEPDIR)/libcurlu_la-http_chunks.Plo
+	$(AM_V_CC)source='http_chunks.c' object='libcurlu_la-http_chunks.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-http_chunks.lo `test -f 'http_chunks.c' || echo '$(srcdir)/'`http_chunks.c
 
 libcurlu_la-strtok.lo: strtok.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-strtok.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-strtok.Tpo -c -o libcurlu_la-strtok.lo `test -f 'strtok.c' || echo '$(srcdir)/'`strtok.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-strtok.Tpo $(DEPDIR)/libcurlu_la-strtok.Plo
-#	$(AM_V_CC)source='strtok.c' object='libcurlu_la-strtok.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-strtok.lo `test -f 'strtok.c' || echo '$(srcdir)/'`strtok.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-strtok.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-strtok.Tpo -c -o libcurlu_la-strtok.lo `test -f 'strtok.c' || echo '$(srcdir)/'`strtok.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-strtok.Tpo $(DEPDIR)/libcurlu_la-strtok.Plo
+	$(AM_V_CC)source='strtok.c' object='libcurlu_la-strtok.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-strtok.lo `test -f 'strtok.c' || echo '$(srcdir)/'`strtok.c
 
 libcurlu_la-connect.lo: connect.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-connect.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-connect.Tpo -c -o libcurlu_la-connect.lo `test -f 'connect.c' || echo '$(srcdir)/'`connect.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-connect.Tpo $(DEPDIR)/libcurlu_la-connect.Plo
-#	$(AM_V_CC)source='connect.c' object='libcurlu_la-connect.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-connect.lo `test -f 'connect.c' || echo '$(srcdir)/'`connect.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-connect.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-connect.Tpo -c -o libcurlu_la-connect.lo `test -f 'connect.c' || echo '$(srcdir)/'`connect.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-connect.Tpo $(DEPDIR)/libcurlu_la-connect.Plo
+	$(AM_V_CC)source='connect.c' object='libcurlu_la-connect.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-connect.lo `test -f 'connect.c' || echo '$(srcdir)/'`connect.c
 
 libcurlu_la-llist.lo: llist.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-llist.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-llist.Tpo -c -o libcurlu_la-llist.lo `test -f 'llist.c' || echo '$(srcdir)/'`llist.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-llist.Tpo $(DEPDIR)/libcurlu_la-llist.Plo
-#	$(AM_V_CC)source='llist.c' object='libcurlu_la-llist.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-llist.lo `test -f 'llist.c' || echo '$(srcdir)/'`llist.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-llist.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-llist.Tpo -c -o libcurlu_la-llist.lo `test -f 'llist.c' || echo '$(srcdir)/'`llist.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-llist.Tpo $(DEPDIR)/libcurlu_la-llist.Plo
+	$(AM_V_CC)source='llist.c' object='libcurlu_la-llist.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-llist.lo `test -f 'llist.c' || echo '$(srcdir)/'`llist.c
 
 libcurlu_la-hash.lo: hash.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-hash.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-hash.Tpo -c -o libcurlu_la-hash.lo `test -f 'hash.c' || echo '$(srcdir)/'`hash.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-hash.Tpo $(DEPDIR)/libcurlu_la-hash.Plo
-#	$(AM_V_CC)source='hash.c' object='libcurlu_la-hash.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-hash.lo `test -f 'hash.c' || echo '$(srcdir)/'`hash.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-hash.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-hash.Tpo -c -o libcurlu_la-hash.lo `test -f 'hash.c' || echo '$(srcdir)/'`hash.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-hash.Tpo $(DEPDIR)/libcurlu_la-hash.Plo
+	$(AM_V_CC)source='hash.c' object='libcurlu_la-hash.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-hash.lo `test -f 'hash.c' || echo '$(srcdir)/'`hash.c
 
 libcurlu_la-multi.lo: multi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-multi.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-multi.Tpo -c -o libcurlu_la-multi.lo `test -f 'multi.c' || echo '$(srcdir)/'`multi.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-multi.Tpo $(DEPDIR)/libcurlu_la-multi.Plo
-#	$(AM_V_CC)source='multi.c' object='libcurlu_la-multi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-multi.lo `test -f 'multi.c' || echo '$(srcdir)/'`multi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-multi.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-multi.Tpo -c -o libcurlu_la-multi.lo `test -f 'multi.c' || echo '$(srcdir)/'`multi.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-multi.Tpo $(DEPDIR)/libcurlu_la-multi.Plo
+	$(AM_V_CC)source='multi.c' object='libcurlu_la-multi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-multi.lo `test -f 'multi.c' || echo '$(srcdir)/'`multi.c
 
 libcurlu_la-content_encoding.lo: content_encoding.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-content_encoding.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-content_encoding.Tpo -c -o libcurlu_la-content_encoding.lo `test -f 'content_encoding.c' || echo '$(srcdir)/'`content_encoding.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-content_encoding.Tpo $(DEPDIR)/libcurlu_la-content_encoding.Plo
-#	$(AM_V_CC)source='content_encoding.c' object='libcurlu_la-content_encoding.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-content_encoding.lo `test -f 'content_encoding.c' || echo '$(srcdir)/'`content_encoding.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-content_encoding.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-content_encoding.Tpo -c -o libcurlu_la-content_encoding.lo `test -f 'content_encoding.c' || echo '$(srcdir)/'`content_encoding.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-content_encoding.Tpo $(DEPDIR)/libcurlu_la-content_encoding.Plo
+	$(AM_V_CC)source='content_encoding.c' object='libcurlu_la-content_encoding.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-content_encoding.lo `test -f 'content_encoding.c' || echo '$(srcdir)/'`content_encoding.c
 
 libcurlu_la-share.lo: share.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-share.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-share.Tpo -c -o libcurlu_la-share.lo `test -f 'share.c' || echo '$(srcdir)/'`share.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-share.Tpo $(DEPDIR)/libcurlu_la-share.Plo
-#	$(AM_V_CC)source='share.c' object='libcurlu_la-share.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-share.lo `test -f 'share.c' || echo '$(srcdir)/'`share.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-share.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-share.Tpo -c -o libcurlu_la-share.lo `test -f 'share.c' || echo '$(srcdir)/'`share.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-share.Tpo $(DEPDIR)/libcurlu_la-share.Plo
+	$(AM_V_CC)source='share.c' object='libcurlu_la-share.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-share.lo `test -f 'share.c' || echo '$(srcdir)/'`share.c
 
 libcurlu_la-http_digest.lo: http_digest.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-http_digest.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-http_digest.Tpo -c -o libcurlu_la-http_digest.lo `test -f 'http_digest.c' || echo '$(srcdir)/'`http_digest.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-http_digest.Tpo $(DEPDIR)/libcurlu_la-http_digest.Plo
-#	$(AM_V_CC)source='http_digest.c' object='libcurlu_la-http_digest.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-http_digest.lo `test -f 'http_digest.c' || echo '$(srcdir)/'`http_digest.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-http_digest.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-http_digest.Tpo -c -o libcurlu_la-http_digest.lo `test -f 'http_digest.c' || echo '$(srcdir)/'`http_digest.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-http_digest.Tpo $(DEPDIR)/libcurlu_la-http_digest.Plo
+	$(AM_V_CC)source='http_digest.c' object='libcurlu_la-http_digest.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-http_digest.lo `test -f 'http_digest.c' || echo '$(srcdir)/'`http_digest.c
 
 libcurlu_la-md4.lo: md4.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-md4.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-md4.Tpo -c -o libcurlu_la-md4.lo `test -f 'md4.c' || echo '$(srcdir)/'`md4.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-md4.Tpo $(DEPDIR)/libcurlu_la-md4.Plo
-#	$(AM_V_CC)source='md4.c' object='libcurlu_la-md4.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-md4.lo `test -f 'md4.c' || echo '$(srcdir)/'`md4.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-md4.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-md4.Tpo -c -o libcurlu_la-md4.lo `test -f 'md4.c' || echo '$(srcdir)/'`md4.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-md4.Tpo $(DEPDIR)/libcurlu_la-md4.Plo
+	$(AM_V_CC)source='md4.c' object='libcurlu_la-md4.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-md4.lo `test -f 'md4.c' || echo '$(srcdir)/'`md4.c
 
 libcurlu_la-md5.lo: md5.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-md5.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-md5.Tpo -c -o libcurlu_la-md5.lo `test -f 'md5.c' || echo '$(srcdir)/'`md5.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-md5.Tpo $(DEPDIR)/libcurlu_la-md5.Plo
-#	$(AM_V_CC)source='md5.c' object='libcurlu_la-md5.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-md5.lo `test -f 'md5.c' || echo '$(srcdir)/'`md5.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-md5.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-md5.Tpo -c -o libcurlu_la-md5.lo `test -f 'md5.c' || echo '$(srcdir)/'`md5.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-md5.Tpo $(DEPDIR)/libcurlu_la-md5.Plo
+	$(AM_V_CC)source='md5.c' object='libcurlu_la-md5.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-md5.lo `test -f 'md5.c' || echo '$(srcdir)/'`md5.c
 
 libcurlu_la-http_negotiate.lo: http_negotiate.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-http_negotiate.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-http_negotiate.Tpo -c -o libcurlu_la-http_negotiate.lo `test -f 'http_negotiate.c' || echo '$(srcdir)/'`http_negotiate.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-http_negotiate.Tpo $(DEPDIR)/libcurlu_la-http_negotiate.Plo
-#	$(AM_V_CC)source='http_negotiate.c' object='libcurlu_la-http_negotiate.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-http_negotiate.lo `test -f 'http_negotiate.c' || echo '$(srcdir)/'`http_negotiate.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-http_negotiate.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-http_negotiate.Tpo -c -o libcurlu_la-http_negotiate.lo `test -f 'http_negotiate.c' || echo '$(srcdir)/'`http_negotiate.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-http_negotiate.Tpo $(DEPDIR)/libcurlu_la-http_negotiate.Plo
+	$(AM_V_CC)source='http_negotiate.c' object='libcurlu_la-http_negotiate.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-http_negotiate.lo `test -f 'http_negotiate.c' || echo '$(srcdir)/'`http_negotiate.c
 
 libcurlu_la-inet_pton.lo: inet_pton.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-inet_pton.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-inet_pton.Tpo -c -o libcurlu_la-inet_pton.lo `test -f 'inet_pton.c' || echo '$(srcdir)/'`inet_pton.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-inet_pton.Tpo $(DEPDIR)/libcurlu_la-inet_pton.Plo
-#	$(AM_V_CC)source='inet_pton.c' object='libcurlu_la-inet_pton.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-inet_pton.lo `test -f 'inet_pton.c' || echo '$(srcdir)/'`inet_pton.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-inet_pton.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-inet_pton.Tpo -c -o libcurlu_la-inet_pton.lo `test -f 'inet_pton.c' || echo '$(srcdir)/'`inet_pton.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-inet_pton.Tpo $(DEPDIR)/libcurlu_la-inet_pton.Plo
+	$(AM_V_CC)source='inet_pton.c' object='libcurlu_la-inet_pton.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-inet_pton.lo `test -f 'inet_pton.c' || echo '$(srcdir)/'`inet_pton.c
 
 libcurlu_la-strtoofft.lo: strtoofft.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-strtoofft.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-strtoofft.Tpo -c -o libcurlu_la-strtoofft.lo `test -f 'strtoofft.c' || echo '$(srcdir)/'`strtoofft.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-strtoofft.Tpo $(DEPDIR)/libcurlu_la-strtoofft.Plo
-#	$(AM_V_CC)source='strtoofft.c' object='libcurlu_la-strtoofft.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-strtoofft.lo `test -f 'strtoofft.c' || echo '$(srcdir)/'`strtoofft.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-strtoofft.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-strtoofft.Tpo -c -o libcurlu_la-strtoofft.lo `test -f 'strtoofft.c' || echo '$(srcdir)/'`strtoofft.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-strtoofft.Tpo $(DEPDIR)/libcurlu_la-strtoofft.Plo
+	$(AM_V_CC)source='strtoofft.c' object='libcurlu_la-strtoofft.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-strtoofft.lo `test -f 'strtoofft.c' || echo '$(srcdir)/'`strtoofft.c
 
 libcurlu_la-strerror.lo: strerror.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-strerror.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-strerror.Tpo -c -o libcurlu_la-strerror.lo `test -f 'strerror.c' || echo '$(srcdir)/'`strerror.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-strerror.Tpo $(DEPDIR)/libcurlu_la-strerror.Plo
-#	$(AM_V_CC)source='strerror.c' object='libcurlu_la-strerror.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-strerror.lo `test -f 'strerror.c' || echo '$(srcdir)/'`strerror.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-strerror.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-strerror.Tpo -c -o libcurlu_la-strerror.lo `test -f 'strerror.c' || echo '$(srcdir)/'`strerror.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-strerror.Tpo $(DEPDIR)/libcurlu_la-strerror.Plo
+	$(AM_V_CC)source='strerror.c' object='libcurlu_la-strerror.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-strerror.lo `test -f 'strerror.c' || echo '$(srcdir)/'`strerror.c
 
 libcurlu_la-amigaos.lo: amigaos.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-amigaos.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-amigaos.Tpo -c -o libcurlu_la-amigaos.lo `test -f 'amigaos.c' || echo '$(srcdir)/'`amigaos.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-amigaos.Tpo $(DEPDIR)/libcurlu_la-amigaos.Plo
-#	$(AM_V_CC)source='amigaos.c' object='libcurlu_la-amigaos.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-amigaos.lo `test -f 'amigaos.c' || echo '$(srcdir)/'`amigaos.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-amigaos.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-amigaos.Tpo -c -o libcurlu_la-amigaos.lo `test -f 'amigaos.c' || echo '$(srcdir)/'`amigaos.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-amigaos.Tpo $(DEPDIR)/libcurlu_la-amigaos.Plo
+	$(AM_V_CC)source='amigaos.c' object='libcurlu_la-amigaos.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-amigaos.lo `test -f 'amigaos.c' || echo '$(srcdir)/'`amigaos.c
 
 libcurlu_la-hostasyn.lo: hostasyn.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-hostasyn.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-hostasyn.Tpo -c -o libcurlu_la-hostasyn.lo `test -f 'hostasyn.c' || echo '$(srcdir)/'`hostasyn.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-hostasyn.Tpo $(DEPDIR)/libcurlu_la-hostasyn.Plo
-#	$(AM_V_CC)source='hostasyn.c' object='libcurlu_la-hostasyn.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-hostasyn.lo `test -f 'hostasyn.c' || echo '$(srcdir)/'`hostasyn.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-hostasyn.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-hostasyn.Tpo -c -o libcurlu_la-hostasyn.lo `test -f 'hostasyn.c' || echo '$(srcdir)/'`hostasyn.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-hostasyn.Tpo $(DEPDIR)/libcurlu_la-hostasyn.Plo
+	$(AM_V_CC)source='hostasyn.c' object='libcurlu_la-hostasyn.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-hostasyn.lo `test -f 'hostasyn.c' || echo '$(srcdir)/'`hostasyn.c
 
 libcurlu_la-hostip4.lo: hostip4.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-hostip4.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-hostip4.Tpo -c -o libcurlu_la-hostip4.lo `test -f 'hostip4.c' || echo '$(srcdir)/'`hostip4.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-hostip4.Tpo $(DEPDIR)/libcurlu_la-hostip4.Plo
-#	$(AM_V_CC)source='hostip4.c' object='libcurlu_la-hostip4.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-hostip4.lo `test -f 'hostip4.c' || echo '$(srcdir)/'`hostip4.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-hostip4.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-hostip4.Tpo -c -o libcurlu_la-hostip4.lo `test -f 'hostip4.c' || echo '$(srcdir)/'`hostip4.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-hostip4.Tpo $(DEPDIR)/libcurlu_la-hostip4.Plo
+	$(AM_V_CC)source='hostip4.c' object='libcurlu_la-hostip4.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-hostip4.lo `test -f 'hostip4.c' || echo '$(srcdir)/'`hostip4.c
 
 libcurlu_la-hostip6.lo: hostip6.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-hostip6.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-hostip6.Tpo -c -o libcurlu_la-hostip6.lo `test -f 'hostip6.c' || echo '$(srcdir)/'`hostip6.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-hostip6.Tpo $(DEPDIR)/libcurlu_la-hostip6.Plo
-#	$(AM_V_CC)source='hostip6.c' object='libcurlu_la-hostip6.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-hostip6.lo `test -f 'hostip6.c' || echo '$(srcdir)/'`hostip6.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-hostip6.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-hostip6.Tpo -c -o libcurlu_la-hostip6.lo `test -f 'hostip6.c' || echo '$(srcdir)/'`hostip6.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-hostip6.Tpo $(DEPDIR)/libcurlu_la-hostip6.Plo
+	$(AM_V_CC)source='hostip6.c' object='libcurlu_la-hostip6.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-hostip6.lo `test -f 'hostip6.c' || echo '$(srcdir)/'`hostip6.c
 
 libcurlu_la-hostsyn.lo: hostsyn.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-hostsyn.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-hostsyn.Tpo -c -o libcurlu_la-hostsyn.lo `test -f 'hostsyn.c' || echo '$(srcdir)/'`hostsyn.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-hostsyn.Tpo $(DEPDIR)/libcurlu_la-hostsyn.Plo
-#	$(AM_V_CC)source='hostsyn.c' object='libcurlu_la-hostsyn.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-hostsyn.lo `test -f 'hostsyn.c' || echo '$(srcdir)/'`hostsyn.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-hostsyn.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-hostsyn.Tpo -c -o libcurlu_la-hostsyn.lo `test -f 'hostsyn.c' || echo '$(srcdir)/'`hostsyn.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-hostsyn.Tpo $(DEPDIR)/libcurlu_la-hostsyn.Plo
+	$(AM_V_CC)source='hostsyn.c' object='libcurlu_la-hostsyn.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-hostsyn.lo `test -f 'hostsyn.c' || echo '$(srcdir)/'`hostsyn.c
 
 libcurlu_la-inet_ntop.lo: inet_ntop.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-inet_ntop.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-inet_ntop.Tpo -c -o libcurlu_la-inet_ntop.lo `test -f 'inet_ntop.c' || echo '$(srcdir)/'`inet_ntop.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-inet_ntop.Tpo $(DEPDIR)/libcurlu_la-inet_ntop.Plo
-#	$(AM_V_CC)source='inet_ntop.c' object='libcurlu_la-inet_ntop.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-inet_ntop.lo `test -f 'inet_ntop.c' || echo '$(srcdir)/'`inet_ntop.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-inet_ntop.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-inet_ntop.Tpo -c -o libcurlu_la-inet_ntop.lo `test -f 'inet_ntop.c' || echo '$(srcdir)/'`inet_ntop.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-inet_ntop.Tpo $(DEPDIR)/libcurlu_la-inet_ntop.Plo
+	$(AM_V_CC)source='inet_ntop.c' object='libcurlu_la-inet_ntop.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-inet_ntop.lo `test -f 'inet_ntop.c' || echo '$(srcdir)/'`inet_ntop.c
 
 libcurlu_la-parsedate.lo: parsedate.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-parsedate.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-parsedate.Tpo -c -o libcurlu_la-parsedate.lo `test -f 'parsedate.c' || echo '$(srcdir)/'`parsedate.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-parsedate.Tpo $(DEPDIR)/libcurlu_la-parsedate.Plo
-#	$(AM_V_CC)source='parsedate.c' object='libcurlu_la-parsedate.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-parsedate.lo `test -f 'parsedate.c' || echo '$(srcdir)/'`parsedate.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-parsedate.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-parsedate.Tpo -c -o libcurlu_la-parsedate.lo `test -f 'parsedate.c' || echo '$(srcdir)/'`parsedate.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-parsedate.Tpo $(DEPDIR)/libcurlu_la-parsedate.Plo
+	$(AM_V_CC)source='parsedate.c' object='libcurlu_la-parsedate.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-parsedate.lo `test -f 'parsedate.c' || echo '$(srcdir)/'`parsedate.c
 
 libcurlu_la-select.lo: select.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-select.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-select.Tpo -c -o libcurlu_la-select.lo `test -f 'select.c' || echo '$(srcdir)/'`select.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-select.Tpo $(DEPDIR)/libcurlu_la-select.Plo
-#	$(AM_V_CC)source='select.c' object='libcurlu_la-select.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-select.lo `test -f 'select.c' || echo '$(srcdir)/'`select.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-select.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-select.Tpo -c -o libcurlu_la-select.lo `test -f 'select.c' || echo '$(srcdir)/'`select.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-select.Tpo $(DEPDIR)/libcurlu_la-select.Plo
+	$(AM_V_CC)source='select.c' object='libcurlu_la-select.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-select.lo `test -f 'select.c' || echo '$(srcdir)/'`select.c
 
 libcurlu_la-tftp.lo: tftp.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-tftp.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-tftp.Tpo -c -o libcurlu_la-tftp.lo `test -f 'tftp.c' || echo '$(srcdir)/'`tftp.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-tftp.Tpo $(DEPDIR)/libcurlu_la-tftp.Plo
-#	$(AM_V_CC)source='tftp.c' object='libcurlu_la-tftp.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-tftp.lo `test -f 'tftp.c' || echo '$(srcdir)/'`tftp.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-tftp.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-tftp.Tpo -c -o libcurlu_la-tftp.lo `test -f 'tftp.c' || echo '$(srcdir)/'`tftp.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-tftp.Tpo $(DEPDIR)/libcurlu_la-tftp.Plo
+	$(AM_V_CC)source='tftp.c' object='libcurlu_la-tftp.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-tftp.lo `test -f 'tftp.c' || echo '$(srcdir)/'`tftp.c
 
 libcurlu_la-splay.lo: splay.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-splay.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-splay.Tpo -c -o libcurlu_la-splay.lo `test -f 'splay.c' || echo '$(srcdir)/'`splay.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-splay.Tpo $(DEPDIR)/libcurlu_la-splay.Plo
-#	$(AM_V_CC)source='splay.c' object='libcurlu_la-splay.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-splay.lo `test -f 'splay.c' || echo '$(srcdir)/'`splay.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-splay.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-splay.Tpo -c -o libcurlu_la-splay.lo `test -f 'splay.c' || echo '$(srcdir)/'`splay.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-splay.Tpo $(DEPDIR)/libcurlu_la-splay.Plo
+	$(AM_V_CC)source='splay.c' object='libcurlu_la-splay.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-splay.lo `test -f 'splay.c' || echo '$(srcdir)/'`splay.c
 
 libcurlu_la-strdup.lo: strdup.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-strdup.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-strdup.Tpo -c -o libcurlu_la-strdup.lo `test -f 'strdup.c' || echo '$(srcdir)/'`strdup.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-strdup.Tpo $(DEPDIR)/libcurlu_la-strdup.Plo
-#	$(AM_V_CC)source='strdup.c' object='libcurlu_la-strdup.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-strdup.lo `test -f 'strdup.c' || echo '$(srcdir)/'`strdup.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-strdup.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-strdup.Tpo -c -o libcurlu_la-strdup.lo `test -f 'strdup.c' || echo '$(srcdir)/'`strdup.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-strdup.Tpo $(DEPDIR)/libcurlu_la-strdup.Plo
+	$(AM_V_CC)source='strdup.c' object='libcurlu_la-strdup.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-strdup.lo `test -f 'strdup.c' || echo '$(srcdir)/'`strdup.c
 
 libcurlu_la-socks.lo: socks.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-socks.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-socks.Tpo -c -o libcurlu_la-socks.lo `test -f 'socks.c' || echo '$(srcdir)/'`socks.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-socks.Tpo $(DEPDIR)/libcurlu_la-socks.Plo
-#	$(AM_V_CC)source='socks.c' object='libcurlu_la-socks.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-socks.lo `test -f 'socks.c' || echo '$(srcdir)/'`socks.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-socks.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-socks.Tpo -c -o libcurlu_la-socks.lo `test -f 'socks.c' || echo '$(srcdir)/'`socks.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-socks.Tpo $(DEPDIR)/libcurlu_la-socks.Plo
+	$(AM_V_CC)source='socks.c' object='libcurlu_la-socks.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-socks.lo `test -f 'socks.c' || echo '$(srcdir)/'`socks.c
 
 libcurlu_la-ssh.lo: ssh.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-ssh.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-ssh.Tpo -c -o libcurlu_la-ssh.lo `test -f 'ssh.c' || echo '$(srcdir)/'`ssh.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-ssh.Tpo $(DEPDIR)/libcurlu_la-ssh.Plo
-#	$(AM_V_CC)source='ssh.c' object='libcurlu_la-ssh.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-ssh.lo `test -f 'ssh.c' || echo '$(srcdir)/'`ssh.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-ssh.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-ssh.Tpo -c -o libcurlu_la-ssh.lo `test -f 'ssh.c' || echo '$(srcdir)/'`ssh.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-ssh.Tpo $(DEPDIR)/libcurlu_la-ssh.Plo
+	$(AM_V_CC)source='ssh.c' object='libcurlu_la-ssh.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-ssh.lo `test -f 'ssh.c' || echo '$(srcdir)/'`ssh.c
 
 libcurlu_la-curl_addrinfo.lo: curl_addrinfo.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_addrinfo.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_addrinfo.Tpo -c -o libcurlu_la-curl_addrinfo.lo `test -f 'curl_addrinfo.c' || echo '$(srcdir)/'`curl_addrinfo.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_addrinfo.Tpo $(DEPDIR)/libcurlu_la-curl_addrinfo.Plo
-#	$(AM_V_CC)source='curl_addrinfo.c' object='libcurlu_la-curl_addrinfo.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_addrinfo.lo `test -f 'curl_addrinfo.c' || echo '$(srcdir)/'`curl_addrinfo.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_addrinfo.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_addrinfo.Tpo -c -o libcurlu_la-curl_addrinfo.lo `test -f 'curl_addrinfo.c' || echo '$(srcdir)/'`curl_addrinfo.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_addrinfo.Tpo $(DEPDIR)/libcurlu_la-curl_addrinfo.Plo
+	$(AM_V_CC)source='curl_addrinfo.c' object='libcurlu_la-curl_addrinfo.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_addrinfo.lo `test -f 'curl_addrinfo.c' || echo '$(srcdir)/'`curl_addrinfo.c
 
 libcurlu_la-socks_gssapi.lo: socks_gssapi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-socks_gssapi.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-socks_gssapi.Tpo -c -o libcurlu_la-socks_gssapi.lo `test -f 'socks_gssapi.c' || echo '$(srcdir)/'`socks_gssapi.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-socks_gssapi.Tpo $(DEPDIR)/libcurlu_la-socks_gssapi.Plo
-#	$(AM_V_CC)source='socks_gssapi.c' object='libcurlu_la-socks_gssapi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-socks_gssapi.lo `test -f 'socks_gssapi.c' || echo '$(srcdir)/'`socks_gssapi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-socks_gssapi.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-socks_gssapi.Tpo -c -o libcurlu_la-socks_gssapi.lo `test -f 'socks_gssapi.c' || echo '$(srcdir)/'`socks_gssapi.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-socks_gssapi.Tpo $(DEPDIR)/libcurlu_la-socks_gssapi.Plo
+	$(AM_V_CC)source='socks_gssapi.c' object='libcurlu_la-socks_gssapi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-socks_gssapi.lo `test -f 'socks_gssapi.c' || echo '$(srcdir)/'`socks_gssapi.c
 
 libcurlu_la-socks_sspi.lo: socks_sspi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-socks_sspi.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-socks_sspi.Tpo -c -o libcurlu_la-socks_sspi.lo `test -f 'socks_sspi.c' || echo '$(srcdir)/'`socks_sspi.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-socks_sspi.Tpo $(DEPDIR)/libcurlu_la-socks_sspi.Plo
-#	$(AM_V_CC)source='socks_sspi.c' object='libcurlu_la-socks_sspi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-socks_sspi.lo `test -f 'socks_sspi.c' || echo '$(srcdir)/'`socks_sspi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-socks_sspi.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-socks_sspi.Tpo -c -o libcurlu_la-socks_sspi.lo `test -f 'socks_sspi.c' || echo '$(srcdir)/'`socks_sspi.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-socks_sspi.Tpo $(DEPDIR)/libcurlu_la-socks_sspi.Plo
+	$(AM_V_CC)source='socks_sspi.c' object='libcurlu_la-socks_sspi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-socks_sspi.lo `test -f 'socks_sspi.c' || echo '$(srcdir)/'`socks_sspi.c
 
 libcurlu_la-curl_sspi.lo: curl_sspi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_sspi.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_sspi.Tpo -c -o libcurlu_la-curl_sspi.lo `test -f 'curl_sspi.c' || echo '$(srcdir)/'`curl_sspi.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_sspi.Tpo $(DEPDIR)/libcurlu_la-curl_sspi.Plo
-#	$(AM_V_CC)source='curl_sspi.c' object='libcurlu_la-curl_sspi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_sspi.lo `test -f 'curl_sspi.c' || echo '$(srcdir)/'`curl_sspi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_sspi.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_sspi.Tpo -c -o libcurlu_la-curl_sspi.lo `test -f 'curl_sspi.c' || echo '$(srcdir)/'`curl_sspi.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_sspi.Tpo $(DEPDIR)/libcurlu_la-curl_sspi.Plo
+	$(AM_V_CC)source='curl_sspi.c' object='libcurlu_la-curl_sspi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_sspi.lo `test -f 'curl_sspi.c' || echo '$(srcdir)/'`curl_sspi.c
 
 libcurlu_la-slist.lo: slist.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-slist.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-slist.Tpo -c -o libcurlu_la-slist.lo `test -f 'slist.c' || echo '$(srcdir)/'`slist.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-slist.Tpo $(DEPDIR)/libcurlu_la-slist.Plo
-#	$(AM_V_CC)source='slist.c' object='libcurlu_la-slist.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-slist.lo `test -f 'slist.c' || echo '$(srcdir)/'`slist.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-slist.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-slist.Tpo -c -o libcurlu_la-slist.lo `test -f 'slist.c' || echo '$(srcdir)/'`slist.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-slist.Tpo $(DEPDIR)/libcurlu_la-slist.Plo
+	$(AM_V_CC)source='slist.c' object='libcurlu_la-slist.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-slist.lo `test -f 'slist.c' || echo '$(srcdir)/'`slist.c
 
 libcurlu_la-nonblock.lo: nonblock.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-nonblock.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-nonblock.Tpo -c -o libcurlu_la-nonblock.lo `test -f 'nonblock.c' || echo '$(srcdir)/'`nonblock.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-nonblock.Tpo $(DEPDIR)/libcurlu_la-nonblock.Plo
-#	$(AM_V_CC)source='nonblock.c' object='libcurlu_la-nonblock.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-nonblock.lo `test -f 'nonblock.c' || echo '$(srcdir)/'`nonblock.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-nonblock.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-nonblock.Tpo -c -o libcurlu_la-nonblock.lo `test -f 'nonblock.c' || echo '$(srcdir)/'`nonblock.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-nonblock.Tpo $(DEPDIR)/libcurlu_la-nonblock.Plo
+	$(AM_V_CC)source='nonblock.c' object='libcurlu_la-nonblock.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-nonblock.lo `test -f 'nonblock.c' || echo '$(srcdir)/'`nonblock.c
 
 libcurlu_la-curl_memrchr.lo: curl_memrchr.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_memrchr.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_memrchr.Tpo -c -o libcurlu_la-curl_memrchr.lo `test -f 'curl_memrchr.c' || echo '$(srcdir)/'`curl_memrchr.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_memrchr.Tpo $(DEPDIR)/libcurlu_la-curl_memrchr.Plo
-#	$(AM_V_CC)source='curl_memrchr.c' object='libcurlu_la-curl_memrchr.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_memrchr.lo `test -f 'curl_memrchr.c' || echo '$(srcdir)/'`curl_memrchr.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_memrchr.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_memrchr.Tpo -c -o libcurlu_la-curl_memrchr.lo `test -f 'curl_memrchr.c' || echo '$(srcdir)/'`curl_memrchr.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_memrchr.Tpo $(DEPDIR)/libcurlu_la-curl_memrchr.Plo
+	$(AM_V_CC)source='curl_memrchr.c' object='libcurlu_la-curl_memrchr.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_memrchr.lo `test -f 'curl_memrchr.c' || echo '$(srcdir)/'`curl_memrchr.c
 
 libcurlu_la-imap.lo: imap.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-imap.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-imap.Tpo -c -o libcurlu_la-imap.lo `test -f 'imap.c' || echo '$(srcdir)/'`imap.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-imap.Tpo $(DEPDIR)/libcurlu_la-imap.Plo
-#	$(AM_V_CC)source='imap.c' object='libcurlu_la-imap.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-imap.lo `test -f 'imap.c' || echo '$(srcdir)/'`imap.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-imap.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-imap.Tpo -c -o libcurlu_la-imap.lo `test -f 'imap.c' || echo '$(srcdir)/'`imap.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-imap.Tpo $(DEPDIR)/libcurlu_la-imap.Plo
+	$(AM_V_CC)source='imap.c' object='libcurlu_la-imap.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-imap.lo `test -f 'imap.c' || echo '$(srcdir)/'`imap.c
 
 libcurlu_la-pop3.lo: pop3.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-pop3.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-pop3.Tpo -c -o libcurlu_la-pop3.lo `test -f 'pop3.c' || echo '$(srcdir)/'`pop3.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-pop3.Tpo $(DEPDIR)/libcurlu_la-pop3.Plo
-#	$(AM_V_CC)source='pop3.c' object='libcurlu_la-pop3.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-pop3.lo `test -f 'pop3.c' || echo '$(srcdir)/'`pop3.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-pop3.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-pop3.Tpo -c -o libcurlu_la-pop3.lo `test -f 'pop3.c' || echo '$(srcdir)/'`pop3.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-pop3.Tpo $(DEPDIR)/libcurlu_la-pop3.Plo
+	$(AM_V_CC)source='pop3.c' object='libcurlu_la-pop3.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-pop3.lo `test -f 'pop3.c' || echo '$(srcdir)/'`pop3.c
 
 libcurlu_la-smtp.lo: smtp.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-smtp.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-smtp.Tpo -c -o libcurlu_la-smtp.lo `test -f 'smtp.c' || echo '$(srcdir)/'`smtp.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-smtp.Tpo $(DEPDIR)/libcurlu_la-smtp.Plo
-#	$(AM_V_CC)source='smtp.c' object='libcurlu_la-smtp.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-smtp.lo `test -f 'smtp.c' || echo '$(srcdir)/'`smtp.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-smtp.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-smtp.Tpo -c -o libcurlu_la-smtp.lo `test -f 'smtp.c' || echo '$(srcdir)/'`smtp.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-smtp.Tpo $(DEPDIR)/libcurlu_la-smtp.Plo
+	$(AM_V_CC)source='smtp.c' object='libcurlu_la-smtp.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-smtp.lo `test -f 'smtp.c' || echo '$(srcdir)/'`smtp.c
 
 libcurlu_la-pingpong.lo: pingpong.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-pingpong.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-pingpong.Tpo -c -o libcurlu_la-pingpong.lo `test -f 'pingpong.c' || echo '$(srcdir)/'`pingpong.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-pingpong.Tpo $(DEPDIR)/libcurlu_la-pingpong.Plo
-#	$(AM_V_CC)source='pingpong.c' object='libcurlu_la-pingpong.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-pingpong.lo `test -f 'pingpong.c' || echo '$(srcdir)/'`pingpong.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-pingpong.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-pingpong.Tpo -c -o libcurlu_la-pingpong.lo `test -f 'pingpong.c' || echo '$(srcdir)/'`pingpong.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-pingpong.Tpo $(DEPDIR)/libcurlu_la-pingpong.Plo
+	$(AM_V_CC)source='pingpong.c' object='libcurlu_la-pingpong.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-pingpong.lo `test -f 'pingpong.c' || echo '$(srcdir)/'`pingpong.c
 
 libcurlu_la-rtsp.lo: rtsp.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-rtsp.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-rtsp.Tpo -c -o libcurlu_la-rtsp.lo `test -f 'rtsp.c' || echo '$(srcdir)/'`rtsp.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-rtsp.Tpo $(DEPDIR)/libcurlu_la-rtsp.Plo
-#	$(AM_V_CC)source='rtsp.c' object='libcurlu_la-rtsp.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-rtsp.lo `test -f 'rtsp.c' || echo '$(srcdir)/'`rtsp.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-rtsp.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-rtsp.Tpo -c -o libcurlu_la-rtsp.lo `test -f 'rtsp.c' || echo '$(srcdir)/'`rtsp.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-rtsp.Tpo $(DEPDIR)/libcurlu_la-rtsp.Plo
+	$(AM_V_CC)source='rtsp.c' object='libcurlu_la-rtsp.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-rtsp.lo `test -f 'rtsp.c' || echo '$(srcdir)/'`rtsp.c
 
 libcurlu_la-curl_threads.lo: curl_threads.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_threads.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_threads.Tpo -c -o libcurlu_la-curl_threads.lo `test -f 'curl_threads.c' || echo '$(srcdir)/'`curl_threads.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_threads.Tpo $(DEPDIR)/libcurlu_la-curl_threads.Plo
-#	$(AM_V_CC)source='curl_threads.c' object='libcurlu_la-curl_threads.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_threads.lo `test -f 'curl_threads.c' || echo '$(srcdir)/'`curl_threads.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_threads.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_threads.Tpo -c -o libcurlu_la-curl_threads.lo `test -f 'curl_threads.c' || echo '$(srcdir)/'`curl_threads.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_threads.Tpo $(DEPDIR)/libcurlu_la-curl_threads.Plo
+	$(AM_V_CC)source='curl_threads.c' object='libcurlu_la-curl_threads.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_threads.lo `test -f 'curl_threads.c' || echo '$(srcdir)/'`curl_threads.c
 
 libcurlu_la-warnless.lo: warnless.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-warnless.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-warnless.Tpo -c -o libcurlu_la-warnless.lo `test -f 'warnless.c' || echo '$(srcdir)/'`warnless.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-warnless.Tpo $(DEPDIR)/libcurlu_la-warnless.Plo
-#	$(AM_V_CC)source='warnless.c' object='libcurlu_la-warnless.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-warnless.lo `test -f 'warnless.c' || echo '$(srcdir)/'`warnless.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-warnless.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-warnless.Tpo -c -o libcurlu_la-warnless.lo `test -f 'warnless.c' || echo '$(srcdir)/'`warnless.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-warnless.Tpo $(DEPDIR)/libcurlu_la-warnless.Plo
+	$(AM_V_CC)source='warnless.c' object='libcurlu_la-warnless.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-warnless.lo `test -f 'warnless.c' || echo '$(srcdir)/'`warnless.c
 
 libcurlu_la-hmac.lo: hmac.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-hmac.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-hmac.Tpo -c -o libcurlu_la-hmac.lo `test -f 'hmac.c' || echo '$(srcdir)/'`hmac.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-hmac.Tpo $(DEPDIR)/libcurlu_la-hmac.Plo
-#	$(AM_V_CC)source='hmac.c' object='libcurlu_la-hmac.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-hmac.lo `test -f 'hmac.c' || echo '$(srcdir)/'`hmac.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-hmac.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-hmac.Tpo -c -o libcurlu_la-hmac.lo `test -f 'hmac.c' || echo '$(srcdir)/'`hmac.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-hmac.Tpo $(DEPDIR)/libcurlu_la-hmac.Plo
+	$(AM_V_CC)source='hmac.c' object='libcurlu_la-hmac.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-hmac.lo `test -f 'hmac.c' || echo '$(srcdir)/'`hmac.c
 
 libcurlu_la-curl_rtmp.lo: curl_rtmp.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_rtmp.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_rtmp.Tpo -c -o libcurlu_la-curl_rtmp.lo `test -f 'curl_rtmp.c' || echo '$(srcdir)/'`curl_rtmp.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_rtmp.Tpo $(DEPDIR)/libcurlu_la-curl_rtmp.Plo
-#	$(AM_V_CC)source='curl_rtmp.c' object='libcurlu_la-curl_rtmp.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_rtmp.lo `test -f 'curl_rtmp.c' || echo '$(srcdir)/'`curl_rtmp.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_rtmp.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_rtmp.Tpo -c -o libcurlu_la-curl_rtmp.lo `test -f 'curl_rtmp.c' || echo '$(srcdir)/'`curl_rtmp.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_rtmp.Tpo $(DEPDIR)/libcurlu_la-curl_rtmp.Plo
+	$(AM_V_CC)source='curl_rtmp.c' object='libcurlu_la-curl_rtmp.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_rtmp.lo `test -f 'curl_rtmp.c' || echo '$(srcdir)/'`curl_rtmp.c
 
 libcurlu_la-openldap.lo: openldap.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-openldap.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-openldap.Tpo -c -o libcurlu_la-openldap.lo `test -f 'openldap.c' || echo '$(srcdir)/'`openldap.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-openldap.Tpo $(DEPDIR)/libcurlu_la-openldap.Plo
-#	$(AM_V_CC)source='openldap.c' object='libcurlu_la-openldap.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-openldap.lo `test -f 'openldap.c' || echo '$(srcdir)/'`openldap.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-openldap.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-openldap.Tpo -c -o libcurlu_la-openldap.lo `test -f 'openldap.c' || echo '$(srcdir)/'`openldap.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-openldap.Tpo $(DEPDIR)/libcurlu_la-openldap.Plo
+	$(AM_V_CC)source='openldap.c' object='libcurlu_la-openldap.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-openldap.lo `test -f 'openldap.c' || echo '$(srcdir)/'`openldap.c
 
 libcurlu_la-curl_gethostname.lo: curl_gethostname.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_gethostname.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_gethostname.Tpo -c -o libcurlu_la-curl_gethostname.lo `test -f 'curl_gethostname.c' || echo '$(srcdir)/'`curl_gethostname.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_gethostname.Tpo $(DEPDIR)/libcurlu_la-curl_gethostname.Plo
-#	$(AM_V_CC)source='curl_gethostname.c' object='libcurlu_la-curl_gethostname.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_gethostname.lo `test -f 'curl_gethostname.c' || echo '$(srcdir)/'`curl_gethostname.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_gethostname.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_gethostname.Tpo -c -o libcurlu_la-curl_gethostname.lo `test -f 'curl_gethostname.c' || echo '$(srcdir)/'`curl_gethostname.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_gethostname.Tpo $(DEPDIR)/libcurlu_la-curl_gethostname.Plo
+	$(AM_V_CC)source='curl_gethostname.c' object='libcurlu_la-curl_gethostname.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_gethostname.lo `test -f 'curl_gethostname.c' || echo '$(srcdir)/'`curl_gethostname.c
 
 libcurlu_la-gopher.lo: gopher.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-gopher.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-gopher.Tpo -c -o libcurlu_la-gopher.lo `test -f 'gopher.c' || echo '$(srcdir)/'`gopher.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-gopher.Tpo $(DEPDIR)/libcurlu_la-gopher.Plo
-#	$(AM_V_CC)source='gopher.c' object='libcurlu_la-gopher.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-gopher.lo `test -f 'gopher.c' || echo '$(srcdir)/'`gopher.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-gopher.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-gopher.Tpo -c -o libcurlu_la-gopher.lo `test -f 'gopher.c' || echo '$(srcdir)/'`gopher.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-gopher.Tpo $(DEPDIR)/libcurlu_la-gopher.Plo
+	$(AM_V_CC)source='gopher.c' object='libcurlu_la-gopher.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-gopher.lo `test -f 'gopher.c' || echo '$(srcdir)/'`gopher.c
 
 libcurlu_la-idn_win32.lo: idn_win32.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-idn_win32.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-idn_win32.Tpo -c -o libcurlu_la-idn_win32.lo `test -f 'idn_win32.c' || echo '$(srcdir)/'`idn_win32.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-idn_win32.Tpo $(DEPDIR)/libcurlu_la-idn_win32.Plo
-#	$(AM_V_CC)source='idn_win32.c' object='libcurlu_la-idn_win32.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-idn_win32.lo `test -f 'idn_win32.c' || echo '$(srcdir)/'`idn_win32.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-idn_win32.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-idn_win32.Tpo -c -o libcurlu_la-idn_win32.lo `test -f 'idn_win32.c' || echo '$(srcdir)/'`idn_win32.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-idn_win32.Tpo $(DEPDIR)/libcurlu_la-idn_win32.Plo
+	$(AM_V_CC)source='idn_win32.c' object='libcurlu_la-idn_win32.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-idn_win32.lo `test -f 'idn_win32.c' || echo '$(srcdir)/'`idn_win32.c
 
 libcurlu_la-http_proxy.lo: http_proxy.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-http_proxy.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-http_proxy.Tpo -c -o libcurlu_la-http_proxy.lo `test -f 'http_proxy.c' || echo '$(srcdir)/'`http_proxy.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-http_proxy.Tpo $(DEPDIR)/libcurlu_la-http_proxy.Plo
-#	$(AM_V_CC)source='http_proxy.c' object='libcurlu_la-http_proxy.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-http_proxy.lo `test -f 'http_proxy.c' || echo '$(srcdir)/'`http_proxy.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-http_proxy.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-http_proxy.Tpo -c -o libcurlu_la-http_proxy.lo `test -f 'http_proxy.c' || echo '$(srcdir)/'`http_proxy.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-http_proxy.Tpo $(DEPDIR)/libcurlu_la-http_proxy.Plo
+	$(AM_V_CC)source='http_proxy.c' object='libcurlu_la-http_proxy.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-http_proxy.lo `test -f 'http_proxy.c' || echo '$(srcdir)/'`http_proxy.c
 
 libcurlu_la-non-ascii.lo: non-ascii.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-non-ascii.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-non-ascii.Tpo -c -o libcurlu_la-non-ascii.lo `test -f 'non-ascii.c' || echo '$(srcdir)/'`non-ascii.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-non-ascii.Tpo $(DEPDIR)/libcurlu_la-non-ascii.Plo
-#	$(AM_V_CC)source='non-ascii.c' object='libcurlu_la-non-ascii.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-non-ascii.lo `test -f 'non-ascii.c' || echo '$(srcdir)/'`non-ascii.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-non-ascii.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-non-ascii.Tpo -c -o libcurlu_la-non-ascii.lo `test -f 'non-ascii.c' || echo '$(srcdir)/'`non-ascii.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-non-ascii.Tpo $(DEPDIR)/libcurlu_la-non-ascii.Plo
+	$(AM_V_CC)source='non-ascii.c' object='libcurlu_la-non-ascii.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-non-ascii.lo `test -f 'non-ascii.c' || echo '$(srcdir)/'`non-ascii.c
 
 libcurlu_la-asyn-ares.lo: asyn-ares.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-asyn-ares.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-asyn-ares.Tpo -c -o libcurlu_la-asyn-ares.lo `test -f 'asyn-ares.c' || echo '$(srcdir)/'`asyn-ares.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-asyn-ares.Tpo $(DEPDIR)/libcurlu_la-asyn-ares.Plo
-#	$(AM_V_CC)source='asyn-ares.c' object='libcurlu_la-asyn-ares.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-asyn-ares.lo `test -f 'asyn-ares.c' || echo '$(srcdir)/'`asyn-ares.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-asyn-ares.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-asyn-ares.Tpo -c -o libcurlu_la-asyn-ares.lo `test -f 'asyn-ares.c' || echo '$(srcdir)/'`asyn-ares.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-asyn-ares.Tpo $(DEPDIR)/libcurlu_la-asyn-ares.Plo
+	$(AM_V_CC)source='asyn-ares.c' object='libcurlu_la-asyn-ares.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-asyn-ares.lo `test -f 'asyn-ares.c' || echo '$(srcdir)/'`asyn-ares.c
 
 libcurlu_la-asyn-thread.lo: asyn-thread.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-asyn-thread.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-asyn-thread.Tpo -c -o libcurlu_la-asyn-thread.lo `test -f 'asyn-thread.c' || echo '$(srcdir)/'`asyn-thread.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-asyn-thread.Tpo $(DEPDIR)/libcurlu_la-asyn-thread.Plo
-#	$(AM_V_CC)source='asyn-thread.c' object='libcurlu_la-asyn-thread.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-asyn-thread.lo `test -f 'asyn-thread.c' || echo '$(srcdir)/'`asyn-thread.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-asyn-thread.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-asyn-thread.Tpo -c -o libcurlu_la-asyn-thread.lo `test -f 'asyn-thread.c' || echo '$(srcdir)/'`asyn-thread.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-asyn-thread.Tpo $(DEPDIR)/libcurlu_la-asyn-thread.Plo
+	$(AM_V_CC)source='asyn-thread.c' object='libcurlu_la-asyn-thread.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-asyn-thread.lo `test -f 'asyn-thread.c' || echo '$(srcdir)/'`asyn-thread.c
 
 libcurlu_la-curl_gssapi.lo: curl_gssapi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_gssapi.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_gssapi.Tpo -c -o libcurlu_la-curl_gssapi.lo `test -f 'curl_gssapi.c' || echo '$(srcdir)/'`curl_gssapi.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_gssapi.Tpo $(DEPDIR)/libcurlu_la-curl_gssapi.Plo
-#	$(AM_V_CC)source='curl_gssapi.c' object='libcurlu_la-curl_gssapi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_gssapi.lo `test -f 'curl_gssapi.c' || echo '$(srcdir)/'`curl_gssapi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_gssapi.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_gssapi.Tpo -c -o libcurlu_la-curl_gssapi.lo `test -f 'curl_gssapi.c' || echo '$(srcdir)/'`curl_gssapi.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_gssapi.Tpo $(DEPDIR)/libcurlu_la-curl_gssapi.Plo
+	$(AM_V_CC)source='curl_gssapi.c' object='libcurlu_la-curl_gssapi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_gssapi.lo `test -f 'curl_gssapi.c' || echo '$(srcdir)/'`curl_gssapi.c
 
 libcurlu_la-http_ntlm.lo: http_ntlm.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-http_ntlm.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-http_ntlm.Tpo -c -o libcurlu_la-http_ntlm.lo `test -f 'http_ntlm.c' || echo '$(srcdir)/'`http_ntlm.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-http_ntlm.Tpo $(DEPDIR)/libcurlu_la-http_ntlm.Plo
-#	$(AM_V_CC)source='http_ntlm.c' object='libcurlu_la-http_ntlm.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-http_ntlm.lo `test -f 'http_ntlm.c' || echo '$(srcdir)/'`http_ntlm.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-http_ntlm.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-http_ntlm.Tpo -c -o libcurlu_la-http_ntlm.lo `test -f 'http_ntlm.c' || echo '$(srcdir)/'`http_ntlm.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-http_ntlm.Tpo $(DEPDIR)/libcurlu_la-http_ntlm.Plo
+	$(AM_V_CC)source='http_ntlm.c' object='libcurlu_la-http_ntlm.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-http_ntlm.lo `test -f 'http_ntlm.c' || echo '$(srcdir)/'`http_ntlm.c
 
 libcurlu_la-curl_ntlm_wb.lo: curl_ntlm_wb.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_ntlm_wb.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_ntlm_wb.Tpo -c -o libcurlu_la-curl_ntlm_wb.lo `test -f 'curl_ntlm_wb.c' || echo '$(srcdir)/'`curl_ntlm_wb.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_ntlm_wb.Tpo $(DEPDIR)/libcurlu_la-curl_ntlm_wb.Plo
-#	$(AM_V_CC)source='curl_ntlm_wb.c' object='libcurlu_la-curl_ntlm_wb.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_ntlm_wb.lo `test -f 'curl_ntlm_wb.c' || echo '$(srcdir)/'`curl_ntlm_wb.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_ntlm_wb.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_ntlm_wb.Tpo -c -o libcurlu_la-curl_ntlm_wb.lo `test -f 'curl_ntlm_wb.c' || echo '$(srcdir)/'`curl_ntlm_wb.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_ntlm_wb.Tpo $(DEPDIR)/libcurlu_la-curl_ntlm_wb.Plo
+	$(AM_V_CC)source='curl_ntlm_wb.c' object='libcurlu_la-curl_ntlm_wb.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_ntlm_wb.lo `test -f 'curl_ntlm_wb.c' || echo '$(srcdir)/'`curl_ntlm_wb.c
 
 libcurlu_la-curl_ntlm_core.lo: curl_ntlm_core.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_ntlm_core.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_ntlm_core.Tpo -c -o libcurlu_la-curl_ntlm_core.lo `test -f 'curl_ntlm_core.c' || echo '$(srcdir)/'`curl_ntlm_core.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_ntlm_core.Tpo $(DEPDIR)/libcurlu_la-curl_ntlm_core.Plo
-#	$(AM_V_CC)source='curl_ntlm_core.c' object='libcurlu_la-curl_ntlm_core.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_ntlm_core.lo `test -f 'curl_ntlm_core.c' || echo '$(srcdir)/'`curl_ntlm_core.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_ntlm_core.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_ntlm_core.Tpo -c -o libcurlu_la-curl_ntlm_core.lo `test -f 'curl_ntlm_core.c' || echo '$(srcdir)/'`curl_ntlm_core.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_ntlm_core.Tpo $(DEPDIR)/libcurlu_la-curl_ntlm_core.Plo
+	$(AM_V_CC)source='curl_ntlm_core.c' object='libcurlu_la-curl_ntlm_core.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_ntlm_core.lo `test -f 'curl_ntlm_core.c' || echo '$(srcdir)/'`curl_ntlm_core.c
 
 libcurlu_la-curl_sasl.lo: curl_sasl.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_sasl.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_sasl.Tpo -c -o libcurlu_la-curl_sasl.lo `test -f 'curl_sasl.c' || echo '$(srcdir)/'`curl_sasl.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_sasl.Tpo $(DEPDIR)/libcurlu_la-curl_sasl.Plo
-#	$(AM_V_CC)source='curl_sasl.c' object='libcurlu_la-curl_sasl.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_sasl.lo `test -f 'curl_sasl.c' || echo '$(srcdir)/'`curl_sasl.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_sasl.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_sasl.Tpo -c -o libcurlu_la-curl_sasl.lo `test -f 'curl_sasl.c' || echo '$(srcdir)/'`curl_sasl.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_sasl.Tpo $(DEPDIR)/libcurlu_la-curl_sasl.Plo
+	$(AM_V_CC)source='curl_sasl.c' object='libcurlu_la-curl_sasl.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_sasl.lo `test -f 'curl_sasl.c' || echo '$(srcdir)/'`curl_sasl.c
 
 libcurlu_la-curl_multibyte.lo: curl_multibyte.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_multibyte.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_multibyte.Tpo -c -o libcurlu_la-curl_multibyte.lo `test -f 'curl_multibyte.c' || echo '$(srcdir)/'`curl_multibyte.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_multibyte.Tpo $(DEPDIR)/libcurlu_la-curl_multibyte.Plo
-#	$(AM_V_CC)source='curl_multibyte.c' object='libcurlu_la-curl_multibyte.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_multibyte.lo `test -f 'curl_multibyte.c' || echo '$(srcdir)/'`curl_multibyte.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_multibyte.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_multibyte.Tpo -c -o libcurlu_la-curl_multibyte.lo `test -f 'curl_multibyte.c' || echo '$(srcdir)/'`curl_multibyte.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_multibyte.Tpo $(DEPDIR)/libcurlu_la-curl_multibyte.Plo
+	$(AM_V_CC)source='curl_multibyte.c' object='libcurlu_la-curl_multibyte.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_multibyte.lo `test -f 'curl_multibyte.c' || echo '$(srcdir)/'`curl_multibyte.c
 
 libcurlu_la-hostcheck.lo: hostcheck.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-hostcheck.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-hostcheck.Tpo -c -o libcurlu_la-hostcheck.lo `test -f 'hostcheck.c' || echo '$(srcdir)/'`hostcheck.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-hostcheck.Tpo $(DEPDIR)/libcurlu_la-hostcheck.Plo
-#	$(AM_V_CC)source='hostcheck.c' object='libcurlu_la-hostcheck.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-hostcheck.lo `test -f 'hostcheck.c' || echo '$(srcdir)/'`hostcheck.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-hostcheck.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-hostcheck.Tpo -c -o libcurlu_la-hostcheck.lo `test -f 'hostcheck.c' || echo '$(srcdir)/'`hostcheck.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-hostcheck.Tpo $(DEPDIR)/libcurlu_la-hostcheck.Plo
+	$(AM_V_CC)source='hostcheck.c' object='libcurlu_la-hostcheck.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-hostcheck.lo `test -f 'hostcheck.c' || echo '$(srcdir)/'`hostcheck.c
 
 libcurlu_la-conncache.lo: conncache.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-conncache.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-conncache.Tpo -c -o libcurlu_la-conncache.lo `test -f 'conncache.c' || echo '$(srcdir)/'`conncache.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-conncache.Tpo $(DEPDIR)/libcurlu_la-conncache.Plo
-#	$(AM_V_CC)source='conncache.c' object='libcurlu_la-conncache.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-conncache.lo `test -f 'conncache.c' || echo '$(srcdir)/'`conncache.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-conncache.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-conncache.Tpo -c -o libcurlu_la-conncache.lo `test -f 'conncache.c' || echo '$(srcdir)/'`conncache.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-conncache.Tpo $(DEPDIR)/libcurlu_la-conncache.Plo
+	$(AM_V_CC)source='conncache.c' object='libcurlu_la-conncache.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-conncache.lo `test -f 'conncache.c' || echo '$(srcdir)/'`conncache.c
 
 libcurlu_la-pipeline.lo: pipeline.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-pipeline.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-pipeline.Tpo -c -o libcurlu_la-pipeline.lo `test -f 'pipeline.c' || echo '$(srcdir)/'`pipeline.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-pipeline.Tpo $(DEPDIR)/libcurlu_la-pipeline.Plo
-#	$(AM_V_CC)source='pipeline.c' object='libcurlu_la-pipeline.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-pipeline.lo `test -f 'pipeline.c' || echo '$(srcdir)/'`pipeline.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-pipeline.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-pipeline.Tpo -c -o libcurlu_la-pipeline.lo `test -f 'pipeline.c' || echo '$(srcdir)/'`pipeline.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-pipeline.Tpo $(DEPDIR)/libcurlu_la-pipeline.Plo
+	$(AM_V_CC)source='pipeline.c' object='libcurlu_la-pipeline.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-pipeline.lo `test -f 'pipeline.c' || echo '$(srcdir)/'`pipeline.c
 
 libcurlu_la-dotdot.lo: dotdot.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-dotdot.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-dotdot.Tpo -c -o libcurlu_la-dotdot.lo `test -f 'dotdot.c' || echo '$(srcdir)/'`dotdot.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-dotdot.Tpo $(DEPDIR)/libcurlu_la-dotdot.Plo
-#	$(AM_V_CC)source='dotdot.c' object='libcurlu_la-dotdot.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-dotdot.lo `test -f 'dotdot.c' || echo '$(srcdir)/'`dotdot.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-dotdot.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-dotdot.Tpo -c -o libcurlu_la-dotdot.lo `test -f 'dotdot.c' || echo '$(srcdir)/'`dotdot.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-dotdot.Tpo $(DEPDIR)/libcurlu_la-dotdot.Plo
+	$(AM_V_CC)source='dotdot.c' object='libcurlu_la-dotdot.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-dotdot.lo `test -f 'dotdot.c' || echo '$(srcdir)/'`dotdot.c
 
 libcurlu_la-x509asn1.lo: x509asn1.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-x509asn1.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-x509asn1.Tpo -c -o libcurlu_la-x509asn1.lo `test -f 'x509asn1.c' || echo '$(srcdir)/'`x509asn1.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-x509asn1.Tpo $(DEPDIR)/libcurlu_la-x509asn1.Plo
-#	$(AM_V_CC)source='x509asn1.c' object='libcurlu_la-x509asn1.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-x509asn1.lo `test -f 'x509asn1.c' || echo '$(srcdir)/'`x509asn1.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-x509asn1.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-x509asn1.Tpo -c -o libcurlu_la-x509asn1.lo `test -f 'x509asn1.c' || echo '$(srcdir)/'`x509asn1.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-x509asn1.Tpo $(DEPDIR)/libcurlu_la-x509asn1.Plo
+	$(AM_V_CC)source='x509asn1.c' object='libcurlu_la-x509asn1.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-x509asn1.lo `test -f 'x509asn1.c' || echo '$(srcdir)/'`x509asn1.c
 
 libcurlu_la-http2.lo: http2.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-http2.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-http2.Tpo -c -o libcurlu_la-http2.lo `test -f 'http2.c' || echo '$(srcdir)/'`http2.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-http2.Tpo $(DEPDIR)/libcurlu_la-http2.Plo
-#	$(AM_V_CC)source='http2.c' object='libcurlu_la-http2.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-http2.lo `test -f 'http2.c' || echo '$(srcdir)/'`http2.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-http2.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-http2.Tpo -c -o libcurlu_la-http2.lo `test -f 'http2.c' || echo '$(srcdir)/'`http2.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-http2.Tpo $(DEPDIR)/libcurlu_la-http2.Plo
+	$(AM_V_CC)source='http2.c' object='libcurlu_la-http2.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-http2.lo `test -f 'http2.c' || echo '$(srcdir)/'`http2.c
 
 libcurlu_la-smb.lo: smb.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-smb.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-smb.Tpo -c -o libcurlu_la-smb.lo `test -f 'smb.c' || echo '$(srcdir)/'`smb.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-smb.Tpo $(DEPDIR)/libcurlu_la-smb.Plo
-#	$(AM_V_CC)source='smb.c' object='libcurlu_la-smb.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-smb.lo `test -f 'smb.c' || echo '$(srcdir)/'`smb.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-smb.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-smb.Tpo -c -o libcurlu_la-smb.lo `test -f 'smb.c' || echo '$(srcdir)/'`smb.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-smb.Tpo $(DEPDIR)/libcurlu_la-smb.Plo
+	$(AM_V_CC)source='smb.c' object='libcurlu_la-smb.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-smb.lo `test -f 'smb.c' || echo '$(srcdir)/'`smb.c
 
 libcurlu_la-curl_endian.lo: curl_endian.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_endian.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_endian.Tpo -c -o libcurlu_la-curl_endian.lo `test -f 'curl_endian.c' || echo '$(srcdir)/'`curl_endian.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_endian.Tpo $(DEPDIR)/libcurlu_la-curl_endian.Plo
-#	$(AM_V_CC)source='curl_endian.c' object='libcurlu_la-curl_endian.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_endian.lo `test -f 'curl_endian.c' || echo '$(srcdir)/'`curl_endian.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_endian.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_endian.Tpo -c -o libcurlu_la-curl_endian.lo `test -f 'curl_endian.c' || echo '$(srcdir)/'`curl_endian.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_endian.Tpo $(DEPDIR)/libcurlu_la-curl_endian.Plo
+	$(AM_V_CC)source='curl_endian.c' object='libcurlu_la-curl_endian.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_endian.lo `test -f 'curl_endian.c' || echo '$(srcdir)/'`curl_endian.c
 
 libcurlu_la-curl_des.lo: curl_des.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_des.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_des.Tpo -c -o libcurlu_la-curl_des.lo `test -f 'curl_des.c' || echo '$(srcdir)/'`curl_des.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_des.Tpo $(DEPDIR)/libcurlu_la-curl_des.Plo
-#	$(AM_V_CC)source='curl_des.c' object='libcurlu_la-curl_des.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_des.lo `test -f 'curl_des.c' || echo '$(srcdir)/'`curl_des.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-curl_des.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-curl_des.Tpo -c -o libcurlu_la-curl_des.lo `test -f 'curl_des.c' || echo '$(srcdir)/'`curl_des.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-curl_des.Tpo $(DEPDIR)/libcurlu_la-curl_des.Plo
+	$(AM_V_CC)source='curl_des.c' object='libcurlu_la-curl_des.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-curl_des.lo `test -f 'curl_des.c' || echo '$(srcdir)/'`curl_des.c
 
 libcurlu_la-system_win32.lo: system_win32.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-system_win32.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-system_win32.Tpo -c -o libcurlu_la-system_win32.lo `test -f 'system_win32.c' || echo '$(srcdir)/'`system_win32.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-system_win32.Tpo $(DEPDIR)/libcurlu_la-system_win32.Plo
-#	$(AM_V_CC)source='system_win32.c' object='libcurlu_la-system_win32.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-system_win32.lo `test -f 'system_win32.c' || echo '$(srcdir)/'`system_win32.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT libcurlu_la-system_win32.lo -MD -MP -MF $(DEPDIR)/libcurlu_la-system_win32.Tpo -c -o libcurlu_la-system_win32.lo `test -f 'system_win32.c' || echo '$(srcdir)/'`system_win32.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/libcurlu_la-system_win32.Tpo $(DEPDIR)/libcurlu_la-system_win32.Plo
+	$(AM_V_CC)source='system_win32.c' object='libcurlu_la-system_win32.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o libcurlu_la-system_win32.lo `test -f 'system_win32.c' || echo '$(srcdir)/'`system_win32.c
 
 vauth/libcurlu_la-vauth.lo: vauth/vauth.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-vauth.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-vauth.Tpo -c -o vauth/libcurlu_la-vauth.lo `test -f 'vauth/vauth.c' || echo '$(srcdir)/'`vauth/vauth.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-vauth.Tpo vauth/$(DEPDIR)/libcurlu_la-vauth.Plo
-#	$(AM_V_CC)source='vauth/vauth.c' object='vauth/libcurlu_la-vauth.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-vauth.lo `test -f 'vauth/vauth.c' || echo '$(srcdir)/'`vauth/vauth.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-vauth.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-vauth.Tpo -c -o vauth/libcurlu_la-vauth.lo `test -f 'vauth/vauth.c' || echo '$(srcdir)/'`vauth/vauth.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-vauth.Tpo vauth/$(DEPDIR)/libcurlu_la-vauth.Plo
+	$(AM_V_CC)source='vauth/vauth.c' object='vauth/libcurlu_la-vauth.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-vauth.lo `test -f 'vauth/vauth.c' || echo '$(srcdir)/'`vauth/vauth.c
 
 vauth/libcurlu_la-cleartext.lo: vauth/cleartext.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-cleartext.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-cleartext.Tpo -c -o vauth/libcurlu_la-cleartext.lo `test -f 'vauth/cleartext.c' || echo '$(srcdir)/'`vauth/cleartext.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-cleartext.Tpo vauth/$(DEPDIR)/libcurlu_la-cleartext.Plo
-#	$(AM_V_CC)source='vauth/cleartext.c' object='vauth/libcurlu_la-cleartext.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-cleartext.lo `test -f 'vauth/cleartext.c' || echo '$(srcdir)/'`vauth/cleartext.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-cleartext.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-cleartext.Tpo -c -o vauth/libcurlu_la-cleartext.lo `test -f 'vauth/cleartext.c' || echo '$(srcdir)/'`vauth/cleartext.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-cleartext.Tpo vauth/$(DEPDIR)/libcurlu_la-cleartext.Plo
+	$(AM_V_CC)source='vauth/cleartext.c' object='vauth/libcurlu_la-cleartext.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-cleartext.lo `test -f 'vauth/cleartext.c' || echo '$(srcdir)/'`vauth/cleartext.c
 
 vauth/libcurlu_la-cram.lo: vauth/cram.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-cram.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-cram.Tpo -c -o vauth/libcurlu_la-cram.lo `test -f 'vauth/cram.c' || echo '$(srcdir)/'`vauth/cram.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-cram.Tpo vauth/$(DEPDIR)/libcurlu_la-cram.Plo
-#	$(AM_V_CC)source='vauth/cram.c' object='vauth/libcurlu_la-cram.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-cram.lo `test -f 'vauth/cram.c' || echo '$(srcdir)/'`vauth/cram.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-cram.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-cram.Tpo -c -o vauth/libcurlu_la-cram.lo `test -f 'vauth/cram.c' || echo '$(srcdir)/'`vauth/cram.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-cram.Tpo vauth/$(DEPDIR)/libcurlu_la-cram.Plo
+	$(AM_V_CC)source='vauth/cram.c' object='vauth/libcurlu_la-cram.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-cram.lo `test -f 'vauth/cram.c' || echo '$(srcdir)/'`vauth/cram.c
 
 vauth/libcurlu_la-digest.lo: vauth/digest.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-digest.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-digest.Tpo -c -o vauth/libcurlu_la-digest.lo `test -f 'vauth/digest.c' || echo '$(srcdir)/'`vauth/digest.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-digest.Tpo vauth/$(DEPDIR)/libcurlu_la-digest.Plo
-#	$(AM_V_CC)source='vauth/digest.c' object='vauth/libcurlu_la-digest.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-digest.lo `test -f 'vauth/digest.c' || echo '$(srcdir)/'`vauth/digest.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-digest.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-digest.Tpo -c -o vauth/libcurlu_la-digest.lo `test -f 'vauth/digest.c' || echo '$(srcdir)/'`vauth/digest.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-digest.Tpo vauth/$(DEPDIR)/libcurlu_la-digest.Plo
+	$(AM_V_CC)source='vauth/digest.c' object='vauth/libcurlu_la-digest.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-digest.lo `test -f 'vauth/digest.c' || echo '$(srcdir)/'`vauth/digest.c
 
 vauth/libcurlu_la-digest_sspi.lo: vauth/digest_sspi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-digest_sspi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-digest_sspi.Tpo -c -o vauth/libcurlu_la-digest_sspi.lo `test -f 'vauth/digest_sspi.c' || echo '$(srcdir)/'`vauth/digest_sspi.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-digest_sspi.Tpo vauth/$(DEPDIR)/libcurlu_la-digest_sspi.Plo
-#	$(AM_V_CC)source='vauth/digest_sspi.c' object='vauth/libcurlu_la-digest_sspi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-digest_sspi.lo `test -f 'vauth/digest_sspi.c' || echo '$(srcdir)/'`vauth/digest_sspi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-digest_sspi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-digest_sspi.Tpo -c -o vauth/libcurlu_la-digest_sspi.lo `test -f 'vauth/digest_sspi.c' || echo '$(srcdir)/'`vauth/digest_sspi.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-digest_sspi.Tpo vauth/$(DEPDIR)/libcurlu_la-digest_sspi.Plo
+	$(AM_V_CC)source='vauth/digest_sspi.c' object='vauth/libcurlu_la-digest_sspi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-digest_sspi.lo `test -f 'vauth/digest_sspi.c' || echo '$(srcdir)/'`vauth/digest_sspi.c
 
 vauth/libcurlu_la-krb5_gssapi.lo: vauth/krb5_gssapi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-krb5_gssapi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-krb5_gssapi.Tpo -c -o vauth/libcurlu_la-krb5_gssapi.lo `test -f 'vauth/krb5_gssapi.c' || echo '$(srcdir)/'`vauth/krb5_gssapi.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-krb5_gssapi.Tpo vauth/$(DEPDIR)/libcurlu_la-krb5_gssapi.Plo
-#	$(AM_V_CC)source='vauth/krb5_gssapi.c' object='vauth/libcurlu_la-krb5_gssapi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-krb5_gssapi.lo `test -f 'vauth/krb5_gssapi.c' || echo '$(srcdir)/'`vauth/krb5_gssapi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-krb5_gssapi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-krb5_gssapi.Tpo -c -o vauth/libcurlu_la-krb5_gssapi.lo `test -f 'vauth/krb5_gssapi.c' || echo '$(srcdir)/'`vauth/krb5_gssapi.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-krb5_gssapi.Tpo vauth/$(DEPDIR)/libcurlu_la-krb5_gssapi.Plo
+	$(AM_V_CC)source='vauth/krb5_gssapi.c' object='vauth/libcurlu_la-krb5_gssapi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-krb5_gssapi.lo `test -f 'vauth/krb5_gssapi.c' || echo '$(srcdir)/'`vauth/krb5_gssapi.c
 
 vauth/libcurlu_la-krb5_sspi.lo: vauth/krb5_sspi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-krb5_sspi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-krb5_sspi.Tpo -c -o vauth/libcurlu_la-krb5_sspi.lo `test -f 'vauth/krb5_sspi.c' || echo '$(srcdir)/'`vauth/krb5_sspi.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-krb5_sspi.Tpo vauth/$(DEPDIR)/libcurlu_la-krb5_sspi.Plo
-#	$(AM_V_CC)source='vauth/krb5_sspi.c' object='vauth/libcurlu_la-krb5_sspi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-krb5_sspi.lo `test -f 'vauth/krb5_sspi.c' || echo '$(srcdir)/'`vauth/krb5_sspi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-krb5_sspi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-krb5_sspi.Tpo -c -o vauth/libcurlu_la-krb5_sspi.lo `test -f 'vauth/krb5_sspi.c' || echo '$(srcdir)/'`vauth/krb5_sspi.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-krb5_sspi.Tpo vauth/$(DEPDIR)/libcurlu_la-krb5_sspi.Plo
+	$(AM_V_CC)source='vauth/krb5_sspi.c' object='vauth/libcurlu_la-krb5_sspi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-krb5_sspi.lo `test -f 'vauth/krb5_sspi.c' || echo '$(srcdir)/'`vauth/krb5_sspi.c
 
 vauth/libcurlu_la-ntlm.lo: vauth/ntlm.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-ntlm.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-ntlm.Tpo -c -o vauth/libcurlu_la-ntlm.lo `test -f 'vauth/ntlm.c' || echo '$(srcdir)/'`vauth/ntlm.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-ntlm.Tpo vauth/$(DEPDIR)/libcurlu_la-ntlm.Plo
-#	$(AM_V_CC)source='vauth/ntlm.c' object='vauth/libcurlu_la-ntlm.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-ntlm.lo `test -f 'vauth/ntlm.c' || echo '$(srcdir)/'`vauth/ntlm.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-ntlm.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-ntlm.Tpo -c -o vauth/libcurlu_la-ntlm.lo `test -f 'vauth/ntlm.c' || echo '$(srcdir)/'`vauth/ntlm.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-ntlm.Tpo vauth/$(DEPDIR)/libcurlu_la-ntlm.Plo
+	$(AM_V_CC)source='vauth/ntlm.c' object='vauth/libcurlu_la-ntlm.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-ntlm.lo `test -f 'vauth/ntlm.c' || echo '$(srcdir)/'`vauth/ntlm.c
 
 vauth/libcurlu_la-ntlm_sspi.lo: vauth/ntlm_sspi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-ntlm_sspi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-ntlm_sspi.Tpo -c -o vauth/libcurlu_la-ntlm_sspi.lo `test -f 'vauth/ntlm_sspi.c' || echo '$(srcdir)/'`vauth/ntlm_sspi.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-ntlm_sspi.Tpo vauth/$(DEPDIR)/libcurlu_la-ntlm_sspi.Plo
-#	$(AM_V_CC)source='vauth/ntlm_sspi.c' object='vauth/libcurlu_la-ntlm_sspi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-ntlm_sspi.lo `test -f 'vauth/ntlm_sspi.c' || echo '$(srcdir)/'`vauth/ntlm_sspi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-ntlm_sspi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-ntlm_sspi.Tpo -c -o vauth/libcurlu_la-ntlm_sspi.lo `test -f 'vauth/ntlm_sspi.c' || echo '$(srcdir)/'`vauth/ntlm_sspi.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-ntlm_sspi.Tpo vauth/$(DEPDIR)/libcurlu_la-ntlm_sspi.Plo
+	$(AM_V_CC)source='vauth/ntlm_sspi.c' object='vauth/libcurlu_la-ntlm_sspi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-ntlm_sspi.lo `test -f 'vauth/ntlm_sspi.c' || echo '$(srcdir)/'`vauth/ntlm_sspi.c
 
 vauth/libcurlu_la-oauth2.lo: vauth/oauth2.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-oauth2.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-oauth2.Tpo -c -o vauth/libcurlu_la-oauth2.lo `test -f 'vauth/oauth2.c' || echo '$(srcdir)/'`vauth/oauth2.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-oauth2.Tpo vauth/$(DEPDIR)/libcurlu_la-oauth2.Plo
-#	$(AM_V_CC)source='vauth/oauth2.c' object='vauth/libcurlu_la-oauth2.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-oauth2.lo `test -f 'vauth/oauth2.c' || echo '$(srcdir)/'`vauth/oauth2.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-oauth2.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-oauth2.Tpo -c -o vauth/libcurlu_la-oauth2.lo `test -f 'vauth/oauth2.c' || echo '$(srcdir)/'`vauth/oauth2.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-oauth2.Tpo vauth/$(DEPDIR)/libcurlu_la-oauth2.Plo
+	$(AM_V_CC)source='vauth/oauth2.c' object='vauth/libcurlu_la-oauth2.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-oauth2.lo `test -f 'vauth/oauth2.c' || echo '$(srcdir)/'`vauth/oauth2.c
 
 vauth/libcurlu_la-spnego_gssapi.lo: vauth/spnego_gssapi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-spnego_gssapi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-spnego_gssapi.Tpo -c -o vauth/libcurlu_la-spnego_gssapi.lo `test -f 'vauth/spnego_gssapi.c' || echo '$(srcdir)/'`vauth/spnego_gssapi.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-spnego_gssapi.Tpo vauth/$(DEPDIR)/libcurlu_la-spnego_gssapi.Plo
-#	$(AM_V_CC)source='vauth/spnego_gssapi.c' object='vauth/libcurlu_la-spnego_gssapi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-spnego_gssapi.lo `test -f 'vauth/spnego_gssapi.c' || echo '$(srcdir)/'`vauth/spnego_gssapi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-spnego_gssapi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-spnego_gssapi.Tpo -c -o vauth/libcurlu_la-spnego_gssapi.lo `test -f 'vauth/spnego_gssapi.c' || echo '$(srcdir)/'`vauth/spnego_gssapi.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-spnego_gssapi.Tpo vauth/$(DEPDIR)/libcurlu_la-spnego_gssapi.Plo
+	$(AM_V_CC)source='vauth/spnego_gssapi.c' object='vauth/libcurlu_la-spnego_gssapi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-spnego_gssapi.lo `test -f 'vauth/spnego_gssapi.c' || echo '$(srcdir)/'`vauth/spnego_gssapi.c
 
 vauth/libcurlu_la-spnego_sspi.lo: vauth/spnego_sspi.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-spnego_sspi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-spnego_sspi.Tpo -c -o vauth/libcurlu_la-spnego_sspi.lo `test -f 'vauth/spnego_sspi.c' || echo '$(srcdir)/'`vauth/spnego_sspi.c
-	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-spnego_sspi.Tpo vauth/$(DEPDIR)/libcurlu_la-spnego_sspi.Plo
-#	$(AM_V_CC)source='vauth/spnego_sspi.c' object='vauth/libcurlu_la-spnego_sspi.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-spnego_sspi.lo `test -f 'vauth/spnego_sspi.c' || echo '$(srcdir)/'`vauth/spnego_sspi.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vauth/libcurlu_la-spnego_sspi.lo -MD -MP -MF vauth/$(DEPDIR)/libcurlu_la-spnego_sspi.Tpo -c -o vauth/libcurlu_la-spnego_sspi.lo `test -f 'vauth/spnego_sspi.c' || echo '$(srcdir)/'`vauth/spnego_sspi.c
+#	$(AM_V_at)$(am__mv) vauth/$(DEPDIR)/libcurlu_la-spnego_sspi.Tpo vauth/$(DEPDIR)/libcurlu_la-spnego_sspi.Plo
+	$(AM_V_CC)source='vauth/spnego_sspi.c' object='vauth/libcurlu_la-spnego_sspi.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vauth/libcurlu_la-spnego_sspi.lo `test -f 'vauth/spnego_sspi.c' || echo '$(srcdir)/'`vauth/spnego_sspi.c
 
 vtls/libcurlu_la-openssl.lo: vtls/openssl.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-openssl.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-openssl.Tpo -c -o vtls/libcurlu_la-openssl.lo `test -f 'vtls/openssl.c' || echo '$(srcdir)/'`vtls/openssl.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-openssl.Tpo vtls/$(DEPDIR)/libcurlu_la-openssl.Plo
-#	$(AM_V_CC)source='vtls/openssl.c' object='vtls/libcurlu_la-openssl.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-openssl.lo `test -f 'vtls/openssl.c' || echo '$(srcdir)/'`vtls/openssl.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-openssl.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-openssl.Tpo -c -o vtls/libcurlu_la-openssl.lo `test -f 'vtls/openssl.c' || echo '$(srcdir)/'`vtls/openssl.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-openssl.Tpo vtls/$(DEPDIR)/libcurlu_la-openssl.Plo
+	$(AM_V_CC)source='vtls/openssl.c' object='vtls/libcurlu_la-openssl.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-openssl.lo `test -f 'vtls/openssl.c' || echo '$(srcdir)/'`vtls/openssl.c
 
 vtls/libcurlu_la-gtls.lo: vtls/gtls.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-gtls.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-gtls.Tpo -c -o vtls/libcurlu_la-gtls.lo `test -f 'vtls/gtls.c' || echo '$(srcdir)/'`vtls/gtls.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-gtls.Tpo vtls/$(DEPDIR)/libcurlu_la-gtls.Plo
-#	$(AM_V_CC)source='vtls/gtls.c' object='vtls/libcurlu_la-gtls.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-gtls.lo `test -f 'vtls/gtls.c' || echo '$(srcdir)/'`vtls/gtls.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-gtls.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-gtls.Tpo -c -o vtls/libcurlu_la-gtls.lo `test -f 'vtls/gtls.c' || echo '$(srcdir)/'`vtls/gtls.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-gtls.Tpo vtls/$(DEPDIR)/libcurlu_la-gtls.Plo
+	$(AM_V_CC)source='vtls/gtls.c' object='vtls/libcurlu_la-gtls.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-gtls.lo `test -f 'vtls/gtls.c' || echo '$(srcdir)/'`vtls/gtls.c
 
 vtls/libcurlu_la-vtls.lo: vtls/vtls.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-vtls.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-vtls.Tpo -c -o vtls/libcurlu_la-vtls.lo `test -f 'vtls/vtls.c' || echo '$(srcdir)/'`vtls/vtls.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-vtls.Tpo vtls/$(DEPDIR)/libcurlu_la-vtls.Plo
-#	$(AM_V_CC)source='vtls/vtls.c' object='vtls/libcurlu_la-vtls.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-vtls.lo `test -f 'vtls/vtls.c' || echo '$(srcdir)/'`vtls/vtls.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-vtls.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-vtls.Tpo -c -o vtls/libcurlu_la-vtls.lo `test -f 'vtls/vtls.c' || echo '$(srcdir)/'`vtls/vtls.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-vtls.Tpo vtls/$(DEPDIR)/libcurlu_la-vtls.Plo
+	$(AM_V_CC)source='vtls/vtls.c' object='vtls/libcurlu_la-vtls.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-vtls.lo `test -f 'vtls/vtls.c' || echo '$(srcdir)/'`vtls/vtls.c
 
 vtls/libcurlu_la-nss.lo: vtls/nss.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-nss.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-nss.Tpo -c -o vtls/libcurlu_la-nss.lo `test -f 'vtls/nss.c' || echo '$(srcdir)/'`vtls/nss.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-nss.Tpo vtls/$(DEPDIR)/libcurlu_la-nss.Plo
-#	$(AM_V_CC)source='vtls/nss.c' object='vtls/libcurlu_la-nss.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-nss.lo `test -f 'vtls/nss.c' || echo '$(srcdir)/'`vtls/nss.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-nss.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-nss.Tpo -c -o vtls/libcurlu_la-nss.lo `test -f 'vtls/nss.c' || echo '$(srcdir)/'`vtls/nss.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-nss.Tpo vtls/$(DEPDIR)/libcurlu_la-nss.Plo
+	$(AM_V_CC)source='vtls/nss.c' object='vtls/libcurlu_la-nss.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-nss.lo `test -f 'vtls/nss.c' || echo '$(srcdir)/'`vtls/nss.c
 
 vtls/libcurlu_la-polarssl.lo: vtls/polarssl.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-polarssl.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-polarssl.Tpo -c -o vtls/libcurlu_la-polarssl.lo `test -f 'vtls/polarssl.c' || echo '$(srcdir)/'`vtls/polarssl.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-polarssl.Tpo vtls/$(DEPDIR)/libcurlu_la-polarssl.Plo
-#	$(AM_V_CC)source='vtls/polarssl.c' object='vtls/libcurlu_la-polarssl.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-polarssl.lo `test -f 'vtls/polarssl.c' || echo '$(srcdir)/'`vtls/polarssl.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-polarssl.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-polarssl.Tpo -c -o vtls/libcurlu_la-polarssl.lo `test -f 'vtls/polarssl.c' || echo '$(srcdir)/'`vtls/polarssl.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-polarssl.Tpo vtls/$(DEPDIR)/libcurlu_la-polarssl.Plo
+	$(AM_V_CC)source='vtls/polarssl.c' object='vtls/libcurlu_la-polarssl.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-polarssl.lo `test -f 'vtls/polarssl.c' || echo '$(srcdir)/'`vtls/polarssl.c
 
 vtls/libcurlu_la-polarssl_threadlock.lo: vtls/polarssl_threadlock.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-polarssl_threadlock.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-polarssl_threadlock.Tpo -c -o vtls/libcurlu_la-polarssl_threadlock.lo `test -f 'vtls/polarssl_threadlock.c' || echo '$(srcdir)/'`vtls/polarssl_threadlock.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-polarssl_threadlock.Tpo vtls/$(DEPDIR)/libcurlu_la-polarssl_threadlock.Plo
-#	$(AM_V_CC)source='vtls/polarssl_threadlock.c' object='vtls/libcurlu_la-polarssl_threadlock.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-polarssl_threadlock.lo `test -f 'vtls/polarssl_threadlock.c' || echo '$(srcdir)/'`vtls/polarssl_threadlock.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-polarssl_threadlock.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-polarssl_threadlock.Tpo -c -o vtls/libcurlu_la-polarssl_threadlock.lo `test -f 'vtls/polarssl_threadlock.c' || echo '$(srcdir)/'`vtls/polarssl_threadlock.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-polarssl_threadlock.Tpo vtls/$(DEPDIR)/libcurlu_la-polarssl_threadlock.Plo
+	$(AM_V_CC)source='vtls/polarssl_threadlock.c' object='vtls/libcurlu_la-polarssl_threadlock.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-polarssl_threadlock.lo `test -f 'vtls/polarssl_threadlock.c' || echo '$(srcdir)/'`vtls/polarssl_threadlock.c
 
 vtls/libcurlu_la-axtls.lo: vtls/axtls.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-axtls.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-axtls.Tpo -c -o vtls/libcurlu_la-axtls.lo `test -f 'vtls/axtls.c' || echo '$(srcdir)/'`vtls/axtls.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-axtls.Tpo vtls/$(DEPDIR)/libcurlu_la-axtls.Plo
-#	$(AM_V_CC)source='vtls/axtls.c' object='vtls/libcurlu_la-axtls.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-axtls.lo `test -f 'vtls/axtls.c' || echo '$(srcdir)/'`vtls/axtls.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-axtls.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-axtls.Tpo -c -o vtls/libcurlu_la-axtls.lo `test -f 'vtls/axtls.c' || echo '$(srcdir)/'`vtls/axtls.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-axtls.Tpo vtls/$(DEPDIR)/libcurlu_la-axtls.Plo
+	$(AM_V_CC)source='vtls/axtls.c' object='vtls/libcurlu_la-axtls.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-axtls.lo `test -f 'vtls/axtls.c' || echo '$(srcdir)/'`vtls/axtls.c
 
 vtls/libcurlu_la-cyassl.lo: vtls/cyassl.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-cyassl.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-cyassl.Tpo -c -o vtls/libcurlu_la-cyassl.lo `test -f 'vtls/cyassl.c' || echo '$(srcdir)/'`vtls/cyassl.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-cyassl.Tpo vtls/$(DEPDIR)/libcurlu_la-cyassl.Plo
-#	$(AM_V_CC)source='vtls/cyassl.c' object='vtls/libcurlu_la-cyassl.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-cyassl.lo `test -f 'vtls/cyassl.c' || echo '$(srcdir)/'`vtls/cyassl.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-cyassl.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-cyassl.Tpo -c -o vtls/libcurlu_la-cyassl.lo `test -f 'vtls/cyassl.c' || echo '$(srcdir)/'`vtls/cyassl.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-cyassl.Tpo vtls/$(DEPDIR)/libcurlu_la-cyassl.Plo
+	$(AM_V_CC)source='vtls/cyassl.c' object='vtls/libcurlu_la-cyassl.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-cyassl.lo `test -f 'vtls/cyassl.c' || echo '$(srcdir)/'`vtls/cyassl.c
 
 vtls/libcurlu_la-schannel.lo: vtls/schannel.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-schannel.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-schannel.Tpo -c -o vtls/libcurlu_la-schannel.lo `test -f 'vtls/schannel.c' || echo '$(srcdir)/'`vtls/schannel.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-schannel.Tpo vtls/$(DEPDIR)/libcurlu_la-schannel.Plo
-#	$(AM_V_CC)source='vtls/schannel.c' object='vtls/libcurlu_la-schannel.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-schannel.lo `test -f 'vtls/schannel.c' || echo '$(srcdir)/'`vtls/schannel.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-schannel.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-schannel.Tpo -c -o vtls/libcurlu_la-schannel.lo `test -f 'vtls/schannel.c' || echo '$(srcdir)/'`vtls/schannel.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-schannel.Tpo vtls/$(DEPDIR)/libcurlu_la-schannel.Plo
+	$(AM_V_CC)source='vtls/schannel.c' object='vtls/libcurlu_la-schannel.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-schannel.lo `test -f 'vtls/schannel.c' || echo '$(srcdir)/'`vtls/schannel.c
 
 vtls/libcurlu_la-darwinssl.lo: vtls/darwinssl.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-darwinssl.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-darwinssl.Tpo -c -o vtls/libcurlu_la-darwinssl.lo `test -f 'vtls/darwinssl.c' || echo '$(srcdir)/'`vtls/darwinssl.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-darwinssl.Tpo vtls/$(DEPDIR)/libcurlu_la-darwinssl.Plo
-#	$(AM_V_CC)source='vtls/darwinssl.c' object='vtls/libcurlu_la-darwinssl.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-darwinssl.lo `test -f 'vtls/darwinssl.c' || echo '$(srcdir)/'`vtls/darwinssl.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-darwinssl.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-darwinssl.Tpo -c -o vtls/libcurlu_la-darwinssl.lo `test -f 'vtls/darwinssl.c' || echo '$(srcdir)/'`vtls/darwinssl.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-darwinssl.Tpo vtls/$(DEPDIR)/libcurlu_la-darwinssl.Plo
+	$(AM_V_CC)source='vtls/darwinssl.c' object='vtls/libcurlu_la-darwinssl.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-darwinssl.lo `test -f 'vtls/darwinssl.c' || echo '$(srcdir)/'`vtls/darwinssl.c
 
 vtls/libcurlu_la-gskit.lo: vtls/gskit.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-gskit.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-gskit.Tpo -c -o vtls/libcurlu_la-gskit.lo `test -f 'vtls/gskit.c' || echo '$(srcdir)/'`vtls/gskit.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-gskit.Tpo vtls/$(DEPDIR)/libcurlu_la-gskit.Plo
-#	$(AM_V_CC)source='vtls/gskit.c' object='vtls/libcurlu_la-gskit.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-gskit.lo `test -f 'vtls/gskit.c' || echo '$(srcdir)/'`vtls/gskit.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-gskit.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-gskit.Tpo -c -o vtls/libcurlu_la-gskit.lo `test -f 'vtls/gskit.c' || echo '$(srcdir)/'`vtls/gskit.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-gskit.Tpo vtls/$(DEPDIR)/libcurlu_la-gskit.Plo
+	$(AM_V_CC)source='vtls/gskit.c' object='vtls/libcurlu_la-gskit.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-gskit.lo `test -f 'vtls/gskit.c' || echo '$(srcdir)/'`vtls/gskit.c
 
 vtls/libcurlu_la-mbedtls.lo: vtls/mbedtls.c
-	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-mbedtls.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-mbedtls.Tpo -c -o vtls/libcurlu_la-mbedtls.lo `test -f 'vtls/mbedtls.c' || echo '$(srcdir)/'`vtls/mbedtls.c
-	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-mbedtls.Tpo vtls/$(DEPDIR)/libcurlu_la-mbedtls.Plo
-#	$(AM_V_CC)source='vtls/mbedtls.c' object='vtls/libcurlu_la-mbedtls.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-mbedtls.lo `test -f 'vtls/mbedtls.c' || echo '$(srcdir)/'`vtls/mbedtls.c
+#	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -MT vtls/libcurlu_la-mbedtls.lo -MD -MP -MF vtls/$(DEPDIR)/libcurlu_la-mbedtls.Tpo -c -o vtls/libcurlu_la-mbedtls.lo `test -f 'vtls/mbedtls.c' || echo '$(srcdir)/'`vtls/mbedtls.c
+#	$(AM_V_at)$(am__mv) vtls/$(DEPDIR)/libcurlu_la-mbedtls.Tpo vtls/$(DEPDIR)/libcurlu_la-mbedtls.Plo
+	$(AM_V_CC)source='vtls/mbedtls.c' object='vtls/libcurlu_la-mbedtls.lo' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcurlu_la_CPPFLAGS) $(CPPFLAGS) $(libcurlu_la_CFLAGS) $(CFLAGS) -c -o vtls/libcurlu_la-mbedtls.lo `test -f 'vtls/mbedtls.c' || echo '$(srcdir)/'`vtls/mbedtls.c
 
 mostlyclean-libtool:
 	-rm -f *.lo

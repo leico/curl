@@ -32,7 +32,6 @@ curl-*.tar.gz
 curl-*.tar.lzma
 curl-*.zip
 curl-config
-depcomp
 missing
 mkinstalldirs
 tags

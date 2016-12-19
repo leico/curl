@@ -334,21 +334,21 @@ CTAGS = ctags
 am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.inc \
 	$(top_srcdir)/depcomp README
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing aclocal-1.15
+ACLOCAL = aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
 AS = as
-AUTOCONF = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing autoconf
-AUTOHEADER = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing autoheader
-AUTOMAKE = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing automake-1.15
+AUTOCONF = autoconf
+AUTOHEADER = autoheader
+AUTOMAKE = automake-1.15
 AWK = awk
 BLANK_AT_MAKETIME = 
 CC = gcc
-CCDEPMODE = depmode=gcc3
+CCDEPMODE = depmode=none
 CFLAGS = -Qunused-arguments -Os -mmacosx-version-min=10.8 -Werror=partial-availability
 CFLAG_CURL_SYMBOL_HIDING = -fvisibility=hidden
-CONFIGURE_OPTIONS = " '--with-darwinssl' '--prefix=/Users/leico/pro/libcurl-xcode/DerivedData/Build/Products/Release/curl/'"
+CONFIGURE_OPTIONS = " '--with-darwinssl' '--prefix=/Users/leico/pro/twitter-oauth-commandline/libCurl/DerivedData/Build/Products/Release/curl/'"
 CPP = gcc -E
 CPPFLAGS = 
 CPPFLAG_CURL_STATICLIB = 
@@ -415,7 +415,7 @@ LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
 MAINT = #
-MAKEINFO = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/missing makeinfo
+MAKEINFO = makeinfo
 MANIFEST_TOOL = :
 MANOPT = -man
 MKDIR_P = ../.././install-sh -c -d
@@ -471,10 +471,10 @@ VERSION = -
 VERSIONNUM = 073300
 ZLIB_LIBS = -lz
 ZSH_FUNCTIONS_DIR = ${prefix}/share/zsh/site-functions
-abs_builddir = /Users/leico/pro/libcurl-xcode/curl/tests/unit
-abs_srcdir = /Users/leico/pro/libcurl-xcode/curl/tests/unit
-abs_top_builddir = /Users/leico/pro/libcurl-xcode/curl
-abs_top_srcdir = /Users/leico/pro/libcurl-xcode/curl
+abs_builddir = /Users/leico/pro/twitter-oauth-commandline/libCurl/curl/tests/unit
+abs_srcdir = /Users/leico/pro/twitter-oauth-commandline/libCurl/curl/tests/unit
+abs_top_builddir = /Users/leico/pro/twitter-oauth-commandline/libCurl/curl
+abs_top_srcdir = /Users/leico/pro/twitter-oauth-commandline/libCurl/curl
 ac_ct_AR = 
 ac_ct_CC = gcc
 ac_ct_DUMPBIN = 
@@ -503,7 +503,7 @@ host_vendor = apple
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /Users/leico/pro/libcurl-xcode/curl/install-sh
+install_sh = ${SHELL} /Users/leico/pro/twitter-oauth-commandline/libCurl/curl/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 libext = a
@@ -513,7 +513,7 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /Users/leico/pro/libcurl-xcode/DerivedData/Build/Products/Release/curl
+prefix = /Users/leico/pro/twitter-oauth-commandline/libCurl/DerivedData/Build/Products/Release/curl
 program_transform_name = s,x,x,
 psdir = ${docdir}
 runstatedir = ${localstatedir}/run
@@ -870,616 +870,616 @@ include ./$(DEPDIR)/unit1604-unit1604.Po
 include ./$(DEPDIR)/unit1605-unit1605.Po
 
 .c.o:
-	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
-	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
+#	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
+#	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Po
+	$(AM_V_CC)source='$<' object='$@' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(COMPILE) -c -o $@ $<
 
 .c.obj:
-	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.obj$$||'`;\
-	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ `$(CYGPATH_W) '$<'` &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Po
-#	$(AM_V_CC)source='$<' object='$@' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+#	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.obj$$||'`;\
+#	$(COMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ `$(CYGPATH_W) '$<'` &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Po
+	$(AM_V_CC)source='$<' object='$@' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
 .c.lo:
-	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.lo$$||'`;\
-	$(LTCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
-	$(am__mv) $$depbase.Tpo $$depbase.Plo
-#	$(AM_V_CC)source='$<' object='$@' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(LTCOMPILE) -c -o $@ $<
+#	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.lo$$||'`;\
+#	$(LTCOMPILE) -MT $@ -MD -MP -MF $$depbase.Tpo -c -o $@ $< &&\
+#	$(am__mv) $$depbase.Tpo $$depbase.Plo
+	$(AM_V_CC)source='$<' object='$@' libtool=yes \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(LTCOMPILE) -c -o $@ $<
 
 unit1300-unit1300.o: unit1300.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1300_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1300-unit1300.o -MD -MP -MF $(DEPDIR)/unit1300-unit1300.Tpo -c -o unit1300-unit1300.o `test -f 'unit1300.c' || echo '$(srcdir)/'`unit1300.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1300-unit1300.Tpo $(DEPDIR)/unit1300-unit1300.Po
-#	$(AM_V_CC)source='unit1300.c' object='unit1300-unit1300.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1300_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1300-unit1300.o `test -f 'unit1300.c' || echo '$(srcdir)/'`unit1300.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1300_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1300-unit1300.o -MD -MP -MF $(DEPDIR)/unit1300-unit1300.Tpo -c -o unit1300-unit1300.o `test -f 'unit1300.c' || echo '$(srcdir)/'`unit1300.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1300-unit1300.Tpo $(DEPDIR)/unit1300-unit1300.Po
+	$(AM_V_CC)source='unit1300.c' object='unit1300-unit1300.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1300_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1300-unit1300.o `test -f 'unit1300.c' || echo '$(srcdir)/'`unit1300.c
 
 unit1300-unit1300.obj: unit1300.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1300_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1300-unit1300.obj -MD -MP -MF $(DEPDIR)/unit1300-unit1300.Tpo -c -o unit1300-unit1300.obj `if test -f 'unit1300.c'; then $(CYGPATH_W) 'unit1300.c'; else $(CYGPATH_W) '$(srcdir)/unit1300.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1300-unit1300.Tpo $(DEPDIR)/unit1300-unit1300.Po
-#	$(AM_V_CC)source='unit1300.c' object='unit1300-unit1300.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1300_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1300-unit1300.obj `if test -f 'unit1300.c'; then $(CYGPATH_W) 'unit1300.c'; else $(CYGPATH_W) '$(srcdir)/unit1300.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1300_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1300-unit1300.obj -MD -MP -MF $(DEPDIR)/unit1300-unit1300.Tpo -c -o unit1300-unit1300.obj `if test -f 'unit1300.c'; then $(CYGPATH_W) 'unit1300.c'; else $(CYGPATH_W) '$(srcdir)/unit1300.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1300-unit1300.Tpo $(DEPDIR)/unit1300-unit1300.Po
+	$(AM_V_CC)source='unit1300.c' object='unit1300-unit1300.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1300_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1300-unit1300.obj `if test -f 'unit1300.c'; then $(CYGPATH_W) 'unit1300.c'; else $(CYGPATH_W) '$(srcdir)/unit1300.c'; fi`
 
 ../libtest/unit1300-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1300_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1300-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1300-first.Tpo -c -o ../libtest/unit1300-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1300-first.Tpo ../libtest/$(DEPDIR)/unit1300-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1300-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1300_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1300-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1300_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1300-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1300-first.Tpo -c -o ../libtest/unit1300-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1300-first.Tpo ../libtest/$(DEPDIR)/unit1300-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1300-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1300_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1300-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1300-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1300_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1300-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1300-first.Tpo -c -o ../libtest/unit1300-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1300-first.Tpo ../libtest/$(DEPDIR)/unit1300-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1300-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1300_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1300-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1300_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1300-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1300-first.Tpo -c -o ../libtest/unit1300-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1300-first.Tpo ../libtest/$(DEPDIR)/unit1300-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1300-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1300_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1300-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1301-unit1301.o: unit1301.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1301_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1301-unit1301.o -MD -MP -MF $(DEPDIR)/unit1301-unit1301.Tpo -c -o unit1301-unit1301.o `test -f 'unit1301.c' || echo '$(srcdir)/'`unit1301.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1301-unit1301.Tpo $(DEPDIR)/unit1301-unit1301.Po
-#	$(AM_V_CC)source='unit1301.c' object='unit1301-unit1301.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1301_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1301-unit1301.o `test -f 'unit1301.c' || echo '$(srcdir)/'`unit1301.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1301_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1301-unit1301.o -MD -MP -MF $(DEPDIR)/unit1301-unit1301.Tpo -c -o unit1301-unit1301.o `test -f 'unit1301.c' || echo '$(srcdir)/'`unit1301.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1301-unit1301.Tpo $(DEPDIR)/unit1301-unit1301.Po
+	$(AM_V_CC)source='unit1301.c' object='unit1301-unit1301.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1301_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1301-unit1301.o `test -f 'unit1301.c' || echo '$(srcdir)/'`unit1301.c
 
 unit1301-unit1301.obj: unit1301.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1301_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1301-unit1301.obj -MD -MP -MF $(DEPDIR)/unit1301-unit1301.Tpo -c -o unit1301-unit1301.obj `if test -f 'unit1301.c'; then $(CYGPATH_W) 'unit1301.c'; else $(CYGPATH_W) '$(srcdir)/unit1301.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1301-unit1301.Tpo $(DEPDIR)/unit1301-unit1301.Po
-#	$(AM_V_CC)source='unit1301.c' object='unit1301-unit1301.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1301_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1301-unit1301.obj `if test -f 'unit1301.c'; then $(CYGPATH_W) 'unit1301.c'; else $(CYGPATH_W) '$(srcdir)/unit1301.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1301_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1301-unit1301.obj -MD -MP -MF $(DEPDIR)/unit1301-unit1301.Tpo -c -o unit1301-unit1301.obj `if test -f 'unit1301.c'; then $(CYGPATH_W) 'unit1301.c'; else $(CYGPATH_W) '$(srcdir)/unit1301.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1301-unit1301.Tpo $(DEPDIR)/unit1301-unit1301.Po
+	$(AM_V_CC)source='unit1301.c' object='unit1301-unit1301.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1301_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1301-unit1301.obj `if test -f 'unit1301.c'; then $(CYGPATH_W) 'unit1301.c'; else $(CYGPATH_W) '$(srcdir)/unit1301.c'; fi`
 
 ../libtest/unit1301-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1301_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1301-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1301-first.Tpo -c -o ../libtest/unit1301-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1301-first.Tpo ../libtest/$(DEPDIR)/unit1301-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1301-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1301_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1301-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1301_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1301-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1301-first.Tpo -c -o ../libtest/unit1301-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1301-first.Tpo ../libtest/$(DEPDIR)/unit1301-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1301-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1301_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1301-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1301-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1301_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1301-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1301-first.Tpo -c -o ../libtest/unit1301-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1301-first.Tpo ../libtest/$(DEPDIR)/unit1301-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1301-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1301_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1301-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1301_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1301-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1301-first.Tpo -c -o ../libtest/unit1301-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1301-first.Tpo ../libtest/$(DEPDIR)/unit1301-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1301-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1301_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1301-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1302-unit1302.o: unit1302.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1302_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1302-unit1302.o -MD -MP -MF $(DEPDIR)/unit1302-unit1302.Tpo -c -o unit1302-unit1302.o `test -f 'unit1302.c' || echo '$(srcdir)/'`unit1302.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1302-unit1302.Tpo $(DEPDIR)/unit1302-unit1302.Po
-#	$(AM_V_CC)source='unit1302.c' object='unit1302-unit1302.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1302_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1302-unit1302.o `test -f 'unit1302.c' || echo '$(srcdir)/'`unit1302.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1302_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1302-unit1302.o -MD -MP -MF $(DEPDIR)/unit1302-unit1302.Tpo -c -o unit1302-unit1302.o `test -f 'unit1302.c' || echo '$(srcdir)/'`unit1302.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1302-unit1302.Tpo $(DEPDIR)/unit1302-unit1302.Po
+	$(AM_V_CC)source='unit1302.c' object='unit1302-unit1302.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1302_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1302-unit1302.o `test -f 'unit1302.c' || echo '$(srcdir)/'`unit1302.c
 
 unit1302-unit1302.obj: unit1302.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1302_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1302-unit1302.obj -MD -MP -MF $(DEPDIR)/unit1302-unit1302.Tpo -c -o unit1302-unit1302.obj `if test -f 'unit1302.c'; then $(CYGPATH_W) 'unit1302.c'; else $(CYGPATH_W) '$(srcdir)/unit1302.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1302-unit1302.Tpo $(DEPDIR)/unit1302-unit1302.Po
-#	$(AM_V_CC)source='unit1302.c' object='unit1302-unit1302.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1302_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1302-unit1302.obj `if test -f 'unit1302.c'; then $(CYGPATH_W) 'unit1302.c'; else $(CYGPATH_W) '$(srcdir)/unit1302.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1302_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1302-unit1302.obj -MD -MP -MF $(DEPDIR)/unit1302-unit1302.Tpo -c -o unit1302-unit1302.obj `if test -f 'unit1302.c'; then $(CYGPATH_W) 'unit1302.c'; else $(CYGPATH_W) '$(srcdir)/unit1302.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1302-unit1302.Tpo $(DEPDIR)/unit1302-unit1302.Po
+	$(AM_V_CC)source='unit1302.c' object='unit1302-unit1302.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1302_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1302-unit1302.obj `if test -f 'unit1302.c'; then $(CYGPATH_W) 'unit1302.c'; else $(CYGPATH_W) '$(srcdir)/unit1302.c'; fi`
 
 ../libtest/unit1302-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1302_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1302-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1302-first.Tpo -c -o ../libtest/unit1302-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1302-first.Tpo ../libtest/$(DEPDIR)/unit1302-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1302-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1302_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1302-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1302_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1302-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1302-first.Tpo -c -o ../libtest/unit1302-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1302-first.Tpo ../libtest/$(DEPDIR)/unit1302-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1302-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1302_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1302-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1302-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1302_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1302-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1302-first.Tpo -c -o ../libtest/unit1302-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1302-first.Tpo ../libtest/$(DEPDIR)/unit1302-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1302-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1302_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1302-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1302_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1302-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1302-first.Tpo -c -o ../libtest/unit1302-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1302-first.Tpo ../libtest/$(DEPDIR)/unit1302-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1302-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1302_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1302-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1303-unit1303.o: unit1303.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1303_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1303-unit1303.o -MD -MP -MF $(DEPDIR)/unit1303-unit1303.Tpo -c -o unit1303-unit1303.o `test -f 'unit1303.c' || echo '$(srcdir)/'`unit1303.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1303-unit1303.Tpo $(DEPDIR)/unit1303-unit1303.Po
-#	$(AM_V_CC)source='unit1303.c' object='unit1303-unit1303.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1303_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1303-unit1303.o `test -f 'unit1303.c' || echo '$(srcdir)/'`unit1303.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1303_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1303-unit1303.o -MD -MP -MF $(DEPDIR)/unit1303-unit1303.Tpo -c -o unit1303-unit1303.o `test -f 'unit1303.c' || echo '$(srcdir)/'`unit1303.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1303-unit1303.Tpo $(DEPDIR)/unit1303-unit1303.Po
+	$(AM_V_CC)source='unit1303.c' object='unit1303-unit1303.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1303_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1303-unit1303.o `test -f 'unit1303.c' || echo '$(srcdir)/'`unit1303.c
 
 unit1303-unit1303.obj: unit1303.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1303_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1303-unit1303.obj -MD -MP -MF $(DEPDIR)/unit1303-unit1303.Tpo -c -o unit1303-unit1303.obj `if test -f 'unit1303.c'; then $(CYGPATH_W) 'unit1303.c'; else $(CYGPATH_W) '$(srcdir)/unit1303.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1303-unit1303.Tpo $(DEPDIR)/unit1303-unit1303.Po
-#	$(AM_V_CC)source='unit1303.c' object='unit1303-unit1303.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1303_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1303-unit1303.obj `if test -f 'unit1303.c'; then $(CYGPATH_W) 'unit1303.c'; else $(CYGPATH_W) '$(srcdir)/unit1303.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1303_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1303-unit1303.obj -MD -MP -MF $(DEPDIR)/unit1303-unit1303.Tpo -c -o unit1303-unit1303.obj `if test -f 'unit1303.c'; then $(CYGPATH_W) 'unit1303.c'; else $(CYGPATH_W) '$(srcdir)/unit1303.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1303-unit1303.Tpo $(DEPDIR)/unit1303-unit1303.Po
+	$(AM_V_CC)source='unit1303.c' object='unit1303-unit1303.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1303_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1303-unit1303.obj `if test -f 'unit1303.c'; then $(CYGPATH_W) 'unit1303.c'; else $(CYGPATH_W) '$(srcdir)/unit1303.c'; fi`
 
 ../libtest/unit1303-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1303_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1303-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1303-first.Tpo -c -o ../libtest/unit1303-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1303-first.Tpo ../libtest/$(DEPDIR)/unit1303-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1303-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1303_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1303-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1303_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1303-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1303-first.Tpo -c -o ../libtest/unit1303-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1303-first.Tpo ../libtest/$(DEPDIR)/unit1303-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1303-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1303_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1303-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1303-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1303_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1303-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1303-first.Tpo -c -o ../libtest/unit1303-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1303-first.Tpo ../libtest/$(DEPDIR)/unit1303-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1303-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1303_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1303-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1303_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1303-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1303-first.Tpo -c -o ../libtest/unit1303-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1303-first.Tpo ../libtest/$(DEPDIR)/unit1303-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1303-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1303_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1303-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1304-unit1304.o: unit1304.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1304_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1304-unit1304.o -MD -MP -MF $(DEPDIR)/unit1304-unit1304.Tpo -c -o unit1304-unit1304.o `test -f 'unit1304.c' || echo '$(srcdir)/'`unit1304.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1304-unit1304.Tpo $(DEPDIR)/unit1304-unit1304.Po
-#	$(AM_V_CC)source='unit1304.c' object='unit1304-unit1304.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1304_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1304-unit1304.o `test -f 'unit1304.c' || echo '$(srcdir)/'`unit1304.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1304_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1304-unit1304.o -MD -MP -MF $(DEPDIR)/unit1304-unit1304.Tpo -c -o unit1304-unit1304.o `test -f 'unit1304.c' || echo '$(srcdir)/'`unit1304.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1304-unit1304.Tpo $(DEPDIR)/unit1304-unit1304.Po
+	$(AM_V_CC)source='unit1304.c' object='unit1304-unit1304.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1304_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1304-unit1304.o `test -f 'unit1304.c' || echo '$(srcdir)/'`unit1304.c
 
 unit1304-unit1304.obj: unit1304.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1304_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1304-unit1304.obj -MD -MP -MF $(DEPDIR)/unit1304-unit1304.Tpo -c -o unit1304-unit1304.obj `if test -f 'unit1304.c'; then $(CYGPATH_W) 'unit1304.c'; else $(CYGPATH_W) '$(srcdir)/unit1304.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1304-unit1304.Tpo $(DEPDIR)/unit1304-unit1304.Po
-#	$(AM_V_CC)source='unit1304.c' object='unit1304-unit1304.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1304_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1304-unit1304.obj `if test -f 'unit1304.c'; then $(CYGPATH_W) 'unit1304.c'; else $(CYGPATH_W) '$(srcdir)/unit1304.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1304_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1304-unit1304.obj -MD -MP -MF $(DEPDIR)/unit1304-unit1304.Tpo -c -o unit1304-unit1304.obj `if test -f 'unit1304.c'; then $(CYGPATH_W) 'unit1304.c'; else $(CYGPATH_W) '$(srcdir)/unit1304.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1304-unit1304.Tpo $(DEPDIR)/unit1304-unit1304.Po
+	$(AM_V_CC)source='unit1304.c' object='unit1304-unit1304.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1304_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1304-unit1304.obj `if test -f 'unit1304.c'; then $(CYGPATH_W) 'unit1304.c'; else $(CYGPATH_W) '$(srcdir)/unit1304.c'; fi`
 
 ../libtest/unit1304-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1304_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1304-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1304-first.Tpo -c -o ../libtest/unit1304-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1304-first.Tpo ../libtest/$(DEPDIR)/unit1304-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1304-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1304_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1304-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1304_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1304-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1304-first.Tpo -c -o ../libtest/unit1304-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1304-first.Tpo ../libtest/$(DEPDIR)/unit1304-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1304-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1304_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1304-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1304-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1304_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1304-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1304-first.Tpo -c -o ../libtest/unit1304-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1304-first.Tpo ../libtest/$(DEPDIR)/unit1304-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1304-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1304_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1304-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1304_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1304-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1304-first.Tpo -c -o ../libtest/unit1304-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1304-first.Tpo ../libtest/$(DEPDIR)/unit1304-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1304-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1304_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1304-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1305-unit1305.o: unit1305.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1305_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1305-unit1305.o -MD -MP -MF $(DEPDIR)/unit1305-unit1305.Tpo -c -o unit1305-unit1305.o `test -f 'unit1305.c' || echo '$(srcdir)/'`unit1305.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1305-unit1305.Tpo $(DEPDIR)/unit1305-unit1305.Po
-#	$(AM_V_CC)source='unit1305.c' object='unit1305-unit1305.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1305_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1305-unit1305.o `test -f 'unit1305.c' || echo '$(srcdir)/'`unit1305.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1305_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1305-unit1305.o -MD -MP -MF $(DEPDIR)/unit1305-unit1305.Tpo -c -o unit1305-unit1305.o `test -f 'unit1305.c' || echo '$(srcdir)/'`unit1305.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1305-unit1305.Tpo $(DEPDIR)/unit1305-unit1305.Po
+	$(AM_V_CC)source='unit1305.c' object='unit1305-unit1305.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1305_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1305-unit1305.o `test -f 'unit1305.c' || echo '$(srcdir)/'`unit1305.c
 
 unit1305-unit1305.obj: unit1305.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1305_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1305-unit1305.obj -MD -MP -MF $(DEPDIR)/unit1305-unit1305.Tpo -c -o unit1305-unit1305.obj `if test -f 'unit1305.c'; then $(CYGPATH_W) 'unit1305.c'; else $(CYGPATH_W) '$(srcdir)/unit1305.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1305-unit1305.Tpo $(DEPDIR)/unit1305-unit1305.Po
-#	$(AM_V_CC)source='unit1305.c' object='unit1305-unit1305.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1305_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1305-unit1305.obj `if test -f 'unit1305.c'; then $(CYGPATH_W) 'unit1305.c'; else $(CYGPATH_W) '$(srcdir)/unit1305.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1305_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1305-unit1305.obj -MD -MP -MF $(DEPDIR)/unit1305-unit1305.Tpo -c -o unit1305-unit1305.obj `if test -f 'unit1305.c'; then $(CYGPATH_W) 'unit1305.c'; else $(CYGPATH_W) '$(srcdir)/unit1305.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1305-unit1305.Tpo $(DEPDIR)/unit1305-unit1305.Po
+	$(AM_V_CC)source='unit1305.c' object='unit1305-unit1305.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1305_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1305-unit1305.obj `if test -f 'unit1305.c'; then $(CYGPATH_W) 'unit1305.c'; else $(CYGPATH_W) '$(srcdir)/unit1305.c'; fi`
 
 ../libtest/unit1305-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1305_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1305-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1305-first.Tpo -c -o ../libtest/unit1305-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1305-first.Tpo ../libtest/$(DEPDIR)/unit1305-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1305-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1305_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1305-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1305_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1305-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1305-first.Tpo -c -o ../libtest/unit1305-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1305-first.Tpo ../libtest/$(DEPDIR)/unit1305-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1305-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1305_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1305-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1305-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1305_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1305-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1305-first.Tpo -c -o ../libtest/unit1305-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1305-first.Tpo ../libtest/$(DEPDIR)/unit1305-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1305-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1305_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1305-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1305_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1305-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1305-first.Tpo -c -o ../libtest/unit1305-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1305-first.Tpo ../libtest/$(DEPDIR)/unit1305-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1305-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1305_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1305-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1307-unit1307.o: unit1307.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1307_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1307-unit1307.o -MD -MP -MF $(DEPDIR)/unit1307-unit1307.Tpo -c -o unit1307-unit1307.o `test -f 'unit1307.c' || echo '$(srcdir)/'`unit1307.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1307-unit1307.Tpo $(DEPDIR)/unit1307-unit1307.Po
-#	$(AM_V_CC)source='unit1307.c' object='unit1307-unit1307.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1307_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1307-unit1307.o `test -f 'unit1307.c' || echo '$(srcdir)/'`unit1307.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1307_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1307-unit1307.o -MD -MP -MF $(DEPDIR)/unit1307-unit1307.Tpo -c -o unit1307-unit1307.o `test -f 'unit1307.c' || echo '$(srcdir)/'`unit1307.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1307-unit1307.Tpo $(DEPDIR)/unit1307-unit1307.Po
+	$(AM_V_CC)source='unit1307.c' object='unit1307-unit1307.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1307_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1307-unit1307.o `test -f 'unit1307.c' || echo '$(srcdir)/'`unit1307.c
 
 unit1307-unit1307.obj: unit1307.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1307_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1307-unit1307.obj -MD -MP -MF $(DEPDIR)/unit1307-unit1307.Tpo -c -o unit1307-unit1307.obj `if test -f 'unit1307.c'; then $(CYGPATH_W) 'unit1307.c'; else $(CYGPATH_W) '$(srcdir)/unit1307.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1307-unit1307.Tpo $(DEPDIR)/unit1307-unit1307.Po
-#	$(AM_V_CC)source='unit1307.c' object='unit1307-unit1307.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1307_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1307-unit1307.obj `if test -f 'unit1307.c'; then $(CYGPATH_W) 'unit1307.c'; else $(CYGPATH_W) '$(srcdir)/unit1307.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1307_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1307-unit1307.obj -MD -MP -MF $(DEPDIR)/unit1307-unit1307.Tpo -c -o unit1307-unit1307.obj `if test -f 'unit1307.c'; then $(CYGPATH_W) 'unit1307.c'; else $(CYGPATH_W) '$(srcdir)/unit1307.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1307-unit1307.Tpo $(DEPDIR)/unit1307-unit1307.Po
+	$(AM_V_CC)source='unit1307.c' object='unit1307-unit1307.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1307_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1307-unit1307.obj `if test -f 'unit1307.c'; then $(CYGPATH_W) 'unit1307.c'; else $(CYGPATH_W) '$(srcdir)/unit1307.c'; fi`
 
 ../libtest/unit1307-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1307_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1307-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1307-first.Tpo -c -o ../libtest/unit1307-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1307-first.Tpo ../libtest/$(DEPDIR)/unit1307-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1307-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1307_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1307-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1307_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1307-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1307-first.Tpo -c -o ../libtest/unit1307-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1307-first.Tpo ../libtest/$(DEPDIR)/unit1307-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1307-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1307_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1307-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1307-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1307_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1307-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1307-first.Tpo -c -o ../libtest/unit1307-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1307-first.Tpo ../libtest/$(DEPDIR)/unit1307-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1307-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1307_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1307-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1307_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1307-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1307-first.Tpo -c -o ../libtest/unit1307-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1307-first.Tpo ../libtest/$(DEPDIR)/unit1307-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1307-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1307_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1307-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1308-unit1308.o: unit1308.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1308_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1308-unit1308.o -MD -MP -MF $(DEPDIR)/unit1308-unit1308.Tpo -c -o unit1308-unit1308.o `test -f 'unit1308.c' || echo '$(srcdir)/'`unit1308.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1308-unit1308.Tpo $(DEPDIR)/unit1308-unit1308.Po
-#	$(AM_V_CC)source='unit1308.c' object='unit1308-unit1308.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1308_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1308-unit1308.o `test -f 'unit1308.c' || echo '$(srcdir)/'`unit1308.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1308_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1308-unit1308.o -MD -MP -MF $(DEPDIR)/unit1308-unit1308.Tpo -c -o unit1308-unit1308.o `test -f 'unit1308.c' || echo '$(srcdir)/'`unit1308.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1308-unit1308.Tpo $(DEPDIR)/unit1308-unit1308.Po
+	$(AM_V_CC)source='unit1308.c' object='unit1308-unit1308.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1308_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1308-unit1308.o `test -f 'unit1308.c' || echo '$(srcdir)/'`unit1308.c
 
 unit1308-unit1308.obj: unit1308.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1308_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1308-unit1308.obj -MD -MP -MF $(DEPDIR)/unit1308-unit1308.Tpo -c -o unit1308-unit1308.obj `if test -f 'unit1308.c'; then $(CYGPATH_W) 'unit1308.c'; else $(CYGPATH_W) '$(srcdir)/unit1308.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1308-unit1308.Tpo $(DEPDIR)/unit1308-unit1308.Po
-#	$(AM_V_CC)source='unit1308.c' object='unit1308-unit1308.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1308_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1308-unit1308.obj `if test -f 'unit1308.c'; then $(CYGPATH_W) 'unit1308.c'; else $(CYGPATH_W) '$(srcdir)/unit1308.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1308_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1308-unit1308.obj -MD -MP -MF $(DEPDIR)/unit1308-unit1308.Tpo -c -o unit1308-unit1308.obj `if test -f 'unit1308.c'; then $(CYGPATH_W) 'unit1308.c'; else $(CYGPATH_W) '$(srcdir)/unit1308.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1308-unit1308.Tpo $(DEPDIR)/unit1308-unit1308.Po
+	$(AM_V_CC)source='unit1308.c' object='unit1308-unit1308.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1308_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1308-unit1308.obj `if test -f 'unit1308.c'; then $(CYGPATH_W) 'unit1308.c'; else $(CYGPATH_W) '$(srcdir)/unit1308.c'; fi`
 
 ../libtest/unit1308-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1308_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1308-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1308-first.Tpo -c -o ../libtest/unit1308-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1308-first.Tpo ../libtest/$(DEPDIR)/unit1308-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1308-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1308_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1308-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1308_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1308-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1308-first.Tpo -c -o ../libtest/unit1308-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1308-first.Tpo ../libtest/$(DEPDIR)/unit1308-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1308-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1308_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1308-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1308-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1308_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1308-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1308-first.Tpo -c -o ../libtest/unit1308-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1308-first.Tpo ../libtest/$(DEPDIR)/unit1308-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1308-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1308_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1308-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1308_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1308-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1308-first.Tpo -c -o ../libtest/unit1308-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1308-first.Tpo ../libtest/$(DEPDIR)/unit1308-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1308-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1308_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1308-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1309-unit1309.o: unit1309.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1309_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1309-unit1309.o -MD -MP -MF $(DEPDIR)/unit1309-unit1309.Tpo -c -o unit1309-unit1309.o `test -f 'unit1309.c' || echo '$(srcdir)/'`unit1309.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1309-unit1309.Tpo $(DEPDIR)/unit1309-unit1309.Po
-#	$(AM_V_CC)source='unit1309.c' object='unit1309-unit1309.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1309_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1309-unit1309.o `test -f 'unit1309.c' || echo '$(srcdir)/'`unit1309.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1309_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1309-unit1309.o -MD -MP -MF $(DEPDIR)/unit1309-unit1309.Tpo -c -o unit1309-unit1309.o `test -f 'unit1309.c' || echo '$(srcdir)/'`unit1309.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1309-unit1309.Tpo $(DEPDIR)/unit1309-unit1309.Po
+	$(AM_V_CC)source='unit1309.c' object='unit1309-unit1309.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1309_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1309-unit1309.o `test -f 'unit1309.c' || echo '$(srcdir)/'`unit1309.c
 
 unit1309-unit1309.obj: unit1309.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1309_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1309-unit1309.obj -MD -MP -MF $(DEPDIR)/unit1309-unit1309.Tpo -c -o unit1309-unit1309.obj `if test -f 'unit1309.c'; then $(CYGPATH_W) 'unit1309.c'; else $(CYGPATH_W) '$(srcdir)/unit1309.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1309-unit1309.Tpo $(DEPDIR)/unit1309-unit1309.Po
-#	$(AM_V_CC)source='unit1309.c' object='unit1309-unit1309.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1309_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1309-unit1309.obj `if test -f 'unit1309.c'; then $(CYGPATH_W) 'unit1309.c'; else $(CYGPATH_W) '$(srcdir)/unit1309.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1309_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1309-unit1309.obj -MD -MP -MF $(DEPDIR)/unit1309-unit1309.Tpo -c -o unit1309-unit1309.obj `if test -f 'unit1309.c'; then $(CYGPATH_W) 'unit1309.c'; else $(CYGPATH_W) '$(srcdir)/unit1309.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1309-unit1309.Tpo $(DEPDIR)/unit1309-unit1309.Po
+	$(AM_V_CC)source='unit1309.c' object='unit1309-unit1309.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1309_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1309-unit1309.obj `if test -f 'unit1309.c'; then $(CYGPATH_W) 'unit1309.c'; else $(CYGPATH_W) '$(srcdir)/unit1309.c'; fi`
 
 ../libtest/unit1309-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1309_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1309-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1309-first.Tpo -c -o ../libtest/unit1309-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1309-first.Tpo ../libtest/$(DEPDIR)/unit1309-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1309-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1309_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1309-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1309_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1309-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1309-first.Tpo -c -o ../libtest/unit1309-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1309-first.Tpo ../libtest/$(DEPDIR)/unit1309-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1309-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1309_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1309-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1309-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1309_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1309-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1309-first.Tpo -c -o ../libtest/unit1309-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1309-first.Tpo ../libtest/$(DEPDIR)/unit1309-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1309-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1309_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1309-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1309_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1309-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1309-first.Tpo -c -o ../libtest/unit1309-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1309-first.Tpo ../libtest/$(DEPDIR)/unit1309-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1309-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1309_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1309-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1330-unit1330.o: unit1330.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1330_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1330-unit1330.o -MD -MP -MF $(DEPDIR)/unit1330-unit1330.Tpo -c -o unit1330-unit1330.o `test -f 'unit1330.c' || echo '$(srcdir)/'`unit1330.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1330-unit1330.Tpo $(DEPDIR)/unit1330-unit1330.Po
-#	$(AM_V_CC)source='unit1330.c' object='unit1330-unit1330.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1330_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1330-unit1330.o `test -f 'unit1330.c' || echo '$(srcdir)/'`unit1330.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1330_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1330-unit1330.o -MD -MP -MF $(DEPDIR)/unit1330-unit1330.Tpo -c -o unit1330-unit1330.o `test -f 'unit1330.c' || echo '$(srcdir)/'`unit1330.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1330-unit1330.Tpo $(DEPDIR)/unit1330-unit1330.Po
+	$(AM_V_CC)source='unit1330.c' object='unit1330-unit1330.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1330_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1330-unit1330.o `test -f 'unit1330.c' || echo '$(srcdir)/'`unit1330.c
 
 unit1330-unit1330.obj: unit1330.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1330_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1330-unit1330.obj -MD -MP -MF $(DEPDIR)/unit1330-unit1330.Tpo -c -o unit1330-unit1330.obj `if test -f 'unit1330.c'; then $(CYGPATH_W) 'unit1330.c'; else $(CYGPATH_W) '$(srcdir)/unit1330.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1330-unit1330.Tpo $(DEPDIR)/unit1330-unit1330.Po
-#	$(AM_V_CC)source='unit1330.c' object='unit1330-unit1330.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1330_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1330-unit1330.obj `if test -f 'unit1330.c'; then $(CYGPATH_W) 'unit1330.c'; else $(CYGPATH_W) '$(srcdir)/unit1330.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1330_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1330-unit1330.obj -MD -MP -MF $(DEPDIR)/unit1330-unit1330.Tpo -c -o unit1330-unit1330.obj `if test -f 'unit1330.c'; then $(CYGPATH_W) 'unit1330.c'; else $(CYGPATH_W) '$(srcdir)/unit1330.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1330-unit1330.Tpo $(DEPDIR)/unit1330-unit1330.Po
+	$(AM_V_CC)source='unit1330.c' object='unit1330-unit1330.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1330_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1330-unit1330.obj `if test -f 'unit1330.c'; then $(CYGPATH_W) 'unit1330.c'; else $(CYGPATH_W) '$(srcdir)/unit1330.c'; fi`
 
 ../libtest/unit1330-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1330_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1330-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1330-first.Tpo -c -o ../libtest/unit1330-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1330-first.Tpo ../libtest/$(DEPDIR)/unit1330-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1330-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1330_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1330-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1330_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1330-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1330-first.Tpo -c -o ../libtest/unit1330-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1330-first.Tpo ../libtest/$(DEPDIR)/unit1330-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1330-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1330_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1330-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1330-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1330_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1330-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1330-first.Tpo -c -o ../libtest/unit1330-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1330-first.Tpo ../libtest/$(DEPDIR)/unit1330-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1330-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1330_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1330-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1330_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1330-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1330-first.Tpo -c -o ../libtest/unit1330-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1330-first.Tpo ../libtest/$(DEPDIR)/unit1330-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1330-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1330_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1330-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1394-unit1394.o: unit1394.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1394_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1394-unit1394.o -MD -MP -MF $(DEPDIR)/unit1394-unit1394.Tpo -c -o unit1394-unit1394.o `test -f 'unit1394.c' || echo '$(srcdir)/'`unit1394.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1394-unit1394.Tpo $(DEPDIR)/unit1394-unit1394.Po
-#	$(AM_V_CC)source='unit1394.c' object='unit1394-unit1394.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1394_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1394-unit1394.o `test -f 'unit1394.c' || echo '$(srcdir)/'`unit1394.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1394_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1394-unit1394.o -MD -MP -MF $(DEPDIR)/unit1394-unit1394.Tpo -c -o unit1394-unit1394.o `test -f 'unit1394.c' || echo '$(srcdir)/'`unit1394.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1394-unit1394.Tpo $(DEPDIR)/unit1394-unit1394.Po
+	$(AM_V_CC)source='unit1394.c' object='unit1394-unit1394.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1394_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1394-unit1394.o `test -f 'unit1394.c' || echo '$(srcdir)/'`unit1394.c
 
 unit1394-unit1394.obj: unit1394.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1394_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1394-unit1394.obj -MD -MP -MF $(DEPDIR)/unit1394-unit1394.Tpo -c -o unit1394-unit1394.obj `if test -f 'unit1394.c'; then $(CYGPATH_W) 'unit1394.c'; else $(CYGPATH_W) '$(srcdir)/unit1394.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1394-unit1394.Tpo $(DEPDIR)/unit1394-unit1394.Po
-#	$(AM_V_CC)source='unit1394.c' object='unit1394-unit1394.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1394_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1394-unit1394.obj `if test -f 'unit1394.c'; then $(CYGPATH_W) 'unit1394.c'; else $(CYGPATH_W) '$(srcdir)/unit1394.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1394_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1394-unit1394.obj -MD -MP -MF $(DEPDIR)/unit1394-unit1394.Tpo -c -o unit1394-unit1394.obj `if test -f 'unit1394.c'; then $(CYGPATH_W) 'unit1394.c'; else $(CYGPATH_W) '$(srcdir)/unit1394.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1394-unit1394.Tpo $(DEPDIR)/unit1394-unit1394.Po
+	$(AM_V_CC)source='unit1394.c' object='unit1394-unit1394.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1394_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1394-unit1394.obj `if test -f 'unit1394.c'; then $(CYGPATH_W) 'unit1394.c'; else $(CYGPATH_W) '$(srcdir)/unit1394.c'; fi`
 
 ../libtest/unit1394-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1394_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1394-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1394-first.Tpo -c -o ../libtest/unit1394-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1394-first.Tpo ../libtest/$(DEPDIR)/unit1394-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1394-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1394_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1394-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1394_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1394-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1394-first.Tpo -c -o ../libtest/unit1394-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1394-first.Tpo ../libtest/$(DEPDIR)/unit1394-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1394-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1394_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1394-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1394-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1394_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1394-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1394-first.Tpo -c -o ../libtest/unit1394-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1394-first.Tpo ../libtest/$(DEPDIR)/unit1394-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1394-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1394_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1394-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1394_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1394-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1394-first.Tpo -c -o ../libtest/unit1394-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1394-first.Tpo ../libtest/$(DEPDIR)/unit1394-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1394-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1394_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1394-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1395-unit1395.o: unit1395.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1395_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1395-unit1395.o -MD -MP -MF $(DEPDIR)/unit1395-unit1395.Tpo -c -o unit1395-unit1395.o `test -f 'unit1395.c' || echo '$(srcdir)/'`unit1395.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1395-unit1395.Tpo $(DEPDIR)/unit1395-unit1395.Po
-#	$(AM_V_CC)source='unit1395.c' object='unit1395-unit1395.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1395_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1395-unit1395.o `test -f 'unit1395.c' || echo '$(srcdir)/'`unit1395.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1395_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1395-unit1395.o -MD -MP -MF $(DEPDIR)/unit1395-unit1395.Tpo -c -o unit1395-unit1395.o `test -f 'unit1395.c' || echo '$(srcdir)/'`unit1395.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1395-unit1395.Tpo $(DEPDIR)/unit1395-unit1395.Po
+	$(AM_V_CC)source='unit1395.c' object='unit1395-unit1395.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1395_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1395-unit1395.o `test -f 'unit1395.c' || echo '$(srcdir)/'`unit1395.c
 
 unit1395-unit1395.obj: unit1395.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1395_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1395-unit1395.obj -MD -MP -MF $(DEPDIR)/unit1395-unit1395.Tpo -c -o unit1395-unit1395.obj `if test -f 'unit1395.c'; then $(CYGPATH_W) 'unit1395.c'; else $(CYGPATH_W) '$(srcdir)/unit1395.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1395-unit1395.Tpo $(DEPDIR)/unit1395-unit1395.Po
-#	$(AM_V_CC)source='unit1395.c' object='unit1395-unit1395.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1395_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1395-unit1395.obj `if test -f 'unit1395.c'; then $(CYGPATH_W) 'unit1395.c'; else $(CYGPATH_W) '$(srcdir)/unit1395.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1395_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1395-unit1395.obj -MD -MP -MF $(DEPDIR)/unit1395-unit1395.Tpo -c -o unit1395-unit1395.obj `if test -f 'unit1395.c'; then $(CYGPATH_W) 'unit1395.c'; else $(CYGPATH_W) '$(srcdir)/unit1395.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1395-unit1395.Tpo $(DEPDIR)/unit1395-unit1395.Po
+	$(AM_V_CC)source='unit1395.c' object='unit1395-unit1395.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1395_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1395-unit1395.obj `if test -f 'unit1395.c'; then $(CYGPATH_W) 'unit1395.c'; else $(CYGPATH_W) '$(srcdir)/unit1395.c'; fi`
 
 ../libtest/unit1395-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1395_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1395-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1395-first.Tpo -c -o ../libtest/unit1395-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1395-first.Tpo ../libtest/$(DEPDIR)/unit1395-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1395-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1395_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1395-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1395_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1395-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1395-first.Tpo -c -o ../libtest/unit1395-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1395-first.Tpo ../libtest/$(DEPDIR)/unit1395-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1395-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1395_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1395-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1395-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1395_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1395-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1395-first.Tpo -c -o ../libtest/unit1395-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1395-first.Tpo ../libtest/$(DEPDIR)/unit1395-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1395-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1395_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1395-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1395_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1395-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1395-first.Tpo -c -o ../libtest/unit1395-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1395-first.Tpo ../libtest/$(DEPDIR)/unit1395-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1395-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1395_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1395-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1396-unit1396.o: unit1396.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1396_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1396-unit1396.o -MD -MP -MF $(DEPDIR)/unit1396-unit1396.Tpo -c -o unit1396-unit1396.o `test -f 'unit1396.c' || echo '$(srcdir)/'`unit1396.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1396-unit1396.Tpo $(DEPDIR)/unit1396-unit1396.Po
-#	$(AM_V_CC)source='unit1396.c' object='unit1396-unit1396.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1396_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1396-unit1396.o `test -f 'unit1396.c' || echo '$(srcdir)/'`unit1396.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1396_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1396-unit1396.o -MD -MP -MF $(DEPDIR)/unit1396-unit1396.Tpo -c -o unit1396-unit1396.o `test -f 'unit1396.c' || echo '$(srcdir)/'`unit1396.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1396-unit1396.Tpo $(DEPDIR)/unit1396-unit1396.Po
+	$(AM_V_CC)source='unit1396.c' object='unit1396-unit1396.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1396_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1396-unit1396.o `test -f 'unit1396.c' || echo '$(srcdir)/'`unit1396.c
 
 unit1396-unit1396.obj: unit1396.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1396_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1396-unit1396.obj -MD -MP -MF $(DEPDIR)/unit1396-unit1396.Tpo -c -o unit1396-unit1396.obj `if test -f 'unit1396.c'; then $(CYGPATH_W) 'unit1396.c'; else $(CYGPATH_W) '$(srcdir)/unit1396.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1396-unit1396.Tpo $(DEPDIR)/unit1396-unit1396.Po
-#	$(AM_V_CC)source='unit1396.c' object='unit1396-unit1396.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1396_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1396-unit1396.obj `if test -f 'unit1396.c'; then $(CYGPATH_W) 'unit1396.c'; else $(CYGPATH_W) '$(srcdir)/unit1396.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1396_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1396-unit1396.obj -MD -MP -MF $(DEPDIR)/unit1396-unit1396.Tpo -c -o unit1396-unit1396.obj `if test -f 'unit1396.c'; then $(CYGPATH_W) 'unit1396.c'; else $(CYGPATH_W) '$(srcdir)/unit1396.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1396-unit1396.Tpo $(DEPDIR)/unit1396-unit1396.Po
+	$(AM_V_CC)source='unit1396.c' object='unit1396-unit1396.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1396_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1396-unit1396.obj `if test -f 'unit1396.c'; then $(CYGPATH_W) 'unit1396.c'; else $(CYGPATH_W) '$(srcdir)/unit1396.c'; fi`
 
 ../libtest/unit1396-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1396_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1396-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1396-first.Tpo -c -o ../libtest/unit1396-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1396-first.Tpo ../libtest/$(DEPDIR)/unit1396-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1396-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1396_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1396-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1396_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1396-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1396-first.Tpo -c -o ../libtest/unit1396-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1396-first.Tpo ../libtest/$(DEPDIR)/unit1396-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1396-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1396_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1396-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1396-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1396_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1396-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1396-first.Tpo -c -o ../libtest/unit1396-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1396-first.Tpo ../libtest/$(DEPDIR)/unit1396-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1396-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1396_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1396-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1396_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1396-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1396-first.Tpo -c -o ../libtest/unit1396-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1396-first.Tpo ../libtest/$(DEPDIR)/unit1396-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1396-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1396_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1396-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1397-unit1397.o: unit1397.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1397_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1397-unit1397.o -MD -MP -MF $(DEPDIR)/unit1397-unit1397.Tpo -c -o unit1397-unit1397.o `test -f 'unit1397.c' || echo '$(srcdir)/'`unit1397.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1397-unit1397.Tpo $(DEPDIR)/unit1397-unit1397.Po
-#	$(AM_V_CC)source='unit1397.c' object='unit1397-unit1397.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1397_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1397-unit1397.o `test -f 'unit1397.c' || echo '$(srcdir)/'`unit1397.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1397_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1397-unit1397.o -MD -MP -MF $(DEPDIR)/unit1397-unit1397.Tpo -c -o unit1397-unit1397.o `test -f 'unit1397.c' || echo '$(srcdir)/'`unit1397.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1397-unit1397.Tpo $(DEPDIR)/unit1397-unit1397.Po
+	$(AM_V_CC)source='unit1397.c' object='unit1397-unit1397.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1397_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1397-unit1397.o `test -f 'unit1397.c' || echo '$(srcdir)/'`unit1397.c
 
 unit1397-unit1397.obj: unit1397.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1397_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1397-unit1397.obj -MD -MP -MF $(DEPDIR)/unit1397-unit1397.Tpo -c -o unit1397-unit1397.obj `if test -f 'unit1397.c'; then $(CYGPATH_W) 'unit1397.c'; else $(CYGPATH_W) '$(srcdir)/unit1397.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1397-unit1397.Tpo $(DEPDIR)/unit1397-unit1397.Po
-#	$(AM_V_CC)source='unit1397.c' object='unit1397-unit1397.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1397_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1397-unit1397.obj `if test -f 'unit1397.c'; then $(CYGPATH_W) 'unit1397.c'; else $(CYGPATH_W) '$(srcdir)/unit1397.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1397_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1397-unit1397.obj -MD -MP -MF $(DEPDIR)/unit1397-unit1397.Tpo -c -o unit1397-unit1397.obj `if test -f 'unit1397.c'; then $(CYGPATH_W) 'unit1397.c'; else $(CYGPATH_W) '$(srcdir)/unit1397.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1397-unit1397.Tpo $(DEPDIR)/unit1397-unit1397.Po
+	$(AM_V_CC)source='unit1397.c' object='unit1397-unit1397.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1397_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1397-unit1397.obj `if test -f 'unit1397.c'; then $(CYGPATH_W) 'unit1397.c'; else $(CYGPATH_W) '$(srcdir)/unit1397.c'; fi`
 
 ../libtest/unit1397-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1397_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1397-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1397-first.Tpo -c -o ../libtest/unit1397-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1397-first.Tpo ../libtest/$(DEPDIR)/unit1397-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1397-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1397_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1397-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1397_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1397-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1397-first.Tpo -c -o ../libtest/unit1397-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1397-first.Tpo ../libtest/$(DEPDIR)/unit1397-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1397-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1397_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1397-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1397-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1397_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1397-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1397-first.Tpo -c -o ../libtest/unit1397-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1397-first.Tpo ../libtest/$(DEPDIR)/unit1397-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1397-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1397_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1397-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1397_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1397-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1397-first.Tpo -c -o ../libtest/unit1397-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1397-first.Tpo ../libtest/$(DEPDIR)/unit1397-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1397-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1397_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1397-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1398-unit1398.o: unit1398.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1398_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1398-unit1398.o -MD -MP -MF $(DEPDIR)/unit1398-unit1398.Tpo -c -o unit1398-unit1398.o `test -f 'unit1398.c' || echo '$(srcdir)/'`unit1398.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1398-unit1398.Tpo $(DEPDIR)/unit1398-unit1398.Po
-#	$(AM_V_CC)source='unit1398.c' object='unit1398-unit1398.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1398_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1398-unit1398.o `test -f 'unit1398.c' || echo '$(srcdir)/'`unit1398.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1398_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1398-unit1398.o -MD -MP -MF $(DEPDIR)/unit1398-unit1398.Tpo -c -o unit1398-unit1398.o `test -f 'unit1398.c' || echo '$(srcdir)/'`unit1398.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1398-unit1398.Tpo $(DEPDIR)/unit1398-unit1398.Po
+	$(AM_V_CC)source='unit1398.c' object='unit1398-unit1398.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1398_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1398-unit1398.o `test -f 'unit1398.c' || echo '$(srcdir)/'`unit1398.c
 
 unit1398-unit1398.obj: unit1398.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1398_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1398-unit1398.obj -MD -MP -MF $(DEPDIR)/unit1398-unit1398.Tpo -c -o unit1398-unit1398.obj `if test -f 'unit1398.c'; then $(CYGPATH_W) 'unit1398.c'; else $(CYGPATH_W) '$(srcdir)/unit1398.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1398-unit1398.Tpo $(DEPDIR)/unit1398-unit1398.Po
-#	$(AM_V_CC)source='unit1398.c' object='unit1398-unit1398.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1398_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1398-unit1398.obj `if test -f 'unit1398.c'; then $(CYGPATH_W) 'unit1398.c'; else $(CYGPATH_W) '$(srcdir)/unit1398.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1398_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1398-unit1398.obj -MD -MP -MF $(DEPDIR)/unit1398-unit1398.Tpo -c -o unit1398-unit1398.obj `if test -f 'unit1398.c'; then $(CYGPATH_W) 'unit1398.c'; else $(CYGPATH_W) '$(srcdir)/unit1398.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1398-unit1398.Tpo $(DEPDIR)/unit1398-unit1398.Po
+	$(AM_V_CC)source='unit1398.c' object='unit1398-unit1398.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1398_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1398-unit1398.obj `if test -f 'unit1398.c'; then $(CYGPATH_W) 'unit1398.c'; else $(CYGPATH_W) '$(srcdir)/unit1398.c'; fi`
 
 ../libtest/unit1398-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1398_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1398-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1398-first.Tpo -c -o ../libtest/unit1398-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1398-first.Tpo ../libtest/$(DEPDIR)/unit1398-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1398-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1398_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1398-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1398_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1398-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1398-first.Tpo -c -o ../libtest/unit1398-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1398-first.Tpo ../libtest/$(DEPDIR)/unit1398-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1398-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1398_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1398-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1398-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1398_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1398-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1398-first.Tpo -c -o ../libtest/unit1398-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1398-first.Tpo ../libtest/$(DEPDIR)/unit1398-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1398-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1398_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1398-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1398_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1398-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1398-first.Tpo -c -o ../libtest/unit1398-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1398-first.Tpo ../libtest/$(DEPDIR)/unit1398-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1398-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1398_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1398-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1600-unit1600.o: unit1600.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1600_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1600-unit1600.o -MD -MP -MF $(DEPDIR)/unit1600-unit1600.Tpo -c -o unit1600-unit1600.o `test -f 'unit1600.c' || echo '$(srcdir)/'`unit1600.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1600-unit1600.Tpo $(DEPDIR)/unit1600-unit1600.Po
-#	$(AM_V_CC)source='unit1600.c' object='unit1600-unit1600.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1600_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1600-unit1600.o `test -f 'unit1600.c' || echo '$(srcdir)/'`unit1600.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1600_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1600-unit1600.o -MD -MP -MF $(DEPDIR)/unit1600-unit1600.Tpo -c -o unit1600-unit1600.o `test -f 'unit1600.c' || echo '$(srcdir)/'`unit1600.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1600-unit1600.Tpo $(DEPDIR)/unit1600-unit1600.Po
+	$(AM_V_CC)source='unit1600.c' object='unit1600-unit1600.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1600_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1600-unit1600.o `test -f 'unit1600.c' || echo '$(srcdir)/'`unit1600.c
 
 unit1600-unit1600.obj: unit1600.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1600_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1600-unit1600.obj -MD -MP -MF $(DEPDIR)/unit1600-unit1600.Tpo -c -o unit1600-unit1600.obj `if test -f 'unit1600.c'; then $(CYGPATH_W) 'unit1600.c'; else $(CYGPATH_W) '$(srcdir)/unit1600.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1600-unit1600.Tpo $(DEPDIR)/unit1600-unit1600.Po
-#	$(AM_V_CC)source='unit1600.c' object='unit1600-unit1600.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1600_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1600-unit1600.obj `if test -f 'unit1600.c'; then $(CYGPATH_W) 'unit1600.c'; else $(CYGPATH_W) '$(srcdir)/unit1600.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1600_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1600-unit1600.obj -MD -MP -MF $(DEPDIR)/unit1600-unit1600.Tpo -c -o unit1600-unit1600.obj `if test -f 'unit1600.c'; then $(CYGPATH_W) 'unit1600.c'; else $(CYGPATH_W) '$(srcdir)/unit1600.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1600-unit1600.Tpo $(DEPDIR)/unit1600-unit1600.Po
+	$(AM_V_CC)source='unit1600.c' object='unit1600-unit1600.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1600_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1600-unit1600.obj `if test -f 'unit1600.c'; then $(CYGPATH_W) 'unit1600.c'; else $(CYGPATH_W) '$(srcdir)/unit1600.c'; fi`
 
 ../libtest/unit1600-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1600_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1600-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1600-first.Tpo -c -o ../libtest/unit1600-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1600-first.Tpo ../libtest/$(DEPDIR)/unit1600-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1600-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1600_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1600-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1600_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1600-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1600-first.Tpo -c -o ../libtest/unit1600-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1600-first.Tpo ../libtest/$(DEPDIR)/unit1600-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1600-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1600_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1600-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1600-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1600_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1600-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1600-first.Tpo -c -o ../libtest/unit1600-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1600-first.Tpo ../libtest/$(DEPDIR)/unit1600-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1600-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1600_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1600-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1600_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1600-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1600-first.Tpo -c -o ../libtest/unit1600-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1600-first.Tpo ../libtest/$(DEPDIR)/unit1600-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1600-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1600_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1600-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1601-unit1601.o: unit1601.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1601_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1601-unit1601.o -MD -MP -MF $(DEPDIR)/unit1601-unit1601.Tpo -c -o unit1601-unit1601.o `test -f 'unit1601.c' || echo '$(srcdir)/'`unit1601.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1601-unit1601.Tpo $(DEPDIR)/unit1601-unit1601.Po
-#	$(AM_V_CC)source='unit1601.c' object='unit1601-unit1601.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1601_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1601-unit1601.o `test -f 'unit1601.c' || echo '$(srcdir)/'`unit1601.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1601_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1601-unit1601.o -MD -MP -MF $(DEPDIR)/unit1601-unit1601.Tpo -c -o unit1601-unit1601.o `test -f 'unit1601.c' || echo '$(srcdir)/'`unit1601.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1601-unit1601.Tpo $(DEPDIR)/unit1601-unit1601.Po
+	$(AM_V_CC)source='unit1601.c' object='unit1601-unit1601.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1601_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1601-unit1601.o `test -f 'unit1601.c' || echo '$(srcdir)/'`unit1601.c
 
 unit1601-unit1601.obj: unit1601.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1601_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1601-unit1601.obj -MD -MP -MF $(DEPDIR)/unit1601-unit1601.Tpo -c -o unit1601-unit1601.obj `if test -f 'unit1601.c'; then $(CYGPATH_W) 'unit1601.c'; else $(CYGPATH_W) '$(srcdir)/unit1601.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1601-unit1601.Tpo $(DEPDIR)/unit1601-unit1601.Po
-#	$(AM_V_CC)source='unit1601.c' object='unit1601-unit1601.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1601_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1601-unit1601.obj `if test -f 'unit1601.c'; then $(CYGPATH_W) 'unit1601.c'; else $(CYGPATH_W) '$(srcdir)/unit1601.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1601_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1601-unit1601.obj -MD -MP -MF $(DEPDIR)/unit1601-unit1601.Tpo -c -o unit1601-unit1601.obj `if test -f 'unit1601.c'; then $(CYGPATH_W) 'unit1601.c'; else $(CYGPATH_W) '$(srcdir)/unit1601.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1601-unit1601.Tpo $(DEPDIR)/unit1601-unit1601.Po
+	$(AM_V_CC)source='unit1601.c' object='unit1601-unit1601.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1601_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1601-unit1601.obj `if test -f 'unit1601.c'; then $(CYGPATH_W) 'unit1601.c'; else $(CYGPATH_W) '$(srcdir)/unit1601.c'; fi`
 
 ../libtest/unit1601-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1601_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1601-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1601-first.Tpo -c -o ../libtest/unit1601-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1601-first.Tpo ../libtest/$(DEPDIR)/unit1601-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1601-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1601_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1601-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1601_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1601-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1601-first.Tpo -c -o ../libtest/unit1601-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1601-first.Tpo ../libtest/$(DEPDIR)/unit1601-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1601-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1601_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1601-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1601-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1601_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1601-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1601-first.Tpo -c -o ../libtest/unit1601-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1601-first.Tpo ../libtest/$(DEPDIR)/unit1601-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1601-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1601_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1601-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1601_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1601-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1601-first.Tpo -c -o ../libtest/unit1601-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1601-first.Tpo ../libtest/$(DEPDIR)/unit1601-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1601-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1601_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1601-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1602-unit1602.o: unit1602.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1602_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1602-unit1602.o -MD -MP -MF $(DEPDIR)/unit1602-unit1602.Tpo -c -o unit1602-unit1602.o `test -f 'unit1602.c' || echo '$(srcdir)/'`unit1602.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1602-unit1602.Tpo $(DEPDIR)/unit1602-unit1602.Po
-#	$(AM_V_CC)source='unit1602.c' object='unit1602-unit1602.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1602_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1602-unit1602.o `test -f 'unit1602.c' || echo '$(srcdir)/'`unit1602.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1602_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1602-unit1602.o -MD -MP -MF $(DEPDIR)/unit1602-unit1602.Tpo -c -o unit1602-unit1602.o `test -f 'unit1602.c' || echo '$(srcdir)/'`unit1602.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1602-unit1602.Tpo $(DEPDIR)/unit1602-unit1602.Po
+	$(AM_V_CC)source='unit1602.c' object='unit1602-unit1602.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1602_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1602-unit1602.o `test -f 'unit1602.c' || echo '$(srcdir)/'`unit1602.c
 
 unit1602-unit1602.obj: unit1602.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1602_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1602-unit1602.obj -MD -MP -MF $(DEPDIR)/unit1602-unit1602.Tpo -c -o unit1602-unit1602.obj `if test -f 'unit1602.c'; then $(CYGPATH_W) 'unit1602.c'; else $(CYGPATH_W) '$(srcdir)/unit1602.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1602-unit1602.Tpo $(DEPDIR)/unit1602-unit1602.Po
-#	$(AM_V_CC)source='unit1602.c' object='unit1602-unit1602.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1602_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1602-unit1602.obj `if test -f 'unit1602.c'; then $(CYGPATH_W) 'unit1602.c'; else $(CYGPATH_W) '$(srcdir)/unit1602.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1602_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1602-unit1602.obj -MD -MP -MF $(DEPDIR)/unit1602-unit1602.Tpo -c -o unit1602-unit1602.obj `if test -f 'unit1602.c'; then $(CYGPATH_W) 'unit1602.c'; else $(CYGPATH_W) '$(srcdir)/unit1602.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1602-unit1602.Tpo $(DEPDIR)/unit1602-unit1602.Po
+	$(AM_V_CC)source='unit1602.c' object='unit1602-unit1602.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1602_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1602-unit1602.obj `if test -f 'unit1602.c'; then $(CYGPATH_W) 'unit1602.c'; else $(CYGPATH_W) '$(srcdir)/unit1602.c'; fi`
 
 ../libtest/unit1602-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1602_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1602-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1602-first.Tpo -c -o ../libtest/unit1602-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1602-first.Tpo ../libtest/$(DEPDIR)/unit1602-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1602-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1602_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1602-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1602_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1602-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1602-first.Tpo -c -o ../libtest/unit1602-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1602-first.Tpo ../libtest/$(DEPDIR)/unit1602-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1602-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1602_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1602-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1602-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1602_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1602-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1602-first.Tpo -c -o ../libtest/unit1602-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1602-first.Tpo ../libtest/$(DEPDIR)/unit1602-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1602-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1602_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1602-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1602_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1602-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1602-first.Tpo -c -o ../libtest/unit1602-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1602-first.Tpo ../libtest/$(DEPDIR)/unit1602-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1602-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1602_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1602-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1603-unit1603.o: unit1603.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1603_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1603-unit1603.o -MD -MP -MF $(DEPDIR)/unit1603-unit1603.Tpo -c -o unit1603-unit1603.o `test -f 'unit1603.c' || echo '$(srcdir)/'`unit1603.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1603-unit1603.Tpo $(DEPDIR)/unit1603-unit1603.Po
-#	$(AM_V_CC)source='unit1603.c' object='unit1603-unit1603.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1603_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1603-unit1603.o `test -f 'unit1603.c' || echo '$(srcdir)/'`unit1603.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1603_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1603-unit1603.o -MD -MP -MF $(DEPDIR)/unit1603-unit1603.Tpo -c -o unit1603-unit1603.o `test -f 'unit1603.c' || echo '$(srcdir)/'`unit1603.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1603-unit1603.Tpo $(DEPDIR)/unit1603-unit1603.Po
+	$(AM_V_CC)source='unit1603.c' object='unit1603-unit1603.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1603_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1603-unit1603.o `test -f 'unit1603.c' || echo '$(srcdir)/'`unit1603.c
 
 unit1603-unit1603.obj: unit1603.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1603_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1603-unit1603.obj -MD -MP -MF $(DEPDIR)/unit1603-unit1603.Tpo -c -o unit1603-unit1603.obj `if test -f 'unit1603.c'; then $(CYGPATH_W) 'unit1603.c'; else $(CYGPATH_W) '$(srcdir)/unit1603.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1603-unit1603.Tpo $(DEPDIR)/unit1603-unit1603.Po
-#	$(AM_V_CC)source='unit1603.c' object='unit1603-unit1603.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1603_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1603-unit1603.obj `if test -f 'unit1603.c'; then $(CYGPATH_W) 'unit1603.c'; else $(CYGPATH_W) '$(srcdir)/unit1603.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1603_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1603-unit1603.obj -MD -MP -MF $(DEPDIR)/unit1603-unit1603.Tpo -c -o unit1603-unit1603.obj `if test -f 'unit1603.c'; then $(CYGPATH_W) 'unit1603.c'; else $(CYGPATH_W) '$(srcdir)/unit1603.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1603-unit1603.Tpo $(DEPDIR)/unit1603-unit1603.Po
+	$(AM_V_CC)source='unit1603.c' object='unit1603-unit1603.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1603_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1603-unit1603.obj `if test -f 'unit1603.c'; then $(CYGPATH_W) 'unit1603.c'; else $(CYGPATH_W) '$(srcdir)/unit1603.c'; fi`
 
 ../libtest/unit1603-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1603_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1603-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1603-first.Tpo -c -o ../libtest/unit1603-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1603-first.Tpo ../libtest/$(DEPDIR)/unit1603-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1603-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1603_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1603-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1603_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1603-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1603-first.Tpo -c -o ../libtest/unit1603-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1603-first.Tpo ../libtest/$(DEPDIR)/unit1603-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1603-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1603_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1603-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1603-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1603_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1603-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1603-first.Tpo -c -o ../libtest/unit1603-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1603-first.Tpo ../libtest/$(DEPDIR)/unit1603-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1603-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1603_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1603-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1603_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1603-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1603-first.Tpo -c -o ../libtest/unit1603-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1603-first.Tpo ../libtest/$(DEPDIR)/unit1603-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1603-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1603_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1603-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1604-unit1604.o: unit1604.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1604_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1604-unit1604.o -MD -MP -MF $(DEPDIR)/unit1604-unit1604.Tpo -c -o unit1604-unit1604.o `test -f 'unit1604.c' || echo '$(srcdir)/'`unit1604.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1604-unit1604.Tpo $(DEPDIR)/unit1604-unit1604.Po
-#	$(AM_V_CC)source='unit1604.c' object='unit1604-unit1604.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1604_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1604-unit1604.o `test -f 'unit1604.c' || echo '$(srcdir)/'`unit1604.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1604_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1604-unit1604.o -MD -MP -MF $(DEPDIR)/unit1604-unit1604.Tpo -c -o unit1604-unit1604.o `test -f 'unit1604.c' || echo '$(srcdir)/'`unit1604.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1604-unit1604.Tpo $(DEPDIR)/unit1604-unit1604.Po
+	$(AM_V_CC)source='unit1604.c' object='unit1604-unit1604.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1604_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1604-unit1604.o `test -f 'unit1604.c' || echo '$(srcdir)/'`unit1604.c
 
 unit1604-unit1604.obj: unit1604.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1604_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1604-unit1604.obj -MD -MP -MF $(DEPDIR)/unit1604-unit1604.Tpo -c -o unit1604-unit1604.obj `if test -f 'unit1604.c'; then $(CYGPATH_W) 'unit1604.c'; else $(CYGPATH_W) '$(srcdir)/unit1604.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1604-unit1604.Tpo $(DEPDIR)/unit1604-unit1604.Po
-#	$(AM_V_CC)source='unit1604.c' object='unit1604-unit1604.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1604_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1604-unit1604.obj `if test -f 'unit1604.c'; then $(CYGPATH_W) 'unit1604.c'; else $(CYGPATH_W) '$(srcdir)/unit1604.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1604_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1604-unit1604.obj -MD -MP -MF $(DEPDIR)/unit1604-unit1604.Tpo -c -o unit1604-unit1604.obj `if test -f 'unit1604.c'; then $(CYGPATH_W) 'unit1604.c'; else $(CYGPATH_W) '$(srcdir)/unit1604.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1604-unit1604.Tpo $(DEPDIR)/unit1604-unit1604.Po
+	$(AM_V_CC)source='unit1604.c' object='unit1604-unit1604.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1604_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1604-unit1604.obj `if test -f 'unit1604.c'; then $(CYGPATH_W) 'unit1604.c'; else $(CYGPATH_W) '$(srcdir)/unit1604.c'; fi`
 
 ../libtest/unit1604-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1604_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1604-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1604-first.Tpo -c -o ../libtest/unit1604-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1604-first.Tpo ../libtest/$(DEPDIR)/unit1604-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1604-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1604_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1604-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1604_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1604-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1604-first.Tpo -c -o ../libtest/unit1604-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1604-first.Tpo ../libtest/$(DEPDIR)/unit1604-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1604-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1604_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1604-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1604-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1604_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1604-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1604-first.Tpo -c -o ../libtest/unit1604-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1604-first.Tpo ../libtest/$(DEPDIR)/unit1604-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1604-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1604_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1604-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1604_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1604-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1604-first.Tpo -c -o ../libtest/unit1604-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1604-first.Tpo ../libtest/$(DEPDIR)/unit1604-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1604-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1604_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1604-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 unit1605-unit1605.o: unit1605.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1605_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1605-unit1605.o -MD -MP -MF $(DEPDIR)/unit1605-unit1605.Tpo -c -o unit1605-unit1605.o `test -f 'unit1605.c' || echo '$(srcdir)/'`unit1605.c
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1605-unit1605.Tpo $(DEPDIR)/unit1605-unit1605.Po
-#	$(AM_V_CC)source='unit1605.c' object='unit1605-unit1605.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1605_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1605-unit1605.o `test -f 'unit1605.c' || echo '$(srcdir)/'`unit1605.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1605_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1605-unit1605.o -MD -MP -MF $(DEPDIR)/unit1605-unit1605.Tpo -c -o unit1605-unit1605.o `test -f 'unit1605.c' || echo '$(srcdir)/'`unit1605.c
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1605-unit1605.Tpo $(DEPDIR)/unit1605-unit1605.Po
+	$(AM_V_CC)source='unit1605.c' object='unit1605-unit1605.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1605_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1605-unit1605.o `test -f 'unit1605.c' || echo '$(srcdir)/'`unit1605.c
 
 unit1605-unit1605.obj: unit1605.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1605_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1605-unit1605.obj -MD -MP -MF $(DEPDIR)/unit1605-unit1605.Tpo -c -o unit1605-unit1605.obj `if test -f 'unit1605.c'; then $(CYGPATH_W) 'unit1605.c'; else $(CYGPATH_W) '$(srcdir)/unit1605.c'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1605-unit1605.Tpo $(DEPDIR)/unit1605-unit1605.Po
-#	$(AM_V_CC)source='unit1605.c' object='unit1605-unit1605.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1605_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1605-unit1605.obj `if test -f 'unit1605.c'; then $(CYGPATH_W) 'unit1605.c'; else $(CYGPATH_W) '$(srcdir)/unit1605.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1605_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT unit1605-unit1605.obj -MD -MP -MF $(DEPDIR)/unit1605-unit1605.Tpo -c -o unit1605-unit1605.obj `if test -f 'unit1605.c'; then $(CYGPATH_W) 'unit1605.c'; else $(CYGPATH_W) '$(srcdir)/unit1605.c'; fi`
+#	$(AM_V_at)$(am__mv) $(DEPDIR)/unit1605-unit1605.Tpo $(DEPDIR)/unit1605-unit1605.Po
+	$(AM_V_CC)source='unit1605.c' object='unit1605-unit1605.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1605_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o unit1605-unit1605.obj `if test -f 'unit1605.c'; then $(CYGPATH_W) 'unit1605.c'; else $(CYGPATH_W) '$(srcdir)/unit1605.c'; fi`
 
 ../libtest/unit1605-first.o: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1605_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1605-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1605-first.Tpo -c -o ../libtest/unit1605-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1605-first.Tpo ../libtest/$(DEPDIR)/unit1605-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1605-first.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1605_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1605-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1605_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1605-first.o -MD -MP -MF ../libtest/$(DEPDIR)/unit1605-first.Tpo -c -o ../libtest/unit1605-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1605-first.Tpo ../libtest/$(DEPDIR)/unit1605-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1605-first.o' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1605_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1605-first.o `test -f '../libtest/first.c' || echo '$(srcdir)/'`../libtest/first.c
 
 ../libtest/unit1605-first.obj: ../libtest/first.c
-	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1605_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1605-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1605-first.Tpo -c -o ../libtest/unit1605-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
-	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1605-first.Tpo ../libtest/$(DEPDIR)/unit1605-first.Po
-#	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1605-first.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1605_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1605-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1605_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT ../libtest/unit1605-first.obj -MD -MP -MF ../libtest/$(DEPDIR)/unit1605-first.Tpo -c -o ../libtest/unit1605-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
+#	$(AM_V_at)$(am__mv) ../libtest/$(DEPDIR)/unit1605-first.Tpo ../libtest/$(DEPDIR)/unit1605-first.Po
+	$(AM_V_CC)source='../libtest/first.c' object='../libtest/unit1605-first.obj' libtool=no \
+	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+	$(AM_V_CC_no)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(unit1605_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o ../libtest/unit1605-first.obj `if test -f '../libtest/first.c'; then $(CYGPATH_W) '../libtest/first.c'; else $(CYGPATH_W) '$(srcdir)/../libtest/first.c'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
