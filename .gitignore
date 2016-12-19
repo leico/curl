@@ -22,15 +22,11 @@ CHANGES.dist
 Debug
 Release
 TAGS
-aclocal.m4
-aclocal.m4.bak
 autom4te.cache
 compile
 config.cache
-config.guess
 config.log
 config.status
-config.sub
 curl-*.tar.bz2
 curl-*.tar.gz
 curl-*.tar.lzma
